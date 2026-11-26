@@ -71,16 +71,30 @@ export const InspectorDrawer: React.FC<InspectorDrawerProps> = ({ restaurant, on
   };
 
   return (
-    <aside
-      aria-label={`Details for ${restaurant.name}`}
-      className="fixed right-3 bottom-14 w-[380px] lg:w-[400px] max-w-[calc(100vw-24px)] z-30 glass-panel-solid rounded-2xl flex flex-col overflow-hidden"
-      style={{ top: 'var(--hud-top, 120px)' }}
-    >
-      {/* Top Banner */}
+    <>
+      {/* Subtle mobile backdrop scrim */}
       <div
-        className="px-5 py-4 border-b relative"
-        style={{ borderColor: 'var(--border-subtle)' }}
+        className="md:hidden fixed inset-0 z-20"
+        style={{ background: 'rgba(13, 15, 18, 0.35)' }}
+        onClick={onClose}
+        aria-hidden="true"
+      />
+      <aside
+        aria-label={`Details for ${restaurant.name}`}
+        className="inspector-sheet fixed inset-x-2 bottom-2 md:inset-x-auto md:right-3 md:bottom-14 w-auto md:w-[380px] lg:w-[400px] z-30 glass-panel-solid rounded-3xl md:rounded-2xl flex flex-col overflow-hidden"
       >
+        {/* Mobile grabber bar */}
+        <div className="md:hidden flex justify-center pt-2.5 pb-1 shrink-0" aria-hidden="true">
+          <span
+            className="w-10 h-1 rounded-full"
+            style={{ background: 'var(--border-strong)' }}
+          />
+        </div>
+        {/* Top Banner */}
+        <div
+          className="px-4 sm:px-5 py-3 sm:py-4 border-b relative"
+          style={{ borderColor: 'var(--border-subtle)' }}
+        >
         <button
           type="button"
           onClick={onClose}
@@ -384,5 +398,6 @@ export const InspectorDrawer: React.FC<InspectorDrawerProps> = ({ restaurant, on
         </section>
       </div>
     </aside>
+    </>
   );
 };

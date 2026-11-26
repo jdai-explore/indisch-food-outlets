@@ -15,8 +15,8 @@ import { ChevronUp } from 'lucide-react';
 function getInitialTheme(): 'light' | 'dark' {
   if (typeof window === 'undefined') return 'light';
   const saved = localStorage.getItem('spiceatlas-theme');
-  if (saved === 'light' || saved === 'dark') return saved;
-  return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+  if (saved === 'dark') return 'dark';
+  return 'light';
 }
 
 export function App() {
@@ -48,9 +48,13 @@ export function App() {
     const q = searchQuery.trim().toLowerCase();
 
     return RESTAURANTS.filter((r) => {
-      // City preset filter (unless searching across all Bavaria)
-      if (!q && activePreset.cityFilter !== 'All' && r.city !== activePreset.cityFilter) {
-        return false;
+      // City preset filter (Munich preset also includes immediate S-Bahn border Unterföhring)
+      if (!q && activePreset.cityFilter !== 'All') {
+        if (activePreset.cityFilter === 'Munich') {
+          if (r.city !== 'Munich' && r.city !== 'Unterföhring') return false;
+        } else if (r.city !== activePreset.cityFilter) {
+          return false;
+        }
       }
 
       if (selectedRegion !== 'all' && r.regionCategory !== selectedRegion) {
@@ -128,7 +132,7 @@ export function App() {
       />
 
       {viewMode === 'map' ? (
-        <main id="main-content" className="relative w-full h-screen overflow-hidden">
+        <main id="main-content" className="relative w-full h-[100dvh] overflow-hidden">
           <Map3D
             restaurants={filteredRestaurants}
             selectedRestaurant={selectedRestaurant}
@@ -151,6 +155,7 @@ export function App() {
             isCollapsed={sidebarCollapsed}
             onToggleCollapse={() => setSidebarCollapsed((c) => !c)}
             cityLabel={activePreset.label}
+            hasInspectorOpen={Boolean(selectedRestaurant)}
           />
 
           <MapControls
@@ -169,7 +174,7 @@ export function App() {
             <button
               type="button"
               onClick={() => setViewMode('list')}
-              className="md:hidden fixed bottom-4 left-1/2 -translate-x-1/2 z-20 glass-panel px-4 py-2.5 rounded-full text-xs font-bold flex items-center gap-1.5 cursor-pointer"
+              className="md:hidden fixed bottom-5 left-1/2 -translate-x-1/2 z-20 glass-panel px-4 py-2.5 rounded-full text-xs font-bold flex items-center gap-1.5 cursor-pointer whitespace-nowrap"
             >
               <ChevronUp className="w-4 h-4" />
               <span>Browse {filteredRestaurants.length} Verified Kitchens</span>

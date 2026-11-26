@@ -20,9 +20,32 @@ interface Map3DProps {
 
 const LIGHT_STYLE = 'https://tiles.openfreemap.org/styles/liberty';
 const DARK_STYLE = 'https://basemaps.cartocdn.com/gl/dark-matter-gl-style/style.json';
+const SOURCE_ID = 'spiceatlas-restaurants';
+const CIRCLE_LAYER_ID = 'spiceatlas-circles';
+const PULSE_LAYER_ID = 'spiceatlas-new-ring';
 
 function prefersReducedMotion(): boolean {
   return typeof window !== 'undefined' && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+}
+
+function buildGeoJson(list: Restaurant[]): GeoJSON.FeatureCollection<GeoJSON.Point> {
+  return {
+    type: 'FeatureCollection',
+    features: list.map((r) => ({
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: r.coordinates,
+      },
+      properties: {
+        id: r.id,
+        name: r.name,
+        color: getRegionStyle(r.regionCategory).color,
+        hasRating: typeof r.googleRating === 'number' ? 1 : 0,
+        isNew: r.isNewSpot ? 1 : 0,
+      },
+    })),
+  };
 }
 
 export const Map3D: React.FC<Map3DProps> = ({
@@ -37,10 +60,77 @@ export const Map3D: React.FC<Map3DProps> = ({
 }) => {
   const containerRef = useRef<HTMLDivElement | null>(null);
   const mapRef = useRef<maplibregl.Map | null>(null);
-  const markersRef = useRef<Map<string, { marker: maplibregl.Marker; el: HTMLButtonElement }>>(new Map());
+  const selectedMarkerRef = useRef<maplibregl.Marker | null>(null);
   const orbitFrameRef = useRef<number | null>(null);
+  const restaurantsRef = useRef<Restaurant[]>(restaurants);
+  const onSelectRef = useRef(onSelectRestaurant);
+  const prevThemeRef = useRef<'light' | 'dark'>(theme);
+
   const [mapReady, setMapReady] = useState(false);
   const [tileError, setTileError] = useState(false);
+
+  restaurantsRef.current = restaurants;
+  onSelectRef.current = onSelectRestaurant;
+
+  const syncGeoJsonLayers = (map: maplibregl.Map, list: Restaurant[], forceWhenStyleLoading = false) => {
+    if (!forceWhenStyleLoading && !map.isStyleLoaded()) return;
+
+    const data = buildGeoJson(list);
+    try {
+      const existingSource = map.getSource(SOURCE_ID) as maplibregl.GeoJSONSource | undefined;
+      if (existingSource) {
+        existingSource.setData(data);
+        return;
+      }
+
+      map.addSource(SOURCE_ID, {
+        type: 'geojson',
+        data,
+      });
+
+      // Subtle outer ring for New & Rising spots
+      map.addLayer({
+        id: PULSE_LAYER_ID,
+        type: 'circle',
+        source: SOURCE_ID,
+        filter: ['==', ['get', 'isNew'], 1],
+        paint: {
+          'circle-radius': ['interpolate', ['linear'], ['zoom'], 7, 7, 12, 14, 15, 17],
+          'circle-color': ['get', 'color'],
+          'circle-opacity': 0.25,
+          'circle-stroke-width': 1.5,
+          'circle-stroke-color': ['get', 'color'],
+          'circle-stroke-opacity': 0.7,
+        },
+      });
+
+      // Main GPU-accelerated region-colored restaurant markers
+      map.addLayer({
+        id: CIRCLE_LAYER_ID,
+        type: 'circle',
+        source: SOURCE_ID,
+        paint: {
+          'circle-radius': [
+            'interpolate',
+            ['linear'],
+            ['zoom'],
+            7,
+            ['case', ['==', ['get', 'hasRating'], 1], 6, 4.2],
+            12,
+            ['case', ['==', ['get', 'hasRating'], 1], 10.5, 7],
+            15,
+            ['case', ['==', ['get', 'hasRating'], 1], 12.5, 8.5],
+          ],
+          'circle-color': ['get', 'color'],
+          'circle-opacity': 0.94,
+          'circle-stroke-color': '#FFFFFF',
+          'circle-stroke-width': ['interpolate', ['linear'], ['zoom'], 7, 1.2, 12, 2],
+        },
+      });
+    } catch {
+      // Style still mid-swap; styledata/idle handler will retry cleanly
+    }
+  };
 
   // Initialize MapLibre GL 3D instance
   useEffect(() => {
@@ -60,10 +150,37 @@ export const Map3D: React.FC<Map3DProps> = ({
     map.on('load', () => {
       setMapReady(true);
       setTileError(false);
+      syncGeoJsonLayers(map, restaurantsRef.current, true);
+    });
+
+    map.on('style.load', () => {
+      setTileError(false);
+      syncGeoJsonLayers(map, restaurantsRef.current, true);
+    });
+
+    map.on('styledata', () => {
+      if (!map.getSource(SOURCE_ID)) {
+        syncGeoJsonLayers(map, restaurantsRef.current, true);
+      }
+    });
+
+    map.on('click', CIRCLE_LAYER_ID, (e) => {
+      const feat = e.features?.[0];
+      const id = feat?.properties?.id;
+      if (!id) return;
+      const found = restaurantsRef.current.find((r) => r.id === id);
+      if (found) onSelectRef.current(found);
+    });
+
+    map.on('mouseenter', CIRCLE_LAYER_ID, () => {
+      map.getCanvas().style.cursor = 'pointer';
+    });
+
+    map.on('mouseleave', CIRCLE_LAYER_ID, () => {
+      map.getCanvas().style.cursor = '';
     });
 
     map.on('error', () => {
-      // Do not hard-crash on occasional tile hiccup; only flag if style fails to load
       if (!map.isStyleLoaded()) {
         setTileError(true);
       }
@@ -92,8 +209,8 @@ export const Map3D: React.FC<Map3DProps> = ({
 
     return () => {
       if (orbitFrameRef.current) cancelAnimationFrame(orbitFrameRef.current);
-      markersRef.current.forEach(({ marker }) => marker.remove());
-      markersRef.current.clear();
+      selectedMarkerRef.current?.remove();
+      selectedMarkerRef.current = null;
       map.remove();
       mapRef.current = null;
     };
@@ -103,13 +220,18 @@ export const Map3D: React.FC<Map3DProps> = ({
   // Switch light/dark map style seamlessly
   useEffect(() => {
     const map = mapRef.current;
-    if (!map) return;
+    if (!map || prevThemeRef.current === theme) return;
+    prevThemeRef.current = theme;
     const targetStyle = theme === 'dark' ? DARK_STYLE : LIGHT_STYLE;
     map.setStyle(targetStyle);
-    map.once('styledata', () => {
-      setTileError(false);
-    });
   }, [theme]);
+
+  // Update GeoJSON points whenever filtered restaurants change
+  useEffect(() => {
+    const map = mapRef.current;
+    if (!map) return;
+    syncGeoJsonLayers(map, restaurants, true);
+  }, [restaurants]);
 
   // Keep mapControlRef updated with latest pitchMode
   useEffect(() => {
@@ -164,13 +286,19 @@ export const Map3D: React.FC<Map3DProps> = ({
     }
   }, [activePreset, pitchMode]);
 
-  // Fly to selected restaurant when picked
+  // Fly to selected restaurant & render crisp active halo pin
   useEffect(() => {
     const map = mapRef.current;
-    if (!map || !selectedRestaurant) return;
+    if (!map) return;
+
+    selectedMarkerRef.current?.remove();
+    selectedMarkerRef.current = null;
+
+    if (!selectedRestaurant) return;
+
     const opts = {
       center: selectedRestaurant.coordinates,
-      zoom: Math.max(map.getZoom(), 14.8),
+      zoom: Math.max(map.getZoom(), 14.6),
       pitch: pitchMode === '3d' ? 58 : 0,
       bearing: activePreset.bearing,
       essential: true,
@@ -180,6 +308,33 @@ export const Map3D: React.FC<Map3DProps> = ({
     } else {
       map.flyTo({ ...opts, speed: 1.2, curve: 1.35 });
     }
+
+    const style = getRegionStyle(selectedRestaurant.regionCategory);
+    const hasRating = typeof selectedRestaurant.googleRating === 'number';
+    const el = document.createElement('div');
+    el.className = 'flex flex-col items-center pointer-events-none';
+    el.style.zIndex = '40';
+    el.innerHTML = `
+      <div class="relative flex items-center justify-center">
+        <span class="pin-pulse absolute inset-0 rounded-full" style="background:${style.color}; opacity:0.5;"></span>
+        <span
+          class="relative flex items-center justify-center rounded-full border-2 border-white font-mono-data text-xs font-bold text-white"
+          style="width:40px; height:40px; background:${style.color}; box-shadow: 0 0 0 4px var(--bg-canvas), 0 0 0 7px ${style.color}, 0 10px 24px rgba(0,0,0,0.4);"
+        >
+          ${hasRating ? selectedRestaurant.googleRating!.toFixed(1) : '★'}
+        </span>
+      </div>
+      <span
+        class="mt-1.5 px-2.5 py-0.5 rounded-full text-xs font-bold whitespace-nowrap"
+        style="background:var(--bg-surface-elevated); color:var(--text-primary); border:1px solid var(--border-subtle); box-shadow:0 4px 12px rgba(0,0,0,0.2);"
+      >
+        ${selectedRestaurant.name}
+      </span>
+    `;
+
+    selectedMarkerRef.current = new maplibregl.Marker({ element: el, anchor: 'center' })
+      .setLngLat(selectedRestaurant.coordinates)
+      .addTo(map);
   }, [selectedRestaurant, pitchMode, activePreset.bearing]);
 
   // Cinematic 360 aerial orbit
@@ -209,73 +364,6 @@ export const Map3D: React.FC<Map3DProps> = ({
       }
     };
   }, [isOrbiting]);
-
-  // Render region-colored 3D map markers
-  useEffect(() => {
-    const map = mapRef.current;
-    if (!map) return;
-
-    markersRef.current.forEach(({ marker }) => marker.remove());
-    markersRef.current.clear();
-
-    restaurants.forEach((restaurant) => {
-      const style = getRegionStyle(restaurant.regionCategory);
-      const isSelected = selectedRestaurant?.id === restaurant.id;
-
-      const hasRating = typeof restaurant.googleRating === 'number';
-      const ratingLabel = hasRating ? `rated ${restaurant.googleRating!.toFixed(1)} stars` : 'verified open via OpenStreetMap';
-      const btn = document.createElement('button');
-      btn.type = 'button';
-      btn.className = 'group relative flex flex-col items-center cursor-pointer border-0 bg-transparent p-0 focus:outline-none';
-      btn.setAttribute(
-        'aria-label',
-        `${restaurant.name} in ${restaurant.city}, ${restaurant.indianState}, ${ratingLabel}`
-      );
-      btn.style.zIndex = isSelected ? '30' : hasRating ? '15' : '10';
-
-      const pulseHtml = restaurant.isNewSpot
-        ? `<span class="pin-pulse absolute inset-0 rounded-full" style="background:${style.color}; opacity:0.45;"></span>`
-        : '';
-
-      const pinSize = isSelected ? 40 : hasRating ? 34 : 26;
-      const pinContent = hasRating ? restaurant.googleRating!.toFixed(1) : '●';
-
-      const selectedRing = isSelected
-        ? `box-shadow: 0 0 0 4px var(--bg-canvas), 0 0 0 7px ${style.color}, 0 10px 24px rgba(0,0,0,0.4); transform: scale(1.22);`
-        : `box-shadow: 0 4px 12px rgba(0,0,0,0.28);`;
-
-      btn.innerHTML = `
-        <div class="relative flex items-center justify-center">
-          ${pulseHtml}
-          <span
-            class="relative flex items-center justify-center rounded-full border-2 border-white font-mono-data text-[11px] font-bold text-white transition-transform duration-200 group-hover:scale-115"
-            style="width:${pinSize}px; height:${pinSize}px; background:${style.color}; ${selectedRing}"
-          >
-            ${pinContent}
-          </span>
-        </div>
-        <span
-          class="mt-1 px-2 py-0.5 rounded-full text-[11px] font-semibold whitespace-nowrap pointer-events-none transition-all duration-150 ${
-            isSelected ? 'opacity-100 translate-y-0' : 'opacity-0 group-hover:opacity-100 -translate-y-0.5'
-          }"
-          style="background:var(--bg-surface-elevated); color:var(--text-primary); border:1px solid var(--border-subtle); box-shadow:0 4px 12px rgba(0,0,0,0.18);"
-        >
-          ${restaurant.name}
-        </span>
-      `;
-
-      btn.addEventListener('click', (e) => {
-        e.stopPropagation();
-        onSelectRestaurant(restaurant);
-      });
-
-      const marker = new maplibregl.Marker({ element: btn, anchor: 'center' })
-        .setLngLat(restaurant.coordinates)
-        .addTo(map);
-
-      markersRef.current.set(restaurant.id, { marker, el: btn });
-    });
-  }, [restaurants, selectedRestaurant, onSelectRestaurant]);
 
   return (
     <div className="relative w-full h-full">

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import {
   ChevronLeft,
   ChevronRight,
@@ -30,6 +30,7 @@ interface SidebarRailProps {
   isCollapsed: boolean;
   onToggleCollapse: () => void;
   cityLabel: string;
+  hasInspectorOpen?: boolean;
 }
 
 const QUICK_FILTERS: { id: QuickFilter; label: string }[] = [
@@ -53,11 +54,21 @@ export const SidebarRail: React.FC<SidebarRailProps> = ({
   isCollapsed,
   onToggleCollapse,
   cityLabel,
+  hasInspectorOpen = false,
 }) => {
+  const [visibleCount, setVisibleCount] = useState(60);
+
+  useEffect(() => {
+    setVisibleCount(60);
+  }, [restaurants]);
+
+  const visibleRestaurants = restaurants.slice(0, visibleCount);
+  const remainingCount = restaurants.length - visibleRestaurants.length;
+
   if (isCollapsed) {
     return (
       <aside
-        className="fixed left-3 z-20 hidden md:block"
+        className={`fixed left-3 z-20 hidden ${hasInspectorOpen ? 'lg:block' : 'md:block'}`}
         style={{ top: 'var(--hud-top, 120px)' }}
       >
         <button
@@ -76,7 +87,9 @@ export const SidebarRail: React.FC<SidebarRailProps> = ({
   return (
     <aside
       aria-label="Filtered Bavarian Indian restaurants"
-      className="fixed left-3 bottom-14 w-[320px] lg:w-[335px] max-w-[calc(100vw-24px)] z-20 hidden md:flex flex-col glass-panel rounded-2xl overflow-hidden"
+      className={`fixed left-3 bottom-14 w-[320px] lg:w-[335px] max-w-[calc(100vw-24px)] z-20 hidden ${
+        hasInspectorOpen ? 'lg:flex' : 'md:flex'
+      } flex-col glass-panel rounded-2xl overflow-hidden`}
       style={{ top: 'var(--hud-top, 120px)' }}
     >
       {/* Header & Collapse */}
@@ -160,7 +173,8 @@ export const SidebarRail: React.FC<SidebarRailProps> = ({
             </p>
           </div>
         ) : (
-          restaurants.map((r) => {
+          <>
+          {visibleRestaurants.map((r) => {
             const region = getRegionStyle(r.regionCategory);
             const isSelected = selectedRestaurant?.id === r.id;
             return (
@@ -242,7 +256,22 @@ export const SidebarRail: React.FC<SidebarRailProps> = ({
                 </div>
               </button>
             );
-          })
+          })}
+          {remainingCount > 0 && (
+            <button
+              type="button"
+              onClick={() => setVisibleCount((c) => c + 60)}
+              className="w-full py-2.5 rounded-xl text-xs font-bold border cursor-pointer transition-opacity hover:opacity-85"
+              style={{
+                background: 'var(--bg-subtle)',
+                borderColor: 'var(--border-subtle)',
+                color: 'var(--text-primary)',
+              }}
+            >
+              Show 60 more ({remainingCount} remaining)
+            </button>
+          )}
+          </>
         )}
       </div>
     </aside>

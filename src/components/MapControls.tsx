@@ -37,7 +37,7 @@ export const MapControls: React.FC<MapControlsProps> = ({
       {/* Bottom-Left Compact Regional Legend */}
       <div
         aria-label="Indian regional cuisine map legend"
-        className="fixed bottom-3 left-3 z-20 hidden sm:flex items-center gap-2.5 flex-wrap glass-panel px-3 py-2 rounded-2xl max-w-[calc(100vw-240px)]"
+        className="fixed bottom-3 left-3 z-20 hidden sm:flex items-center gap-2 lg:gap-2.5 flex-wrap glass-panel px-3 py-1.5 lg:py-2 rounded-2xl max-w-[calc(100vw-300px)] lg:max-w-[calc(100vw-240px)]"
       >
         <span className="text-[11px] font-bold uppercase tracking-wider" style={{ color: 'var(--text-muted)' }}>
           Regions
@@ -56,7 +56,7 @@ export const MapControls: React.FC<MapControlsProps> = ({
 
       {/* Bottom-Right 3D Aerial Controls */}
       <div
-        className={`fixed bottom-12 z-20 flex flex-col gap-1.5 transition-all ${
+        className={`fixed bottom-20 md:bottom-12 z-20 flex flex-col gap-1.5 transition-all ${
           hasInspectorOpen ? 'right-[420px] hidden lg:flex' : 'right-3'
         }`}
         role="group"

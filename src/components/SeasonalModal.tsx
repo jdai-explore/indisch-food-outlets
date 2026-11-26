@@ -39,11 +39,11 @@ export const SeasonalModal: React.FC<SeasonalModalProps> = ({
         role="dialog"
         aria-modal="true"
         aria-labelledby="seasonal-modal-title"
-        className="glass-panel-solid w-full max-w-3xl max-h-[86vh] rounded-3xl flex flex-col overflow-hidden"
+        className="glass-panel-solid w-full max-w-3xl max-h-[90dvh] rounded-3xl flex flex-col overflow-hidden"
         onClick={(e) => e.stopPropagation()}
       >
         <div
-          className="px-6 py-5 border-b flex items-start justify-between gap-4"
+          className="px-4 sm:px-6 py-4 sm:py-5 border-b flex items-start justify-between gap-4"
           style={{ borderColor: 'var(--border-subtle)' }}
         >
           <div>

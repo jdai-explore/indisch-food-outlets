@@ -162,6 +162,18 @@ body,
   animation: pulse-ring 2.2s cubic-bezier(0.22, 1, 0.36, 1) infinite;
 }
 
+/* Responsive Inspector Drawer: Bottom sheet on mobile, floating right HUD on md+ */
+.inspector-sheet {
+  max-height: 78dvh;
+}
+
+@media (min-width: 768px) {
+  .inspector-sheet {
+    top: var(--hud-top, 120px);
+    max-height: none;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .pin-pulse {
     animation: none;

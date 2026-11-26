@@ -73,19 +73,19 @@ export const TopBar: React.FC<TopBarProps> = ({
   return (
     <header ref={headerRef} className="fixed top-3 left-3 right-3 z-30 flex flex-col gap-2 pointer-events-none">
       {/* Main Row */}
-      <div className="glass-panel rounded-2xl px-3.5 py-2.5 flex flex-wrap items-center justify-between gap-2.5 pointer-events-auto">
+      <div className="glass-panel rounded-2xl px-3 py-2 sm:px-3.5 sm:py-2.5 flex flex-wrap items-center justify-between gap-2 sm:gap-2.5 pointer-events-auto">
         {/* Brand */}
-        <div className="flex items-center gap-2.5 shrink-0">
+        <div className="order-1 flex items-center gap-2 sm:gap-2.5 shrink-0">
           <div
-            className="w-9 h-9 rounded-xl flex items-center justify-center text-white font-bold shadow-sm"
+            className="w-8 h-8 sm:w-9 sm:h-9 rounded-xl flex items-center justify-center text-white font-bold shadow-sm"
             style={{ background: 'linear-gradient(135deg, var(--accent-saffron), var(--accent-crimson))' }}
             aria-hidden="true"
           >
-            <Compass className="w-5 h-5" />
+            <Compass className="w-4 h-4 sm:w-5 sm:h-5" />
           </div>
           <div>
             <div className="flex items-center gap-1.5">
-              <span className="font-display text-lg font-bold tracking-tight leading-none">
+              <span className="font-display text-base sm:text-lg font-bold tracking-tight leading-none">
                 SpiceAtlas
               </span>
               <span
@@ -102,7 +102,7 @@ export const TopBar: React.FC<TopBarProps> = ({
         </div>
 
         {/* Search */}
-        <div className="relative flex-1 min-w-[200px] max-w-md">
+        <div className="order-3 md:order-2 relative w-full md:w-auto md:flex-1 md:min-w-[200px] md:max-w-md">
           <Search
             className="w-4 h-4 absolute left-3 top-1/2 -translate-y-1/2 pointer-events-none"
             style={{ color: 'var(--text-muted)' }}
@@ -112,9 +112,9 @@ export const TopBar: React.FC<TopBarProps> = ({
             type="search"
             value={searchQuery}
             onChange={(e) => onSearchChange(e.target.value)}
-            placeholder="Search dish, state (Kerala, Marathi), or city…  (/)"
+            placeholder="Search dish, state (Kerala, Marathi), or city…"
             aria-label="Search restaurants, Indian states, cities, or signature dishes"
-            className="w-full pl-9 pr-8 py-2 rounded-xl text-sm border transition-colors"
+            className="w-full pl-9 pr-8 py-1.5 sm:py-2 rounded-xl text-xs sm:text-sm border transition-colors"
             style={{
               background: 'var(--bg-subtle)',
               color: 'var(--text-primary)',
@@ -134,12 +134,12 @@ export const TopBar: React.FC<TopBarProps> = ({
           )}
         </div>
 
-        {/* Action Pills */}
-        <div className="flex items-center gap-1.5 flex-wrap">
+        {/* Culinary Guide & Seasonal Chips */}
+        <div className="order-4 md:order-3 w-full md:w-auto flex items-center gap-1.5 overflow-x-auto no-scrollbar">
           <button
             type="button"
             onClick={onOpenBeyondClassics}
-            className="inline-flex items-center gap-1.5 px-3 py-2 rounded-xl text-xs font-semibold cursor-pointer transition-transform active:scale-95"
+            className="shrink-0 inline-flex items-center gap-1.5 px-2.5 sm:px-3 py-1.5 sm:py-2 rounded-xl text-[11px] sm:text-xs font-semibold cursor-pointer transition-transform active:scale-95"
             style={{
               background: 'var(--accent-crimson-soft)',
               color: 'var(--accent-crimson)',
@@ -153,7 +153,7 @@ export const TopBar: React.FC<TopBarProps> = ({
           <button
             type="button"
             onClick={onOpenSeasonal}
-            className="inline-flex items-center gap-1.5 px-3 py-2 rounded-xl text-xs font-semibold cursor-pointer transition-transform active:scale-95"
+            className="shrink-0 inline-flex items-center gap-1.5 px-2.5 sm:px-3 py-1.5 sm:py-2 rounded-xl text-[11px] sm:text-xs font-semibold cursor-pointer transition-transform active:scale-95"
             style={{
               background: 'var(--accent-emerald-soft)',
               color: 'var(--accent-emerald)',
@@ -161,11 +161,12 @@ export const TopBar: React.FC<TopBarProps> = ({
             }}
           >
             <Sparkles className="w-3.5 h-3.5" />
-            <span className="hidden md:inline">Seasonal &amp; Offers</span>
-            <span className="md:hidden">Seasonal</span>
+            <span>Seasonal &amp; Offers</span>
           </button>
+        </div>
 
-          {/* View Mode Switch */}
+        {/* View Mode & Theme Controls */}
+        <div className="order-2 md:order-4 flex items-center gap-1.5 ml-auto md:ml-0 shrink-0">
           <div
             className="inline-flex p-0.5 rounded-xl border"
             style={{ background: 'var(--bg-subtle)', borderColor: 'var(--border-subtle)' }}
@@ -176,7 +177,8 @@ export const TopBar: React.FC<TopBarProps> = ({
               type="button"
               onClick={() => onToggleViewMode('map')}
               aria-pressed={viewMode === 'map'}
-              className="inline-flex items-center gap-1 px-2.5 py-1.5 rounded-lg text-xs font-semibold cursor-pointer transition-colors"
+              aria-label="3D Map view"
+              className="inline-flex items-center gap-1 px-2 sm:px-2.5 py-1.5 rounded-lg text-xs font-semibold cursor-pointer transition-colors"
               style={{
                 background: viewMode === 'map' ? 'var(--bg-surface-solid)' : 'transparent',
                 color: viewMode === 'map' ? 'var(--text-primary)' : 'var(--text-muted)',
@@ -190,7 +192,8 @@ export const TopBar: React.FC<TopBarProps> = ({
               type="button"
               onClick={() => onToggleViewMode('list')}
               aria-pressed={viewMode === 'list'}
-              className="inline-flex items-center gap-1 px-2.5 py-1.5 rounded-lg text-xs font-semibold cursor-pointer transition-colors"
+              aria-label="Accessible List view"
+              className="inline-flex items-center gap-1 px-2 sm:px-2.5 py-1.5 rounded-lg text-xs font-semibold cursor-pointer transition-colors"
               style={{
                 background: viewMode === 'list' ? 'var(--bg-surface-solid)' : 'transparent',
                 color: viewMode === 'list' ? 'var(--text-primary)' : 'var(--text-muted)',

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Globe, MapPin, Phone, Sparkles, Star, Tag } from 'lucide-react';
 import { IndianRegionCategory, Restaurant } from '../types/restaurant';
 import { getRegionStyle, REGION_STYLES } from '../utils/regions';
@@ -35,6 +35,15 @@ export const AccessibleGridView: React.FC<AccessibleGridViewProps> = ({
   onSelectQuickFilter,
   cityLabel,
 }) => {
+  const [visibleCount, setVisibleCount] = useState(60);
+
+  useEffect(() => {
+    setVisibleCount(60);
+  }, [restaurants]);
+
+  const visibleRestaurants = restaurants.slice(0, visibleCount);
+  const remainingCount = restaurants.length - visibleRestaurants.length;
+
   return (
     <main
       id="main-content"
@@ -109,8 +118,9 @@ export const AccessibleGridView: React.FC<AccessibleGridViewProps> = ({
           </p>
         </div>
       ) : (
+        <>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-          {restaurants.map((r) => {
+          {visibleRestaurants.map((r) => {
             const region = getRegionStyle(r.regionCategory);
             const isSelected = selectedRestaurant?.id === r.id;
             return (
@@ -239,6 +249,24 @@ export const AccessibleGridView: React.FC<AccessibleGridViewProps> = ({
             );
           })}
         </div>
+        {remainingCount > 0 && (
+          <div className="mt-6 flex justify-center">
+            <button
+              type="button"
+              onClick={() => setVisibleCount((c) => c + 60)}
+              className="px-6 py-3 rounded-2xl text-xs sm:text-sm font-bold border cursor-pointer transition-opacity hover:opacity-85"
+              style={{
+                background: 'var(--bg-surface-solid)',
+                borderColor: 'var(--border-strong)',
+                color: 'var(--text-primary)',
+                boxShadow: 'var(--shadow-card)',
+              }}
+            >
+              Load 60 more kitchens ({remainingCount} remaining)
+            </button>
+          </div>
+        )}
+        </>
       )}
     </main>
   );
