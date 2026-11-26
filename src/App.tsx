@@ -103,7 +103,8 @@ export function App() {
           .join(' ')
           .toLowerCase();
 
-        return haystack.includes(q);
+        const tokens = q.split(/\s+/).filter(Boolean);
+        return tokens.every((tok) => haystack.includes(tok));
       })
       .sort((a, b) => {
         const ra = a.googleRating ?? -1;

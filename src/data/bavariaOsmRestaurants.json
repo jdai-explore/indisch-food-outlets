@@ -1,5 +1,34 @@
 [
   {
+    "id": "jsonld-the-spice-route-81371",
+    "name": "The Spice Route",
+    "city": "Munich",
+    "district": null,
+    "address": "Schäftlarnstraße 166, 81371 München",
+    "coordinates": [
+      11.547156,
+      48.102973
+    ],
+    "indianState": "Indian",
+    "regionCategory": "North Indian & Tandoori",
+    "cuisineStyle": "Official Website Branch (Spice Route)",
+    "phone": "+49 155 60684508",
+    "website": "https://thespiceroute.de/",
+    "establishedNote": "Verified branch harvested from Spice Route official site",
+    "hoursNote": "Open for dine-in / takeaway / delivery — see Wolt link for live hours",
+    "isStreetFood": false,
+    "isNewSpot": true,
+    "positiveReviews": [
+      {
+        "quote": "Official Spice Route branch in Munich offering authentic regional dishes.",
+        "reviewerType": "Official Multi-Branch Harvest"
+      }
+    ],
+    "signatureDishes": [],
+    "authenticityNote": "Verified branch from https://thespiceroute.de/.",
+    "dataSource": "osm-verified"
+  },
+  {
     "id": "jsonld-swaad-assal-marathi-81673",
     "name": "Swaad - Assal Marathi!",
     "city": "Munich",
@@ -3965,9 +3994,38 @@
     "regionCategory": "North Indian & Tandoori",
     "cuisineStyle": "Regional Indian · Landkreis Altötting",
     "phone": "+49 8677 9165225",
-    "website": "https://maharani-burghausen.de",
+    "website": null,
     "establishedNote": "Verified via 96-district Bavaria sweep (Landkreis Altötting)",
     "hoursNote": "Su-Fr 11:30-14:30,17:30-23:00; Sa 17:30-23:00",
+    "isStreetFood": false,
+    "isNewSpot": true,
+    "positiveReviews": [
+      {
+        "quote": "Verified Indian kitchen serving Burghausen (Landkreis Altötting).",
+        "reviewerType": "96-District Sweep"
+      }
+    ],
+    "signatureDishes": [],
+    "authenticityNote": "Verified in Landkreis Altötting via Bavaria district audit.",
+    "dataSource": "osm-verified"
+  },
+  {
+    "id": "dist-maharani-burghausen-84489",
+    "name": "Maharani Burghausen",
+    "city": "Burghausen",
+    "district": "Landkreis Altötting",
+    "address": "Stadtplatz 44, 84489 Burghausen",
+    "coordinates": [
+      12.832436,
+      48.158795
+    ],
+    "indianState": "Indian",
+    "regionCategory": "North Indian & Tandoori",
+    "cuisineStyle": "Regional Indian · Landkreis Altötting",
+    "phone": null,
+    "website": "https://maharani-burghausen.de",
+    "establishedNote": "Verified via 96-district Bavaria sweep (Landkreis Altötting)",
+    "hoursNote": "Check website or call for daily hours",
     "isStreetFood": false,
     "isNewSpot": true,
     "positiveReviews": [
@@ -4344,7 +4402,7 @@
     "phone": "+49 8421 9345562",
     "website": "https://eichstaett-maharaja.de",
     "establishedNote": "Verified via 96-district Bavaria sweep (Landkreis Eichstätt)",
-    "hoursNote": "Tu-Su 11:30-14:30,17:00-22:00; Mo 17:00-22:00",
+    "hoursNote": "Tu 17:15-22:00; We-Mo,PH 11:00-14:15,17:15-22:00",
     "isStreetFood": false,
     "isNewSpot": true,
     "positiveReviews": [
@@ -4374,6 +4432,35 @@
     "website": "https://restaurantsafran.de",
     "establishedNote": "Verified via 96-district Bavaria sweep (Landkreis Günzburg)",
     "hoursNote": "Mo-Su 11:30-14:30,17:30-22:30",
+    "isStreetFood": false,
+    "isNewSpot": true,
+    "positiveReviews": [
+      {
+        "quote": "Verified Indian kitchen serving Günzburg (Landkreis Günzburg).",
+        "reviewerType": "96-District Sweep"
+      }
+    ],
+    "signatureDishes": [],
+    "authenticityNote": "Verified in Landkreis Günzburg via Bavaria district audit.",
+    "dataSource": "osm-verified"
+  },
+  {
+    "id": "dist-namaste-india-g-nzburg-89312",
+    "name": "Namaste India Günzburg",
+    "city": "Günzburg",
+    "district": "Landkreis Günzburg",
+    "address": "Hofgasse 11, 89312 Günzburg",
+    "coordinates": [
+      10.277646,
+      48.455046
+    ],
+    "indianState": "Indian",
+    "regionCategory": "North Indian & Tandoori",
+    "cuisineStyle": "Regional Indian · Landkreis Günzburg",
+    "phone": null,
+    "website": null,
+    "establishedNote": "Verified via 96-district Bavaria sweep (Landkreis Günzburg)",
+    "hoursNote": "Check website or call for daily hours",
     "isStreetFood": false,
     "isNewSpot": true,
     "positiveReviews": [
@@ -4766,6 +4853,37 @@
     "reviewCountLabel": "49+ Wolt ratings"
   },
   {
+    "id": "wolt-650d6d2001ab395e684fea9f",
+    "name": "Delhi Mehek Restaurant",
+    "city": "Munich",
+    "district": null,
+    "address": "Ungererstraße 65, 80805 München",
+    "coordinates": [
+      11.594419,
+      48.171263
+    ],
+    "indianState": "Delhi & North India",
+    "regionCategory": "North Indian & Tandoori",
+    "cuisineStyle": "The flavors of India in your home 🍛",
+    "phone": "+49 89 361 967 80",
+    "website": "https://www.delhimehek.de/",
+    "establishedNote": "Active Live Kitchen (Wolt Verified)",
+    "hoursNote": "Open for dine-in / takeaway / delivery — see Wolt link for live hours",
+    "isStreetFood": false,
+    "isNewSpot": false,
+    "positiveReviews": [
+      {
+        "quote": "The flavors of India in your home 🍛",
+        "reviewerType": "Live Platform Listing"
+      }
+    ],
+    "signatureDishes": [],
+    "authenticityNote": "Verified active Indian restaurant via Wolt live index.",
+    "dataSource": "osm-verified",
+    "googleRating": 4.3,
+    "reviewCountLabel": "21+ Wolt ratings"
+  },
+  {
     "id": "wolt-69413c3682b8f8204a7d2c65",
     "name": "Mythri Delights",
     "city": "Munich",
@@ -4857,66 +4975,6 @@
     "reviewCountLabel": "67+ Wolt ratings"
   },
   {
-    "id": "wolt-618bb285473e27566d90e2a2",
-    "name": "Chandani Chowk",
-    "city": "Munich",
-    "district": null,
-    "address": "Rosenheimer Straße 10, 81669 München",
-    "coordinates": [
-      11.589106,
-      48.131454
-    ],
-    "indianState": "Indian",
-    "regionCategory": "North Indian & Tandoori",
-    "cuisineStyle": "Traditional Indian cousine",
-    "phone": "+49 89 237 877 10",
-    "website": "https://www.restaurant-chandani-chowk.de/",
-    "establishedNote": "Active Live Kitchen (Wolt Verified)",
-    "hoursNote": "Open for dine-in / takeaway / delivery — see Wolt link for live hours",
-    "isStreetFood": false,
-    "isNewSpot": false,
-    "positiveReviews": [
-      {
-        "quote": "Traditional Indian cousine",
-        "reviewerType": "Live Platform Listing"
-      }
-    ],
-    "signatureDishes": [],
-    "authenticityNote": "Verified active Indian restaurant via Wolt live index.",
-    "dataSource": "osm-verified",
-    "googleRating": 4.2,
-    "reviewCountLabel": "108+ Wolt ratings"
-  },
-  {
-    "id": "wolt-6524157feccfb54c515bd9df",
-    "name": "Spiceland",
-    "city": "Munich",
-    "district": null,
-    "address": "Sebastian-Bauer-Straße 12, 81737 München",
-    "coordinates": [
-      11.629521,
-      48.098383
-    ],
-    "indianState": "Indian",
-    "regionCategory": "North Indian & Tandoori",
-    "cuisineStyle": "Enjoy indian spices 🏝️",
-    "phone": null,
-    "website": "https://spice-land.de/",
-    "establishedNote": "Active Live Kitchen (Wolt Verified)",
-    "hoursNote": "Open for dine-in / takeaway / delivery — see Wolt link for live hours",
-    "isStreetFood": false,
-    "isNewSpot": false,
-    "positiveReviews": [
-      {
-        "quote": "Enjoy indian spices 🏝️",
-        "reviewerType": "Live Platform Listing"
-      }
-    ],
-    "signatureDishes": [],
-    "authenticityNote": "Verified active Indian restaurant via Wolt live index.",
-    "dataSource": "osm-verified"
-  },
-  {
     "id": "wolt-647086097fa568444f9284b3",
     "name": "Restaurant Kerala",
     "city": "Munich",
@@ -4948,66 +5006,122 @@
     "reviewCountLabel": "76+ Wolt ratings"
   },
   {
-    "id": "wolt-697785de449b454efcde690d",
-    "name": "Sahyadri Indian Restaurant",
+    "id": "wolt-6524157feccfb54c515bd9df",
+    "name": "Spiceland",
     "city": "Munich",
     "district": null,
-    "address": "Von-Stauffenberg-Straße 19, 82008 Unterhaching",
+    "address": "Sebastian-Bauer-Straße 12, 81737 München",
     "coordinates": [
-      11.620192,
-      48.06572
+      11.629521,
+      48.098383
     ],
     "indianState": "Indian",
     "regionCategory": "North Indian & Tandoori",
-    "cuisineStyle": "Are you in the mood for something delicious from Sahyadri Indian Restaurant? 🍛✨",
+    "cuisineStyle": "Enjoy indian spices 🏝️",
     "phone": null,
-    "website": "https://eat.allo.restaurant/restaurant/sahyadri-indian-restaurent",
+    "website": "https://spice-land.de/",
     "establishedNote": "Active Live Kitchen (Wolt Verified)",
     "hoursNote": "Open for dine-in / takeaway / delivery — see Wolt link for live hours",
     "isStreetFood": false,
     "isNewSpot": false,
     "positiveReviews": [
       {
-        "quote": "Are you in the mood for something delicious from Sahyadri Indian Restaurant? 🍛✨",
+        "quote": "Enjoy indian spices 🏝️",
         "reviewerType": "Live Platform Listing"
       }
     ],
     "signatureDishes": [],
     "authenticityNote": "Verified active Indian restaurant via Wolt live index.",
-    "dataSource": "osm-verified",
-    "googleRating": 4.5,
-    "reviewCountLabel": "30+ Wolt ratings"
+    "dataSource": "osm-verified"
   },
   {
-    "id": "wolt-69fde69647935d26a075cb25",
-    "name": "Bangalore Bites",
+    "id": "wolt-6a1ee57ceb15d297246b0260",
+    "name": "Green Chillies",
     "city": "Munich",
     "district": null,
-    "address": "Münchner Straße 107, 82008 Unterhaching",
+    "address": "Hanns-Seidel-Platz 1, Munich",
     "coordinates": [
-      11.60573,
-      48.071871
+      11.647016,
+      48.100525
+    ],
+    "indianState": "Indian",
+    "regionCategory": "North Indian & Tandoori",
+    "cuisineStyle": "Aromatic Indian curries and spices 🍛",
+    "phone": null,
+    "website": "https://wolt.com/en/deu/munich/restaurant/green-chillies",
+    "establishedNote": "Active Live Kitchen (Wolt Verified)",
+    "hoursNote": "Open for dine-in / takeaway / delivery — see Wolt link for live hours",
+    "isStreetFood": false,
+    "isNewSpot": false,
+    "positiveReviews": [
+      {
+        "quote": "Aromatic Indian curries and spices 🍛",
+        "reviewerType": "Live Platform Listing"
+      }
+    ],
+    "signatureDishes": [],
+    "authenticityNote": "Verified active Indian restaurant via Wolt live index.",
+    "dataSource": "osm-verified"
+  },
+  {
+    "id": "wolt-697357b6235b8066f7412942",
+    "name": "Moti Mahal",
+    "city": "Munich",
+    "district": null,
+    "address": "Röntgenstraße 5, Munich",
+    "coordinates": [
+      11.608585,
+      48.143886
+    ],
+    "indianState": "Indian",
+    "regionCategory": "North Indian & Tandoori",
+    "cuisineStyle": "Are you in the mood for something delicious from Moti Mahal? 🍛✨",
+    "phone": null,
+    "website": "https://wolt.com/en/deu/munich/restaurant/moti-mahal-mn",
+    "establishedNote": "Active Live Kitchen (Wolt Verified)",
+    "hoursNote": "Open for dine-in / takeaway / delivery — see Wolt link for live hours",
+    "isStreetFood": false,
+    "isNewSpot": false,
+    "positiveReviews": [
+      {
+        "quote": "Are you in the mood for something delicious from Moti Mahal? 🍛✨",
+        "reviewerType": "Live Platform Listing"
+      }
+    ],
+    "signatureDishes": [],
+    "authenticityNote": "Verified active Indian restaurant via Wolt live index.",
+    "dataSource": "osm-verified"
+  },
+  {
+    "id": "wolt-6a5f7225c7321c58c0337b11",
+    "name": "Bindaas",
+    "city": "Munich",
+    "district": null,
+    "address": "This is a virtual venue, Munich",
+    "coordinates": [
+      11.591199,
+      48.126408
     ],
     "indianState": "Urban Indian Street Food & Chaat",
     "regionCategory": "Street Food & Chaat",
-    "cuisineStyle": "Authentic Indian spices and flavors 🍛",
+    "cuisineStyle": "Authentic Indian cuisine full of bold flavors✨",
     "phone": null,
-    "website": "https://wolt.com/en/deu/munich/restaurant/bangalore-bites-1",
+    "website": "https://wolt.com/en/deu/munich/restaurant/bindaas-2",
     "establishedNote": "Active Live Kitchen (Wolt Verified)",
     "hoursNote": "Open for dine-in / takeaway / delivery — see Wolt link for live hours",
     "isStreetFood": true,
-    "isNewSpot": true,
+    "isNewSpot": false,
     "positiveReviews": [
       {
-        "quote": "Authentic Indian spices and flavors 🍛",
+        "quote": "Authentic Indian cuisine full of bold flavors✨",
         "reviewerType": "Live Platform Listing"
       }
     ],
     "signatureDishes": [],
     "authenticityNote": "Verified active Indian restaurant via Wolt live index.",
     "dataSource": "osm-verified",
-    "googleRating": 3.3,
-    "reviewCountLabel": "26+ Wolt ratings"
+    "googleRating": 3.8,
+    "reviewCountLabel": "50+ Wolt ratings"
   },
   {
     "id": "wolt-669e2a902a5ac71b81f15cd2",
@@ -5041,35 +5155,6 @@
     "reviewCountLabel": "39+ Wolt ratings"
   },
   {
-    "id": "wolt-697357b6235b8066f7412942",
-    "name": "Moti Mahal",
-    "city": "Munich",
-    "district": null,
-    "address": "Röntgenstraße 5, Munich",
-    "coordinates": [
-      11.608585,
-      48.143886
-    ],
-    "indianState": "Indian",
-    "regionCategory": "North Indian & Tandoori",
-    "cuisineStyle": "Are you in the mood for something delicious from Moti Mahal? 🍛✨",
-    "phone": null,
-    "website": "https://wolt.com/en/deu/munich/restaurant/moti-mahal-mn",
-    "establishedNote": "Active Live Kitchen (Wolt Verified)",
-    "hoursNote": "Open for dine-in / takeaway / delivery — see Wolt link for live hours",
-    "isStreetFood": false,
-    "isNewSpot": false,
-    "positiveReviews": [
-      {
-        "quote": "Are you in the mood for something delicious from Moti Mahal? 🍛✨",
-        "reviewerType": "Live Platform Listing"
-      }
-    ],
-    "signatureDishes": [],
-    "authenticityNote": "Verified active Indian restaurant via Wolt live index.",
-    "dataSource": "osm-verified"
-  },
-  {
     "id": "wolt-6964d7ad792f3acb9e0262d1",
     "name": "Restauant Taj",
     "city": "Munich",
@@ -5097,279 +5182,6 @@
     "signatureDishes": [],
     "authenticityNote": "Verified active Indian restaurant via Wolt live index.",
     "dataSource": "osm-verified"
-  },
-  {
-    "id": "wolt-659bc80648d8ec0e1b0fa924",
-    "name": "Indisches Fastfood",
-    "city": "Munich",
-    "district": null,
-    "address": "Barer Straße 46, 80799 München",
-    "coordinates": [
-      11.572548,
-      48.149495
-    ],
-    "indianState": "Indian",
-    "regionCategory": "North Indian & Tandoori",
-    "cuisineStyle": "Authentic indian cuisine for you 🇮🇳🍛",
-    "phone": "+49 89 273 713 34",
-    "website": "https://wolt.com/en/deu/munich/restaurant/indisches-fastfood",
-    "establishedNote": "Active Live Kitchen (Wolt Verified)",
-    "hoursNote": "Open for dine-in / takeaway / delivery — see Wolt link for live hours",
-    "isStreetFood": false,
-    "isNewSpot": false,
-    "positiveReviews": [
-      {
-        "quote": "Authentic indian cuisine for you 🇮🇳🍛",
-        "reviewerType": "Live Platform Listing"
-      }
-    ],
-    "signatureDishes": [],
-    "authenticityNote": "Verified active Indian restaurant via Wolt live index.",
-    "dataSource": "osm-verified",
-    "googleRating": 3.6,
-    "reviewCountLabel": "18+ Wolt ratings"
-  },
-  {
-    "id": "wolt-617287415a014f9bd221cc66",
-    "name": "Rasoi Restaurant",
-    "city": "Munich",
-    "district": null,
-    "address": "Adolf-Kolping-Straße 16, 80336 München",
-    "coordinates": [
-      11.561738,
-      48.138249
-    ],
-    "indianState": "Indian",
-    "regionCategory": "North Indian & Tandoori",
-    "cuisineStyle": "Indian spice 🇮🇳",
-    "phone": null,
-    "website": "https://www.rasoi-restaurant.de/",
-    "establishedNote": "Active Live Kitchen (Wolt Verified)",
-    "hoursNote": "Open for dine-in / takeaway / delivery — see Wolt link for live hours",
-    "isStreetFood": false,
-    "isNewSpot": false,
-    "positiveReviews": [
-      {
-        "quote": "Indian spice 🇮🇳",
-        "reviewerType": "Live Platform Listing"
-      }
-    ],
-    "signatureDishes": [],
-    "authenticityNote": "Verified active Indian restaurant via Wolt live index.",
-    "dataSource": "osm-verified",
-    "googleRating": 3.4,
-    "reviewCountLabel": "28+ Wolt ratings"
-  },
-  {
-    "id": "wolt-67b48d34c49ac90920d65a3e",
-    "name": "INDIAN LOVE STORY RESTAURANT AND STREET FOOD",
-    "city": "Munich",
-    "district": null,
-    "address": "Tal 28, 80331 München",
-    "coordinates": [
-      11.579856,
-      48.135576
-    ],
-    "indianState": "Urban Indian Street Food & Chaat",
-    "regionCategory": "Street Food & Chaat",
-    "cuisineStyle": "Indian Love Story 🍲",
-    "phone": "+49 89 51578430",
-    "website": "https://wolt.com/en/deu/munich/restaurant/indian-love-story-restaurant-and-street-food",
-    "establishedNote": "Active Live Kitchen (Wolt Verified)",
-    "hoursNote": "Open for dine-in / takeaway / delivery — see Wolt link for live hours",
-    "isStreetFood": true,
-    "isNewSpot": true,
-    "positiveReviews": [
-      {
-        "quote": "Indian Love Story 🍲",
-        "reviewerType": "Live Platform Listing"
-      }
-    ],
-    "signatureDishes": [],
-    "authenticityNote": "Verified active Indian restaurant via Wolt live index.",
-    "dataSource": "osm-verified"
-  },
-  {
-    "id": "wolt-698b658c926257016342f3ed",
-    "name": "Indisch Curry Service",
-    "city": "Munich",
-    "district": null,
-    "address": "Kantstr. 26, Munich",
-    "coordinates": [
-      11.566265,
-      48.178245
-    ],
-    "indianState": "Indian",
-    "regionCategory": "North Indian & Tandoori",
-    "cuisineStyle": "Traditional Indian dishes and much more 🍛 🍕 🍲",
-    "phone": null,
-    "website": "https://wolt.com/en/deu/munich/restaurant/indisch-curry-service-kantstr",
-    "establishedNote": "Active Live Kitchen (Wolt Verified)",
-    "hoursNote": "Open for dine-in / takeaway / delivery — see Wolt link for live hours",
-    "isStreetFood": false,
-    "isNewSpot": false,
-    "positiveReviews": [
-      {
-        "quote": "Traditional Indian dishes and much more 🍛 🍕 🍲",
-        "reviewerType": "Live Platform Listing"
-      }
-    ],
-    "signatureDishes": [],
-    "authenticityNote": "Verified active Indian restaurant via Wolt live index.",
-    "dataSource": "osm-verified",
-    "googleRating": 3.8,
-    "reviewCountLabel": "19+ Wolt ratings"
-  },
-  {
-    "id": "wolt-6a902705032af1e96b458acf",
-    "name": "Khana Khazana",
-    "city": "Munich",
-    "district": null,
-    "address": "Theresienstraße 54, 80333 München",
-    "coordinates": [
-      11.573852,
-      48.148576
-    ],
-    "indianState": "Urban Indian Street Food & Chaat",
-    "regionCategory": "Street Food & Chaat",
-    "cuisineStyle": "Spicy, aromatic, authentic – Khana Khazana",
-    "phone": "+49 89 215 663 33",
-    "website": "https://khanakhazana.eu/",
-    "establishedNote": "Active Live Kitchen (Wolt Verified)",
-    "hoursNote": "Open for dine-in / takeaway / delivery — see Wolt link for live hours",
-    "isStreetFood": true,
-    "isNewSpot": false,
-    "positiveReviews": [
-      {
-        "quote": "Spicy, aromatic, authentic – Khana Khazana",
-        "reviewerType": "Live Platform Listing"
-      }
-    ],
-    "signatureDishes": [],
-    "authenticityNote": "Verified active Indian restaurant via Wolt live index.",
-    "dataSource": "osm-verified"
-  },
-  {
-    "id": "wolt-67fe6eb32f26d5000930c736",
-    "name": "Ambari  - Traditional Indian Vegetarian Restaurant",
-    "city": "Munich",
-    "district": null,
-    "address": "Dianastraße 1, Munich",
-    "coordinates": [
-      11.595091,
-      48.147523
-    ],
-    "indianState": "Indian",
-    "regionCategory": "North Indian & Tandoori",
-    "cuisineStyle": "Are you in the mood for something delicious from Ambari? 🇮🇳🍛🥖🍰",
-    "phone": null,
-    "website": "https://wolt.com/en/deu/munich/restaurant/ambari-traditional-indian-vegetarian-restaurant-dianastrasse",
-    "establishedNote": "Active Live Kitchen (Wolt Verified)",
-    "hoursNote": "Open for dine-in / takeaway / delivery — see Wolt link for live hours",
-    "isStreetFood": false,
-    "isNewSpot": false,
-    "positiveReviews": [
-      {
-        "quote": "Are you in the mood for something delicious from Ambari? 🇮🇳🍛🥖🍰",
-        "reviewerType": "Live Platform Listing"
-      }
-    ],
-    "signatureDishes": [],
-    "authenticityNote": "Verified active Indian restaurant via Wolt live index.",
-    "dataSource": "osm-verified"
-  },
-  {
-    "id": "wolt-65a527cdaf83893fffb1c796",
-    "name": "Indisch Curry Service",
-    "city": "Munich",
-    "district": null,
-    "address": "Forstenrieder Allee 195, München",
-    "coordinates": [
-      11.494447,
-      48.083364
-    ],
-    "indianState": "Indian",
-    "regionCategory": "North Indian & Tandoori",
-    "cuisineStyle": "Get a taste of India 🍛",
-    "phone": "+49 89 7459581",
-    "website": "https://www.indischcurry123.de/",
-    "establishedNote": "Active Live Kitchen (Wolt Verified)",
-    "hoursNote": "Open for dine-in / takeaway / delivery — see Wolt link for live hours",
-    "isStreetFood": false,
-    "isNewSpot": false,
-    "positiveReviews": [
-      {
-        "quote": "Get a taste of India 🍛",
-        "reviewerType": "Live Platform Listing"
-      }
-    ],
-    "signatureDishes": [],
-    "authenticityNote": "Verified active Indian restaurant via Wolt live index.",
-    "dataSource": "osm-verified",
-    "googleRating": 4.4,
-    "reviewCountLabel": "18+ Wolt ratings"
-  },
-  {
-    "id": "wolt-628f67298a0c2c7fd1d406b7",
-    "name": "Shiva",
-    "city": "Munich",
-    "district": null,
-    "address": "Theresienstraße 124, 80333 München",
-    "coordinates": [
-      11.565228,
-      48.15223
-    ],
-    "indianState": "Indian",
-    "regionCategory": "North Indian & Tandoori",
-    "cuisineStyle": "Get in touch with India",
-    "phone": "+49 89 5232 888",
-    "website": "http://www.shiva-muenchen.de",
-    "establishedNote": "Active Live Kitchen (Wolt Verified)",
-    "hoursNote": "Open for dine-in / takeaway / delivery — see Wolt link for live hours",
-    "isStreetFood": false,
-    "isNewSpot": false,
-    "positiveReviews": [
-      {
-        "quote": "Get in touch with India",
-        "reviewerType": "Live Platform Listing"
-      }
-    ],
-    "signatureDishes": [],
-    "authenticityNote": "Verified active Indian restaurant via Wolt live index.",
-    "dataSource": "osm-verified",
-    "googleRating": 4.3,
-    "reviewCountLabel": "15+ Wolt ratings"
-  },
-  {
-    "id": "wolt-67126b4ab4e6cb4f55c49484",
-    "name": "Maharani im Stiglmaierplatz",
-    "city": "Munich",
-    "district": null,
-    "address": "Rottmannstraße 24, 80333 München",
-    "coordinates": [
-      11.559181,
-      48.148995
-    ],
-    "indianState": "Indian",
-    "regionCategory": "North Indian & Tandoori",
-    "cuisineStyle": "Indian delicacies 🥘",
-    "phone": "+49 89 527912",
-    "website": "https://www.maharanimunchen.de/",
-    "establishedNote": "Active Live Kitchen (Wolt Verified)",
-    "hoursNote": "Open for dine-in / takeaway / delivery — see Wolt link for live hours",
-    "isStreetFood": false,
-    "isNewSpot": false,
-    "positiveReviews": [
-      {
-        "quote": "Indian delicacies 🥘",
-        "reviewerType": "Live Platform Listing"
-      }
-    ],
-    "signatureDishes": [],
-    "authenticityNote": "Verified active Indian restaurant via Wolt live index.",
-    "dataSource": "osm-verified",
-    "googleRating": 4.3,
-    "reviewCountLabel": "78+ Wolt ratings"
   },
   {
     "id": "wolt-60ca11a35790f0f9cfa85e08",
@@ -5523,6 +5335,37 @@
     "reviewCountLabel": "19+ Wolt ratings"
   },
   {
+    "id": "wolt-6a313cc994b30d001f454250",
+    "name": "Malgudi Indian Restaurant",
+    "city": "Munich",
+    "district": null,
+    "address": "Elsenheimerstraße 2, Munich",
+    "coordinates": [
+      11.518305,
+      48.140884
+    ],
+    "indianState": "Tamil Nadu & Kerala (South India)",
+    "regionCategory": "South Indian",
+    "cuisineStyle": "Aromatic curries and South Indian flair 🍛",
+    "phone": null,
+    "website": "https://wolt.com/en/deu/munich/restaurant/malgudi-indian-restaurant",
+    "establishedNote": "Active Live Kitchen (Wolt Verified)",
+    "hoursNote": "Open for dine-in / takeaway / delivery — see Wolt link for live hours",
+    "isStreetFood": false,
+    "isNewSpot": false,
+    "positiveReviews": [
+      {
+        "quote": "Aromatic curries and South Indian flair 🍛",
+        "reviewerType": "Live Platform Listing"
+      }
+    ],
+    "signatureDishes": [],
+    "authenticityNote": "Verified active Indian restaurant via Wolt live index.",
+    "dataSource": "osm-verified",
+    "googleRating": 4.4,
+    "reviewCountLabel": "18+ Wolt ratings"
+  },
+  {
     "id": "wolt-679123c1e8633708b32ce9e2",
     "name": "Daily Tadka Landsbergerstraße",
     "city": "Munich",
@@ -5587,7 +5430,7 @@
     "name": "Maharaja München",
     "city": "Munich",
     "district": null,
-    "address": "Blutenburgstraße 79, Munich",
+    "address": "Blutenburgstraße 79, 80634 München",
     "coordinates": [
       11.536012,
       48.151104
@@ -5595,8 +5438,8 @@
     "indianState": "Indian",
     "regionCategory": "North Indian & Tandoori",
     "cuisineStyle": "Taste the Exquisite India!",
-    "phone": null,
-    "website": "https://wolt.com/en/deu/munich/restaurant/maharajaa",
+    "phone": "+49 89 13012482",
+    "website": "https://restaurantmaharajamuenchen.de/",
     "establishedNote": "Active Live Kitchen (Wolt Verified)",
     "hoursNote": "Open for dine-in / takeaway / delivery — see Wolt link for live hours",
     "isStreetFood": false,
@@ -5676,27 +5519,211 @@
     "reviewCountLabel": "33+ Wolt ratings"
   },
   {
-    "id": "wolt-690a2678f90e7c09b591824f",
-    "name": "Sidhartha Food & more",
+    "id": "wolt-6569f3cd07d6e3698422470a",
+    "name": "Madam Chutney - Sendlinger Straße",
     "city": "Munich",
     "district": null,
-    "address": "Flößergasse 5c, Munich",
+    "address": "Sendlinger Straße 45, 80331 München",
     "coordinates": [
-      11.538116,
-      48.105525
+      11.568217,
+      48.134174
+    ],
+    "indianState": "Urban Indian Street Food & Chaat",
+    "regionCategory": "Street Food & Chaat",
+    "cuisineStyle": "Indian street kitchen - from our family to yours",
+    "phone": null,
+    "website": "https://www.madamchutney.com/",
+    "establishedNote": "Active Live Kitchen (Wolt Verified)",
+    "hoursNote": "Open for dine-in / takeaway / delivery — see Wolt link for live hours",
+    "isStreetFood": true,
+    "isNewSpot": false,
+    "positiveReviews": [
+      {
+        "quote": "Indian street kitchen - from our family to yours",
+        "reviewerType": "Live Platform Listing"
+      }
+    ],
+    "signatureDishes": [],
+    "authenticityNote": "Verified active Indian restaurant via Wolt live index.",
+    "dataSource": "osm-verified",
+    "googleRating": 4.3,
+    "reviewCountLabel": "85+ Wolt ratings"
+  },
+  {
+    "id": "wolt-659bc80648d8ec0e1b0fa924",
+    "name": "Indisches Fastfood",
+    "city": "Munich",
+    "district": null,
+    "address": "Barer Straße 46, 80799 München",
+    "coordinates": [
+      11.572548,
+      48.149495
     ],
     "indianState": "Indian",
     "regionCategory": "North Indian & Tandoori",
-    "cuisineStyle": "Discover the enchanting flavors of India 🇮🇳🍛",
-    "phone": null,
-    "website": "https://wolt.com/en/deu/munich/restaurant/sidhartha-food-more",
+    "cuisineStyle": "Authentic indian cuisine for you 🇮🇳🍛",
+    "phone": "+49 89 273 713 34",
+    "website": "https://wolt.com/en/deu/munich/restaurant/indisches-fastfood",
     "establishedNote": "Active Live Kitchen (Wolt Verified)",
     "hoursNote": "Open for dine-in / takeaway / delivery — see Wolt link for live hours",
     "isStreetFood": false,
     "isNewSpot": false,
     "positiveReviews": [
       {
-        "quote": "Discover the enchanting flavors of India 🇮🇳🍛",
+        "quote": "Authentic indian cuisine for you 🇮🇳🍛",
+        "reviewerType": "Live Platform Listing"
+      }
+    ],
+    "signatureDishes": [],
+    "authenticityNote": "Verified active Indian restaurant via Wolt live index.",
+    "dataSource": "osm-verified",
+    "googleRating": 3.6,
+    "reviewCountLabel": "18+ Wolt ratings"
+  },
+  {
+    "id": "wolt-617287415a014f9bd221cc66",
+    "name": "Rasoi Restaurant",
+    "city": "Munich",
+    "district": null,
+    "address": "Adolf-Kolping-Straße 16, 80336 München",
+    "coordinates": [
+      11.561738,
+      48.138249
+    ],
+    "indianState": "Indian",
+    "regionCategory": "North Indian & Tandoori",
+    "cuisineStyle": "Indian spice 🇮🇳",
+    "phone": null,
+    "website": "https://www.rasoi-restaurant.de/",
+    "establishedNote": "Active Live Kitchen (Wolt Verified)",
+    "hoursNote": "Open for dine-in / takeaway / delivery — see Wolt link for live hours",
+    "isStreetFood": false,
+    "isNewSpot": false,
+    "positiveReviews": [
+      {
+        "quote": "Indian spice 🇮🇳",
+        "reviewerType": "Live Platform Listing"
+      }
+    ],
+    "signatureDishes": [],
+    "authenticityNote": "Verified active Indian restaurant via Wolt live index.",
+    "dataSource": "osm-verified",
+    "googleRating": 3.4,
+    "reviewCountLabel": "28+ Wolt ratings"
+  },
+  {
+    "id": "wolt-5fe30244b16318286d136d4d",
+    "name": "Deeba Restaurant",
+    "city": "Munich",
+    "district": null,
+    "address": "Barer Str. 42, Munich",
+    "coordinates": [
+      11.572303,
+      48.149211
+    ],
+    "indianState": "Indian",
+    "regionCategory": "North Indian & Tandoori",
+    "cuisineStyle": "Pakistanisches Indisches Restaurant",
+    "phone": null,
+    "website": "https://wolt.com/en/deu/munich/restaurant/deeba-restaurant",
+    "establishedNote": "Active Live Kitchen (Wolt Verified)",
+    "hoursNote": "Open for dine-in / takeaway / delivery — see Wolt link for live hours",
+    "isStreetFood": false,
+    "isNewSpot": false,
+    "positiveReviews": [
+      {
+        "quote": "Pakistanisches Indisches Restaurant",
+        "reviewerType": "Live Platform Listing"
+      }
+    ],
+    "signatureDishes": [],
+    "authenticityNote": "Verified active Indian restaurant via Wolt live index.",
+    "dataSource": "osm-verified",
+    "googleRating": 4.1,
+    "reviewCountLabel": "59+ Wolt ratings"
+  },
+  {
+    "id": "wolt-65afce9b30b1cb1d05477844",
+    "name": "Monsoon l Taste of India",
+    "city": "Munich",
+    "district": null,
+    "address": "Morassistraße 16, 80469 München",
+    "coordinates": [
+      11.582255,
+      48.132132
+    ],
+    "indianState": "Indian",
+    "regionCategory": "North Indian & Tandoori",
+    "cuisineStyle": "Get in touch with India 🇮🇳",
+    "phone": "+49 89 21020676",
+    "website": "https://monsoon-restaurant.de/",
+    "establishedNote": "Active Live Kitchen (Wolt Verified)",
+    "hoursNote": "Open for dine-in / takeaway / delivery — see Wolt link for live hours",
+    "isStreetFood": false,
+    "isNewSpot": false,
+    "positiveReviews": [
+      {
+        "quote": "Get in touch with India 🇮🇳",
+        "reviewerType": "Live Platform Listing"
+      }
+    ],
+    "signatureDishes": [],
+    "authenticityNote": "Verified active Indian restaurant via Wolt live index.",
+    "dataSource": "osm-verified",
+    "googleRating": 4.3,
+    "reviewCountLabel": "140+ Wolt ratings"
+  },
+  {
+    "id": "wolt-6a902705032af1e96b458acf",
+    "name": "Khana Khazana",
+    "city": "Munich",
+    "district": null,
+    "address": "Theresienstraße 54, 80333 München",
+    "coordinates": [
+      11.573852,
+      48.148576
+    ],
+    "indianState": "Urban Indian Street Food & Chaat",
+    "regionCategory": "Street Food & Chaat",
+    "cuisineStyle": "Spicy, aromatic, authentic – Khana Khazana",
+    "phone": "+49 89 215 663 33",
+    "website": "https://khanakhazana.eu/",
+    "establishedNote": "Active Live Kitchen (Wolt Verified)",
+    "hoursNote": "Open for dine-in / takeaway / delivery — see Wolt link for live hours",
+    "isStreetFood": true,
+    "isNewSpot": false,
+    "positiveReviews": [
+      {
+        "quote": "Spicy, aromatic, authentic – Khana Khazana",
+        "reviewerType": "Live Platform Listing"
+      }
+    ],
+    "signatureDishes": [],
+    "authenticityNote": "Verified active Indian restaurant via Wolt live index.",
+    "dataSource": "osm-verified"
+  },
+  {
+    "id": "wolt-620a1ef54deb6b2689c6f2c5",
+    "name": "Daawat Indisches Restaurant",
+    "city": "Munich",
+    "district": null,
+    "address": "Belgradstraße 105, 80804 München",
+    "coordinates": [
+      11.573323,
+      48.169691
+    ],
+    "indianState": "Indian",
+    "regionCategory": "North Indian & Tandoori",
+    "cuisineStyle": "Your culinary journey to India",
+    "phone": "+49 89 3083936",
+    "website": "https://www.daawat-restaurant.de/",
+    "establishedNote": "Active Live Kitchen (Wolt Verified)",
+    "hoursNote": "Open for dine-in / takeaway / delivery — see Wolt link for live hours",
+    "isStreetFood": false,
+    "isNewSpot": false,
+    "positiveReviews": [
+      {
+        "quote": "Your culinary journey to India",
         "reviewerType": "Live Platform Listing"
       }
     ],
@@ -5734,6 +5761,97 @@
     "dataSource": "osm-verified",
     "googleRating": 4.5,
     "reviewCountLabel": "85+ Wolt ratings"
+  },
+  {
+    "id": "wolt-67b48d34c49ac90920d65a3e",
+    "name": "INDIAN LOVE STORY RESTAURANT AND STREET FOOD",
+    "city": "Munich",
+    "district": null,
+    "address": "Tal 28, 80331 München",
+    "coordinates": [
+      11.579856,
+      48.135576
+    ],
+    "indianState": "Urban Indian Street Food & Chaat",
+    "regionCategory": "Street Food & Chaat",
+    "cuisineStyle": "Indian Love Story 🍲",
+    "phone": "+49 89 51578430",
+    "website": "https://wolt.com/en/deu/munich/restaurant/indian-love-story-restaurant-and-street-food",
+    "establishedNote": "Active Live Kitchen (Wolt Verified)",
+    "hoursNote": "Open for dine-in / takeaway / delivery — see Wolt link for live hours",
+    "isStreetFood": true,
+    "isNewSpot": true,
+    "positiveReviews": [
+      {
+        "quote": "Indian Love Story 🍲",
+        "reviewerType": "Live Platform Listing"
+      }
+    ],
+    "signatureDishes": [],
+    "authenticityNote": "Verified active Indian restaurant via Wolt live index.",
+    "dataSource": "osm-verified"
+  },
+  {
+    "id": "wolt-618bb285473e27566d90e2a2",
+    "name": "Chandani Chowk",
+    "city": "Munich",
+    "district": null,
+    "address": "Rosenheimer Straße 10, 81669 München",
+    "coordinates": [
+      11.589106,
+      48.131454
+    ],
+    "indianState": "Indian",
+    "regionCategory": "North Indian & Tandoori",
+    "cuisineStyle": "Traditional Indian cousine",
+    "phone": "+49 89 237 877 10",
+    "website": "https://www.restaurant-chandani-chowk.de/",
+    "establishedNote": "Active Live Kitchen (Wolt Verified)",
+    "hoursNote": "Open for dine-in / takeaway / delivery — see Wolt link for live hours",
+    "isStreetFood": false,
+    "isNewSpot": false,
+    "positiveReviews": [
+      {
+        "quote": "Traditional Indian cousine",
+        "reviewerType": "Live Platform Listing"
+      }
+    ],
+    "signatureDishes": [],
+    "authenticityNote": "Verified active Indian restaurant via Wolt live index.",
+    "dataSource": "osm-verified",
+    "googleRating": 4.2,
+    "reviewCountLabel": "108+ Wolt ratings"
+  },
+  {
+    "id": "wolt-698b658c926257016342f3ed",
+    "name": "Indisch Curry Service",
+    "city": "Munich",
+    "district": null,
+    "address": "Kantstr. 26, Munich",
+    "coordinates": [
+      11.566265,
+      48.178245
+    ],
+    "indianState": "Indian",
+    "regionCategory": "North Indian & Tandoori",
+    "cuisineStyle": "Traditional Indian dishes and much more 🍛 🍕 🍲",
+    "phone": null,
+    "website": "https://wolt.com/en/deu/munich/restaurant/indisch-curry-service-kantstr",
+    "establishedNote": "Active Live Kitchen (Wolt Verified)",
+    "hoursNote": "Open for dine-in / takeaway / delivery — see Wolt link for live hours",
+    "isStreetFood": false,
+    "isNewSpot": false,
+    "positiveReviews": [
+      {
+        "quote": "Traditional Indian dishes and much more 🍛 🍕 🍲",
+        "reviewerType": "Live Platform Listing"
+      }
+    ],
+    "signatureDishes": [],
+    "authenticityNote": "Verified active Indian restaurant via Wolt live index.",
+    "dataSource": "osm-verified",
+    "googleRating": 3.8,
+    "reviewCountLabel": "19+ Wolt ratings"
   },
   {
     "id": "wolt-607d5218a4c36987c03262a8",
@@ -5798,33 +5916,66 @@
     "reviewCountLabel": "26+ Wolt ratings"
   },
   {
-    "id": "wolt-67d955894f86a7351a2ecc93",
-    "name": "SpiceRoute - südindisches Restaurant",
+    "id": "wolt-679b4300b664bf1433e0bc92",
+    "name": "Tattva Indisches Restaurant",
     "city": "Munich",
     "district": null,
-    "address": "Schäftlarnstraße 166, Munich",
+    "address": "Schleißheimer Straße 283, 80809 München",
     "coordinates": [
-      11.547219,
-      48.102941
+      11.566526,
+      48.181827
     ],
-    "indianState": "Tamil Nadu & Kerala (South India)",
-    "regionCategory": "South Indian",
-    "cuisineStyle": "The flavors of India at your home! 🇮🇳",
-    "phone": null,
-    "website": "https://wolt.com/en/deu/munich/restaurant/spiceroute-sdindisches-restaurant",
+    "indianState": "Indian",
+    "regionCategory": "North Indian & Tandoori",
+    "cuisineStyle": "One bite, one journey - enjoyment without limits!",
+    "phone": "+49 89 27371304",
+    "website": "https://www.tattvarestaurant.de",
     "establishedNote": "Active Live Kitchen (Wolt Verified)",
     "hoursNote": "Open for dine-in / takeaway / delivery — see Wolt link for live hours",
     "isStreetFood": false,
     "isNewSpot": false,
     "positiveReviews": [
       {
-        "quote": "The flavors of India at your home! 🇮🇳",
+        "quote": "One bite, one journey - enjoyment without limits!",
         "reviewerType": "Live Platform Listing"
       }
     ],
     "signatureDishes": [],
     "authenticityNote": "Verified active Indian restaurant via Wolt live index.",
-    "dataSource": "osm-verified"
+    "dataSource": "osm-verified",
+    "googleRating": 4.1,
+    "reviewCountLabel": "115+ Wolt ratings"
+  },
+  {
+    "id": "wolt-6915a35e54194ea3b5d25319",
+    "name": "Anjappar",
+    "city": "Munich",
+    "district": null,
+    "address": "Thierschstraße 14, Munich",
+    "coordinates": [
+      11.584892,
+      48.134162
+    ],
+    "indianState": "Tamil Nadu (South India)",
+    "regionCategory": "South Indian",
+    "cuisineStyle": "Are you in the mood for something delicious from Anjappar? 🍛",
+    "phone": null,
+    "website": "https://anjapparmunich.de",
+    "establishedNote": "Active Live Kitchen (Wolt Verified)",
+    "hoursNote": "Open for dine-in / takeaway / delivery — see Wolt link for live hours",
+    "isStreetFood": false,
+    "isNewSpot": true,
+    "positiveReviews": [
+      {
+        "quote": "Are you in the mood for something delicious from Anjappar? 🍛",
+        "reviewerType": "Live Platform Listing"
+      }
+    ],
+    "signatureDishes": [],
+    "authenticityNote": "Verified active Indian restaurant via Wolt live index.",
+    "dataSource": "osm-verified",
+    "googleRating": 3.8,
+    "reviewCountLabel": "59+ Wolt ratings"
   },
   {
     "id": "wolt-6a50d9823856cdca2cc98700",
@@ -5856,27 +6007,240 @@
     "dataSource": "osm-verified"
   },
   {
-    "id": "wolt-620a1ef54deb6b2689c6f2c5",
-    "name": "Daawat Indisches Restaurant",
+    "id": "wolt-67fe6eb32f26d5000930c736",
+    "name": "Ambari  - Traditional Indian Vegetarian Restaurant",
     "city": "Munich",
     "district": null,
-    "address": "Belgradstraße 105, 80804 München",
+    "address": "Dianastraße 1, Munich",
     "coordinates": [
-      11.573323,
-      48.169691
+      11.595091,
+      48.147523
     ],
     "indianState": "Indian",
     "regionCategory": "North Indian & Tandoori",
-    "cuisineStyle": "Your culinary journey to India",
-    "phone": "+49 89 3083936",
-    "website": "https://www.daawat-restaurant.de/",
+    "cuisineStyle": "Are you in the mood for something delicious from Ambari? 🇮🇳🍛🥖🍰",
+    "phone": null,
+    "website": "https://wolt.com/en/deu/munich/restaurant/ambari-traditional-indian-vegetarian-restaurant-dianastrasse",
     "establishedNote": "Active Live Kitchen (Wolt Verified)",
     "hoursNote": "Open for dine-in / takeaway / delivery — see Wolt link for live hours",
     "isStreetFood": false,
     "isNewSpot": false,
     "positiveReviews": [
       {
-        "quote": "Your culinary journey to India",
+        "quote": "Are you in the mood for something delicious from Ambari? 🇮🇳🍛🥖🍰",
+        "reviewerType": "Live Platform Listing"
+      }
+    ],
+    "signatureDishes": [],
+    "authenticityNote": "Verified active Indian restaurant via Wolt live index.",
+    "dataSource": "osm-verified"
+  },
+  {
+    "id": "wolt-65a527cdaf83893fffb1c796",
+    "name": "Indisch Curry Service",
+    "city": "Munich",
+    "district": null,
+    "address": "Forstenrieder Allee 195, München",
+    "coordinates": [
+      11.494447,
+      48.083364
+    ],
+    "indianState": "Indian",
+    "regionCategory": "North Indian & Tandoori",
+    "cuisineStyle": "Get a taste of India 🍛",
+    "phone": "+49 89 7459581",
+    "website": "https://www.indischcurry123.de/",
+    "establishedNote": "Active Live Kitchen (Wolt Verified)",
+    "hoursNote": "Open for dine-in / takeaway / delivery — see Wolt link for live hours",
+    "isStreetFood": false,
+    "isNewSpot": false,
+    "positiveReviews": [
+      {
+        "quote": "Get a taste of India 🍛",
+        "reviewerType": "Live Platform Listing"
+      }
+    ],
+    "signatureDishes": [],
+    "authenticityNote": "Verified active Indian restaurant via Wolt live index.",
+    "dataSource": "osm-verified",
+    "googleRating": 4.4,
+    "reviewCountLabel": "18+ Wolt ratings"
+  },
+  {
+    "id": "wolt-67126b4ab4e6cb4f55c49484",
+    "name": "Maharani im Stiglmaierplatz",
+    "city": "Munich",
+    "district": null,
+    "address": "Rottmannstraße 24, 80333 München",
+    "coordinates": [
+      11.559181,
+      48.148995
+    ],
+    "indianState": "Indian",
+    "regionCategory": "North Indian & Tandoori",
+    "cuisineStyle": "Indian delicacies 🥘",
+    "phone": "+49 89 527912",
+    "website": "https://www.maharanimunchen.de/",
+    "establishedNote": "Active Live Kitchen (Wolt Verified)",
+    "hoursNote": "Open for dine-in / takeaway / delivery — see Wolt link for live hours",
+    "isStreetFood": false,
+    "isNewSpot": false,
+    "positiveReviews": [
+      {
+        "quote": "Indian delicacies 🥘",
+        "reviewerType": "Live Platform Listing"
+      }
+    ],
+    "signatureDishes": [],
+    "authenticityNote": "Verified active Indian restaurant via Wolt live index.",
+    "dataSource": "osm-verified",
+    "googleRating": 4.3,
+    "reviewCountLabel": "78+ Wolt ratings"
+  },
+  {
+    "id": "wolt-628f67298a0c2c7fd1d406b7",
+    "name": "Shiva",
+    "city": "Munich",
+    "district": null,
+    "address": "Augustenstraße 96, Munich",
+    "coordinates": [
+      11.565228,
+      48.15223
+    ],
+    "indianState": "Indian",
+    "regionCategory": "North Indian & Tandoori",
+    "cuisineStyle": "Get in touch with India",
+    "phone": "+49 89 5232 888",
+    "website": "http://www.shiva-muenchen.de",
+    "establishedNote": "Active Live Kitchen (Wolt Verified)",
+    "hoursNote": "Open for dine-in / takeaway / delivery — see Wolt link for live hours",
+    "isStreetFood": false,
+    "isNewSpot": false,
+    "positiveReviews": [
+      {
+        "quote": "Get in touch with India",
+        "reviewerType": "Live Platform Listing"
+      }
+    ],
+    "signatureDishes": [],
+    "authenticityNote": "Verified active Indian restaurant via Wolt live index.",
+    "dataSource": "osm-verified",
+    "googleRating": 4.3,
+    "reviewCountLabel": "15+ Wolt ratings"
+  },
+  {
+    "id": "wolt-697785de449b454efcde690d",
+    "name": "Sahyadri Indian Restaurant",
+    "city": "Munich",
+    "district": null,
+    "address": "Von-Stauffenberg-Straße 19, 82008 Unterhaching",
+    "coordinates": [
+      11.620192,
+      48.06572
+    ],
+    "indianState": "Indian",
+    "regionCategory": "North Indian & Tandoori",
+    "cuisineStyle": "Are you in the mood for something delicious from Sahyadri Indian Restaurant? 🍛✨",
+    "phone": null,
+    "website": "https://eat.allo.restaurant/restaurant/sahyadri-indian-restaurent",
+    "establishedNote": "Active Live Kitchen (Wolt Verified)",
+    "hoursNote": "Open for dine-in / takeaway / delivery — see Wolt link for live hours",
+    "isStreetFood": false,
+    "isNewSpot": false,
+    "positiveReviews": [
+      {
+        "quote": "Are you in the mood for something delicious from Sahyadri Indian Restaurant? 🍛✨",
+        "reviewerType": "Live Platform Listing"
+      }
+    ],
+    "signatureDishes": [],
+    "authenticityNote": "Verified active Indian restaurant via Wolt live index.",
+    "dataSource": "osm-verified",
+    "googleRating": 4.5,
+    "reviewCountLabel": "30+ Wolt ratings"
+  },
+  {
+    "id": "wolt-69fde69647935d26a075cb25",
+    "name": "Bangalore Bites",
+    "city": "Munich",
+    "district": null,
+    "address": "Münchner Straße 107, 82008 Unterhaching",
+    "coordinates": [
+      11.60573,
+      48.071871
+    ],
+    "indianState": "Urban Indian Street Food & Chaat",
+    "regionCategory": "Street Food & Chaat",
+    "cuisineStyle": "Authentic Indian spices and flavors 🍛",
+    "phone": null,
+    "website": "https://wolt.com/en/deu/munich/restaurant/bangalore-bites-1",
+    "establishedNote": "Active Live Kitchen (Wolt Verified)",
+    "hoursNote": "Open for dine-in / takeaway / delivery — see Wolt link for live hours",
+    "isStreetFood": true,
+    "isNewSpot": true,
+    "positiveReviews": [
+      {
+        "quote": "Authentic Indian spices and flavors 🍛",
+        "reviewerType": "Live Platform Listing"
+      }
+    ],
+    "signatureDishes": [],
+    "authenticityNote": "Verified active Indian restaurant via Wolt live index.",
+    "dataSource": "osm-verified",
+    "googleRating": 3.3,
+    "reviewCountLabel": "26+ Wolt ratings"
+  },
+  {
+    "id": "wolt-690a2678f90e7c09b591824f",
+    "name": "Sidhartha Food & more",
+    "city": "Munich",
+    "district": null,
+    "address": "Flößergasse 5c, Munich",
+    "coordinates": [
+      11.538116,
+      48.105525
+    ],
+    "indianState": "Indian",
+    "regionCategory": "North Indian & Tandoori",
+    "cuisineStyle": "Discover the enchanting flavors of India 🇮🇳🍛",
+    "phone": null,
+    "website": "https://wolt.com/en/deu/munich/restaurant/sidhartha-food-more",
+    "establishedNote": "Active Live Kitchen (Wolt Verified)",
+    "hoursNote": "Open for dine-in / takeaway / delivery — see Wolt link for live hours",
+    "isStreetFood": false,
+    "isNewSpot": false,
+    "positiveReviews": [
+      {
+        "quote": "Discover the enchanting flavors of India 🇮🇳🍛",
+        "reviewerType": "Live Platform Listing"
+      }
+    ],
+    "signatureDishes": [],
+    "authenticityNote": "Verified active Indian restaurant via Wolt live index.",
+    "dataSource": "osm-verified"
+  },
+  {
+    "id": "wolt-673f2ce749624a277f41a225",
+    "name": "Mehmaan",
+    "city": "Munich",
+    "district": null,
+    "address": "Bruderhofstraße 5, 81371 München",
+    "coordinates": [
+      11.550892,
+      48.111701
+    ],
+    "indianState": "Indian",
+    "regionCategory": "North Indian & Tandoori",
+    "cuisineStyle": "Spicy, rich, flavourful!",
+    "phone": "+49 89 23748698;+49 1521 7419345",
+    "website": "https://www.restaurant-mehmaan.de/",
+    "establishedNote": "Active Live Kitchen (Wolt Verified)",
+    "hoursNote": "Open for dine-in / takeaway / delivery — see Wolt link for live hours",
+    "isStreetFood": false,
+    "isNewSpot": false,
+    "positiveReviews": [
+      {
+        "quote": "Spicy, rich, flavourful!",
         "reviewerType": "Live Platform Listing"
       }
     ],
@@ -5914,6 +6278,238 @@
     "dataSource": "osm-verified"
   },
   {
+    "id": "wolt-691dbb37355c6e28c9d54765",
+    "name": "Der Kleine Inder",
+    "city": "Fürth",
+    "district": null,
+    "address": "Schwabacher Straße 250, Fürth",
+    "coordinates": [
+      10.988283,
+      49.456417
+    ],
+    "indianState": "Indian",
+    "regionCategory": "North Indian & Tandoori",
+    "cuisineStyle": "Indian delicacies like curry, chicken and tender lamb with the best flavors of India 🍛🍗",
+    "phone": "+49 911 780 96 22",
+    "website": "https://derkleineinder.de/",
+    "establishedNote": "Active Live Kitchen (Wolt Verified)",
+    "hoursNote": "Open for dine-in / takeaway / delivery — see Wolt link for live hours",
+    "isStreetFood": false,
+    "isNewSpot": false,
+    "positiveReviews": [
+      {
+        "quote": "Indian delicacies like curry, chicken and tender lamb with the best flavors of India 🍛🍗",
+        "reviewerType": "Live Platform Listing"
+      }
+    ],
+    "signatureDishes": [],
+    "authenticityNote": "Verified active Indian restaurant via Wolt live index.",
+    "dataSource": "osm-verified"
+  },
+  {
+    "id": "wolt-6501e8868f9a3f3d96a5ef3b",
+    "name": "Punjabi House",
+    "city": "Fürth",
+    "district": null,
+    "address": "Ottostraße 25, 90762 Fürth",
+    "coordinates": [
+      10.98607,
+      49.471666
+    ],
+    "indianState": "Indian",
+    "regionCategory": "North Indian & Tandoori",
+    "cuisineStyle": "Where spices meet amore and fiesta 🌱💙",
+    "phone": null,
+    "website": "https://www.punjabi-haus-fuerth.de/",
+    "establishedNote": "Active Live Kitchen (Wolt Verified)",
+    "hoursNote": "Open for dine-in / takeaway / delivery — see Wolt link for live hours",
+    "isStreetFood": false,
+    "isNewSpot": false,
+    "positiveReviews": [
+      {
+        "quote": "Where spices meet amore and fiesta 🌱💙",
+        "reviewerType": "Live Platform Listing"
+      }
+    ],
+    "signatureDishes": [],
+    "authenticityNote": "Verified active Indian restaurant via Wolt live index.",
+    "dataSource": "osm-verified"
+  },
+  {
+    "id": "wolt-6ae895e56b4307fbbbf3a415",
+    "name": "The India",
+    "city": "Fürth",
+    "district": null,
+    "address": "This is a virtual venue, Fürth",
+    "coordinates": [
+      10.988771,
+      49.468202
+    ],
+    "indianState": "Indian",
+    "regionCategory": "North Indian & Tandoori",
+    "cuisineStyle": "Aromatic Indian curries, tandoori specialties & warm naan! 🍛🫓🌶️",
+    "phone": null,
+    "website": "https://wolt.com/en/deu/munich/restaurant/the-india",
+    "establishedNote": "Active Live Kitchen (Wolt Verified)",
+    "hoursNote": "Open for dine-in / takeaway / delivery — see Wolt link for live hours",
+    "isStreetFood": false,
+    "isNewSpot": false,
+    "positiveReviews": [
+      {
+        "quote": "Aromatic Indian curries, tandoori specialties & warm naan! 🍛🫓🌶️",
+        "reviewerType": "Live Platform Listing"
+      }
+    ],
+    "signatureDishes": [],
+    "authenticityNote": "Verified active Indian restaurant via Wolt live index.",
+    "dataSource": "osm-verified"
+  },
+  {
+    "id": "wolt-6724d32bd8c043210f0073ae",
+    "name": "Tandoori Zirndorf",
+    "city": "Fürth",
+    "district": null,
+    "address": "Marktplatz 2, Bavaria",
+    "coordinates": [
+      10.956868,
+      49.441519
+    ],
+    "indianState": "Indian",
+    "regionCategory": "North Indian & Tandoori",
+    "cuisineStyle": "Get in touch with India 🥘",
+    "phone": "+4991123815244",
+    "website": "https://tandoori-zirndorf.de/",
+    "establishedNote": "Active Live Kitchen (Wolt Verified)",
+    "hoursNote": "Open for dine-in / takeaway / delivery — see Wolt link for live hours",
+    "isStreetFood": false,
+    "isNewSpot": false,
+    "positiveReviews": [
+      {
+        "quote": "Get in touch with India 🥘",
+        "reviewerType": "Live Platform Listing"
+      }
+    ],
+    "signatureDishes": [],
+    "authenticityNote": "Verified active Indian restaurant via Wolt live index.",
+    "dataSource": "osm-verified"
+  },
+  {
+    "id": "wolt-678e8b8c0c8bbf222715ce57",
+    "name": "Namaste India - Indisches Spezialitäten Restaurant",
+    "city": "Fürth",
+    "district": null,
+    "address": "Schwabacher Straße 113, Fürth",
+    "coordinates": [
+      10.986046,
+      49.465969
+    ],
+    "indianState": "Indian",
+    "regionCategory": "North Indian & Tandoori",
+    "cuisineStyle": "The spices dance here 🌱🌶️",
+    "phone": "+49 91197122444",
+    "website": "https://namasteindiafuerth.de/",
+    "establishedNote": "Active Live Kitchen (Wolt Verified)",
+    "hoursNote": "Open for dine-in / takeaway / delivery — see Wolt link for live hours",
+    "isStreetFood": false,
+    "isNewSpot": false,
+    "positiveReviews": [
+      {
+        "quote": "The spices dance here 🌱🌶️",
+        "reviewerType": "Live Platform Listing"
+      }
+    ],
+    "signatureDishes": [],
+    "authenticityNote": "Verified active Indian restaurant via Wolt live index.",
+    "dataSource": "osm-verified"
+  },
+  {
+    "id": "wolt-66157ec843d3df49de516896",
+    "name": "Shiva - Authentisches indisches Restaurant",
+    "city": "Fürth",
+    "district": null,
+    "address": "Sonnenstraße 13, 90763 Fürth",
+    "coordinates": [
+      10.996612,
+      49.465957
+    ],
+    "indianState": "Indian",
+    "regionCategory": "North Indian & Tandoori",
+    "cuisineStyle": "Flavors that enchant and unite! 🍛",
+    "phone": null,
+    "website": "https://shiva-authentisches-indisches-restaurant.business.site/",
+    "establishedNote": "Active Live Kitchen (Wolt Verified)",
+    "hoursNote": "Open for dine-in / takeaway / delivery — see Wolt link for live hours",
+    "isStreetFood": false,
+    "isNewSpot": false,
+    "positiveReviews": [
+      {
+        "quote": "Flavors that enchant and unite! 🍛",
+        "reviewerType": "Live Platform Listing"
+      }
+    ],
+    "signatureDishes": [],
+    "authenticityNote": "Verified active Indian restaurant via Wolt live index.",
+    "dataSource": "osm-verified"
+  },
+  {
+    "id": "wolt-6a316a313d68683b1e794d57",
+    "name": "Royal India",
+    "city": "Erlangen",
+    "district": null,
+    "address": "Steigerwaldallee 2, 91056 Erlangen",
+    "coordinates": [
+      10.969698,
+      49.596039
+    ],
+    "indianState": "Indian",
+    "regionCategory": "North Indian & Tandoori",
+    "cuisineStyle": "Indian cuisine, curries & tandoori specialties 🍛",
+    "phone": "+49 9131 4094333;+49 9131 4094334",
+    "website": "https://mamapizza24.de/",
+    "establishedNote": "Active Live Kitchen (Wolt Verified)",
+    "hoursNote": "Open for dine-in / takeaway / delivery — see Wolt link for live hours",
+    "isStreetFood": false,
+    "isNewSpot": false,
+    "positiveReviews": [
+      {
+        "quote": "Indian cuisine, curries & tandoori specialties 🍛",
+        "reviewerType": "Live Platform Listing"
+      }
+    ],
+    "signatureDishes": [],
+    "authenticityNote": "Verified active Indian restaurant via Wolt live index.",
+    "dataSource": "osm-verified"
+  },
+  {
+    "id": "wolt-6a1db46dc86159404f9e3236",
+    "name": "Boliwood",
+    "city": "Erlangen",
+    "district": null,
+    "address": "Gerberei 8, 91054 Erlangen",
+    "coordinates": [
+      11.000594,
+      49.59837
+    ],
+    "indianState": "Indian",
+    "regionCategory": "North Indian & Tandoori",
+    "cuisineStyle": "🍛 Authentic Indian specialties with aromatic spices, traditional recipes, and freshly prepared tandoori dishes ✨🇮🇳",
+    "phone": "+49 9131 973 177",
+    "website": "http://www.restaurant-boliwood.de/",
+    "establishedNote": "Active Live Kitchen (Wolt Verified)",
+    "hoursNote": "Open for dine-in / takeaway / delivery — see Wolt link for live hours",
+    "isStreetFood": false,
+    "isNewSpot": false,
+    "positiveReviews": [
+      {
+        "quote": "🍛 Authentic Indian specialties with aromatic spices, traditional recipes, and freshly prepared tandoori dishes ✨🇮🇳",
+        "reviewerType": "Live Platform Listing"
+      }
+    ],
+    "signatureDishes": [],
+    "authenticityNote": "Verified active Indian restaurant via Wolt live index.",
+    "dataSource": "osm-verified"
+  },
+  {
     "id": "wolt-6718e18bc1d03a6052bad7b2",
     "name": "LêBar",
     "city": "Nuremberg",
@@ -5935,35 +6531,6 @@
     "positiveReviews": [
       {
         "quote": "Are you in the mood for something delicious from LêBar? 🍛🍔🍲🥤",
-        "reviewerType": "Live Platform Listing"
-      }
-    ],
-    "signatureDishes": [],
-    "authenticityNote": "Verified active Indian restaurant via Wolt live index.",
-    "dataSource": "osm-verified"
-  },
-  {
-    "id": "wolt-69134c793beaaafbe7c9f0e3",
-    "name": "Zayeka | Nuremberg",
-    "city": "Nuremberg",
-    "district": null,
-    "address": "This is a virtual venue, Nuremberg",
-    "coordinates": [
-      11.081238,
-      49.44813
-    ],
-    "indianState": "Urban Indian Street Food & Chaat",
-    "regionCategory": "Street Food & Chaat",
-    "cuisineStyle": "Curries, Biryani & Indian Soul Food",
-    "phone": null,
-    "website": "https://wolt.com/en/deu/munich/restaurant/zayeka-nrnberg",
-    "establishedNote": "Active Live Kitchen (Wolt Verified)",
-    "hoursNote": "Open for dine-in / takeaway / delivery — see Wolt link for live hours",
-    "isStreetFood": true,
-    "isNewSpot": false,
-    "positiveReviews": [
-      {
-        "quote": "Curries, Biryani & Indian Soul Food",
         "reviewerType": "Live Platform Listing"
       }
     ],
@@ -6065,6 +6632,35 @@
     "reviewCountLabel": "20+ Wolt ratings"
   },
   {
+    "id": "wolt-68626551a0988962d054edfe",
+    "name": "Indo Chaska",
+    "city": "Nuremberg",
+    "district": null,
+    "address": "Kornmarkt 4, 90402 Nürnberg",
+    "coordinates": [
+      11.076077,
+      49.449208
+    ],
+    "indianState": "Urban Indian Street Food & Chaat",
+    "regionCategory": "Street Food & Chaat",
+    "cuisineStyle": "Indian street food with bold flavors 🥘",
+    "phone": "+4991180099731",
+    "website": "https://www.indochaska-nuernberg.de",
+    "establishedNote": "Active Live Kitchen (Wolt Verified)",
+    "hoursNote": "Open for dine-in / takeaway / delivery — see Wolt link for live hours",
+    "isStreetFood": true,
+    "isNewSpot": false,
+    "positiveReviews": [
+      {
+        "quote": "Indian street food with bold flavors 🥘",
+        "reviewerType": "Live Platform Listing"
+      }
+    ],
+    "signatureDishes": [],
+    "authenticityNote": "Verified active Indian restaurant via Wolt live index.",
+    "dataSource": "osm-verified"
+  },
+  {
     "id": "wolt-6825d300f65ecfb984292475",
     "name": "Mount Lavinia",
     "city": "Nuremberg",
@@ -6096,27 +6692,27 @@
     "reviewCountLabel": "15+ Wolt ratings"
   },
   {
-    "id": "wolt-68626551a0988962d054edfe",
-    "name": "Indo Chaska",
+    "id": "wolt-69134c793beaaafbe7c9f0e3",
+    "name": "Zayeka | Nuremberg",
     "city": "Nuremberg",
     "district": null,
-    "address": "Kornmarkt 4, 90402 Nürnberg",
+    "address": "This is a virtual venue, Nuremberg",
     "coordinates": [
-      11.076077,
-      49.449208
+      11.081238,
+      49.44813
     ],
     "indianState": "Urban Indian Street Food & Chaat",
     "regionCategory": "Street Food & Chaat",
-    "cuisineStyle": "Indian street food with bold flavors 🥘",
-    "phone": "+4991180099731",
-    "website": "https://www.indochaska-nuernberg.de",
+    "cuisineStyle": "Curries, Biryani & Indian Soul Food",
+    "phone": "+49 911 2349417",
+    "website": "https://www.restaurant-sangam-nuernberg.de/",
     "establishedNote": "Active Live Kitchen (Wolt Verified)",
     "hoursNote": "Open for dine-in / takeaway / delivery — see Wolt link for live hours",
     "isStreetFood": true,
     "isNewSpot": false,
     "positiveReviews": [
       {
-        "quote": "Indian street food with bold flavors 🥘",
+        "quote": "Curries, Biryani & Indian Soul Food",
         "reviewerType": "Live Platform Listing"
       }
     ],
@@ -6185,91 +6781,35 @@
     "dataSource": "osm-verified"
   },
   {
-    "id": "wolt-678e8b8c0c8bbf222715ce57",
-    "name": "Namaste India - Indisches Spezialitäten Restaurant",
+    "id": "wolt-62c4562184f1ef7770b00d01",
+    "name": "NAMASTE",
     "city": "Nuremberg",
     "district": null,
-    "address": "Schwabacher Straße 113, Nuremberg",
+    "address": "Hirschelgasse 1, 90403 Nürnberg",
     "coordinates": [
-      10.986046,
-      49.465969
+      11.083486,
+      49.457397
     ],
     "indianState": "Indian",
     "regionCategory": "North Indian & Tandoori",
-    "cuisineStyle": "The spices dance here 🌱🌶️",
-    "phone": "+49 91197122444",
-    "website": "https://namasteindiafuerth.de/",
+    "cuisineStyle": "Fragrant & spicy greetings to you",
+    "phone": null,
+    "website": "https://namastenuremberg.de/",
     "establishedNote": "Active Live Kitchen (Wolt Verified)",
     "hoursNote": "Open for dine-in / takeaway / delivery — see Wolt link for live hours",
     "isStreetFood": false,
     "isNewSpot": false,
     "positiveReviews": [
       {
-        "quote": "The spices dance here 🌱🌶️",
+        "quote": "Fragrant & spicy greetings to you",
         "reviewerType": "Live Platform Listing"
       }
     ],
     "signatureDishes": [],
     "authenticityNote": "Verified active Indian restaurant via Wolt live index.",
-    "dataSource": "osm-verified"
-  },
-  {
-    "id": "wolt-6a316a313d68683b1e794d57",
-    "name": "Royal India",
-    "city": "Erlangen",
-    "district": null,
-    "address": "Steigerwaldallee 2, 91056 Erlangen",
-    "coordinates": [
-      10.969698,
-      49.596039
-    ],
-    "indianState": "Indian",
-    "regionCategory": "North Indian & Tandoori",
-    "cuisineStyle": "Indian cuisine, curries & tandoori specialties 🍛",
-    "phone": "+49 9131 4094333;+49 9131 4094334",
-    "website": "https://mamapizza24.de/",
-    "establishedNote": "Active Live Kitchen (Wolt Verified)",
-    "hoursNote": "Open for dine-in / takeaway / delivery — see Wolt link for live hours",
-    "isStreetFood": false,
-    "isNewSpot": false,
-    "positiveReviews": [
-      {
-        "quote": "Indian cuisine, curries & tandoori specialties 🍛",
-        "reviewerType": "Live Platform Listing"
-      }
-    ],
-    "signatureDishes": [],
-    "authenticityNote": "Verified active Indian restaurant via Wolt live index.",
-    "dataSource": "osm-verified"
-  },
-  {
-    "id": "wolt-6a1db46dc86159404f9e3236",
-    "name": "Boliwood",
-    "city": "Erlangen",
-    "district": null,
-    "address": "Gerberei 8, 91054 Erlangen",
-    "coordinates": [
-      11.000594,
-      49.59837
-    ],
-    "indianState": "Indian",
-    "regionCategory": "North Indian & Tandoori",
-    "cuisineStyle": "🍛 Authentic Indian specialties with aromatic spices, traditional recipes, and freshly prepared tandoori dishes ✨🇮🇳",
-    "phone": "+49 9131 973 177",
-    "website": "http://www.restaurant-boliwood.de/",
-    "establishedNote": "Active Live Kitchen (Wolt Verified)",
-    "hoursNote": "Open for dine-in / takeaway / delivery — see Wolt link for live hours",
-    "isStreetFood": false,
-    "isNewSpot": false,
-    "positiveReviews": [
-      {
-        "quote": "🍛 Authentic Indian specialties with aromatic spices, traditional recipes, and freshly prepared tandoori dishes ✨🇮🇳",
-        "reviewerType": "Live Platform Listing"
-      }
-    ],
-    "signatureDishes": [],
-    "authenticityNote": "Verified active Indian restaurant via Wolt live index.",
-    "dataSource": "osm-verified"
+    "dataSource": "osm-verified",
+    "googleRating": 4.6,
+    "reviewCountLabel": "34+ Wolt ratings"
   },
   {
     "id": "osm-1002545964",
@@ -7074,6 +7614,36 @@
     "positiveReviews": [
       {
         "quote": "Verified active Indian restaurant in Erlangen serving regional spices and freshly prepared dishes.",
+        "reviewerType": "OSM Community Verified"
+      }
+    ],
+    "signatureDishes": [],
+    "authenticityNote": "Verified Indian cuisine in OpenStreetMap.",
+    "dataSource": "osm-verified"
+  },
+  {
+    "id": "osm-12205685299",
+    "name": "Kanchana",
+    "city": "Bavaria",
+    "district": null,
+    "address": "Luitpoldstraße 13, Bavaria",
+    "coordinates": [
+      11.185707,
+      48.892444
+    ],
+    "indianState": "Indian",
+    "regionCategory": "North Indian & Tandoori",
+    "cuisineStyle": "OpenStreetMap Verified Indian Kitchen (indian;asian)",
+    "phone": null,
+    "website": null,
+    "establishedNote": "OpenStreetMap Verified Open Location",
+    "hoursNote": "Tu-Su 11:30-14:30,17:00-22:00; Mo 17:00-22:00",
+    "isPureVeg": false,
+    "isStreetFood": false,
+    "isNewSpot": false,
+    "positiveReviews": [
+      {
+        "quote": "Verified active Indian restaurant in Bavaria serving regional spices and freshly prepared dishes.",
         "reviewerType": "OSM Community Verified"
       }
     ],
@@ -7982,6 +8552,36 @@
     "dataSource": "osm-verified"
   },
   {
+    "id": "osm-14108306640",
+    "name": "Bharat",
+    "city": "Munich",
+    "district": null,
+    "address": "Zweibrückenstraße 5, 80331 München",
+    "coordinates": [
+      11.58348,
+      48.133392
+    ],
+    "indianState": "Indian",
+    "regionCategory": "North Indian & Tandoori",
+    "cuisineStyle": "OpenStreetMap Verified Indian Kitchen (indian)",
+    "phone": null,
+    "website": "https://www.bharatonline.de/",
+    "establishedNote": "OpenStreetMap Verified Open Location",
+    "hoursNote": "Mo-Sa 09:30-20:00; Su off",
+    "isPureVeg": false,
+    "isStreetFood": false,
+    "isNewSpot": false,
+    "positiveReviews": [
+      {
+        "quote": "Verified active Indian restaurant in Munich serving regional spices and freshly prepared dishes.",
+        "reviewerType": "OSM Community Verified"
+      }
+    ],
+    "signatureDishes": [],
+    "authenticityNote": "Verified Indian cuisine in OpenStreetMap.",
+    "dataSource": "osm-verified"
+  },
+  {
     "id": "osm-14143927401",
     "name": "Swadesh Foods",
     "city": "Bavaria",
@@ -8132,6 +8732,36 @@
     "dataSource": "osm-verified"
   },
   {
+    "id": "osm-155332482",
+    "name": "Rama",
+    "city": "Ismaning",
+    "district": null,
+    "address": "Bahnhofplatz 5, 85737 Ismaning",
+    "coordinates": [
+      11.678388,
+      48.225953
+    ],
+    "indianState": "Indian",
+    "regionCategory": "North Indian & Tandoori",
+    "cuisineStyle": "OpenStreetMap Verified Indian Kitchen (indian;italian)",
+    "phone": "+49 89 967690",
+    "website": "https://www.restaurant-rama.de/",
+    "establishedNote": "OpenStreetMap Verified Open Location",
+    "hoursNote": "Tu-Su 11:30-14:20,17:30-23:00",
+    "isPureVeg": false,
+    "isStreetFood": false,
+    "isNewSpot": false,
+    "positiveReviews": [
+      {
+        "quote": "Verified active Indian restaurant in Ismaning serving regional spices and freshly prepared dishes.",
+        "reviewerType": "OSM Community Verified"
+      }
+    ],
+    "signatureDishes": [],
+    "authenticityNote": "Verified Indian cuisine in OpenStreetMap.",
+    "dataSource": "osm-verified"
+  },
+  {
     "id": "osm-1564494541",
     "name": "Swagat",
     "city": "Veitsbronn",
@@ -8244,36 +8874,6 @@
     "positiveReviews": [
       {
         "quote": "Verified active Indian restaurant in Augsburg serving regional spices and freshly prepared dishes.",
-        "reviewerType": "OSM Community Verified"
-      }
-    ],
-    "signatureDishes": [],
-    "authenticityNote": "Verified Indian cuisine in OpenStreetMap.",
-    "dataSource": "osm-verified"
-  },
-  {
-    "id": "osm-1596090696",
-    "name": "Shiva",
-    "city": "Fürth",
-    "district": null,
-    "address": "Sonnenstraße 13, 90763 Fürth",
-    "coordinates": [
-      10.996948,
-      49.465746
-    ],
-    "indianState": "Indian",
-    "regionCategory": "North Indian & Tandoori",
-    "cuisineStyle": "OpenStreetMap Verified Indian Kitchen (indian)",
-    "phone": null,
-    "website": "https://shiva-authentisches-indisches-restaurant.business.site/",
-    "establishedNote": "OpenStreetMap Verified Open Location",
-    "hoursNote": "Mo-Sa 16:00-22:30; Su 11:00-14:00,16:00-22:30",
-    "isPureVeg": false,
-    "isStreetFood": false,
-    "isNewSpot": false,
-    "positiveReviews": [
-      {
-        "quote": "Verified active Indian restaurant in Fürth serving regional spices and freshly prepared dishes.",
         "reviewerType": "OSM Community Verified"
       }
     ],
@@ -8522,6 +9122,36 @@
     "dataSource": "osm-verified"
   },
   {
+    "id": "osm-1788352953",
+    "name": "The Indian Room",
+    "city": "Munich",
+    "district": null,
+    "address": "Belgradstraße 9, 80796 München",
+    "coordinates": [
+      11.574667,
+      48.161432
+    ],
+    "indianState": "Indian",
+    "regionCategory": "North Indian & Tandoori",
+    "cuisineStyle": "OpenStreetMap Verified Indian Kitchen (indian)",
+    "phone": null,
+    "website": null,
+    "establishedNote": "OpenStreetMap Verified Open Location",
+    "hoursNote": "Tu-Su 17:30-23:30; Mo off",
+    "isPureVeg": false,
+    "isStreetFood": false,
+    "isNewSpot": false,
+    "positiveReviews": [
+      {
+        "quote": "Verified active Indian restaurant in Munich serving regional spices and freshly prepared dishes.",
+        "reviewerType": "OSM Community Verified"
+      }
+    ],
+    "signatureDishes": [],
+    "authenticityNote": "Verified Indian cuisine in OpenStreetMap.",
+    "dataSource": "osm-verified"
+  },
+  {
     "id": "osm-1805148703",
     "name": "Bella Tandoori",
     "city": "Bavaria",
@@ -8732,36 +9362,6 @@
     "dataSource": "osm-verified"
   },
   {
-    "id": "osm-2131871600",
-    "name": "Tandoori",
-    "city": "Bavaria",
-    "district": null,
-    "address": "Marktplatz 2, Bavaria",
-    "coordinates": [
-      10.956877,
-      49.441511
-    ],
-    "indianState": "Indian",
-    "regionCategory": "North Indian & Tandoori",
-    "cuisineStyle": "OpenStreetMap Verified Indian Kitchen (indian)",
-    "phone": "+4991123815244",
-    "website": "https://tandoori-zirndorf.de/",
-    "establishedNote": "OpenStreetMap Verified Open Location",
-    "hoursNote": "Mo-Fr 11:00-14:30,17:00-22:30; PH,Sa,Su 12:00-22:30",
-    "isPureVeg": false,
-    "isStreetFood": false,
-    "isNewSpot": false,
-    "positiveReviews": [
-      {
-        "quote": "Verified active Indian restaurant in Bavaria serving regional spices and freshly prepared dishes.",
-        "reviewerType": "OSM Community Verified"
-      }
-    ],
-    "signatureDishes": [],
-    "authenticityNote": "Verified Indian cuisine in OpenStreetMap.",
-    "dataSource": "osm-verified"
-  },
-  {
     "id": "osm-2212077947",
     "name": "Punjabi´s Stella Indisches Restaurant",
     "city": "Mühlhausen",
@@ -8822,36 +9422,6 @@
     "dataSource": "osm-verified"
   },
   {
-    "id": "osm-2269367619",
-    "name": "Punjabi House",
-    "city": "Fürth",
-    "district": null,
-    "address": "Ottostraße 25, 90762 Fürth",
-    "coordinates": [
-      10.985948,
-      49.471639
-    ],
-    "indianState": "Indian",
-    "regionCategory": "North Indian & Tandoori",
-    "cuisineStyle": "OpenStreetMap Verified Indian Kitchen (indian)",
-    "phone": null,
-    "website": "https://www.punjabi-haus-fuerth.de/",
-    "establishedNote": "OpenStreetMap Verified Open Location",
-    "hoursNote": "Mo-Fr 17:00-23:30; Sa 16:00-23:30; Su,PH 12:00-23:30",
-    "isPureVeg": false,
-    "isStreetFood": false,
-    "isNewSpot": false,
-    "positiveReviews": [
-      {
-        "quote": "Verified active Indian restaurant in Fürth serving regional spices and freshly prepared dishes.",
-        "reviewerType": "OSM Community Verified"
-      }
-    ],
-    "signatureDishes": [],
-    "authenticityNote": "Verified Indian cuisine in OpenStreetMap.",
-    "dataSource": "osm-verified"
-  },
-  {
     "id": "osm-2280042789",
     "name": "Safran",
     "city": "Ingolstadt",
@@ -8895,9 +9465,39 @@
     "regionCategory": "North Indian & Tandoori",
     "cuisineStyle": "OpenStreetMap Verified Indian Kitchen (indian)",
     "phone": "+4999138300150",
-    "website": "https://tajmahaldeggendorf.de/de",
+    "website": null,
     "establishedNote": "OpenStreetMap Verified Open Location",
     "hoursNote": "Mo-Fr 11:30-14:30,16:30-22:30; Sa,Su,PH 11:30-22:30",
+    "isPureVeg": false,
+    "isStreetFood": false,
+    "isNewSpot": false,
+    "positiveReviews": [
+      {
+        "quote": "Verified active Indian restaurant in Deggendorf serving regional spices and freshly prepared dishes.",
+        "reviewerType": "OSM Community Verified"
+      }
+    ],
+    "signatureDishes": [],
+    "authenticityNote": "Verified Indian cuisine in OpenStreetMap.",
+    "dataSource": "osm-verified"
+  },
+  {
+    "id": "osm-2340028572",
+    "name": "Taj Mahal",
+    "city": "Deggendorf",
+    "district": null,
+    "address": "Bahnhofstraße 26, 94469 Deggendorf",
+    "coordinates": [
+      12.95963,
+      48.833978
+    ],
+    "indianState": "Indian",
+    "regionCategory": "North Indian & Tandoori",
+    "cuisineStyle": "OpenStreetMap Verified Indian Kitchen (indian)",
+    "phone": "+49 99138312680",
+    "website": "https://tajmahaldeggendorf.de/de",
+    "establishedNote": "OpenStreetMap Verified Open Location",
+    "hoursNote": "Mo, We-Su 11:30-14:30, 17:30-23:30",
     "isPureVeg": false,
     "isStreetFood": false,
     "isNewSpot": false,
@@ -9504,6 +10104,36 @@
     "positiveReviews": [
       {
         "quote": "Verified active Indian restaurant in Bavaria serving regional spices and freshly prepared dishes.",
+        "reviewerType": "OSM Community Verified"
+      }
+    ],
+    "signatureDishes": [],
+    "authenticityNote": "Verified Indian cuisine in OpenStreetMap.",
+    "dataSource": "osm-verified"
+  },
+  {
+    "id": "osm-287930713",
+    "name": "Noon Mirch",
+    "city": "Augsburg",
+    "district": null,
+    "address": "Augsburger Straße 39, 86157 Augsburg",
+    "coordinates": [
+      10.868831,
+      48.362175
+    ],
+    "indianState": "Urban Indian Street Food & Chaat",
+    "regionCategory": "Street Food & Chaat",
+    "cuisineStyle": "OpenStreetMap Verified Indian Kitchen (indian)",
+    "phone": "+49 821 4206789",
+    "website": "https://www.noonmirch.de",
+    "establishedNote": "OpenStreetMap Verified Open Location",
+    "hoursNote": "11:00-14:00,17:00-22:00",
+    "isPureVeg": false,
+    "isStreetFood": true,
+    "isNewSpot": true,
+    "positiveReviews": [
+      {
+        "quote": "Verified active Indian restaurant in Augsburg serving regional spices and freshly prepared dishes.",
         "reviewerType": "OSM Community Verified"
       }
     ],
@@ -10622,6 +11252,36 @@
     "dataSource": "osm-verified"
   },
   {
+    "id": "osm-401623077",
+    "name": "ROOH",
+    "city": "Hersbruck",
+    "district": null,
+    "address": "Prager Straße 16, 91217 Hersbruck",
+    "coordinates": [
+      11.430494,
+      49.508872
+    ],
+    "indianState": "Indian",
+    "regionCategory": "North Indian & Tandoori",
+    "cuisineStyle": "OpenStreetMap Verified Indian Kitchen (indian)",
+    "phone": "+49 9151 8166770",
+    "website": "https://rooh-gastronomy.com/",
+    "establishedNote": "OpenStreetMap Verified Open Location",
+    "hoursNote": "Check official site or Google Maps for hours",
+    "isPureVeg": false,
+    "isStreetFood": false,
+    "isNewSpot": false,
+    "positiveReviews": [
+      {
+        "quote": "Verified active Indian restaurant in Hersbruck serving regional spices and freshly prepared dishes.",
+        "reviewerType": "OSM Community Verified"
+      }
+    ],
+    "signatureDishes": [],
+    "authenticityNote": "Verified Indian cuisine in OpenStreetMap.",
+    "dataSource": "osm-verified"
+  },
+  {
     "id": "osm-4022662619",
     "name": "Dessi Tadka",
     "city": "Augsburg",
@@ -10746,7 +11406,7 @@
     "name": "Curry House",
     "city": "Erlangen",
     "district": null,
-    "address": "Goethestraße 26, 91054 Erlangen",
+    "address": "Helmstraße 11, 91054 Erlangen",
     "coordinates": [
       11.002461,
       49.597052
@@ -10754,7 +11414,7 @@
     "indianState": "Indian",
     "regionCategory": "North Indian & Tandoori",
     "cuisineStyle": "OpenStreetMap Verified Indian Kitchen (indian)",
-    "phone": "+49 9131 977196979",
+    "phone": null,
     "website": "https://curryhouse-erlangen.de",
     "establishedNote": "OpenStreetMap Verified Open Location",
     "hoursNote": "Mo-Su 11:00-24:00",
@@ -11004,6 +11664,36 @@
     "positiveReviews": [
       {
         "quote": "Verified active Indian restaurant in Großheubach serving regional spices and freshly prepared dishes.",
+        "reviewerType": "OSM Community Verified"
+      }
+    ],
+    "signatureDishes": [],
+    "authenticityNote": "Verified Indian cuisine in OpenStreetMap.",
+    "dataSource": "osm-verified"
+  },
+  {
+    "id": "osm-4470479393",
+    "name": "Bombay Indien Grill",
+    "city": "Munich",
+    "district": null,
+    "address": "Theresienstraße 124, 80333 München",
+    "coordinates": [
+      11.564575,
+      48.151412
+    ],
+    "indianState": "Maharashtra & Western Coast",
+    "regionCategory": "Western & Marathi",
+    "cuisineStyle": "OpenStreetMap Verified Indian Kitchen (indian)",
+    "phone": "+4917660872032",
+    "website": null,
+    "establishedNote": "OpenStreetMap Verified Open Location",
+    "hoursNote": "Mo-Sa 11:00-20:00",
+    "isPureVeg": false,
+    "isStreetFood": false,
+    "isNewSpot": false,
+    "positiveReviews": [
+      {
+        "quote": "Verified active Indian restaurant in Munich serving regional spices and freshly prepared dishes.",
         "reviewerType": "OSM Community Verified"
       }
     ],
@@ -11274,6 +11964,36 @@
     "positiveReviews": [
       {
         "quote": "Verified active Indian restaurant in Bavaria serving regional spices and freshly prepared dishes.",
+        "reviewerType": "OSM Community Verified"
+      }
+    ],
+    "signatureDishes": [],
+    "authenticityNote": "Verified Indian cuisine in OpenStreetMap.",
+    "dataSource": "osm-verified"
+  },
+  {
+    "id": "osm-4815509423",
+    "name": "Rasam",
+    "city": "Erlangen",
+    "district": null,
+    "address": "Apfelstraße 8, 91054 Erlangen",
+    "coordinates": [
+      11.004124,
+      49.598772
+    ],
+    "indianState": "Indian",
+    "regionCategory": "North Indian & Tandoori",
+    "cuisineStyle": "OpenStreetMap Verified Indian Kitchen (indian)",
+    "phone": "+49 9131 6874977",
+    "website": "https://www.rasamerlangen.de/",
+    "establishedNote": "OpenStreetMap Verified Open Location",
+    "hoursNote": "Mo-Th 17:00-24:00, Fr 17:00-01:00, Sa 12:00-01:00, Su,PH 12:00-22:00",
+    "isPureVeg": false,
+    "isStreetFood": false,
+    "isNewSpot": false,
+    "positiveReviews": [
+      {
+        "quote": "Verified active Indian restaurant in Erlangen serving regional spices and freshly prepared dishes.",
         "reviewerType": "OSM Community Verified"
       }
     ],
@@ -11574,6 +12294,36 @@
     "positiveReviews": [
       {
         "quote": "Verified active Indian restaurant in Erlangen serving regional spices and freshly prepared dishes.",
+        "reviewerType": "OSM Community Verified"
+      }
+    ],
+    "signatureDishes": [],
+    "authenticityNote": "Verified Indian cuisine in OpenStreetMap.",
+    "dataSource": "osm-verified"
+  },
+  {
+    "id": "osm-5310043426",
+    "name": "Spice of India",
+    "city": "Starnberg",
+    "district": null,
+    "address": "Achheimstraße 8, 82319 Starnberg",
+    "coordinates": [
+      11.339672,
+      47.996154
+    ],
+    "indianState": "Indian",
+    "regionCategory": "North Indian & Tandoori",
+    "cuisineStyle": "OpenStreetMap Verified Indian Kitchen (indian;burger;asian;pizza)",
+    "phone": "+49 8151 918939",
+    "website": "https://spiceofindia1893.com/",
+    "establishedNote": "OpenStreetMap Verified Open Location",
+    "hoursNote": "Mo,We,Th,Fr 11:30-14:30,17:00-22:30; Tu 17:00-22:30; Sa,Su,PH 12:00-15:00,17:00-23:00",
+    "isPureVeg": false,
+    "isStreetFood": false,
+    "isNewSpot": false,
+    "positiveReviews": [
+      {
+        "quote": "Verified active Indian restaurant in Starnberg serving regional spices and freshly prepared dishes.",
         "reviewerType": "OSM Community Verified"
       }
     ],
@@ -12122,6 +12872,36 @@
     "dataSource": "osm-verified"
   },
   {
+    "id": "osm-6355154851",
+    "name": "Chandni",
+    "city": "Passau",
+    "district": "Altstadt",
+    "address": "Michaeligasse 4, 94032 Passau",
+    "coordinates": [
+      13.470264,
+      48.574763
+    ],
+    "indianState": "Indian",
+    "regionCategory": "North Indian & Tandoori",
+    "cuisineStyle": "OpenStreetMap Verified Indian Kitchen (indian)",
+    "phone": "+49 851 2669",
+    "website": "https://chandni-online.de/",
+    "establishedNote": "OpenStreetMap Verified Open Location",
+    "hoursNote": "Tu-Sa 18:00-24:00; Su 12:00-14:00,18:00-24:00",
+    "isPureVeg": false,
+    "isStreetFood": false,
+    "isNewSpot": false,
+    "positiveReviews": [
+      {
+        "quote": "Verified active Indian restaurant in Passau serving regional spices and freshly prepared dishes.",
+        "reviewerType": "OSM Community Verified"
+      }
+    ],
+    "signatureDishes": [],
+    "authenticityNote": "Verified Indian cuisine in OpenStreetMap.",
+    "dataSource": "osm-verified"
+  },
+  {
     "id": "osm-635733894",
     "name": "Sher e Punjab",
     "city": "Erlangen",
@@ -12136,6 +12916,36 @@
     "cuisineStyle": "OpenStreetMap Verified Indian Kitchen (indian)",
     "phone": "+49 9131 812777",
     "website": "https://sherepunjab-erlangen.de/",
+    "establishedNote": "OpenStreetMap Verified Open Location",
+    "hoursNote": "Check official site or Google Maps for hours",
+    "isPureVeg": false,
+    "isStreetFood": false,
+    "isNewSpot": false,
+    "positiveReviews": [
+      {
+        "quote": "Verified active Indian restaurant in Erlangen serving regional spices and freshly prepared dishes.",
+        "reviewerType": "OSM Community Verified"
+      }
+    ],
+    "signatureDishes": [],
+    "authenticityNote": "Verified Indian cuisine in OpenStreetMap.",
+    "dataSource": "osm-verified"
+  },
+  {
+    "id": "osm-635733898",
+    "name": "Taste of India",
+    "city": "Erlangen",
+    "district": null,
+    "address": "Luitpoldstraße 54, 91052 Erlangen",
+    "coordinates": [
+      11.020138,
+      49.596962
+    ],
+    "indianState": "Indian",
+    "regionCategory": "North Indian & Tandoori",
+    "cuisineStyle": "OpenStreetMap Verified Indian Kitchen (indian)",
+    "phone": "+49 9131 54797",
+    "website": "https://tasteofindia-erlangen.de/",
     "establishedNote": "OpenStreetMap Verified Open Location",
     "hoursNote": "Check official site or Google Maps for hours",
     "isPureVeg": false,
@@ -12182,6 +12992,36 @@
     "dataSource": "osm-verified"
   },
   {
+    "id": "osm-6535424616",
+    "name": "Bistro Ravi",
+    "city": "Bamberg",
+    "district": null,
+    "address": "Fischstraße 2, 96047 Bamberg",
+    "coordinates": [
+      10.887842,
+      49.892949
+    ],
+    "indianState": "Indian",
+    "regionCategory": "North Indian & Tandoori",
+    "cuisineStyle": "OpenStreetMap Verified Indian Kitchen (indian;pizza)",
+    "phone": "+49 951 70028880",
+    "website": null,
+    "establishedNote": "OpenStreetMap Verified Open Location",
+    "hoursNote": "Mo-Sa 11:30-20:00; Su off",
+    "isPureVeg": false,
+    "isStreetFood": false,
+    "isNewSpot": false,
+    "positiveReviews": [
+      {
+        "quote": "Verified active Indian restaurant in Bamberg serving regional spices and freshly prepared dishes.",
+        "reviewerType": "OSM Community Verified"
+      }
+    ],
+    "signatureDishes": [],
+    "authenticityNote": "Verified Indian cuisine in OpenStreetMap.",
+    "dataSource": "osm-verified"
+  },
+  {
     "id": "osm-6537689952",
     "name": "Taj Mahal",
     "city": "Simbach am Inn",
@@ -12204,6 +13044,36 @@
     "positiveReviews": [
       {
         "quote": "Verified active Indian restaurant in Simbach am Inn serving regional spices and freshly prepared dishes.",
+        "reviewerType": "OSM Community Verified"
+      }
+    ],
+    "signatureDishes": [],
+    "authenticityNote": "Verified Indian cuisine in OpenStreetMap.",
+    "dataSource": "osm-verified"
+  },
+  {
+    "id": "osm-656252915",
+    "name": "Garam Masala",
+    "city": "Munich",
+    "district": null,
+    "address": "Radlsteg 1, 80331 München",
+    "coordinates": [
+      11.579087,
+      48.135444
+    ],
+    "indianState": "Indian",
+    "regionCategory": "North Indian & Tandoori",
+    "cuisineStyle": "OpenStreetMap Verified Indian Kitchen (indian)",
+    "phone": "+49 89 2424 5907",
+    "website": "https://www.garam-masala-restaurant.de/",
+    "establishedNote": "OpenStreetMap Verified Open Location",
+    "hoursNote": "Mo-Su 11:30-23:30",
+    "isPureVeg": false,
+    "isStreetFood": false,
+    "isNewSpot": false,
+    "positiveReviews": [
+      {
+        "quote": "Verified active Indian restaurant in Munich serving regional spices and freshly prepared dishes.",
         "reviewerType": "OSM Community Verified"
       }
     ],
@@ -12302,28 +13172,28 @@
     "dataSource": "osm-verified"
   },
   {
-    "id": "osm-663410487",
-    "name": "Der kleine Inder",
-    "city": "Bavaria",
+    "id": "osm-671521749",
+    "name": "tandoori flame",
+    "city": "Unterföhring",
     "district": null,
-    "address": "Bavaria",
+    "address": "Firkenweg 3, 85774 Unterföhring",
     "coordinates": [
-      10.988308,
-      49.456401
+      11.64389,
+      48.189404
     ],
     "indianState": "Indian",
     "regionCategory": "North Indian & Tandoori",
     "cuisineStyle": "OpenStreetMap Verified Indian Kitchen (indian)",
-    "phone": "+49 911 780 96 22",
-    "website": "https://derkleineinder.de/",
+    "phone": "+49 89 99690600",
+    "website": "https://www.tandooriflame.de/",
     "establishedNote": "OpenStreetMap Verified Open Location",
-    "hoursNote": "Check official site or Google Maps for hours",
+    "hoursNote": "Mo-Fr 11:30-14:30,17:30-23:00; Sa 17:30-23:00; Su,PH 12:00-22:00",
     "isPureVeg": false,
     "isStreetFood": false,
     "isNewSpot": false,
     "positiveReviews": [
       {
-        "quote": "Verified active Indian restaurant in Bavaria serving regional spices and freshly prepared dishes.",
+        "quote": "Verified active Indian restaurant in Unterföhring serving regional spices and freshly prepared dishes.",
         "reviewerType": "OSM Community Verified"
       }
     ],
@@ -12662,6 +13532,36 @@
     "dataSource": "osm-verified"
   },
   {
+    "id": "osm-7289541677",
+    "name": "Bella Tandoori",
+    "city": "Coburg",
+    "district": null,
+    "address": "Steinweg 59, 96450 Coburg",
+    "coordinates": [
+      10.966228,
+      50.262649
+    ],
+    "indianState": "Indian",
+    "regionCategory": "North Indian & Tandoori",
+    "cuisineStyle": "OpenStreetMap Verified Indian Kitchen (indian)",
+    "phone": "+49 9561 7942774",
+    "website": "https://www.bella-tandoori-coburg.de",
+    "establishedNote": "OpenStreetMap Verified Open Location",
+    "hoursNote": "Mo 16:00-23:00; Tu-Sa 10:30-14:00,16:30-23:00; Su 10:30-23:00",
+    "isPureVeg": false,
+    "isStreetFood": false,
+    "isNewSpot": false,
+    "positiveReviews": [
+      {
+        "quote": "Verified active Indian restaurant in Coburg serving regional spices and freshly prepared dishes.",
+        "reviewerType": "OSM Community Verified"
+      }
+    ],
+    "signatureDishes": [],
+    "authenticityNote": "Verified Indian cuisine in OpenStreetMap.",
+    "dataSource": "osm-verified"
+  },
+  {
     "id": "osm-7340973669",
     "name": "Haveli",
     "city": "Bavaria",
@@ -12684,6 +13584,36 @@
     "positiveReviews": [
       {
         "quote": "Verified active Indian restaurant in Bavaria serving regional spices and freshly prepared dishes.",
+        "reviewerType": "OSM Community Verified"
+      }
+    ],
+    "signatureDishes": [],
+    "authenticityNote": "Verified Indian cuisine in OpenStreetMap.",
+    "dataSource": "osm-verified"
+  },
+  {
+    "id": "osm-7398517520",
+    "name": "Chai Roti",
+    "city": "Erlangen",
+    "district": null,
+    "address": "Goethestraße 26, 91054 Erlangen",
+    "coordinates": [
+      11.002088,
+      49.59739
+    ],
+    "indianState": "Indian",
+    "regionCategory": "North Indian & Tandoori",
+    "cuisineStyle": "OpenStreetMap Verified Indian Kitchen (indian)",
+    "phone": "+49 9131 977196979",
+    "website": "https://www.chairotierlangen.com/",
+    "establishedNote": "OpenStreetMap Verified Open Location",
+    "hoursNote": "Mo-Fr 11:30-15:00,17:30-23:00; Sa,Su 13:00-23:00",
+    "isPureVeg": false,
+    "isStreetFood": false,
+    "isNewSpot": false,
+    "positiveReviews": [
+      {
+        "quote": "Verified active Indian restaurant in Erlangen serving regional spices and freshly prepared dishes.",
         "reviewerType": "OSM Community Verified"
       }
     ],
@@ -12902,6 +13832,36 @@
     "dataSource": "osm-verified"
   },
   {
+    "id": "osm-807789920",
+    "name": "Maharaja II",
+    "city": "Würzburg",
+    "district": null,
+    "address": "Ernst-Reuter-Straße 20, 97080 Würzburg",
+    "coordinates": [
+      9.942335,
+      49.804082
+    ],
+    "indianState": "Indian",
+    "regionCategory": "North Indian & Tandoori",
+    "cuisineStyle": "OpenStreetMap Verified Indian Kitchen (indian)",
+    "phone": "+49 931 287094",
+    "website": "https://maharaja-wuerzburg.com/",
+    "establishedNote": "OpenStreetMap Verified Open Location",
+    "hoursNote": "Tu-Su 17:30-22:00",
+    "isPureVeg": false,
+    "isStreetFood": false,
+    "isNewSpot": false,
+    "positiveReviews": [
+      {
+        "quote": "Verified active Indian restaurant in Würzburg serving regional spices and freshly prepared dishes.",
+        "reviewerType": "OSM Community Verified"
+      }
+    ],
+    "signatureDishes": [],
+    "authenticityNote": "Verified Indian cuisine in OpenStreetMap.",
+    "dataSource": "osm-verified"
+  },
+  {
     "id": "osm-8109565717",
     "name": "Taj",
     "city": "Scheyern",
@@ -12954,6 +13914,36 @@
     "positiveReviews": [
       {
         "quote": "Verified active Indian restaurant in Bavaria serving regional spices and freshly prepared dishes.",
+        "reviewerType": "OSM Community Verified"
+      }
+    ],
+    "signatureDishes": [],
+    "authenticityNote": "Verified Indian cuisine in OpenStreetMap.",
+    "dataSource": "osm-verified"
+  },
+  {
+    "id": "osm-8176122842",
+    "name": "Bombay Heim Service",
+    "city": "Munich",
+    "district": null,
+    "address": "Verdistraße 103, Munich",
+    "coordinates": [
+      11.46818,
+      48.164651
+    ],
+    "indianState": "Maharashtra & Western Coast",
+    "regionCategory": "Western & Marathi",
+    "cuisineStyle": "OpenStreetMap Verified Indian Kitchen (indian)",
+    "phone": null,
+    "website": "https://www.bombayheimservicemuenchen.de/",
+    "establishedNote": "OpenStreetMap Verified Open Location",
+    "hoursNote": "Mo-Fr 11:00-14:30; Sa 14:00-22:30; Su,PH 11:00-23:00",
+    "isPureVeg": false,
+    "isStreetFood": false,
+    "isNewSpot": false,
+    "positiveReviews": [
+      {
+        "quote": "Verified active Indian restaurant in Munich serving regional spices and freshly prepared dishes.",
         "reviewerType": "OSM Community Verified"
       }
     ],
@@ -13044,6 +14034,36 @@
     "positiveReviews": [
       {
         "quote": "Verified active Indian restaurant in Munich serving regional spices and freshly prepared dishes.",
+        "reviewerType": "OSM Community Verified"
+      }
+    ],
+    "signatureDishes": [],
+    "authenticityNote": "Verified Indian cuisine in OpenStreetMap.",
+    "dataSource": "osm-verified"
+  },
+  {
+    "id": "osm-8454224551",
+    "name": "Rani Mahal",
+    "city": "Bavaria",
+    "district": null,
+    "address": "Bavaria",
+    "coordinates": [
+      10.315708,
+      47.726022
+    ],
+    "indianState": "Indian",
+    "regionCategory": "North Indian & Tandoori",
+    "cuisineStyle": "OpenStreetMap Verified Indian Kitchen (indian)",
+    "phone": null,
+    "website": null,
+    "establishedNote": "OpenStreetMap Verified Open Location",
+    "hoursNote": "Check official site or Google Maps for hours",
+    "isPureVeg": false,
+    "isStreetFood": false,
+    "isNewSpot": false,
+    "positiveReviews": [
+      {
+        "quote": "Verified active Indian restaurant in Bavaria serving regional spices and freshly prepared dishes.",
         "reviewerType": "OSM Community Verified"
       }
     ],
@@ -13490,6 +14510,36 @@
     "hoursNote": "Check official site or Google Maps for hours",
     "isPureVeg": false,
     "isStreetFood": false,
+    "isNewSpot": false,
+    "positiveReviews": [
+      {
+        "quote": "Verified active Indian restaurant in Munich serving regional spices and freshly prepared dishes.",
+        "reviewerType": "OSM Community Verified"
+      }
+    ],
+    "signatureDishes": [],
+    "authenticityNote": "Verified Indian cuisine in OpenStreetMap.",
+    "dataSource": "osm-verified"
+  },
+  {
+    "id": "osm-9447308660",
+    "name": "Bindaas",
+    "city": "Munich",
+    "district": null,
+    "address": "Munich",
+    "coordinates": [
+      11.605818,
+      48.124261
+    ],
+    "indianState": "Urban Indian Street Food & Chaat",
+    "regionCategory": "Street Food & Chaat",
+    "cuisineStyle": "OpenStreetMap Verified Indian Kitchen (indian)",
+    "phone": null,
+    "website": "https://www.bindaas.de/werksviertel/",
+    "establishedNote": "OpenStreetMap Verified Open Location",
+    "hoursNote": "Mo-Fr 11:30-14:30,17:30-24:00; Sa,PH 12:00-01:00; Su off",
+    "isPureVeg": false,
+    "isStreetFood": true,
     "isNewSpot": false,
     "positiveReviews": [
       {

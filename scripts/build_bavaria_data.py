@@ -172,6 +172,7 @@ NAME_NON_INDIAN_EXCLUDE = [
     "vietnam", "china", "asia", "wok", "burger", "metzgerei", "bäckerei",
     "ice cream", "wirtshaus", "gasthaus", "gasthof", "brauhaus", "trattoria",
     "ristorante", "imbiss", "anan", "kaimug", "dean&david", "slurp", "bami house",
+    "biergarten", "hexengarten", "la barca",
 ]
 
 SECONDARY_CUISINE_BAD = [
@@ -492,27 +493,31 @@ LIMIT 500
     return results
 
 def fetch_wolt_bavaria():
-    print("2/3 Querying Wolt Live API across 22 Munich & Bavaria hubs...", flush=True)
+    print("2/3 Querying Wolt Live API (restaurants + category-indian) across 22 Munich & Bavaria hubs...", flush=True)
 
     def fetch_point(city_hint, lat, lon):
-        url = f"https://restaurant-api.wolt.com/v1/pages/restaurants?lat={lat}&lon={lon}"
-        req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"})
-        try:
-            with urllib.request.urlopen(req, timeout=10) as r:
-                d = json.loads(r.read().decode("utf-8"))
-                found = []
-                for sec in d.get("sections", []):
-                    for it in sec.get("items", []):
-                        v = it.get("venue")
-                        if not v:
-                            continue
-                        tags = [t.lower() for t in v.get("tags", [])]
-                        if "indian" not in tags and "indisch" not in tags:
-                            continue
-                        found.append((city_hint, v))
-                return found
-        except Exception:
-            return []
+        endpoints = [
+            (f"https://restaurant-api.wolt.com/v1/pages/venue-list/category-indian?lat={lat}&lon={lon}", True),
+            (f"https://restaurant-api.wolt.com/v1/pages/restaurants?lat={lat}&lon={lon}", False),
+        ]
+        found = []
+        for url, is_indian_cat in endpoints:
+            req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"})
+            try:
+                with urllib.request.urlopen(req, timeout=10) as r:
+                    d = json.loads(r.read().decode("utf-8"))
+                    for sec in d.get("sections", []):
+                        for it in sec.get("items", []):
+                            v = it.get("venue")
+                            if not v:
+                                continue
+                            tags = [t.lower() for t in v.get("tags", [])]
+                            if not is_indian_cat and "indian" not in tags and "indisch" not in tags:
+                                continue
+                            found.append((city_hint, v))
+            except Exception:
+                continue
+        return found
 
     seen_wolt = {}
     with ThreadPoolExecutor(max_workers=8) as ex:
@@ -534,7 +539,9 @@ def fetch_wolt_bavaria():
             continue
 
         address = (v.get("address") or "").strip()
-        if is_excluded(name, " ".join(v.get("tags", [])), address):
+        if address.lower().startswith("this is a virtual venue") and name.lower().endswith("veggie"):
+            continue
+        if is_excluded(name, ";".join(v.get("tags", [])), address):
             continue
 
         # Parse postcode from address if present
@@ -914,11 +921,11 @@ def main():
         if is_excluded(rec["name"], "", rec.get("address", "")):
             continue
 
-        # Deduplicate against flagship curated 28
+        # Deduplicate against flagship curated 29
         skip = False
         for fname, flon, flat in FLAGSHIP_CENTERS:
             dist = haversine_m(lon, lat, flon, flat)
-            if dist < 130 or (dist < 2500 and (fname == n or fname in n or n in fname)):
+            if dist < 25 or (dist < 250 and (fname == n or fname in n or n in fname)):
                 skip = True
                 break
         if skip:
@@ -930,7 +937,7 @@ def main():
             elon, elat = existing["coordinates"]
             dist = haversine_m(lon, lat, elon, elat)
             en = norm_name(existing["name"])
-            if dist < 110 or (dist < 380 and en and n and (en == n or en in n or n in en)):
+            if dist < 25 or (dist < 250 and en and n and (en == n or en in n or n in en)):
                 dup = existing
                 break
 
