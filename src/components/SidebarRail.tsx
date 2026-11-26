@@ -89,7 +89,7 @@ export const SidebarRail: React.FC<SidebarRailProps> = ({
             {cityLabel === 'All Bavaria' ? 'All Bavaria' : `${cityLabel} Kitchens`}
           </h2>
           <p className="text-[11px]" style={{ color: 'var(--text-muted)' }}>
-            {restaurants.length} open &amp; verified · Pakistani/closed excluded
+            {restaurants.length} open &amp; verified Indian kitchens
           </p>
         </div>
         <button

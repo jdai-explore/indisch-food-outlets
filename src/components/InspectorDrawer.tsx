@@ -357,13 +357,10 @@ export const InspectorDrawer: React.FC<InspectorDrawerProps> = ({ restaurant, on
           </div>
         </section>
 
-        {/* Positive Reviews Only */}
-        <section aria-label="Positive diner highlights" className="space-y-2.5">
+        {/* Diner Highlights */}
+        <section aria-label="Diner highlights" className="space-y-2.5">
           <div className="flex items-center justify-between">
-            <h3 className="font-display text-base font-bold">Positive Diner Highlights</h3>
-            <span className="text-[10px] font-mono-data uppercase" style={{ color: 'var(--text-muted)' }}>
-              Positive-Only Curation
-            </span>
+            <h3 className="font-display text-base font-bold">Diner Highlights</h3>
           </div>
 
           <div className="space-y-2.5">
@@ -385,11 +382,6 @@ export const InspectorDrawer: React.FC<InspectorDrawerProps> = ({ restaurant, on
             ))}
           </div>
         </section>
-
-        {/* Authenticity Note */}
-        <p className="text-[11px] leading-relaxed pb-2" style={{ color: 'var(--text-muted)' }}>
-          {restaurant.authenticityNote}
-        </p>
       </div>
     </aside>
   );

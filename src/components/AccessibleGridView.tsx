@@ -49,7 +49,7 @@ export const AccessibleGridView: React.FC<AccessibleGridViewProps> = ({
               : `Authentic Indian Kitchens in ${cityLabel}`}
           </h1>
           <p className="text-sm mt-1" style={{ color: 'var(--text-secondary)' }}>
-            Accessible keyboard-first directory · {restaurants.length} open &amp; verified Indian kitchens (Pakistani/closed venues excluded)
+            Accessible keyboard-first directory · {restaurants.length} open &amp; verified Indian kitchens
           </p>
         </div>
 
