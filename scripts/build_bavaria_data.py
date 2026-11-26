@@ -217,76 +217,16 @@ def classify_region(name: str, cuisine: str = ""):
             state = "Kerala (Coastal South India)"
         elif "chettinad" in text or "anjappar" in text or "saravanaa" in text or "sripaka" in text:
             state = "Tamil Nadu (South India)"
-        return state, "South Indian", [
-            {
-                "name": "Ghee Roast Masala Dosa",
-                "regionalOrigin": "South India",
-                "description": "Crisp fermented rice-lentil crepe served with sambar and coconut-ginger chutneys.",
-                "spiceLevel": 2,
-                "dietary": ["Vegetarian", "Gluten-Free", "Signature"],
-                "insteadOf": "Garlic Naan",
-            },
-            {
-                "name": "Chettinad Pepper Curry or Kerala Roast",
-                "regionalOrigin": state,
-                "description": "Fragrant black pepper, fresh curry leaves, and roasted coconut spices.",
-                "spiceLevel": 4,
-                "dietary": ["Gluten-Free", "Dairy-Free"],
-                "insteadOf": "Butter Chicken",
-            },
-        ]
+        return state, "South Indian", []
 
     if any(w in text for w in ["swaad", "svaad", "marathi", "bombay", "mumbai", "maharashtra", "kolhapur", "goa"]):
         state = "Goa & Western Coast" if "goa" in text else "Maharashtra & Western Coast"
-        return state, "Western & Marathi", [
-            {
-                "name": "Kolhapuri Masala or Goan Vindaloo",
-                "regionalOrigin": state,
-                "description": "Roasted coconut, sesame, kokum, and whole red-chili spice blend.",
-                "spiceLevel": 4,
-                "dietary": ["Gluten-Free", "Signature"],
-                "insteadOf": "Chicken Tikka Masala",
-            },
-            {
-                "name": "Kokum Solkadhi & Vada Pav",
-                "regionalOrigin": "Mumbai & Konkan",
-                "description": "Chilled pink kokum-coconut digestive or spiced Mumbai potato slider.",
-                "spiceLevel": 2,
-                "dietary": ["Vegetarian"],
-            },
-        ]
+        return state, "Western & Marathi", []
 
     if any(w in text for w in ["street", "chaat", "chutney", "bindaas", "tadka", "noon mirch", "tikka n talk", "indian sun", "chaska", "khazana", "bites", "kulhad"]):
-        return "Urban Indian Street Food & Chaat", "Street Food & Chaat", [
-            {
-                "name": "Pani Puri & Delhi Chaat",
-                "regionalOrigin": "Mumbai / Delhi",
-                "description": "Crisp hollow puris with spiced chickpeas, tamarind glaze, and chilled mint water.",
-                "spiceLevel": 3,
-                "dietary": ["Vegan", "Signature"],
-                "insteadOf": "Standard Veg Samosa",
-            },
-            {
-                "name": "Mumbai Kathi Roll or Tawa Platter",
-                "regionalOrigin": "Kolkata / Mumbai",
-                "description": "Flaky griddle paratha wrapped around spiced fillings and fresh mint chutney.",
-                "spiceLevel": 3,
-                "dietary": ["Signature"],
-            },
-        ]
+        return "Urban Indian Street Food & Chaat", "Street Food & Chaat", []
 
-    if any(w in text for w in ["ayurveda", "ayurvedic", "holi", "radha", "madhuram", "sidhartha", "satvik"]):
-        return "Ayurvedic & Pan-Indian Wellness", "Ayurvedic & Pan-Indian", [
-            {
-                "name": "Ayurvedic Dosha-Balanced Thali",
-                "regionalOrigin": "Pan-Indian",
-                "description": "Lightly tempered lentils, seasonal vegetables, cumin rice, and digestive chutneys.",
-                "spiceLevel": 2,
-                "dietary": ["Vegan", "Gluten-Free", "Signature"],
-            }
-        ]
-
-    state = "North India & Punjab"
+    state = "Indian"
     if "hyderabad" in text or "biryani" in text:
         state = "Telangana (Hyderabadi) & North India"
     elif "delhi" in text:
@@ -296,23 +236,7 @@ def classify_region(name: str, cuisine: str = ""):
     elif "palast" in text or "rajasthan" in text or "jaipur" in text:
         state = "Rajasthan & North India"
 
-    return state, "North Indian & Tandoori", [
-        {
-            "name": "Charcoal Tandoori Platter & Dal Tadka",
-            "regionalOrigin": state,
-            "description": "Clay-oven blistered skewers paired with smoky cumin-tempered yellow lentils.",
-            "spiceLevel": 3,
-            "dietary": ["Gluten-Free", "Signature"],
-            "insteadOf": "Butter Chicken",
-        },
-        {
-            "name": "Whole-Spice Lamb Rogan Josh or Kadai Paneer",
-            "regionalOrigin": "North India",
-            "description": "Aromatic cardamom and roasted coriander gravy cooked without heavy cream.",
-            "spiceLevel": 3,
-            "dietary": ["Gluten-Free"],
-        },
-    ]
+    return state, "North Indian & Tandoori", []
 
 def parse_wkt_centroid(loc: str):
     """Extract (lon, lat, is_polygon) from WKT POINT, POLYGON, or MULTIPOLYGON."""
@@ -947,7 +871,18 @@ def load_prev_json_or_cache():
     if OUT_PATH.exists():
         try:
             prev = json.loads(OUT_PATH.read_text(encoding="utf-8"))
-            return [r for r in prev if str(r.get("id", "")).startswith("bav-")]
+            retained = []
+            for r in prev:
+                if not str(r.get("id", "")).startswith("bav-"):
+                    continue
+                r["signatureDishes"] = []
+                r.pop("ongoingOffer", None)
+                if r.get("regionCategory") == "Ayurvedic & Pan-Indian":
+                    r["regionCategory"] = "North Indian & Tandoori"
+                if "ayurvedic" in str(r.get("indianState", "")).lower() or r.get("indianState") == "North India & Punjab":
+                    r["indianState"] = "Indian"
+                retained.append(r)
+            return retained
         except Exception:
             return []
     return []

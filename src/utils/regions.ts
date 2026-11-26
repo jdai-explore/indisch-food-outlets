@@ -37,13 +37,6 @@ export const REGION_STYLES: Record<IndianRegionCategory, RegionStyle> = {
     bgSoft: 'rgba(190, 18, 60, 0.14)',
     border: 'rgba(190, 18, 60, 0.36)',
   },
-  'Ayurvedic & Pan-Indian': {
-    label: 'Ayurvedic & Regional Pan-Indian',
-    shortLabel: 'Ayurvedic & Pan',
-    color: '#4338CA',
-    bgSoft: 'rgba(67, 56, 202, 0.14)',
-    border: 'rgba(67, 56, 202, 0.36)',
-  },
 };
 
 export function getRegionStyle(category: IndianRegionCategory): RegionStyle {

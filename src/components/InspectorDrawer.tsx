@@ -14,7 +14,6 @@ import {
   ShieldCheck,
   Sparkles,
   Star,
-  Tag,
   X,
 } from 'lucide-react';
 import { Restaurant } from '../types/restaurant';
@@ -159,12 +158,14 @@ export const InspectorDrawer: React.FC<InspectorDrawerProps> = ({ restaurant, on
           </button>
 
           <div className="flex items-center gap-1.5 flex-wrap pr-11">
-            <span
-              className="text-[11px] font-bold px-2.5 py-0.5 rounded-full"
-              style={{ background: region.bgSoft, color: region.color }}
-            >
-              {restaurant.indianState}
-            </span>
+            {restaurant.indianState && restaurant.indianState !== 'Indian' && (
+              <span
+                className="text-[11px] font-bold px-2.5 py-0.5 rounded-full"
+                style={{ background: region.bgSoft, color: region.color }}
+              >
+                {restaurant.indianState}
+              </span>
+            )}
             <span
               className="inline-flex items-center gap-1 text-[11px] font-semibold px-2 py-0.5 rounded-full"
               style={{ background: 'var(--accent-emerald-soft)', color: 'var(--accent-emerald)' }}
@@ -282,9 +283,11 @@ export const InspectorDrawer: React.FC<InspectorDrawerProps> = ({ restaurant, on
                 <MapPin className="w-4 h-4 mt-0.5 shrink-0" style={{ color: 'var(--accent-saffron)' }} />
                 <div>
                   <p className="font-semibold leading-snug">{restaurant.address}</p>
-                  <p className="text-xs mt-0.5" style={{ color: 'var(--text-muted)' }}>
-                    {restaurant.establishedNote}
-                  </p>
+                  {restaurant.establishedNote && !/openstreetmap/i.test(restaurant.establishedNote) && (
+                    <p className="text-xs mt-0.5" style={{ color: 'var(--text-muted)' }}>
+                      {restaurant.establishedNote}
+                    </p>
+                  )}
                 </div>
               </div>
               <button
@@ -321,32 +324,6 @@ export const InspectorDrawer: React.FC<InspectorDrawerProps> = ({ restaurant, on
             </p>
           </section>
 
-          {/* Ongoing Offer */}
-          {restaurant.ongoingOffer && (
-            <section
-              aria-label="Ongoing offer"
-              className="pt-4 border-t"
-              style={{ borderColor: 'var(--border-subtle)' }}
-            >
-              <div
-                className="p-3.5 rounded-xl border"
-                style={{
-                  background: 'var(--accent-emerald-soft)',
-                  borderColor: 'rgba(15, 118, 110, 0.25)',
-                }}
-              >
-                <div className="flex items-center gap-1.5 text-xs font-bold" style={{ color: 'var(--accent-emerald)' }}>
-                  <Tag className="w-3.5 h-3.5" />
-                  <span>{restaurant.ongoingOffer.title}</span>
-                </div>
-                <p className="text-xs mt-1 leading-relaxed">{restaurant.ongoingOffer.details}</p>
-                <p className="text-[11px] mt-1 font-medium" style={{ color: 'var(--text-secondary)' }}>
-                  {restaurant.ongoingOffer.validNote}
-                </p>
-              </div>
-            </section>
-          )}
-
           {/* Seasonal Highlight */}
           {restaurant.isSeasonalWinterPick && restaurant.seasonalReason && (
             <section
@@ -365,63 +342,65 @@ export const InspectorDrawer: React.FC<InspectorDrawerProps> = ({ restaurant, on
           )}
 
           {/* Skip the Usual — Delicacies to Try */}
-          <section
-            aria-label="Recommended delicacies beyond Butter Chicken"
-            className="pt-4 border-t space-y-3"
-            style={{ borderColor: 'var(--border-subtle)' }}
-          >
-            <div>
-              <h3 className="font-display text-base font-bold">Skip the Usual — Try These Here</h3>
-              <p className="text-[11px]" style={{ color: 'var(--text-muted)' }}>
-                Regional specialties that showcase what this kitchen truly excels at
-              </p>
-            </div>
+          {restaurant.signatureDishes.length > 0 && (
+            <section
+              aria-label="Recommended delicacies beyond Butter Chicken"
+              className="pt-4 border-t space-y-3"
+              style={{ borderColor: 'var(--border-subtle)' }}
+            >
+              <div>
+                <h3 className="font-display text-base font-bold">Skip the Usual — Try These Here</h3>
+                <p className="text-[11px]" style={{ color: 'var(--text-muted)' }}>
+                  Regional specialties that showcase what this kitchen truly excels at
+                </p>
+              </div>
 
-            <div className="space-y-3">
-              {restaurant.signatureDishes.map((dish, idx) => (
-                <div
-                  key={dish.name}
-                  className={idx > 0 ? 'pt-3 border-t space-y-1.5' : 'space-y-1.5'}
-                  style={{ borderColor: 'var(--border-subtle)' }}
-                >
-                  <div className="flex items-start justify-between gap-2">
-                    <div>
-                      <h4 className="text-sm font-bold leading-snug">{dish.name}</h4>
-                      <p className="text-[11px] font-medium" style={{ color: 'var(--accent-saffron)' }}>
-                        Origin: {dish.regionalOrigin}
-                      </p>
+              <div className="space-y-3">
+                {restaurant.signatureDishes.map((dish, idx) => (
+                  <div
+                    key={dish.name}
+                    className={idx > 0 ? 'pt-3 border-t space-y-1.5' : 'space-y-1.5'}
+                    style={{ borderColor: 'var(--border-subtle)' }}
+                  >
+                    <div className="flex items-start justify-between gap-2">
+                      <div>
+                        <h4 className="text-sm font-bold leading-snug">{dish.name}</h4>
+                        <p className="text-[11px] font-medium" style={{ color: 'var(--accent-saffron)' }}>
+                          Origin: {dish.regionalOrigin}
+                        </p>
+                      </div>
+                      <SpiceDots level={dish.spiceLevel} />
                     </div>
-                    <SpiceDots level={dish.spiceLevel} />
-                  </div>
 
-                  {dish.insteadOf && (
-                    <p className="text-[11px] font-semibold" style={{ color: 'var(--accent-crimson)' }}>
-                      Try instead of: {dish.insteadOf}
+                    {dish.insteadOf && (
+                      <p className="text-[11px] font-semibold" style={{ color: 'var(--accent-crimson)' }}>
+                        Try instead of: {dish.insteadOf}
+                      </p>
+                    )}
+
+                    <p className="text-xs leading-relaxed" style={{ color: 'var(--text-secondary)' }}>
+                      {dish.description}
                     </p>
-                  )}
 
-                  <p className="text-xs leading-relaxed" style={{ color: 'var(--text-secondary)' }}>
-                    {dish.description}
-                  </p>
-
-                  <div className="flex flex-wrap gap-1 pt-0.5">
-                    {dish.dietary.map((tag) => (
-                      <span
-                        key={tag}
-                        className="text-[10px] font-semibold px-2 py-0.5 rounded-md"
-                        style={{
-                          background: 'var(--bg-subtle)',
-                          color: 'var(--text-secondary)',
-                        }}
-                      >
-                        {tag}
-                      </span>
-                    ))}
+                    <div className="flex flex-wrap gap-1 pt-0.5">
+                      {dish.dietary.map((tag) => (
+                        <span
+                          key={tag}
+                          className="text-[10px] font-semibold px-2 py-0.5 rounded-md"
+                          style={{
+                            background: 'var(--bg-subtle)',
+                            color: 'var(--text-secondary)',
+                          }}
+                        >
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
                   </div>
-                </div>
-              ))}
-            </div>
-          </section>
+                ))}
+              </div>
+            </section>
+          )}
 
           {/* Diner Highlights */}
           <section

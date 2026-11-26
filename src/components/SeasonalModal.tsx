@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import { MapPin, Sparkles, Tag, X } from 'lucide-react';
+import { MapPin, Sparkles, X } from 'lucide-react';
 import { SEASONAL_SPOTLIGHTS } from '../data/delicacies';
 import { Restaurant } from '../types/restaurant';
 
@@ -33,8 +33,6 @@ export const SeasonalModal: React.FC<SeasonalModalProps> = ({
   }, [isOpen, onClose]);
 
   if (!isOpen) return null;
-
-  const offerRestaurants = restaurants.filter((r) => Boolean(r.ongoingOffer));
 
   return (
     <div
@@ -132,44 +130,6 @@ export const SeasonalModal: React.FC<SeasonalModalProps> = ({
               );
             })}
           </div>
-
-          {/* Active Offers List */}
-          <section aria-label="Active weekday offers and specials" className="space-y-2.5">
-            <h3 className="font-display text-lg font-bold flex items-center gap-2">
-              <Tag className="w-4 h-4" style={{ color: 'var(--accent-emerald)' }} />
-              <span>Ongoing Lunch &amp; Thali Specials</span>
-            </h3>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-              {offerRestaurants.map((r) => (
-                <button
-                  key={r.id}
-                  type="button"
-                  onClick={() => {
-                    onPickRestaurant(r);
-                    onClose();
-                  }}
-                  className="text-left p-3.5 rounded-2xl border cursor-pointer transition-all hover:scale-[1.01]"
-                  style={{
-                    background: 'var(--accent-emerald-soft)',
-                    borderColor: 'rgba(15, 118, 110, 0.3)',
-                  }}
-                >
-                  <div className="flex items-center justify-between gap-2">
-                    <span className="text-sm font-bold">{r.name}</span>
-                    <span className="text-[11px] font-mono-data" style={{ color: 'var(--text-muted)' }}>
-                      {r.city}
-                    </span>
-                  </div>
-                  <p className="text-xs font-semibold mt-1" style={{ color: 'var(--accent-emerald)' }}>
-                    {r.ongoingOffer?.title}
-                  </p>
-                  <p className="text-xs mt-1" style={{ color: 'var(--text-secondary)' }}>
-                    {r.ongoingOffer?.details}
-                  </p>
-                </button>
-              ))}
-            </div>
-          </section>
         </div>
       </div>
     </div>

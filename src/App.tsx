@@ -84,7 +84,6 @@ export function App() {
         }
 
         if (quickFilter === 'new' && !r.isNewSpot) return false;
-        if (quickFilter === 'offers' && !r.ongoingOffer) return false;
         if (quickFilter === 'seasonal' && !r.isSeasonalWinterPick) return false;
         if (quickFilter === 'street-food' && !r.isStreetFood) return false;
         if (quickFilter === 'fine-dining' && !r.isFineDining) return false;

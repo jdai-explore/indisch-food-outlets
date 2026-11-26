@@ -4815,5 +4815,28 @@
         "9.5705903"
       ]
     }
+  ],
+  "format=jsonv2&limit=1&q=Breite+Str.+23%2C+92421+Schwandorf%2C+Germany&countrycodes=de": [
+    {
+      "place_id": 130811550,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "way",
+      "osm_id": 491415991,
+      "lat": "49.3293057",
+      "lon": "12.1058179",
+      "category": "building",
+      "type": "yes",
+      "place_rank": 30,
+      "importance": 5.225833524066556e-05,
+      "addresstype": "building",
+      "name": "Färberhaus",
+      "display_name": "Färberhaus, 23, Breite Straße, Innenstadt, Schwandorf, Landkreis Schwandorf, Bayern, 92421, Deutschland",
+      "boundingbox": [
+        "49.3291270",
+        "49.3294155",
+        "12.1054791",
+        "12.1060015"
+      ]
+    }
   ]
 }

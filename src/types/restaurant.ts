@@ -4,8 +4,7 @@ export type IndianRegionCategory =
   | 'South Indian'
   | 'North Indian & Tandoori'
   | 'Western & Marathi'
-  | 'Street Food & Chaat'
-  | 'Ayurvedic & Pan-Indian';
+  | 'Street Food & Chaat';
 
 export interface DishRecommendation {
   name: string;

@@ -95,9 +95,6 @@ export const TopBar: React.FC<TopBarProps> = ({
                 Bayern
               </span>
             </div>
-            <p className="text-[11px] leading-tight hidden lg:block" style={{ color: 'var(--text-muted)' }}>
-              Verified Indian Kitchens · Munich &amp; Bavaria
-            </p>
           </div>
         </div>
 

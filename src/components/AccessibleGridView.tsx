@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Globe, MapPin, Phone, Sparkles, Star, Tag } from 'lucide-react';
+import { Globe, MapPin, Phone, Sparkles, Star } from 'lucide-react';
 import { IndianRegionCategory, Restaurant } from '../types/restaurant';
 import { getRegionStyle, REGION_STYLES } from '../utils/regions';
 import { safeHttpUrl, safeTelHref } from '../utils/sanitize';
@@ -19,7 +19,6 @@ interface AccessibleGridViewProps {
 const QUICK_FILTERS: { id: QuickFilter; label: string }[] = [
   { id: 'all', label: 'All Verified' },
   { id: 'new', label: 'New & Rising' },
-  { id: 'offers', label: 'Lunch Offers' },
   { id: 'seasonal', label: 'Winter Picks' },
   { id: 'street-food', label: 'Street Food' },
   { id: 'fine-dining', label: 'Fine Dining' },
@@ -137,19 +136,21 @@ export const AccessibleGridView: React.FC<AccessibleGridViewProps> = ({
                 <div className="space-y-3">
                   <div className="flex items-start justify-between gap-2">
                     <div>
-                      <span
-                        className="inline-block text-[10px] font-bold px-2 py-0.5 rounded-full mb-1.5"
-                        style={{ background: region.bgSoft, color: region.color }}
-                      >
-                        {r.indianState}
-                      </span>
+                      {r.indianState && r.indianState !== 'Indian' && (
+                        <span
+                          className="inline-block text-[10px] font-bold px-2 py-0.5 rounded-full mb-1.5"
+                          style={{ background: region.bgSoft, color: region.color }}
+                        >
+                          {r.indianState}
+                        </span>
+                      )}
                       <h2 className="font-display text-lg font-bold leading-snug">{r.name}</h2>
                       <p className="text-xs mt-0.5 flex items-center gap-1" style={{ color: 'var(--text-muted)' }}>
                         <MapPin className="w-3.5 h-3.5 shrink-0" />
                         <span>{r.address}</span>
                       </p>
                     </div>
-                    {typeof r.googleRating === 'number' ? (
+                    {typeof r.googleRating === 'number' && (
                       <div
                         className="shrink-0 inline-flex items-center gap-1 px-2 py-1 rounded-xl font-mono-data text-xs font-bold"
                         style={{ background: 'var(--accent-saffron-soft)', color: 'var(--accent-amber-gold)' }}
@@ -157,13 +158,6 @@ export const AccessibleGridView: React.FC<AccessibleGridViewProps> = ({
                         <Star className="w-3.5 h-3.5 fill-current" />
                         {r.googleRating.toFixed(1)}
                       </div>
-                    ) : (
-                      <span
-                        className="shrink-0 inline-flex items-center px-2 py-1 rounded-xl font-mono-data text-[10px] font-semibold"
-                        style={{ background: 'var(--accent-emerald-soft)', color: 'var(--accent-emerald)' }}
-                      >
-                        Open · OSM
-                      </span>
                     )}
                   </div>
 
@@ -190,15 +184,6 @@ export const AccessibleGridView: React.FC<AccessibleGridViewProps> = ({
                         style={{ background: 'var(--accent-crimson-soft)', color: 'var(--accent-crimson)' }}
                       >
                         New &amp; Rising
-                      </span>
-                    )}
-                    {r.ongoingOffer && (
-                      <span
-                        className="inline-flex items-center gap-1 text-[10px] font-semibold px-2 py-0.5 rounded-full"
-                        style={{ background: 'var(--accent-emerald-soft)', color: 'var(--accent-emerald)' }}
-                      >
-                        <Tag className="w-2.5 h-2.5" />
-                        {r.ongoingOffer.title}
                       </span>
                     )}
                     {r.isSeasonalWinterPick && (

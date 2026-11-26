@@ -5,7 +5,6 @@ import {
   MapPin,
   Sparkles,
   Star,
-  Tag,
 } from 'lucide-react';
 import { IndianRegionCategory, Restaurant } from '../types/restaurant';
 import { getRegionStyle, REGION_STYLES } from '../utils/regions';
@@ -13,7 +12,6 @@ import { getRegionStyle, REGION_STYLES } from '../utils/regions';
 export type QuickFilter =
   | 'all'
   | 'new'
-  | 'offers'
   | 'seasonal'
   | 'street-food'
   | 'fine-dining'
@@ -36,7 +34,6 @@ interface SidebarRailProps {
 const QUICK_FILTERS: { id: QuickFilter; label: string }[] = [
   { id: 'all', label: 'All Verified' },
   { id: 'new', label: 'New & Rising' },
-  { id: 'offers', label: 'Lunch Offers' },
   { id: 'seasonal', label: 'Winter Picks' },
   { id: 'street-food', label: 'Street Food' },
   { id: 'fine-dining', label: 'Fine Dining' },
@@ -210,7 +207,7 @@ export const SidebarRail: React.FC<SidebarRailProps> = ({
                       </span>
                     </p>
                   </div>
-                  {typeof r.googleRating === 'number' ? (
+                  {typeof r.googleRating === 'number' && (
                     <div
                       className="shrink-0 inline-flex items-center gap-1 px-2 py-0.5 rounded-lg font-mono-data text-xs font-bold"
                       style={{ background: 'var(--accent-saffron-soft)', color: 'var(--accent-amber-gold)' }}
@@ -218,30 +215,16 @@ export const SidebarRail: React.FC<SidebarRailProps> = ({
                       <Star className="w-3 h-3 fill-current" />
                       {r.googleRating.toFixed(1)}
                     </div>
-                  ) : (
-                    <span
-                      className="shrink-0 inline-flex items-center px-2 py-0.5 rounded-lg font-mono-data text-[10px] font-semibold"
-                      style={{ background: 'var(--accent-emerald-soft)', color: 'var(--accent-emerald)' }}
-                    >
-                      Open · OSM
-                    </span>
                   )}
                 </div>
 
                 <div className="mt-2 flex items-center gap-1.5 flex-wrap">
-                  <span
-                    className="text-[10px] font-semibold px-2 py-0.5 rounded-full"
-                    style={{ background: region.bgSoft, color: region.color }}
-                  >
-                    {r.indianState}
-                  </span>
-                  {r.ongoingOffer && (
+                  {r.indianState && r.indianState !== 'Indian' && (
                     <span
-                      className="inline-flex items-center gap-1 text-[10px] font-semibold px-2 py-0.5 rounded-full"
-                      style={{ background: 'var(--accent-emerald-soft)', color: 'var(--accent-emerald)' }}
+                      className="text-[10px] font-semibold px-2 py-0.5 rounded-full"
+                      style={{ background: region.bgSoft, color: region.color }}
                     >
-                      <Tag className="w-2.5 h-2.5" />
-                      Offer
+                      {r.indianState}
                     </span>
                   )}
                   {r.isSeasonalWinterPick && (

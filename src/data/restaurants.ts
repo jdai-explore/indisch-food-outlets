@@ -77,11 +77,6 @@ export const CURATED_RESTAURANTS: Restaurant[] = [
     isNewSpot: true,
     isSeasonalWinterPick: true,
     seasonalReason: 'Warming Tellicherry black pepper, fresh curry leaves, and coconut milk stews ideal for Bavarian autumn/winter.',
-    ongoingOffer: {
-      title: 'Coastal Lunch Thali (Mittagstisch)',
-      details: 'Rotating Kerala rice, sambar, avial, papadam & seasonal curry on weekdays.',
-      validNote: 'Tue–Fri 11:30–14:30',
-    },
     positiveReviews: [
       {
         quote:
@@ -125,18 +120,13 @@ export const CURATED_RESTAURANTS: Restaurant[] = [
     coordinates: [11.5829, 48.1328],
     googleRating: 4.7,
     reviewCountLabel: '1,800+ Google reviews',
-    indianState: 'Ayurvedic Pan-Indian (North & South)',
-    regionCategory: 'Ayurvedic & Pan-Indian',
-    cuisineStyle: 'Ayurvedic Home-Style & Extensive Vegan Menu',
+    indianState: 'Pan-Indian',
+    regionCategory: 'North Indian & Tandoori',
+    cuisineStyle: 'Home-Style & Extensive Vegan Menu',
     phone: '+49 89 25542424',
     website: 'https://indian-mango.com',
     establishedNote: 'Beloved Munich favorite near Isartor',
     hoursNote: 'Daily 11:30–14:30 & 17:30–23:00',
-    ongoingOffer: {
-      title: 'Ayurvedic Weekday Mittagsmenü',
-      details: 'Freshly prepared lunch bowls & thali platters with soup or salad at weekday pricing.',
-      validNote: 'Mon–Fri 11:30–14:30',
-    },
     positiveReviews: [
       {
         quote:
@@ -235,11 +225,6 @@ export const CURATED_RESTAURANTS: Restaurant[] = [
     hoursNote: 'Mon–Sun 12:00–23:00',
     isNewSpot: true,
     isStreetFood: true,
-    ongoingOffer: {
-      title: 'Street-Food Lunch Bowls',
-      details: 'Curated chaat + curry street bowls served briskly for Viktualienmarkt & Gärtnerplatz lunch crowds.',
-      validNote: 'Mon–Fri Lunch Hours',
-    },
     positiveReviews: [
       {
         quote:
@@ -339,11 +324,6 @@ export const CURATED_RESTAURANTS: Restaurant[] = [
     website: 'https://www.swagat.de',
     establishedNote: 'Long-standing Munich classic at Prinzregentenplatz',
     hoursNote: 'Daily 11:30–14:30 & 17:30–23:00',
-    ongoingOffer: {
-      title: 'Prinzregenten Business Lunch',
-      details: 'Rotating daily vegetarian & meat lunch combinations with basmati and naan.',
-      validNote: 'Mon–Fri 11:30–14:30',
-    },
     positiveReviews: [
       {
         quote:
@@ -430,11 +410,6 @@ export const CURATED_RESTAURANTS: Restaurant[] = [
     hoursNote: 'Tue–Sun 11:30–14:30 & 17:30–22:30',
     isSeasonalWinterPick: true,
     seasonalReason: 'Spicy Kolhapuri curries and warming Misal Pav cut right through Munich winter chills.',
-    ongoingOffer: {
-      title: 'Maharashtrian Lunch Thali & Weekend Specials',
-      details: 'Traditional Marathi thalis and weekend festival specials (Puran Poli / Modak on select days).',
-      validNote: 'Check weekly specials at Schwabing, Berg am Laim & Pasing',
-    },
     positiveReviews: [
       {
         quote:
@@ -523,7 +498,7 @@ export const CURATED_RESTAURANTS: Restaurant[] = [
     googleRating: 4.4,
     reviewCountLabel: '750+ Google reviews',
     indianState: 'Pan-Indian & South-North Classics',
-    regionCategory: 'Ayurvedic & Pan-Indian',
+    regionCategory: 'North Indian & Tandoori',
     cuisineStyle: 'Balanced Regional Curries & Neighborhood Favorite',
     phone: '+49 163 0005555',
     website: 'https://tattvarestaurant.de',
@@ -709,11 +684,6 @@ export const CURATED_RESTAURANTS: Restaurant[] = [
     website: 'https://www.tandooriflame.de',
     establishedNote: 'Highly rated Unterföhring Indian favorite',
     hoursNote: 'Daily 11:30–14:30 & 17:00–22:30',
-    ongoingOffer: {
-      title: 'Unterföhring Lunch Specials',
-      details: 'Freshly prepared weekday lunch curries with basmati rice and tandoori naan.',
-      validNote: 'Mon–Fri Lunch Hours',
-    },
     positiveReviews: [
       {
         quote:
@@ -883,11 +853,6 @@ export const CURATED_RESTAURANTS: Restaurant[] = [
     isNewSpot: true,
     isSeasonalWinterPick: true,
     seasonalReason: 'Handmade South Indian pepper rasam, parottas, and Kerala coastal curries.',
-    ongoingOffer: {
-      title: 'South Indian Lunch Thali',
-      details: 'Handmade weekday thali featuring rasam, sambar, poriyal, rice & papad.',
-      validNote: 'Tue–Fri 11:30–14:30',
-    },
     positiveReviews: [
       {
         quote:
@@ -1137,7 +1102,7 @@ export const CURATED_RESTAURANTS: Restaurant[] = [
     googleRating: 4.6,
     reviewCountLabel: '550+ reviews',
     indianState: 'South & North Indian Home-Style',
-    regionCategory: 'Ayurvedic & Pan-Indian',
+    regionCategory: 'North Indian & Tandoori',
     cuisineStyle: 'Simple, Balanced Home-Style Indian Cooking',
     website: 'https://swamyindien.de',
     establishedNote: 'Loved by FAU students and Indian researchers',
@@ -1242,7 +1207,7 @@ export const CURATED_RESTAURANTS: Restaurant[] = [
     googleRating: 4.6,
     reviewCountLabel: '800+ reviews',
     indianState: 'North India (Family-Run Kitchen)',
-    regionCategory: 'Ayurvedic & Pan-Indian',
+    regionCategory: 'North Indian & Tandoori',
     cuisineStyle: 'Family-Run Old Town Kitchen with Extensive Vegan Menu',
     phone: '+49 951 2974086',
     website: 'https://swarg.de',
@@ -1271,5 +1236,5 @@ export const CURATED_RESTAURANTS: Restaurant[] = [
 
 export async function loadExpansionRestaurants(): Promise<Restaurant[]> {
   const mod = await import('./bavariaOsmRestaurants.json');
-  return mod.default as Restaurant[];
+  return mod.default as unknown as Restaurant[];
 }
