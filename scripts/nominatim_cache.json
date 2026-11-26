@@ -1,0 +1,3600 @@
+{
+  "countrycodes=de&format=jsonv2&limit=1&q=Belgradstra%C3%9Fe+16%2C+80796+M%C3%BCnchen%2C+Germany": [
+    {
+      "place_id": 128160207,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "node",
+      "osm_id": 298817185,
+      "lat": "48.1626208",
+      "lon": "11.5749057",
+      "category": "amenity",
+      "type": "restaurant",
+      "place_rank": 30,
+      "importance": 8.462272068355866e-05,
+      "addresstype": "amenity",
+      "name": "Dhaba",
+      "display_name": "Dhaba, 16, Belgradstraße, Schwabing-West, Alt-Schwabing, Schwabing, München, Bayern, 80796, Deutschland",
+      "boundingbox": [
+        "48.1625708",
+        "48.1626708",
+        "11.5748557",
+        "11.5749557"
+      ]
+    }
+  ],
+  "countrycodes=de&format=jsonv2&limit=1&q=Leopoldstra%C3%9Fe+87%2C+80802+M%C3%BCnchen%2C+Germany": [
+    {
+      "place_id": 128084293,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "node",
+      "osm_id": 559544805,
+      "lat": "48.1640635",
+      "lon": "11.5861446",
+      "category": "shop",
+      "type": "furniture",
+      "place_rank": 30,
+      "importance": 8.462272068355866e-05,
+      "addresstype": "shop",
+      "name": "Focus Einrichtungen",
+      "display_name": "Focus Einrichtungen, 87, Leopoldstraße, Viktoriaviertel, Alt-Schwabing, Schwabing, Schwabing-Freimann, München, Bayern, 80802, Deutschland",
+      "boundingbox": [
+        "48.1640135",
+        "48.1641135",
+        "11.5860946",
+        "11.5861946"
+      ]
+    }
+  ],
+  "countrycodes=de&format=jsonv2&limit=1&q=Elisabethstra%C3%9Fe+12%2C+80796+M%C3%BCnchen%2C+Germany": [
+    {
+      "place_id": 127691414,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "node",
+      "osm_id": 10573337140,
+      "lat": "48.1582220",
+      "lon": "11.5721887",
+      "category": "place",
+      "type": "house",
+      "place_rank": 30,
+      "importance": 8.462272068355866e-05,
+      "addresstype": "place",
+      "name": "",
+      "display_name": "12, Elisabethstraße, Schwabing-West, Schwabing, München, Bayern, 80796, Deutschland",
+      "boundingbox": [
+        "48.1581720",
+        "48.1582720",
+        "11.5721387",
+        "11.5722387"
+      ]
+    }
+  ],
+  "countrycodes=de&format=jsonv2&limit=1&q=Brienner+Stra%C3%9Fe+10%2C+80333+M%C3%BCnchen%2C+Germany": [
+    {
+      "place_id": 128269154,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "node",
+      "osm_id": 7401549420,
+      "lat": "48.1432692",
+      "lon": "11.5749009",
+      "category": "amenity",
+      "type": "bar",
+      "place_rank": 30,
+      "importance": 8.462272068355866e-05,
+      "addresstype": "amenity",
+      "name": "Bar Alvino",
+      "display_name": "Bar Alvino, 10, Brienner Straße, Kreuzviertel, Altstadt-Lehel, München, Bayern, 80333, Deutschland",
+      "boundingbox": [
+        "48.1432192",
+        "48.1433192",
+        "11.5748509",
+        "11.5749509"
+      ]
+    }
+  ],
+  "countrycodes=de&format=jsonv2&limit=1&q=Gabelsbergerstra%C3%9Fe+50%2C+80333+M%C3%BCnchen%2C+Germany": [
+    {
+      "place_id": 128263508,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "node",
+      "osm_id": 4978366182,
+      "lat": "48.1495431",
+      "lon": "11.5615030",
+      "category": "amenity",
+      "type": "restaurant",
+      "place_rank": 30,
+      "importance": 8.462272068355866e-05,
+      "addresstype": "amenity",
+      "name": "King Masala",
+      "display_name": "King Masala, 50, Gabelsbergerstraße, Kunstareal, St. Benno-Viertel, Maxvorstadt, München, Bayern, 80333, Deutschland",
+      "boundingbox": [
+        "48.1494931",
+        "48.1495931",
+        "11.5614530",
+        "11.5615530"
+      ]
+    }
+  ],
+  "countrycodes=de&format=jsonv2&limit=1&q=Rosenheimer+Str.+155%2C+81667+M%C3%BCnchen%2C+Germany": [
+    {
+      "place_id": 128811583,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "node",
+      "osm_id": 319378537,
+      "lat": "48.1198045",
+      "lon": "11.6079636",
+      "category": "amenity",
+      "type": "restaurant",
+      "place_rank": 30,
+      "importance": 8.462272068355866e-05,
+      "addresstype": "amenity",
+      "name": "Ilai",
+      "display_name": "Ilai, 155, Rosenheimer Straße, Ramersdorf, Ramersdorf-Perlach, München, Bayern, 81671, Deutschland",
+      "boundingbox": [
+        "48.1197545",
+        "48.1198545",
+        "11.6079136",
+        "11.6080136"
+      ]
+    }
+  ],
+  "countrycodes=de&format=jsonv2&limit=1&q=Franziskanerstra%C3%9Fe+16%2C+81669+M%C3%BCnchen%2C+Germany": [
+    {
+      "place_id": 128454571,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "node",
+      "osm_id": 259759574,
+      "lat": "48.1267604",
+      "lon": "11.5913744",
+      "category": "amenity",
+      "type": "pharmacy",
+      "place_rank": 30,
+      "importance": 8.462272068355866e-05,
+      "addresstype": "amenity",
+      "name": "Apotheke im Franziskanerhof",
+      "display_name": "Apotheke im Franziskanerhof, 16, Franziskanerstraße, Obere Au, Au, Au-Haidhausen, München, Bayern, 81669, Deutschland",
+      "boundingbox": [
+        "48.1267104",
+        "48.1268104",
+        "11.5913244",
+        "11.5914244"
+      ]
+    }
+  ],
+  "countrycodes=de&format=jsonv2&limit=1&q=Steinstra%C3%9Fe+79%2C+81667+M%C3%BCnchen%2C+Germany": [
+    {
+      "place_id": 129633652,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "way",
+      "osm_id": 117163532,
+      "lat": "48.1293870",
+      "lon": "11.5949536",
+      "category": "building",
+      "type": "apartments",
+      "place_rank": 30,
+      "importance": 8.462272068355866e-05,
+      "addresstype": "building",
+      "name": "",
+      "display_name": "79, Steinstraße, Haidhausen-Süd, Haidhausen, Au-Haidhausen, München, Bayern, 81667, Deutschland",
+      "boundingbox": [
+        "48.1292858",
+        "48.1294881",
+        "11.5947899",
+        "11.5951172"
+      ]
+    }
+  ],
+  "countrycodes=de&format=jsonv2&limit=1&q=Rosenheimer+Str.+113a%2C+81667+M%C3%BCnchen%2C+Germany": [
+    {
+      "place_id": 128432865,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "way",
+      "osm_id": 109576798,
+      "lat": "48.1265828",
+      "lon": "11.5976959",
+      "category": "building",
+      "type": "apartments",
+      "place_rank": 30,
+      "importance": 8.462272068355866e-05,
+      "addresstype": "building",
+      "name": "",
+      "display_name": "113a, Rosenheimer Straße, Haidhausen-Süd, Haidhausen, Au-Haidhausen, München, Bayern, 81667, Deutschland",
+      "boundingbox": [
+        "48.1264650",
+        "48.1266834",
+        "11.5975421",
+        "11.5978499"
+      ]
+    }
+  ],
+  "countrycodes=de&format=jsonv2&limit=1&q=Hans-Sachs-Stra%C3%9Fe+8%2C+80469+M%C3%BCnchen%2C+Germany": [
+    {
+      "place_id": 127878141,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "node",
+      "osm_id": 409497619,
+      "lat": "48.1301046",
+      "lon": "11.5698679",
+      "category": "amenity",
+      "type": "restaurant",
+      "place_rank": 30,
+      "importance": 8.462272068355866e-05,
+      "addresstype": "amenity",
+      "name": "Palast der Winde",
+      "display_name": "Palast der Winde, 8, Hans-Sachs-Straße, Am Alten Südlichen Friedhof, Glockenbach, Isarvorstadt, Ludwigsvorstadt-Isarvorstadt, München, Bayern, 80469, Deutschland",
+      "boundingbox": [
+        "48.1300546",
+        "48.1301546",
+        "11.5698179",
+        "11.5699179"
+      ]
+    }
+  ],
+  "countrycodes=de&format=jsonv2&limit=1&q=Papa-Schmid-Stra%C3%9Fe+1%2C+80469+M%C3%BCnchen%2C+Germany": [
+    {
+      "place_id": 128404378,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "node",
+      "osm_id": 2412707765,
+      "lat": "48.1317434",
+      "lon": "11.5713830",
+      "category": "place",
+      "type": "house",
+      "place_rank": 30,
+      "importance": 8.462272068355866e-05,
+      "addresstype": "place",
+      "name": "",
+      "display_name": "1, Papa-Schmid-Straße, Angerviertel, Altstadt-Lehel, München, Bayern, 80469, Deutschland",
+      "boundingbox": [
+        "48.1316934",
+        "48.1317934",
+        "11.5713330",
+        "11.5714330"
+      ]
+    }
+  ],
+  "countrycodes=de&format=jsonv2&limit=1&q=Ganghoferstra%C3%9Fe+76%2C+81373+M%C3%BCnchen%2C+Germany": [
+    {
+      "place_id": 128589988,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "way",
+      "osm_id": 233904912,
+      "lat": "48.1283245",
+      "lon": "11.5385274",
+      "category": "building",
+      "type": "apartments",
+      "place_rank": 30,
+      "importance": 8.462272068355866e-05,
+      "addresstype": "building",
+      "name": "",
+      "display_name": "76, Ganghoferstraße, Untersendling, Sendling, München, Bayern, 81373, Deutschland",
+      "boundingbox": [
+        "48.1282461",
+        "48.1284078",
+        "11.5383341",
+        "11.5386360"
+      ]
+    }
+  ],
+  "countrycodes=de&format=jsonv2&limit=1&q=Hofmannstra%C3%9Fe+7%2C+81379+M%C3%BCnchen%2C+Germany": [
+    {
+      "place_id": 128580604,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "way",
+      "osm_id": 287752528,
+      "lat": "48.1019541",
+      "lon": "11.5304495",
+      "category": "building",
+      "type": "office",
+      "place_rank": 30,
+      "importance": 8.462272068355866e-05,
+      "addresstype": "building",
+      "name": "",
+      "display_name": "7, Hofmannstraße, Obersendling, Thalkirchen-Obersendling-Forstenried-Fürstenried-Solln, München, Bayern, 81379, Deutschland",
+      "boundingbox": [
+        "48.1018030",
+        "48.1020302",
+        "11.5303055",
+        "11.5305586"
+      ]
+    }
+  ],
+  "countrycodes=de&format=jsonv2&limit=1&q=Donnersbergerstra%C3%9Fe+44%2C+80634+M%C3%BCnchen%2C+Germany": [
+    {
+      "place_id": 128233253,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "way",
+      "osm_id": 109791275,
+      "lat": "48.1476231",
+      "lon": "11.5348011",
+      "category": "building",
+      "type": "apartments",
+      "place_rank": 30,
+      "importance": 8.462272068355866e-05,
+      "addresstype": "building",
+      "name": "",
+      "display_name": "44, Donnersbergerstraße, Postversuchssiedlung, Nymphenburg, Neuhausen-Nymphenburg, München, Bayern, 80634, Deutschland",
+      "boundingbox": [
+        "48.1475212",
+        "48.1477018",
+        "11.5347003",
+        "11.5349249"
+      ]
+    }
+  ],
+  "countrycodes=de&format=jsonv2&limit=1&q=Nymphenburger+Stra%C3%9Fe+145%2C+80636+M%C3%BCnchen%2C+Germany": [
+    {
+      "place_id": 128716167,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "way",
+      "osm_id": 117992349,
+      "lat": "48.1512929",
+      "lon": "11.5374897",
+      "category": "building",
+      "type": "apartments",
+      "place_rank": 30,
+      "importance": 8.462272068355866e-05,
+      "addresstype": "building",
+      "name": "",
+      "display_name": "145, Nymphenburger Straße, St. Vinzenz-Viertel, Neuhausen-Nymphenburg, München, Bayern, 80636, Deutschland",
+      "boundingbox": [
+        "48.1511753",
+        "48.1514015",
+        "11.5373261",
+        "11.5376748"
+      ]
+    }
+  ],
+  "countrycodes=de&format=jsonv2&limit=1&q=Ismaninger+Stra%C3%9Fe+71A%2C+81675+M%C3%BCnchen%2C+Germany": [
+    {
+      "place_id": 128342642,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "node",
+      "osm_id": 1383927369,
+      "lat": "48.1453722",
+      "lon": "11.6020239",
+      "category": "place",
+      "type": "house",
+      "place_rank": 30,
+      "importance": 8.462272068355866e-05,
+      "addresstype": "place",
+      "name": "",
+      "display_name": "71a, Ismaninger Straße, Altbogenhausen, Bogenhausen, München, Bayern, 81675, Deutschland",
+      "boundingbox": [
+        "48.1453222",
+        "48.1454222",
+        "11.6019739",
+        "11.6020739"
+      ]
+    }
+  ],
+  "countrycodes=de&format=jsonv2&limit=1&q=Effnerstra%C3%9Fe+102%2C+81925+M%C3%BCnchen%2C+Germany": [
+    {
+      "place_id": 128495189,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "node",
+      "osm_id": 1393198523,
+      "lat": "48.1609831",
+      "lon": "11.6225588",
+      "category": "place",
+      "type": "house",
+      "place_rank": 30,
+      "importance": 8.462272068355866e-05,
+      "addresstype": "place",
+      "name": "",
+      "display_name": "102, Effnerstraße, Gartenstadt Bogenhausen-Priel, Priel, Oberföhring, Bogenhausen, München, Bayern, 81925, Deutschland",
+      "boundingbox": [
+        "48.1609331",
+        "48.1610331",
+        "11.6225088",
+        "11.6226088"
+      ]
+    }
+  ],
+  "countrycodes=de&format=jsonv2&limit=1&q=Werner-Schlierf-Stra%C3%9Fe+23%2C+81539+M%C3%BCnchen%2C+Germany": [
+    {
+      "place_id": 128432740,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "node",
+      "osm_id": 3059747900,
+      "lat": "48.1098425",
+      "lon": "11.5805307",
+      "category": "place",
+      "type": "house",
+      "place_rank": 30,
+      "importance": 8.462272068355866e-05,
+      "addresstype": "place",
+      "name": "",
+      "display_name": "23, Werner-Schlierf-Straße, Parkviertel Giesing, Stadelheim, Fasangarten, Obergiesing-Fasangarten, München, Bayern, 81539, Deutschland",
+      "boundingbox": [
+        "48.1097925",
+        "48.1098925",
+        "11.5804807",
+        "11.5805807"
+      ]
+    }
+  ],
+  "countrycodes=de&format=jsonv2&limit=1&q=Rotwandstra%C3%9Fe+1%2C+81539+M%C3%BCnchen%2C+Germany": [
+    {
+      "place_id": 126935710,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "node",
+      "osm_id": 488460616,
+      "lat": "48.1150585",
+      "lon": "11.5875911",
+      "category": "place",
+      "type": "house",
+      "place_rank": 30,
+      "importance": 8.462272068355866e-05,
+      "addresstype": "place",
+      "name": "",
+      "display_name": "1, Rotwandstraße, Obergiesing, Obergiesing-Fasangarten, München, Bayern, 81539, Deutschland",
+      "boundingbox": [
+        "48.1150085",
+        "48.1151085",
+        "11.5875411",
+        "11.5876411"
+      ]
+    }
+  ],
+  "countrycodes=de&format=jsonv2&limit=1&q=Gottfried-Keller-Stra%C3%9Fe+35%2C+81245+M%C3%BCnchen%2C+Germany": [
+    {
+      "place_id": 127824437,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "way",
+      "osm_id": 156210093,
+      "lat": "48.1505241",
+      "lon": "11.4640943",
+      "category": "building",
+      "type": "apartments",
+      "place_rank": 30,
+      "importance": 8.462272068355866e-05,
+      "addresstype": "building",
+      "name": "",
+      "display_name": "35, Gottfried-Keller-Straße, Kolonie I, Neupasing, Pasing, Pasing-Obermenzing, München, Bayern, 81245, Deutschland",
+      "boundingbox": [
+        "48.1504493",
+        "48.1505808",
+        "11.4637726",
+        "11.4644155"
+      ]
+    }
+  ],
+  "countrycodes=de&format=jsonv2&limit=1&q=Berg-am-Laim-Stra%C3%9Fe+103%2C+81673+M%C3%BCnchen%2C+Germany": [
+    {
+      "place_id": 126813149,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "node",
+      "osm_id": 10235715148,
+      "lat": "48.1301868",
+      "lon": "11.6241475",
+      "category": "amenity",
+      "type": "restaurant",
+      "place_rank": 30,
+      "importance": 8.462272068355866e-05,
+      "addresstype": "amenity",
+      "name": "Swaad",
+      "display_name": "Swaad, 103, Berg-am-Laim-Straße, Baumkirchen, Berg am Laim, München, Bayern, 81673, Deutschland",
+      "boundingbox": [
+        "48.1301368",
+        "48.1302368",
+        "11.6240975",
+        "11.6241975"
+      ]
+    }
+  ],
+  "countrycodes=de&format=jsonv2&limit=1&q=Bunzlauer+Platz+1%2C+80992+M%C3%BCnchen%2C+Germany": [
+    {
+      "place_id": 128711395,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "way",
+      "osm_id": 96569893,
+      "lat": "48.1796118",
+      "lon": "11.5070547",
+      "category": "building",
+      "type": "apartments",
+      "place_rank": 30,
+      "importance": 8.462272068355866e-05,
+      "addresstype": "building",
+      "name": "",
+      "display_name": "1, Bunzlauer Platz, Alt-Moosach, Moosach, München, Bayern, 80992, Deutschland",
+      "boundingbox": [
+        "48.1795007",
+        "48.1797586",
+        "11.5068383",
+        "11.5072718"
+      ]
+    }
+  ],
+  "countrycodes=de&format=jsonv2&limit=1&q=Wasserburger+Landstra%C3%9Fe+204A%2C+81827+M%C3%BCnchen%2C+Germany": [
+    {
+      "place_id": 128660340,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "node",
+      "osm_id": 2960359174,
+      "lat": "48.1134841",
+      "lon": "11.6998649",
+      "category": "place",
+      "type": "house",
+      "place_rank": 30,
+      "importance": 8.462272068355866e-05,
+      "addresstype": "place",
+      "name": "",
+      "display_name": "204a, Wasserburger Landstraße, Waldtrudering, Trudering-Riem, München, Bayern, 81827, Deutschland",
+      "boundingbox": [
+        "48.1134341",
+        "48.1135341",
+        "11.6998149",
+        "11.6999149"
+      ]
+    }
+  ],
+  "countrycodes=de&format=jsonv2&limit=1&q=Truderinger+Stra%C3%9Fe+212%2C+81825+M%C3%BCnchen%2C+Germany": [
+    {
+      "place_id": 128633993,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "way",
+      "osm_id": 145394873,
+      "lat": "48.1264783",
+      "lon": "11.6581801",
+      "category": "building",
+      "type": "residential",
+      "place_rank": 30,
+      "importance": 8.462272068355866e-05,
+      "addresstype": "building",
+      "name": "",
+      "display_name": "212, Truderinger Straße, Kirchtrudering, 15.1, Trudering-Riem, München, Bayern, 81825, Deutschland",
+      "boundingbox": [
+        "48.1263444",
+        "48.1266231",
+        "11.6579837",
+        "11.6583571"
+      ]
+    }
+  ],
+  "countrycodes=de&format=jsonv2&limit=1&q=Baaderstra%C3%9Fe+11%2C+80469+M%C3%BCnchen%2C+Germany": [
+    {
+      "place_id": 127724027,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "way",
+      "osm_id": 144052075,
+      "lat": "48.1318079",
+      "lon": "11.5799741",
+      "category": "building",
+      "type": "apartments",
+      "place_rank": 30,
+      "importance": 8.462272068355866e-05,
+      "addresstype": "building",
+      "name": "",
+      "display_name": "11, Baaderstraße, Gärtnerplatz, Isarvorstadt, Ludwigsvorstadt-Isarvorstadt, München, Bayern, 80469, Deutschland",
+      "boundingbox": [
+        "48.1317022",
+        "48.1319434",
+        "11.5798146",
+        "11.5801616"
+      ]
+    }
+  ],
+  "countrycodes=de&format=jsonv2&limit=1&q=Thierschstra%C3%9Fe+8%2C+80538+M%C3%BCnchen%2C+Germany": [
+    {
+      "place_id": 127730237,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "node",
+      "osm_id": 297922622,
+      "lat": "48.1340942",
+      "lon": "11.5841028",
+      "category": "amenity",
+      "type": "restaurant",
+      "place_rank": 30,
+      "importance": 8.462272068355866e-05,
+      "addresstype": "amenity",
+      "name": "Goa",
+      "display_name": "Goa, 8, Thierschstraße, Graggenauerviertel, Altstadt-Lehel, München, Bayern, 80538, Deutschland",
+      "boundingbox": [
+        "48.1340442",
+        "48.1341442",
+        "11.5840528",
+        "11.5841528"
+      ]
+    }
+  ],
+  "countrycodes=de&format=jsonv2&limit=1&q=Robert-Koch-Stra%C3%9Fe+4%2C+80538+M%C3%BCnchen%2C+Germany": [
+    {
+      "place_id": 127736539,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "way",
+      "osm_id": 220117776,
+      "lat": "48.1397813",
+      "lon": "11.5894046",
+      "category": "building",
+      "type": "apartments",
+      "place_rank": 30,
+      "importance": 8.462272068355866e-05,
+      "addresstype": "building",
+      "name": "",
+      "display_name": "4, Robert-Koch-Straße, Lehel, Altstadt-Lehel, München, Bayern, 80538, Deutschland",
+      "boundingbox": [
+        "48.1396864",
+        "48.1398704",
+        "11.5892731",
+        "11.5895263"
+      ]
+    }
+  ],
+  "countrycodes=de&format=jsonv2&limit=1&q=Radlsteg+1%2C+80331+M%C3%BCnchen%2C+Germany": [
+    {
+      "place_id": 127729553,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "node",
+      "osm_id": 11161553272,
+      "lat": "48.1354959",
+      "lon": "11.5790492",
+      "category": "place",
+      "type": "house",
+      "place_rank": 30,
+      "importance": 8.462272068355866e-05,
+      "addresstype": "place",
+      "name": "",
+      "display_name": "1, Radlsteg, Graggenauerviertel, Altstadt-Lehel, München, Bayern, 80331, Deutschland",
+      "boundingbox": [
+        "48.1354459",
+        "48.1355459",
+        "11.5789992",
+        "11.5790992"
+      ]
+    }
+  ],
+  "countrycodes=de&format=jsonv2&limit=1&q=Sendlinger+Stra%C3%9Fe+45%2C+80331+M%C3%BCnchen%2C+Germany": [
+    {
+      "place_id": 126819766,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "node",
+      "osm_id": 701427947,
+      "lat": "48.1341135",
+      "lon": "11.5682238",
+      "category": "shop",
+      "type": "spices",
+      "place_rank": 30,
+      "importance": 8.462272068355866e-05,
+      "addresstype": "shop",
+      "name": "Gewürzmühle",
+      "display_name": "Gewürzmühle, 45, Sendlinger Straße, Hackenviertel, Altstadt-Lehel, München, Bayern, 80331, Deutschland",
+      "boundingbox": [
+        "48.1340635",
+        "48.1341635",
+        "11.5681738",
+        "11.5682738"
+      ]
+    }
+  ],
+  "countrycodes=de&format=jsonv2&limit=1&q=Speicherstra%C3%9Fe+20%2C+81671+M%C3%BCnchen%2C+Germany": [
+    {
+      "place_id": 128047435,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "node",
+      "osm_id": 5324672546,
+      "lat": "48.1240307",
+      "lon": "11.6060886",
+      "category": "amenity",
+      "type": "bar",
+      "place_rank": 30,
+      "importance": 8.462272068355866e-05,
+      "addresstype": "amenity",
+      "name": "Gin City",
+      "display_name": "Gin City, 20, Speicherstraße, Werksviertel München, Berg am Laim, München, Bayern, 81671, Deutschland",
+      "boundingbox": [
+        "48.1239807",
+        "48.1240807",
+        "11.6060386",
+        "11.6061386"
+      ]
+    }
+  ],
+  "countrycodes=de&format=jsonv2&limit=1&q=Hansastra%C3%9Fe+146%2C+81373+M%C3%BCnchen%2C+Germany": [
+    {
+      "place_id": 128074048,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "node",
+      "osm_id": 275064989,
+      "lat": "48.1184917",
+      "lon": "11.5334921",
+      "category": "amenity",
+      "type": "restaurant",
+      "place_rank": 30,
+      "importance": 8.462272068355866e-05,
+      "addresstype": "amenity",
+      "name": "Mehfil",
+      "display_name": "Mehfil, 146, Hansastraße, Kriegersiedlung, Sendling-Westpark, München, Bayern, 81373, Deutschland",
+      "boundingbox": [
+        "48.1184417",
+        "48.1185417",
+        "11.5334421",
+        "11.5335421"
+      ]
+    }
+  ],
+  "countrycodes=de&format=jsonv2&limit=1&q=Westendstra%C3%9Fe+117%2C+80339+M%C3%BCnchen%2C+Germany": [
+    {
+      "place_id": 127634760,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "node",
+      "osm_id": 1286263617,
+      "lat": "48.1381188",
+      "lon": "11.5359899",
+      "category": "amenity",
+      "type": "restaurant",
+      "place_rank": 30,
+      "importance": 8.462272068355866e-05,
+      "addresstype": "amenity",
+      "name": "Royal India",
+      "display_name": "Royal India, 117, Westendstraße, Theresienhöhe, Westend, Schwanthalerhöhe, München, Bayern, 80339, Deutschland",
+      "boundingbox": [
+        "48.1380688",
+        "48.1381688",
+        "11.5359399",
+        "11.5360399"
+      ]
+    }
+  ],
+  "countrycodes=de&format=jsonv2&limit=1&q=Theresienh%C3%B6he+5%2C+80339+M%C3%BCnchen%2C+Germany": [
+    {
+      "place_id": 128411822,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "node",
+      "osm_id": 6528150240,
+      "lat": "48.1367490",
+      "lon": "11.5467236",
+      "category": "shop",
+      "type": "mall",
+      "place_rank": 30,
+      "importance": 0.11734328469919902,
+      "addresstype": "shop",
+      "name": "Forum Schwanthalerhöhe",
+      "display_name": "Forum Schwanthalerhöhe, 5, Theresienhöhe, Parkstraße, Schwanthalerhöhe, München, Bayern, 80339, Deutschland",
+      "boundingbox": [
+        "48.1366990",
+        "48.1367990",
+        "11.5466736",
+        "11.5467736"
+      ]
+    }
+  ],
+  "countrycodes=de&format=jsonv2&limit=1&q=Max-Rothschild-Stra%C3%9Fe+10%2C+81825+M%C3%BCnchen%2C+Germany": [
+    {
+      "place_id": 128494963,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "node",
+      "osm_id": 279881217,
+      "lat": "48.1204857",
+      "lon": "11.6720122",
+      "category": "amenity",
+      "type": "restaurant",
+      "place_rank": 30,
+      "importance": 8.462272068355866e-05,
+      "addresstype": "amenity",
+      "name": "Masala Noir",
+      "display_name": "Masala Noir, 10, Max-Rothschild-Straße, Straßtrudering, 15.1, Trudering-Riem, München, Bayern, 81825, Deutschland",
+      "boundingbox": [
+        "48.1204357",
+        "48.1205357",
+        "11.6719622",
+        "11.6720622"
+      ]
+    }
+  ],
+  "countrycodes=de&format=jsonv2&limit=1&q=Fasangartenstra%C3%9Fe+99%2C+81549+M%C3%BCnchen%2C+Germany": [
+    {
+      "place_id": 127888867,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "way",
+      "osm_id": 210851867,
+      "lat": "48.0894218",
+      "lon": "11.6117128",
+      "category": "amenity",
+      "type": "restaurant",
+      "place_rank": 30,
+      "importance": 8.462272068355866e-05,
+      "addresstype": "amenity",
+      "name": "Chickyz",
+      "display_name": "Chickyz, 99, Fasangartenstraße, Fasangarten, Obergiesing-Fasangarten, München, Bayern, 81549, Deutschland",
+      "boundingbox": [
+        "48.0893633",
+        "48.0894803",
+        "11.6116457",
+        "11.6117798"
+      ]
+    }
+  ],
+  "countrycodes=de&format=jsonv2&limit=1&q=Forstenrieder+Allee+247%2C+81476+M%C3%BCnchen%2C+Germany": [
+    {
+      "place_id": 128551285,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "way",
+      "osm_id": 118159945,
+      "lat": "48.0786043",
+      "lon": "11.4908216",
+      "category": "building",
+      "type": "apartments",
+      "place_rank": 30,
+      "importance": 8.462272068355866e-05,
+      "addresstype": "building",
+      "name": "",
+      "display_name": "247, Forstenrieder Allee, Unterdill, Thalkirchen-Obersendling-Forstenried-Fürstenried-Solln, München, Bayern, 81476, Deutschland",
+      "boundingbox": [
+        "48.0785195",
+        "48.0786890",
+        "11.4906970",
+        "11.4909461"
+      ]
+    }
+  ],
+  "countrycodes=de&format=jsonv2&limit=1&q=Feldmochinger+Stra%C3%9Fe+226%2C+80995+M%C3%BCnchen%2C+Germany": [
+    {
+      "place_id": 127656200,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "way",
+      "osm_id": 79103163,
+      "lat": "48.1980117",
+      "lon": "11.5243152",
+      "category": "building",
+      "type": "yes",
+      "place_rank": 30,
+      "importance": 8.462272068355866e-05,
+      "addresstype": "building",
+      "name": "",
+      "display_name": "226, Feldmochinger Straße, Fasanerie, Feldmoching-Hasenbergl, München, Bayern, 80995, Deutschland",
+      "boundingbox": [
+        "48.1978233",
+        "48.1981881",
+        "11.5241331",
+        "11.5244632"
+      ]
+    }
+  ],
+  "countrycodes=de&format=jsonv2&limit=1&q=Thomas-Dehler-Stra%C3%9Fe+13%2C+81737+M%C3%BCnchen%2C+Germany": [
+    {
+      "place_id": 128725612,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "node",
+      "osm_id": 10102809820,
+      "lat": "48.1003257",
+      "lon": "11.6462631",
+      "category": "amenity",
+      "type": "fast_food",
+      "place_rank": 30,
+      "importance": 8.462272068355866e-05,
+      "addresstype": "amenity",
+      "name": "Five Guys",
+      "display_name": "Five Guys, 13, Thomas-Dehler-Straße, Neuperlach, Ramersdorf-Perlach, München, Bayern, 81737, Deutschland",
+      "boundingbox": [
+        "48.1002757",
+        "48.1003757",
+        "11.6462131",
+        "11.6463131"
+      ]
+    }
+  ],
+  "countrycodes=de&format=jsonv2&limit=1&q=Zehentstadelweg+12%2C+81247+M%C3%BCnchen%2C+Germany": [
+    {
+      "place_id": 128009372,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "node",
+      "osm_id": 415263915,
+      "lat": "48.1662022",
+      "lon": "11.4585924",
+      "category": "tourism",
+      "type": "hotel",
+      "place_rank": 30,
+      "importance": 8.462272068355866e-05,
+      "addresstype": "tourism",
+      "name": "Hotel Schleuse",
+      "display_name": "Hotel Schleuse, 12, Zehentstadelweg, Obermenzing, Pasing-Obermenzing, München, Bayern, 81247, Deutschland",
+      "boundingbox": [
+        "48.1661522",
+        "48.1662522",
+        "11.4585424",
+        "11.4586424"
+      ]
+    }
+  ],
+  "countrycodes=de&format=jsonv2&limit=1&q=Gro%C3%9Fhaderner+Stra%C3%9Fe+12%2C+81375+M%C3%BCnchen%2C+Germany": [
+    {
+      "place_id": 128517752,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "node",
+      "osm_id": 2503164190,
+      "lat": "48.1169511",
+      "lon": "11.4798218",
+      "category": "place",
+      "type": "house",
+      "place_rank": 30,
+      "importance": 8.462272068355866e-05,
+      "addresstype": "place",
+      "name": "",
+      "display_name": "12, Großhaderner Straße, Großhadern, Hadern, München, Bayern, 81375, Deutschland",
+      "boundingbox": [
+        "48.1169011",
+        "48.1170011",
+        "11.4797718",
+        "11.4798718"
+      ]
+    }
+  ],
+  "countrycodes=de&format=jsonv2&limit=1&q=Rosenheimer+Stra%C3%9Fe+75%2C+81667+M%C3%BCnchen%2C+Germany": [
+    {
+      "place_id": 128570117,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "way",
+      "osm_id": 115928478,
+      "lat": "48.1278661",
+      "lon": "11.5954367",
+      "category": "building",
+      "type": "apartments",
+      "place_rank": 30,
+      "importance": 8.462272068355866e-05,
+      "addresstype": "building",
+      "name": "",
+      "display_name": "75, Rosenheimer Straße, Haidhausen-Süd, Haidhausen, Au-Haidhausen, München, Bayern, 81667, Deutschland",
+      "boundingbox": [
+        "48.1277649",
+        "48.1279677",
+        "11.5952792",
+        "11.5955941"
+      ]
+    }
+  ],
+  "countrycodes=de&format=jsonv2&limit=1&q=Blutenburgstra%C3%9Fe+79%2C+80634+M%C3%BCnchen%2C+Germany": [
+    {
+      "place_id": 126725018,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "way",
+      "osm_id": 114461736,
+      "lat": "48.1510913",
+      "lon": "11.5360041",
+      "category": "building",
+      "type": "apartments",
+      "place_rank": 30,
+      "importance": 8.462272068355866e-05,
+      "addresstype": "building",
+      "name": "",
+      "display_name": "79, Blutenburgstraße, St. Vinzenz-Viertel, Nymphenburg, Neuhausen-Nymphenburg, München, Bayern, 80634, Deutschland",
+      "boundingbox": [
+        "48.1510066",
+        "48.1511768",
+        "11.5358799",
+        "11.5361284"
+      ]
+    }
+  ],
+  "countrycodes=de&format=jsonv2&limit=1&q=Sankt-Ingbert-Stra%C3%9Fe+2%2C+81541+M%C3%BCnchen%2C+Germany": [
+    {
+      "place_id": 128028093,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "way",
+      "osm_id": 97383805,
+      "lat": "48.1165739",
+      "lon": "11.6006393",
+      "category": "highway",
+      "type": "residential",
+      "place_rank": 26,
+      "importance": 0.053417956054016905,
+      "addresstype": "residential",
+      "name": "Sankt-Ingbert-Straße",
+      "display_name": "Sankt-Ingbert-Straße, Ramersdorf, Ramersdorf-Perlach, München, Bayern, 81541, Deutschland",
+      "boundingbox": [
+        "48.1163526",
+        "48.1167953",
+        "11.5996903",
+        "11.6015883"
+      ]
+    }
+  ],
+  "countrycodes=de&format=jsonv2&limit=1&q=Tal+34%2C+80331+M%C3%BCnchen%2C+Germany": [
+    {
+      "place_id": 126753695,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "node",
+      "osm_id": 2812037901,
+      "lat": "48.1356422",
+      "lon": "11.5802851",
+      "category": "place",
+      "type": "house",
+      "place_rank": 30,
+      "importance": 8.462272068355866e-05,
+      "addresstype": "place",
+      "name": "",
+      "display_name": "34, Tal, Graggenauerviertel, Altstadt-Lehel, München, Bayern, 80331, Deutschland",
+      "boundingbox": [
+        "48.1355922",
+        "48.1356922",
+        "11.5802351",
+        "11.5803351"
+      ]
+    }
+  ],
+  "countrycodes=de&format=jsonv2&limit=1&q=Rathausplatz+4%2C+82008+Unterhaching%2C+Germany": [
+    {
+      "place_id": 129438373,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "way",
+      "osm_id": 305401410,
+      "lat": "48.0660642",
+      "lon": "11.6105934",
+      "category": "building",
+      "type": "apartments",
+      "place_rank": 30,
+      "importance": 4.6958876935942895e-05,
+      "addresstype": "building",
+      "name": "",
+      "display_name": "4, Rathausplatz, Am Klosterfeld, Unterhaching, Landkreis München, Bayern, 82008, Deutschland",
+      "boundingbox": [
+        "48.0659758",
+        "48.0661554",
+        "11.6104631",
+        "11.6107292"
+      ]
+    }
+  ],
+  "countrycodes=de&format=jsonv2&limit=1&q=Friedrich-Ebert-Platz+3%2C+85521+Ottobrunn%2C+Germany": [
+    {
+      "place_id": 128527031,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "way",
+      "osm_id": 86865893,
+      "lat": "48.0594548",
+      "lon": "11.6673242",
+      "category": "building",
+      "type": "apartments",
+      "place_rank": 30,
+      "importance": 5.3440909437659535e-05,
+      "addresstype": "building",
+      "name": "",
+      "display_name": "3, Friedrich-Ebert-Platz, Ottobrunn, Landkreis München, Bayern, 85521, Deutschland",
+      "boundingbox": [
+        "48.0593600",
+        "48.0595252",
+        "11.6672242",
+        "11.6674242"
+      ]
+    }
+  ],
+  "countrycodes=de&format=jsonv2&limit=1&q=H%C3%B6glweg+3%2C+85540+Haar%2C+Germany": [
+    {
+      "place_id": 128506787,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "way",
+      "osm_id": 17740280,
+      "lat": "48.1142156",
+      "lon": "11.7276464",
+      "category": "leisure",
+      "type": "sports_centre",
+      "place_rank": 30,
+      "importance": 5.1544213015900166e-05,
+      "addresstype": "leisure",
+      "name": "Racket-Park",
+      "display_name": "Racket-Park, 3, Höglweg, Eglfing, Haar, Landkreis München, Bayern, 85540, Deutschland",
+      "boundingbox": [
+        "48.1139420",
+        "48.1145163",
+        "11.7271174",
+        "11.7281816"
+      ]
+    }
+  ],
+  "countrycodes=de&format=jsonv2&limit=1&q=Schneiderhofstra%C3%9Fe+31%2C+85540+Haar%2C+Germany": [
+    {
+      "place_id": 129663056,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "way",
+      "osm_id": 215113732,
+      "lat": "48.1209990",
+      "lon": "11.7016752",
+      "category": "building",
+      "type": "residential",
+      "place_rank": 30,
+      "importance": 8.462272068355866e-05,
+      "addresstype": "building",
+      "name": "",
+      "display_name": "31, Schneiderhofstraße, Gronsdorf, Haar, Landkreis München, Bayern, 85540, Deutschland",
+      "boundingbox": [
+        "48.1208029",
+        "48.1210674",
+        "11.7014755",
+        "11.7019143"
+      ]
+    }
+  ],
+  "countrycodes=de&format=jsonv2&limit=1&q=M%C3%BCnchener+Stra%C3%9Fe+1%2C+82110+Germering%2C+Germany": [
+    {
+      "place_id": 127806569,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "node",
+      "osm_id": 8926478493,
+      "lat": "48.1378646",
+      "lon": "11.3733692",
+      "category": "amenity",
+      "type": "doctors",
+      "place_rank": 30,
+      "importance": 5.483558403901759e-05,
+      "addresstype": "amenity",
+      "name": "Die Radiologie Germering",
+      "display_name": "Die Radiologie Germering, 1, Münchener Straße, Neugermering, Germering, Landkreis Fürstenfeldbruck, Bayern, 82110, Deutschland",
+      "boundingbox": [
+        "48.1378146",
+        "48.1379146",
+        "11.3733192",
+        "11.3734192"
+      ]
+    }
+  ],
+  "countrycodes=de&format=jsonv2&limit=1&q=Goethestra%C3%9Fe+5%2C+82110+Germering%2C+Germany": [
+    {
+      "place_id": 127906243,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "way",
+      "osm_id": 74535869,
+      "lat": "48.1333640",
+      "lon": "11.3621913",
+      "category": "building",
+      "type": "yes",
+      "place_rank": 30,
+      "importance": 5.483558403901759e-05,
+      "addresstype": "building",
+      "name": "",
+      "display_name": "5, Goethestraße, Neugermering, Germering, Landkreis Fürstenfeldbruck, Bayern, 82110, Deutschland",
+      "boundingbox": [
+        "48.1332632",
+        "48.1334649",
+        "11.3620555",
+        "11.3623270"
+      ]
+    }
+  ],
+  "countrycodes=de&format=jsonv2&limit=1&q=Mittermayerstra%C3%9Fe+15%2C+85221+Dachau%2C+Germany": [
+    {
+      "place_id": 128202969,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "way",
+      "osm_id": 252863548,
+      "lat": "48.2631523",
+      "lon": "11.4338252",
+      "category": "building",
+      "type": "retail",
+      "place_rank": 30,
+      "importance": 6.308003356980267e-05,
+      "addresstype": "building",
+      "name": "",
+      "display_name": "15, Mittermayerstraße, Etzenhausen, Webling, Dachau, Landkreis Dachau, Bayern, 85221, Deutschland",
+      "boundingbox": [
+        "48.2630399",
+        "48.2632647",
+        "11.4336391",
+        "11.4340113"
+      ]
+    }
+  ],
+  "countrycodes=de&format=jsonv2&limit=1&q=Friedenstra%C3%9Fe+21%2C+85221+Dachau%2C+Germany": [
+    {
+      "place_id": 128264578,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "way",
+      "osm_id": 42061158,
+      "lat": "48.2601651",
+      "lon": "11.4455940",
+      "category": "amenity",
+      "type": "restaurant",
+      "place_rank": 30,
+      "importance": 6.308003356980267e-05,
+      "addresstype": "amenity",
+      "name": "Radha",
+      "display_name": "Radha, 21, Friedenstraße, Obermoosschwaige, Webling, Dachau, Landkreis Dachau, Bayern, 85221, Deutschland",
+      "boundingbox": [
+        "48.2600626",
+        "48.2602676",
+        "11.4454451",
+        "11.4457429"
+      ]
+    }
+  ],
+  "countrycodes=de&format=jsonv2&limit=1&q=Achheimstra%C3%9Fe+3%2C+82319+Starnberg%2C+Germany": [
+    {
+      "place_id": 73845320,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "way",
+      "osm_id": 87281069,
+      "lat": "47.9962460",
+      "lon": "11.3400257",
+      "category": "building",
+      "type": "yes",
+      "place_rank": 30,
+      "importance": 5.9103532463523576e-05,
+      "addresstype": "building",
+      "name": "",
+      "display_name": "3, Achheimstraße, Neusöcking, Percha, Starnberg, Landkreis Starnberg, Bayern, 82319, Deutschland",
+      "boundingbox": [
+        "47.9960886",
+        "47.9964009",
+        "11.3398602",
+        "11.3401967"
+      ]
+    }
+  ],
+  "countrycodes=de&format=jsonv2&limit=1&q=Haager+Stra%C3%9Fe+15%2C+85435+Erding%2C+Germany": [
+    {
+      "place_id": 128578575,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "way",
+      "osm_id": 201812088,
+      "lat": "48.3026874",
+      "lon": "11.9078996",
+      "category": "building",
+      "type": "apartments",
+      "place_rank": 30,
+      "importance": 5.266117341873834e-05,
+      "addresstype": "building",
+      "name": "",
+      "display_name": "15, Haager Straße, Heilig Blut, Haager Vorstadt, Erding, Siglfing, Erding, Landkreis Erding, Bayern, 85435, Deutschland",
+      "boundingbox": [
+        "48.3025636",
+        "48.3028273",
+        "11.9077035",
+        "11.9081050"
+      ]
+    }
+  ],
+  "countrycodes=de&format=jsonv2&limit=1&q=Wendelsteinstra%C3%9Fe+24%2C+85435+Erding%2C+Germany": [
+    {
+      "place_id": 130519973,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "way",
+      "osm_id": 229955464,
+      "lat": "48.2878917",
+      "lon": "11.9011090",
+      "category": "building",
+      "type": "house",
+      "place_rank": 30,
+      "importance": 5.266117341873834e-05,
+      "addresstype": "building",
+      "name": "",
+      "display_name": "24, Wendelsteinstraße, Im Obstgarten, Klettham, Altenerding, Pretzen, Erding, Landkreis Erding, Bayern, 85435, Deutschland",
+      "boundingbox": [
+        "48.2878281",
+        "48.2879387",
+        "11.9009416",
+        "11.9011991"
+      ]
+    }
+  ],
+  "countrycodes=de&format=jsonv2&limit=1&q=Mainburger+Stra%C3%9Fe+41%2C+85356+Freising%2C+Germany": [
+    {
+      "place_id": 128209675,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "way",
+      "osm_id": 996822903,
+      "lat": "48.4070178",
+      "lon": "11.7459637",
+      "category": "building",
+      "type": "detached",
+      "place_rank": 30,
+      "importance": 6.139696345459705e-05,
+      "addresstype": "building",
+      "name": "",
+      "display_name": "41, Mainburger Straße, Schelmenbuckel, Lohmühle, Altenhausen, Freising, Landkreis Freising, Bayern, 85354, Deutschland",
+      "boundingbox": [
+        "48.4069169",
+        "48.4071031",
+        "11.7458541",
+        "11.7460978"
+      ]
+    }
+  ],
+  "countrycodes=de&format=jsonv2&limit=1&q=General-von-Nagel-Stra%C3%9Fe+16%2C+85354+Freising%2C+Germany": [
+    {
+      "place_id": 128403263,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "way",
+      "osm_id": 123634057,
+      "lat": "48.4022838",
+      "lon": "11.7495587",
+      "category": "building",
+      "type": "yes",
+      "place_rank": 30,
+      "importance": 6.139696345459705e-05,
+      "addresstype": "building",
+      "name": "Landshuter Hof",
+      "display_name": "Landshuter Hof, 16, General-von-Nagel-Straße, Domberg, Innenstadt, Altenhausen, Freising, Landkreis Freising, Bayern, 85354, Deutschland",
+      "boundingbox": [
+        "48.4021901",
+        "48.4023776",
+        "11.7492784",
+        "11.7498390"
+      ]
+    }
+  ],
+  "countrycodes=de&format=jsonv2&limit=1&q=K%C3%B6nigstra%C3%9Fe+57%2C+90402+N%C3%BCrnberg%2C+Germany": [
+    {
+      "place_id": 128165717,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "node",
+      "osm_id": 4738529169,
+      "lat": "49.4491158",
+      "lon": "11.0798715",
+      "category": "place",
+      "type": "house",
+      "place_rank": 30,
+      "importance": 7.61417563133748e-05,
+      "addresstype": "place",
+      "name": "",
+      "display_name": "57, Königstraße, Altstadt, St. Lorenz, Altstadt und engere Innenstadt, Nürnberg, Bayern, 90402, Deutschland",
+      "boundingbox": [
+        "49.4490658",
+        "49.4491658",
+        "11.0798215",
+        "11.0799215"
+      ]
+    }
+  ],
+  "countrycodes=de&format=jsonv2&limit=1&q=Johannisstra%C3%9Fe+10%2C+90419+N%C3%BCrnberg%2C+Germany": [
+    {
+      "place_id": 126815428,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "node",
+      "osm_id": 3140534310,
+      "lat": "49.4571728",
+      "lon": "11.0693180",
+      "category": "amenity",
+      "type": "fast_food",
+      "place_rank": 30,
+      "importance": 7.61417563133748e-05,
+      "addresstype": "amenity",
+      "name": "Nürnberger Manakish",
+      "display_name": "Nürnberger Manakish, 10, Johannisstraße, St. Johannis, Altstadt und engere Innenstadt, Nürnberg, Bayern, 90419, Deutschland",
+      "boundingbox": [
+        "49.4571228",
+        "49.4572228",
+        "11.0692680",
+        "11.0693680"
+      ]
+    }
+  ],
+  "countrycodes=de&format=jsonv2&limit=1&q=Bahnhofstra%C3%9Fe+13%2C+90402+N%C3%BCrnberg%2C+Germany": [
+    {
+      "place_id": 126315235,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "node",
+      "osm_id": 1467297484,
+      "lat": "49.4473403",
+      "lon": "11.0860677",
+      "category": "place",
+      "type": "house",
+      "place_rank": 30,
+      "importance": 7.61417563133748e-05,
+      "addresstype": "place",
+      "name": "",
+      "display_name": "13, Bahnhofstraße, Marienvorstadt, Altstadt und engere Innenstadt, Nürnberg, Bayern, 90402, Deutschland",
+      "boundingbox": [
+        "49.4472903",
+        "49.4473903",
+        "11.0860177",
+        "11.0861177"
+      ]
+    }
+  ],
+  "countrycodes=de&format=jsonv2&limit=1&q=K%C3%B6nigstra%C3%9Fe+108%2C+90762+F%C3%BCrth%2C+Germany": [
+    {
+      "place_id": 124588357,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "way",
+      "osm_id": 208741564,
+      "lat": "49.4760901",
+      "lon": "10.9906270",
+      "category": "building",
+      "type": "apartments",
+      "place_rank": 30,
+      "importance": 6.607690547031384e-05,
+      "addresstype": "building",
+      "name": "",
+      "display_name": "108, Königstraße, Altstadt, Innenstadt, Süd, Fürth, Bayern, 90762, Deutschland",
+      "boundingbox": [
+        "49.4760347",
+        "49.4761592",
+        "10.9905173",
+        "10.9907403"
+      ]
+    }
+  ],
+  "countrycodes=de&format=jsonv2&limit=1&q=Hans-Vogel-Stra%C3%9Fe+40%2C+90765+F%C3%BCrth%2C+Germany": [
+    {
+      "place_id": 126702404,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "way",
+      "osm_id": 55311263,
+      "lat": "49.4799630",
+      "lon": "11.0108423",
+      "category": "building",
+      "type": "retail",
+      "place_rank": 30,
+      "importance": 6.607690547031384e-05,
+      "addresstype": "building",
+      "name": "",
+      "display_name": "40, Hans-Vogel-Straße, Poppenreuth, Espan, Nord-Ost, Fürth, Bayern, 90765, Deutschland",
+      "boundingbox": [
+        "49.4798001",
+        "49.4801911",
+        "11.0105609",
+        "11.0111682"
+      ]
+    }
+  ],
+  "countrycodes=de&format=jsonv2&limit=1&q=Kohlenmarkt+4%2C+90762+F%C3%BCrth%2C+Germany": [
+    {
+      "place_id": 125931836,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "way",
+      "osm_id": 34684709,
+      "lat": "49.4767385",
+      "lon": "10.9884321",
+      "category": "building",
+      "type": "office",
+      "place_rank": 30,
+      "importance": 6.607690547031384e-05,
+      "addresstype": "building",
+      "name": "",
+      "display_name": "4, Kohlenmarkt, Altstadt, Innenstadt, Süd, Fürth, Bayern, 90762, Deutschland",
+      "boundingbox": [
+        "49.4766113",
+        "49.4768502",
+        "10.9882050",
+        "10.9886640"
+      ]
+    }
+  ],
+  "countrycodes=de&format=jsonv2&limit=1&q=Martinsb%C3%BChler+Stra%C3%9Fe+1%2C+91054+Erlangen%2C+Germany": [
+    {
+      "place_id": 127060112,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "way",
+      "osm_id": 233622022,
+      "lat": "49.6024467",
+      "lon": "11.0009364",
+      "category": "building",
+      "type": "yes",
+      "place_rank": 30,
+      "importance": 6.749904631108595e-05,
+      "addresstype": "building",
+      "name": "",
+      "display_name": "1, Martinsbühler Straße, Stadtrandsiedlung, Werker, Erlangen, Bayern, 91054, Deutschland",
+      "boundingbox": [
+        "49.6023575",
+        "49.6026239",
+        "11.0007865",
+        "11.0011100"
+      ]
+    }
+  ],
+  "countrycodes=de&format=jsonv2&limit=1&q=Theodor-von-Zahn-Stra%C3%9Fe+19%2C+91052+Erlangen%2C+Germany": [
+    {
+      "place_id": 125922707,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "way",
+      "osm_id": 42811622,
+      "lat": "49.5915638",
+      "lon": "11.0176326",
+      "category": "amenity",
+      "type": "restaurant",
+      "place_rank": 30,
+      "importance": 6.749904631108595e-05,
+      "addresstype": "amenity",
+      "name": "Delhi",
+      "display_name": "Delhi, 19, Theodor-von-Zahn-Straße, Röthelheimpark, Erlangen, Bayern, 91052, Deutschland",
+      "boundingbox": [
+        "49.5914913",
+        "49.5916363",
+        "11.0174545",
+        "11.0178106"
+      ]
+    }
+  ],
+  "countrycodes=de&format=jsonv2&limit=1&q=Theaterplatz+2%2C+91054+Erlangen%2C+Germany": [
+    {
+      "place_id": 126322741,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "way",
+      "osm_id": 250780756,
+      "lat": "49.5996847",
+      "lon": "11.0057671",
+      "category": "amenity",
+      "type": "theatre",
+      "place_rank": 30,
+      "importance": 0.24158668584662718,
+      "addresstype": "amenity",
+      "name": "Markgrafentheater Erlangen",
+      "display_name": "Markgrafentheater Erlangen, 2, Theaterplatz, Innenstadt, Erlangen, Bayern, 91054, Deutschland",
+      "boundingbox": [
+        "49.5995116",
+        "49.5998779",
+        "11.0054601",
+        "11.0062514"
+      ]
+    }
+  ],
+  "countrycodes=de&format=jsonv2&limit=1&q=Kornstra%C3%9Fe+2%2C+91054+Erlangen%2C+Germany": [],
+  "countrycodes=de&format=jsonv2&limit=1&q=Namaste+Erlangen+Erlangen+Germany": [
+    {
+      "place_id": 126027783,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "node",
+      "osm_id": 11233642899,
+      "lat": "49.5955078",
+      "lon": "11.0065774",
+      "category": "amenity",
+      "type": "restaurant",
+      "place_rank": 30,
+      "importance": 6.749904631108595e-05,
+      "addresstype": "amenity",
+      "name": "Namaste",
+      "display_name": "Namaste, 10, Rückertstraße, Innenstadt, Erlangen, Bayern, 91054, Deutschland",
+      "boundingbox": [
+        "49.5954578",
+        "49.5955578",
+        "11.0065274",
+        "11.0066274"
+      ]
+    }
+  ],
+  "countrycodes=de&format=jsonv2&limit=1&q=Bahnhofstra%C3%9Fe+21%2C+86150+Augsburg%2C+Germany": [
+    {
+      "place_id": 125964821,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "way",
+      "osm_id": 91155849,
+      "lat": "48.3657853",
+      "lon": "10.8894259",
+      "category": "building",
+      "type": "yes",
+      "place_rank": 30,
+      "importance": 7.340428778510746e-05,
+      "addresstype": "building",
+      "name": "",
+      "display_name": "21, Bahnhofstraße, Bahnhofsviertel, Bahnhofs- und Bismarckviertel, Innenstadt, Augsburg, Bayern, 86150, Deutschland",
+      "boundingbox": [
+        "48.3657201",
+        "48.3659075",
+        "10.8892421",
+        "10.8896193"
+      ]
+    }
+  ],
+  "countrycodes=de&format=jsonv2&limit=1&q=Jakoberstra%C3%9Fe+55%2C+86152+Augsburg%2C+Germany": [
+    {
+      "place_id": 127336179,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "way",
+      "osm_id": 138168534,
+      "lat": "48.3704923",
+      "lon": "10.9065282",
+      "category": "building",
+      "type": "yes",
+      "place_rank": 30,
+      "importance": 7.340428778510746e-05,
+      "addresstype": "building",
+      "name": "",
+      "display_name": "55, Jakoberstraße, Jakobervorstadt-Nord, Innenstadt, Augsburg, Bayern, 86152, Deutschland",
+      "boundingbox": [
+        "48.3702994",
+        "48.3706695",
+        "10.9064249",
+        "10.9065804"
+      ]
+    }
+  ],
+  "countrycodes=de&format=jsonv2&limit=1&q=Barf%C3%BC%C3%9Ferstra%C3%9Fe+5%2C+86150+Augsburg%2C+Germany": [
+    {
+      "place_id": 127295454,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "node",
+      "osm_id": 4022662619,
+      "lat": "48.3695873",
+      "lon": "10.8999983",
+      "category": "amenity",
+      "type": "restaurant",
+      "place_rank": 30,
+      "importance": 7.340428778510746e-05,
+      "addresstype": "amenity",
+      "name": "Dessi Tadka",
+      "display_name": "Dessi Tadka, 5, Barfüßerstraße, Jakobervorstadt-Nord, Innenstadt, Augsburg, Bayern, 86150, Deutschland",
+      "boundingbox": [
+        "48.3695373",
+        "48.3696373",
+        "10.8999483",
+        "10.9000483"
+      ]
+    }
+  ],
+  "countrycodes=de&format=jsonv2&limit=1&q=Klostersteige+7%2C+87435+Kempten%2C+Germany": [
+    {
+      "place_id": 70815416,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "way",
+      "osm_id": 114669111,
+      "lat": "47.7264932",
+      "lon": "10.3151581",
+      "category": "building",
+      "type": "apartments",
+      "place_rank": 30,
+      "importance": 6.394064240477633e-05,
+      "addresstype": "building",
+      "name": "",
+      "display_name": "7, Klostersteige, Auf dem Lindenberg, Kempten (Allgäu), Bayern, 87435, Deutschland",
+      "boundingbox": [
+        "47.7264458",
+        "47.7266178",
+        "10.3150931",
+        "10.3152222"
+      ]
+    }
+  ],
+  "countrycodes=de&format=jsonv2&limit=1&q=Scheibenstra%C3%9Fe+5%2C+87435+Kempten%2C+Germany": [
+    {
+      "place_id": 70815496,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "way",
+      "osm_id": 114082801,
+      "lat": "47.7219956",
+      "lon": "10.3167103",
+      "category": "building",
+      "type": "apartments",
+      "place_rank": 30,
+      "importance": 6.394064240477633e-05,
+      "addresstype": "building",
+      "name": "",
+      "display_name": "5, Scheibenstraße, Haubenschloß, Kempten (Allgäu), Bayern, 87435, Deutschland",
+      "boundingbox": [
+        "47.7219055",
+        "47.7220399",
+        "10.3165965",
+        "10.3168241"
+      ]
+    }
+  ],
+  "countrycodes=de&format=jsonv2&limit=1&q=Kalchstra%C3%9Fe+6%2C+87700+Memmingen%2C+Germany": [
+    {
+      "place_id": 70986670,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "way",
+      "osm_id": 244249314,
+      "lat": "47.9859326",
+      "lon": "10.1820713",
+      "category": "building",
+      "type": "yes",
+      "place_rank": 30,
+      "importance": 6.474326695654257e-05,
+      "addresstype": "building",
+      "name": "",
+      "display_name": "6, Kalchstraße, Rosenviertel, Gewerbegebiet Schlachthofstraße, Neubruch, Memmingen, Bayern, 87700, Deutschland",
+      "boundingbox": [
+        "47.9858378",
+        "47.9860607",
+        "10.1819032",
+        "10.1822302"
+      ]
+    }
+  ],
+  "countrycodes=de&format=jsonv2&limit=1&q=Augsburger+Stra%C3%9Fe+15%2C+87700+Memmingen%2C+Germany": [
+    {
+      "place_id": 71221828,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "way",
+      "osm_id": 211513422,
+      "lat": "47.9880809",
+      "lon": "10.1909009",
+      "category": "amenity",
+      "type": "restaurant",
+      "place_rank": 30,
+      "importance": 6.474326695654257e-05,
+      "addresstype": "amenity",
+      "name": "Ristorante Victoria",
+      "display_name": "Ristorante Victoria, 15, Augsburger Straße, Baltensiedlung, Gewerbegebiet Ost, Amendingen, Memmingen, Bayern, 87700, Deutschland",
+      "boundingbox": [
+        "47.9880045",
+        "47.9881574",
+        "10.1908057",
+        "10.1909961"
+      ]
+    }
+  ],
+  "countrycodes=de&format=jsonv2&limit=1&q=Kasernstra%C3%9Fe+24%2C+89231+Neu-Ulm%2C+Germany": [
+    {
+      "place_id": 127565808,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "node",
+      "osm_id": 12346812984,
+      "lat": "48.3954801",
+      "lon": "10.0025297",
+      "category": "tourism",
+      "type": "guest_house",
+      "place_rank": 30,
+      "importance": 5.860914015407061e-05,
+      "addresstype": "tourism",
+      "name": "Pension Mitte 24",
+      "display_name": "Pension Mitte 24, 24, Kasernstraße, Stadtmitte, Neu-Ulm, Landkreis Neu-Ulm, Bayern, 89231, Deutschland",
+      "boundingbox": [
+        "48.3954301",
+        "48.3955301",
+        "10.0024797",
+        "10.0025797"
+      ]
+    }
+  ],
+  "countrycodes=de&format=jsonv2&limit=1&q=Augsburger+Stra%C3%9Fe+26%2C+89231+Neu-Ulm%2C+Germany": [
+    {
+      "place_id": 128078935,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "node",
+      "osm_id": 769215842,
+      "lat": "48.3960500",
+      "lon": "10.0012000",
+      "category": "place",
+      "type": "house",
+      "place_rank": 30,
+      "importance": 5.860914015407061e-05,
+      "addresstype": "place",
+      "name": "",
+      "display_name": "26, Augsburger Straße, Stadtmitte, Neu-Ulm, Landkreis Neu-Ulm, Bayern, 89231, Deutschland",
+      "boundingbox": [
+        "48.3960000",
+        "48.3961000",
+        "10.0011500",
+        "10.0012500"
+      ]
+    }
+  ],
+  "countrycodes=de&format=jsonv2&limit=1&q=Ringweg+23%2C+87600+Kaufbeuren%2C+Germany": [
+    {
+      "place_id": 71155337,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "way",
+      "osm_id": 88515597,
+      "lat": "47.8788240",
+      "lon": "10.6235442",
+      "category": "building",
+      "type": "yes",
+      "place_rank": 30,
+      "importance": 6.308155947199232e-05,
+      "addresstype": "building",
+      "name": "",
+      "display_name": "23, Ringweg, Altstadt, Kaufbeuren, Bayern, 87600, Deutschland",
+      "boundingbox": [
+        "47.8786858",
+        "47.8789622",
+        "10.6233382",
+        "10.6237502"
+      ]
+    }
+  ],
+  "countrycodes=de&format=jsonv2&limit=1&q=Schmiedgasse+6%2C+88131+Lindau%2C+Germany": [
+    {
+      "place_id": 71635840,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "way",
+      "osm_id": 54607732,
+      "lat": "47.5477695",
+      "lon": "9.6885696",
+      "category": "building",
+      "type": "apartments",
+      "place_rank": 30,
+      "importance": 5.071107042034054e-05,
+      "addresstype": "building",
+      "name": "",
+      "display_name": "6, Schmiedgasse, Insel, Lindau (Bodensee), Landkreis Lindau, Bayern, 88131, Deutschland",
+      "boundingbox": [
+        "47.5476619",
+        "47.5478729",
+        "9.6884966",
+        "9.6886569"
+      ]
+    }
+  ],
+  "countrycodes=de&format=jsonv2&limit=1&q=In+der+Grub+30%2C+88131+Lindau%2C+Germany": [
+    {
+      "place_id": 71250211,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "way",
+      "osm_id": 54607484,
+      "lat": "47.5473941",
+      "lon": "9.6843781",
+      "category": "building",
+      "type": "apartments",
+      "place_rank": 30,
+      "importance": 5.071107042034054e-05,
+      "addresstype": "building",
+      "name": "",
+      "display_name": "30, In der Grub, Insel, Lindau (Bodensee), Landkreis Lindau, Bayern, 88131, Deutschland",
+      "boundingbox": [
+        "47.5472999",
+        "47.5474740",
+        "9.6842862",
+        "9.6844651"
+      ]
+    }
+  ],
+  "countrycodes=de&format=jsonv2&limit=1&q=Schikanederstra%C3%9Fe+2a%2C+93053+Regensburg%2C+Germany": [
+    {
+      "place_id": 131472995,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "node",
+      "osm_id": 457465270,
+      "lat": "49.0093339",
+      "lon": "12.1010173",
+      "category": "amenity",
+      "type": "restaurant",
+      "place_rank": 30,
+      "importance": 7.224002441438952e-05,
+      "addresstype": "amenity",
+      "name": "Namaste",
+      "display_name": "Namaste, 2a, Schikanederstraße, Galgenberg, Regensburg, Bayern, 93053, Deutschland",
+      "boundingbox": [
+        "49.0092839",
+        "49.0093839",
+        "12.1009673",
+        "12.1010673"
+      ]
+    }
+  ],
+  "countrycodes=de&format=jsonv2&limit=1&q=Schopperplatz+3%2C+93059+Regensburg%2C+Germany": [
+    {
+      "place_id": 130783789,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "way",
+      "osm_id": 100403860,
+      "lat": "49.0238199",
+      "lon": "12.0874471",
+      "category": "amenity",
+      "type": "restaurant",
+      "place_rank": 30,
+      "importance": 7.224002441438952e-05,
+      "addresstype": "amenity",
+      "name": "Taj Mahal",
+      "display_name": "Taj Mahal, 3, Schopperplatz, Pfaffenstein, Niederwinzer, Regensburg, Bayern, 93059, Deutschland",
+      "boundingbox": [
+        "49.0237160",
+        "49.0239345",
+        "12.0873337",
+        "12.0875775"
+      ]
+    }
+  ],
+  "countrycodes=de&format=jsonv2&limit=1&q=Werftstra%C3%9Fe+3%2C+93059+Regensburg%2C+Germany": [
+    {
+      "place_id": 131483704,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "way",
+      "osm_id": 100768167,
+      "lat": "49.0214532",
+      "lon": "12.1029165",
+      "category": "building",
+      "type": "apartments",
+      "place_rank": 30,
+      "importance": 7.224002441438952e-05,
+      "addresstype": "building",
+      "name": "",
+      "display_name": "3, Werftstraße, Ostermayer-Viertel, Weichs, Regensburg, Bayern, 93059, Deutschland",
+      "boundingbox": [
+        "49.0213858",
+        "49.0215354",
+        "12.1028053",
+        "12.1030174"
+      ]
+    }
+  ],
+  "countrycodes=de&format=jsonv2&limit=1&q=Haunw%C3%B6hrer+Stra%C3%9Fe+81%2C+85051+Ingolstadt%2C+Germany": [
+    {
+      "place_id": 127079461,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "way",
+      "osm_id": 160090324,
+      "lat": "48.7502440",
+      "lon": "11.4219052",
+      "category": "amenity",
+      "type": "restaurant",
+      "place_rank": 30,
+      "importance": 6.83916990920427e-05,
+      "addresstype": "amenity",
+      "name": "Indian Palace",
+      "display_name": "Indian Palace, 81, Haunwöhrer Straße, Herz-Jesu-Viertel, Südwest, Ingolstadt, Bayern, 85051, Deutschland",
+      "boundingbox": [
+        "48.7501500",
+        "48.7503931",
+        "11.4217557",
+        "11.4220176"
+      ]
+    }
+  ],
+  "countrycodes=de&format=jsonv2&limit=1&q=Beckerstra%C3%9Fe+11%2C+85049+Ingolstadt%2C+Germany": [
+    {
+      "place_id": 127275042,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "node",
+      "osm_id": 361119376,
+      "lat": "48.7658222",
+      "lon": "11.4292691",
+      "category": "amenity",
+      "type": "restaurant",
+      "place_rank": 30,
+      "importance": 6.83916990920427e-05,
+      "addresstype": "amenity",
+      "name": "Taj Mahal",
+      "display_name": "Taj Mahal, 11, Beckerstraße, Altstadt Nordost, Mitte, Ingolstadt, Bayern, 85049, Deutschland",
+      "boundingbox": [
+        "48.7657722",
+        "48.7658722",
+        "11.4292191",
+        "11.4293191"
+      ]
+    }
+  ],
+  "countrycodes=de&format=jsonv2&limit=1&q=Friedrichshofener+Stra%C3%9Fe+16%2C+85049+Ingolstadt%2C+Germany": [
+    {
+      "place_id": 426725713,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "way",
+      "osm_id": 148680886,
+      "lat": "48.7759568",
+      "lon": "11.3825586",
+      "category": "building",
+      "type": "commercial",
+      "place_rank": 30,
+      "importance": 6.83916990920427e-05,
+      "addresstype": "building",
+      "name": "",
+      "display_name": "16, Friedrichshofener Straße, Friedrichshofen, Friedrichshofen-Hollerstauden, Ingolstadt, Bayern, 85049, Deutschland",
+      "boundingbox": [
+        "48.7756799",
+        "48.7762337",
+        "11.3821874",
+        "11.3829298"
+      ]
+    }
+  ],
+  "countrycodes=de&format=jsonv2&limit=1&q=M%C3%BCnchener+Stra%C3%9Fe+103%2C+85051+Ingolstadt%2C+Germany": [
+    {
+      "place_id": 127193729,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "node",
+      "osm_id": 649286943,
+      "lat": "48.7426861",
+      "lon": "11.4345136",
+      "category": "amenity",
+      "type": "restaurant",
+      "place_rank": 30,
+      "importance": 6.83916990920427e-05,
+      "addresstype": "amenity",
+      "name": "Tattva Indisches Restaurant",
+      "display_name": "Tattva Indisches Restaurant, 103, Münchener Straße, Bahnhofsviertel, Münchener Straße, Ingolstadt, Bayern, 85051, Deutschland",
+      "boundingbox": [
+        "48.7426361",
+        "48.7427361",
+        "11.4344636",
+        "11.4345636"
+      ]
+    }
+  ],
+  "countrycodes=de&format=jsonv2&limit=1&q=Altstadt+30%2C+84028+Landshut%2C+Germany": [
+    {
+      "place_id": 131756061,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "way",
+      "osm_id": 134586399,
+      "lat": "48.5342285",
+      "lon": "12.1502868",
+      "category": "building",
+      "type": "apartments",
+      "place_rank": 30,
+      "importance": 6.628900587467792e-05,
+      "addresstype": "building",
+      "name": "",
+      "display_name": "30, Altstadt, Landshut, Bayern, 84028, Deutschland",
+      "boundingbox": [
+        "48.5342033",
+        "48.5343024",
+        "12.1501034",
+        "12.1503668"
+      ]
+    }
+  ],
+  "countrycodes=de&format=jsonv2&limit=1&q=Schirmgasse+264%2C+84028+Landshut%2C+Germany": [
+    {
+      "place_id": 129257649,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "way",
+      "osm_id": 216688675,
+      "lat": "48.5349830",
+      "lon": "12.1516681",
+      "category": "building",
+      "type": "apartments",
+      "place_rank": 30,
+      "importance": 6.628900587467792e-05,
+      "addresstype": "building",
+      "name": "",
+      "display_name": "264, Schirmgasse, Altstadt, Landshut, Bayern, 84028, Deutschland",
+      "boundingbox": [
+        "48.5349000",
+        "48.5351507",
+        "12.1515533",
+        "12.1517696"
+      ]
+    }
+  ],
+  "countrycodes=de&format=jsonv2&limit=1&q=Zweibr%C3%BCckenstra%C3%9Fe+725%2C+84028+Landshut%2C+Germany": [
+    {
+      "place_id": 128402414,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "way",
+      "osm_id": 213654339,
+      "lat": "48.5397817",
+      "lon": "12.1513489",
+      "category": "building",
+      "type": "yes",
+      "place_rank": 30,
+      "importance": 6.628900587467792e-05,
+      "addresstype": "building",
+      "name": "",
+      "display_name": "725, Zweibrückenstraße, Altstadt, Landshut, Bayern, 84028, Deutschland",
+      "boundingbox": [
+        "48.5397300",
+        "48.5398434",
+        "12.1511771",
+        "12.1515186"
+      ]
+    }
+  ],
+  "countrycodes=de&format=jsonv2&limit=1&q=Dreifaltigkeitsplatz+11A%2C+84028+Landshut%2C+Germany": [
+    {
+      "place_id": 128736245,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "way",
+      "osm_id": 216690343,
+      "lat": "48.5327029",
+      "lon": "12.1488320",
+      "category": "building",
+      "type": "apartments",
+      "place_rank": 30,
+      "importance": 6.628900587467792e-05,
+      "addresstype": "building",
+      "name": "",
+      "display_name": "11a, Dreifaltigkeitsplatz, Altstadt, Landshut, Bayern, 84028, Deutschland",
+      "boundingbox": [
+        "48.5325762",
+        "48.5328477",
+        "12.1486656",
+        "12.1491120"
+      ]
+    }
+  ],
+  "countrycodes=de&format=jsonv2&limit=1&q=Theresienstra%C3%9Fe+14%2C+94032+Passau%2C+Germany": [
+    {
+      "place_id": 128377802,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "way",
+      "osm_id": 223074415,
+      "lat": "48.5737328",
+      "lon": "13.4604761",
+      "category": "building",
+      "type": "yes",
+      "place_rank": 30,
+      "importance": 6.784695201033062e-05,
+      "addresstype": "building",
+      "name": "",
+      "display_name": "14, Theresienstraße, Altstadt, Ries, Passau, Bayern, 94032, Deutschland",
+      "boundingbox": [
+        "48.5736305",
+        "48.5738411",
+        "13.4603219",
+        "13.4606348"
+      ]
+    }
+  ],
+  "countrycodes=de&format=jsonv2&limit=1&q=H%C3%B6llgasse+26%2C+94032+Passau%2C+Germany": [
+    {
+      "place_id": 430580868,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "node",
+      "osm_id": 1458164542,
+      "lat": "48.5758524",
+      "lon": "13.4649273",
+      "category": "amenity",
+      "type": "restaurant",
+      "place_rank": 30,
+      "importance": 6.784695201033062e-05,
+      "addresstype": "amenity",
+      "name": "Kahaani",
+      "display_name": "Kahaani, 26, Höllgasse, Altstadt, Ries, Passau, Bayern, 94032, Deutschland",
+      "boundingbox": [
+        "48.5758024",
+        "48.5759024",
+        "13.4648773",
+        "13.4649773"
+      ]
+    }
+  ],
+  "countrycodes=de&format=jsonv2&limit=1&q=Ro%C3%9Ftr%C3%A4nke+10%2C+94032+Passau%2C+Germany": [
+    {
+      "place_id": 129197077,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "node",
+      "osm_id": 1640245069,
+      "lat": "48.5756161",
+      "lon": "13.4598948",
+      "category": "amenity",
+      "type": "restaurant",
+      "place_rank": 30,
+      "importance": 6.784695201033062e-05,
+      "addresstype": "amenity",
+      "name": "Maharaja",
+      "display_name": "Maharaja, 10, Roßtränke, Altstadt, Ries, Passau, Bayern, 94032, Deutschland",
+      "boundingbox": [
+        "48.5755661",
+        "48.5756661",
+        "13.4598448",
+        "13.4599448"
+      ]
+    }
+  ],
+  "countrycodes=de&format=jsonv2&limit=1&q=Aprilgasse+20%2C+94315+Straubing%2C+Germany": [
+    {
+      "place_id": 128924923,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "way",
+      "osm_id": 205237101,
+      "lat": "48.8807638",
+      "lon": "12.5686274",
+      "category": "building",
+      "type": "residential",
+      "place_rank": 30,
+      "importance": 6.367360952158415e-05,
+      "addresstype": "building",
+      "name": "",
+      "display_name": "20, Aprilgasse, Gerberviertel, Kagers, Straubing, Bayern, 94315, Deutschland",
+      "boundingbox": [
+        "48.8806878",
+        "48.8808554",
+        "12.5684472",
+        "12.5688066"
+      ]
+    }
+  ],
+  "countrycodes=de&format=jsonv2&limit=1&q=Ludwigsplatz+5%2C+94315+Straubing%2C+Germany": [
+    {
+      "place_id": 128821456,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "way",
+      "osm_id": 231421634,
+      "lat": "48.8822782",
+      "lon": "12.5699666",
+      "category": "building",
+      "type": "apartments",
+      "place_rank": 30,
+      "importance": 6.367360952158415e-05,
+      "addresstype": "building",
+      "name": "",
+      "display_name": "5, Ludwigsplatz, Gerberviertel, Kagers, Straubing, Bayern, 94315, Deutschland",
+      "boundingbox": [
+        "48.8820583",
+        "48.8824999",
+        "12.5697665",
+        "12.5701266"
+      ]
+    }
+  ],
+  "countrycodes=de&format=jsonv2&limit=1&q=Drahthammerstra%C3%9Fe+15%2C+92224+Amberg%2C+Germany": [
+    {
+      "place_id": 126099789,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "way",
+      "osm_id": 221097963,
+      "lat": "49.4363944",
+      "lon": "11.8715525",
+      "category": "building",
+      "type": "yes",
+      "place_rank": 30,
+      "importance": 6.380025940332673e-05,
+      "addresstype": "building",
+      "name": "",
+      "display_name": "15, Drahthammerstraße, Amberg, Bayern, 92224, Deutschland",
+      "boundingbox": [
+        "49.4363297",
+        "49.4364589",
+        "11.8714646",
+        "11.8716404"
+      ]
+    }
+  ],
+  "countrycodes=de&format=jsonv2&limit=1&q=Regensburger+Stra%C3%9Fe+37%2C+92224+Amberg%2C+Germany": [
+    {
+      "place_id": 126751950,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "way",
+      "osm_id": 271765384,
+      "lat": "49.4416326",
+      "lon": "11.8737270",
+      "category": "building",
+      "type": "yes",
+      "place_rank": 30,
+      "importance": 6.380025940332673e-05,
+      "addresstype": "building",
+      "name": "",
+      "display_name": "37, Regensburger Straße, Amberg, Bayern, 92224, Deutschland",
+      "boundingbox": [
+        "49.4415624",
+        "49.4417028",
+        "11.8736226",
+        "11.8738314"
+      ]
+    }
+  ],
+  "countrycodes=de&format=jsonv2&limit=1&q=Nikolaistra%C3%9Fe+1%2C+92637+Weiden%2C+Germany": [
+    {
+      "place_id": 131585002,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "way",
+      "osm_id": 263638764,
+      "lat": "49.6783832",
+      "lon": "12.1584431",
+      "category": "building",
+      "type": "yes",
+      "place_rank": 30,
+      "importance": 6.247882810707283e-05,
+      "addresstype": "building",
+      "name": "",
+      "display_name": "1, Nikolaistraße, Innenstadt, Stockerhut, Weiden in der Oberpfalz, Bayern, 92637, Deutschland",
+      "boundingbox": [
+        "49.6783256",
+        "49.6784407",
+        "12.1583556",
+        "12.1585306"
+      ]
+    }
+  ],
+  "countrycodes=de&format=jsonv2&limit=1&q=Unterer+Markt+18a%2C+92637+Weiden%2C+Germany": [
+    {
+      "place_id": 131469395,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "way",
+      "osm_id": 243339815,
+      "lat": "49.6761431",
+      "lon": "12.1650371",
+      "category": "building",
+      "type": "apartments",
+      "place_rank": 30,
+      "importance": 6.247882810707283e-05,
+      "addresstype": "building",
+      "name": "",
+      "display_name": "18a, Unterer Markt, Altstadt, Stockerhut, Weiden in der Oberpfalz, Bayern, 92637, Deutschland",
+      "boundingbox": [
+        "49.6760494",
+        "49.6762354",
+        "12.1649004",
+        "12.1651848"
+      ]
+    }
+  ],
+  "countrycodes=de&format=jsonv2&limit=1&q=Rosengasse+4%2C+92318+Neumarkt%2C+Germany": [
+    {
+      "place_id": 126755067,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "node",
+      "osm_id": 9781031439,
+      "lat": "49.2788686",
+      "lon": "11.4611053",
+      "category": "amenity",
+      "type": "restaurant",
+      "place_rank": 30,
+      "importance": 5.764019226363039e-05,
+      "addresstype": "amenity",
+      "name": "Masala",
+      "display_name": "Masala, 4, Rosengasse, Holzheim, Neumarkt in der Oberpfalz, Landkreis Neumarkt in der Oberpfalz, Bayern, 92318, Deutschland",
+      "boundingbox": [
+        "49.2788186",
+        "49.2789186",
+        "11.4610553",
+        "11.4611553"
+      ]
+    }
+  ],
+  "countrycodes=de&format=jsonv2&limit=1&q=P%C3%B6deldorfer+Stra%C3%9Fe+39%2C+96052+Bamberg%2C+Germany": [
+    {
+      "place_id": 126879495,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "way",
+      "osm_id": 31737610,
+      "lat": "49.8998358",
+      "lon": "10.9076231",
+      "category": "building",
+      "type": "apartments",
+      "place_rank": 30,
+      "importance": 6.342336156247834e-05,
+      "addresstype": "building",
+      "name": "",
+      "display_name": "39, Pödeldorfer Straße, Bamberg-Ost, Bamberg, Bayern, 96052, Deutschland",
+      "boundingbox": [
+        "49.8997676",
+        "49.8999201",
+        "10.9074876",
+        "10.9077479"
+      ]
+    }
+  ],
+  "countrycodes=de&format=jsonv2&limit=1&q=Brennerstra%C3%9Fe+42%2C+96052+Bamberg%2C+Germany": [
+    {
+      "place_id": 126548007,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "way",
+      "osm_id": 31279889,
+      "lat": "49.9028395",
+      "lon": "10.8994540",
+      "category": "building",
+      "type": "apartments",
+      "place_rank": 30,
+      "importance": 6.342336156247834e-05,
+      "addresstype": "building",
+      "name": "",
+      "display_name": "42, Brennerstraße, Gärtnerstadt, Bamberg, Bayern, 96052, Deutschland",
+      "boundingbox": [
+        "49.9027575",
+        "49.9028971",
+        "10.8993282",
+        "10.8996016"
+      ]
+    }
+  ],
+  "countrycodes=de&format=jsonv2&limit=1&q=Obere+K%C3%B6nigstra%C3%9Fe+39%2C+96052+Bamberg%2C+Germany": [
+    {
+      "place_id": 126698616,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "way",
+      "osm_id": 31346905,
+      "lat": "49.8970754",
+      "lon": "10.8939344",
+      "category": "building",
+      "type": "apartments",
+      "place_rank": 30,
+      "importance": 6.342336156247834e-05,
+      "addresstype": "building",
+      "name": "",
+      "display_name": "39, Obere Königstraße, Wunderburg, Gärtnerstadt, Bamberg, Bayern, 96052, Deutschland",
+      "boundingbox": [
+        "49.8970211",
+        "49.8971290",
+        "10.8938787",
+        "10.8939914"
+      ]
+    }
+  ],
+  "countrycodes=de&format=jsonv2&limit=1&q=Friedrichstra%C3%9Fe+15%2C+95444+Bayreuth%2C+Germany": [
+    {
+      "place_id": 127231833,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "way",
+      "osm_id": 41645187,
+      "lat": "49.9414278",
+      "lon": "11.5748293",
+      "category": "building",
+      "type": "yes",
+      "place_rank": 30,
+      "importance": 6.796139467455585e-05,
+      "addresstype": "building",
+      "name": "",
+      "display_name": "15, Friedrichstraße, Bismarck- / Friedrichstraße / Moritzhöfen, City, Bayreuth, Bayern, 95444, Deutschland",
+      "boundingbox": [
+        "49.9413158",
+        "49.9415698",
+        "11.5745471",
+        "11.5750670"
+      ]
+    }
+  ],
+  "countrycodes=de&format=jsonv2&limit=1&q=Alexanderstra%C3%9Fe+7%2C+95444+Bayreuth%2C+Germany": [
+    {
+      "place_id": 126848100,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "way",
+      "osm_id": 40654276,
+      "lat": "49.9460888",
+      "lon": "11.5785390",
+      "category": "building",
+      "type": "apartments",
+      "place_rank": 30,
+      "importance": 6.796139467455585e-05,
+      "addresstype": "building",
+      "name": "",
+      "display_name": "7, Alexanderstraße, Nördliche Innenstadt, City, Bayreuth, Bayern, 95444, Deutschland",
+      "boundingbox": [
+        "49.9460081",
+        "49.9461696",
+        "11.5783975",
+        "11.5786805"
+      ]
+    }
+  ],
+  "countrycodes=de&format=jsonv2&limit=1&q=Maximilianstra%C3%9Fe+39%2C+95444+Bayreuth%2C+Germany": [
+    {
+      "place_id": 126021482,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "way",
+      "osm_id": 37682410,
+      "lat": "49.9441909",
+      "lon": "11.5744795",
+      "category": "building",
+      "type": "apartments",
+      "place_rank": 30,
+      "importance": 6.796139467455585e-05,
+      "addresstype": "building",
+      "name": "",
+      "display_name": "39, Maximilianstraße, Westliche Innenstadt, City, Bayreuth, Bayern, 95444, Deutschland",
+      "boundingbox": [
+        "49.9439858",
+        "49.9443578",
+        "11.5742679",
+        "11.5746550"
+      ]
+    }
+  ],
+  "countrycodes=de&format=jsonv2&limit=1&q=Dreikronenstra%C3%9Fe+17%2C+97082+W%C3%BCrzburg%2C+Germany": [
+    {
+      "place_id": 124873809,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "node",
+      "osm_id": 1968674295,
+      "lat": "49.7949421",
+      "lon": "9.9240164",
+      "category": "amenity",
+      "type": "restaurant",
+      "place_rank": 30,
+      "importance": 7.193026626988659e-05,
+      "addresstype": "amenity",
+      "name": "Guru",
+      "display_name": "Guru, 17, Dreikronenstraße, Mainviertel, Würzburg Altstadt, Würzburg, Bayern, 97082, Deutschland",
+      "boundingbox": [
+        "49.7948921",
+        "49.7949921",
+        "9.9239664",
+        "9.9240664"
+      ]
+    }
+  ],
+  "countrycodes=de&format=jsonv2&limit=1&q=Lehmgrubenweg+13%2C+97084+W%C3%BCrzburg%2C+Germany": [
+    {
+      "place_id": 124892103,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "way",
+      "osm_id": 170266149,
+      "lat": "49.7620656",
+      "lon": "9.9398008",
+      "category": "building",
+      "type": "yes",
+      "place_rank": 30,
+      "importance": 7.193026626988659e-05,
+      "addresstype": "building",
+      "name": "",
+      "display_name": "13, Lehmgrubenweg, Lehmgrubensiedlung, Heidingsfeld, Würzburg, Bayern, 97084, Deutschland",
+      "boundingbox": [
+        "49.7619867",
+        "49.7621445",
+        "9.9396771",
+        "9.9399245"
+      ]
+    }
+  ],
+  "countrycodes=de&format=jsonv2&limit=1&q=Sanderrothstra%C3%9Fe+1%2C+97074+W%C3%BCrzburg%2C+Germany": [
+    {
+      "place_id": 125466742,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "way",
+      "osm_id": 112353949,
+      "lat": "49.7779766",
+      "lon": "9.9541793",
+      "category": "building",
+      "type": "apartments",
+      "place_rank": 30,
+      "importance": 7.193026626988659e-05,
+      "addresstype": "building",
+      "name": "",
+      "display_name": "1, Sanderrothstraße, Keesburg, Frauenland, Würzburg, Bayern, 97074, Deutschland",
+      "boundingbox": [
+        "49.7779251",
+        "49.7780281",
+        "9.9540617",
+        "9.9542968"
+      ]
+    }
+  ],
+  "countrycodes=de&format=jsonv2&limit=1&q=Theatergasse+1%2C+96450+Coburg%2C+Germany": [
+    {
+      "place_id": 137092905,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "node",
+      "osm_id": 3933003602,
+      "lat": "50.2588267",
+      "lon": "10.9663493",
+      "category": "amenity",
+      "type": "restaurant",
+      "place_rank": 30,
+      "importance": 6.605706874184813e-05,
+      "addresstype": "amenity",
+      "name": "Andaaz",
+      "display_name": "Andaaz, 1, Theatergasse, Neuses bei Coburg, Coburg, Bayern, 96450, Deutschland",
+      "boundingbox": [
+        "50.2587767",
+        "50.2588767",
+        "10.9662993",
+        "10.9663993"
+      ]
+    }
+  ],
+  "countrycodes=de&format=jsonv2&limit=1&q=Heiligkreuzstra%C3%9Fe+8%2C+96450+Coburg%2C+Germany": [
+    {
+      "place_id": 137259823,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "way",
+      "osm_id": 727868208,
+      "lat": "50.2635049",
+      "lon": "10.9662063",
+      "category": "building",
+      "type": "yes",
+      "place_rank": 30,
+      "importance": 6.605706874184813e-05,
+      "addresstype": "building",
+      "name": "",
+      "display_name": "8, Heiligkreuzstraße, Neuses bei Coburg, Coburg, Bayern, 96450, Deutschland",
+      "boundingbox": [
+        "50.2634263",
+        "50.2636504",
+        "10.9660868",
+        "10.9664666"
+      ]
+    }
+  ],
+  "countrycodes=de&format=jsonv2&limit=1&q=Ludwigstra%C3%9Fe+22%2C+95028+Hof%2C+Germany": [
+    {
+      "place_id": 137334159,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "way",
+      "osm_id": 729302801,
+      "lat": "50.3223097",
+      "lon": "11.9187441",
+      "category": "building",
+      "type": "yes",
+      "place_rank": 30,
+      "importance": 6.324635690847666e-05,
+      "addresstype": "building",
+      "name": "",
+      "display_name": "22, Ludwigstraße, Neustadt, Hofeck, Hof, Bayern, 95028, Deutschland",
+      "boundingbox": [
+        "50.3222561",
+        "50.3223848",
+        "11.9186397",
+        "11.9188709"
+      ]
+    }
+  ],
+  "countrycodes=de&format=jsonv2&limit=1&q=N%C3%BCrnberger+Stra%C3%9Fe+40%2C+91522+Ansbach%2C+Germany": [
+    {
+      "place_id": 427365757,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "way",
+      "osm_id": 536749193,
+      "lat": "49.3037310",
+      "lon": "10.5824067",
+      "category": "building",
+      "type": "yes",
+      "place_rank": 30,
+      "importance": 6.542687113751458e-05,
+      "addresstype": "building",
+      "name": "",
+      "display_name": "40, Nürnberger Straße, Kammerforst, Ansbach, Bayern, 91522, Deutschland",
+      "boundingbox": [
+        "49.3036917",
+        "49.3037704",
+        "10.5823217",
+        "10.5824916"
+      ]
+    }
+  ],
+  "countrycodes=de&format=jsonv2&limit=1&q=Ritter-von-Lang-Allee+7%2C+91522+Ansbach%2C+Germany": [
+    {
+      "place_id": 124632821,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "way",
+      "osm_id": 813277089,
+      "lat": "49.3060655",
+      "lon": "10.5889141",
+      "category": "building",
+      "type": "supermarket",
+      "place_rank": 30,
+      "importance": 6.542687113751458e-05,
+      "addresstype": "building",
+      "name": "",
+      "display_name": "7, Ritter-von-Lang-Allee, Kammerforst, Ansbach, Bayern, 91522, Deutschland",
+      "boundingbox": [
+        "49.3055575",
+        "49.3065841",
+        "10.5880036",
+        "10.5897674"
+      ]
+    }
+  ],
+  "countrycodes=de&format=jsonv2&limit=1&q=Ludwigstra%C3%9Fe+3%2C+63739+Aschaffenburg%2C+Germany": [
+    {
+      "place_id": 125147184,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "node",
+      "osm_id": 9560999292,
+      "lat": "49.9796313",
+      "lon": "9.1434342",
+      "category": "amenity",
+      "type": "dentist",
+      "place_rank": 30,
+      "importance": 6.64354924848862e-05,
+      "addresstype": "amenity",
+      "name": "Voss",
+      "display_name": "Voss, 3, Ludwigstraße, Stadtmitte, Aschaffenburg, Bayern, 63739, Deutschland",
+      "boundingbox": [
+        "49.9795813",
+        "49.9796813",
+        "9.1433842",
+        "9.1434842"
+      ]
+    }
+  ],
+  "countrycodes=de&format=jsonv2&limit=1&q=Schweinheimer+Stra%C3%9Fe+79%2C+63743+Aschaffenburg%2C+Germany": [
+    {
+      "place_id": 125162902,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "way",
+      "osm_id": 124415036,
+      "lat": "49.9625453",
+      "lon": "9.1601686",
+      "category": "amenity",
+      "type": "restaurant",
+      "place_rank": 30,
+      "importance": 6.64354924848862e-05,
+      "addresstype": "amenity",
+      "name": "Agni",
+      "display_name": "Agni, 79, Schweinheimer Straße, Schweinheim, Aschaffenburg, Bayern, 63743, Deutschland",
+      "boundingbox": [
+        "49.9624516",
+        "49.9626382",
+        "9.1600263",
+        "9.1603209"
+      ]
+    }
+  ],
+  "countrycodes=de&format=jsonv2&limit=1&q=Ernsthofstra%C3%9Fe+1%2C+63739+Aschaffenburg%2C+Germany": [
+    {
+      "place_id": 125174468,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "way",
+      "osm_id": 124259807,
+      "lat": "49.9772357",
+      "lon": "9.1542601",
+      "category": "building",
+      "type": "yes",
+      "place_rank": 30,
+      "importance": 6.64354924848862e-05,
+      "addresstype": "building",
+      "name": "",
+      "display_name": "1, Ernsthofstraße, Herz-Jesu-Viertel, Stadtmitte, Aschaffenburg, Bayern, 63739, Deutschland",
+      "boundingbox": [
+        "49.9770958",
+        "49.9773755",
+        "9.1540879",
+        "9.1544323"
+      ]
+    }
+  ],
+  "countrycodes=de&format=jsonv2&limit=1&q=Luitpoldstra%C3%9Fe+14%2C+97421+Schweinfurt%2C+Germany": [
+    {
+      "place_id": 136907975,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "node",
+      "osm_id": 6329224960,
+      "lat": "50.0420382",
+      "lon": "10.2252885",
+      "category": "amenity",
+      "type": "restaurant",
+      "place_rank": 30,
+      "importance": 6.496604867623434e-05,
+      "addresstype": "amenity",
+      "name": "Indisches Curry Haus",
+      "display_name": "Indisches Curry Haus, 14, Luitpoldstraße, Innenstadt, Schweinfurt, Bayern, 97421, Deutschland",
+      "boundingbox": [
+        "50.0419882",
+        "50.0420882",
+        "10.2252385",
+        "10.2253385"
+      ]
+    }
+  ],
+  "countrycodes=de&format=jsonv2&limit=1&q=Salinstra%C3%9Fe+8B%2C+83022+Rosenheim%2C+Germany": [
+    {
+      "place_id": 70187009,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "way",
+      "osm_id": 114421795,
+      "lat": "47.8525216",
+      "lon": "12.1223335",
+      "category": "building",
+      "type": "apartments",
+      "place_rank": 30,
+      "importance": 6.39681086441904e-05,
+      "addresstype": "building",
+      "name": "",
+      "display_name": "8b, Salinstraße, Roßacker, Innenstadt, Fürstätt, Rosenheim, Bayern, 83022, Deutschland",
+      "boundingbox": [
+        "47.8524134",
+        "47.8525893",
+        "12.1222217",
+        "12.1224625"
+      ]
+    }
+  ],
+  "countrycodes=de&format=jsonv2&limit=1&q=M%C3%BCnchener+Stra%C3%9Fe+47%2C+83022+Rosenheim%2C+Germany": [
+    {
+      "place_id": 70207533,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "way",
+      "osm_id": 111386130,
+      "lat": "47.8524285",
+      "lon": "12.1186403",
+      "category": "building",
+      "type": "apartments",
+      "place_rank": 30,
+      "importance": 6.39681086441904e-05,
+      "addresstype": "building",
+      "name": "",
+      "display_name": "47, Münchener Straße, Roßacker, Innenstadt, Fürstätt, Rosenheim, Bayern, 83022, Deutschland",
+      "boundingbox": [
+        "47.8523351",
+        "47.8525432",
+        "12.1184606",
+        "12.1188200"
+      ]
+    }
+  ],
+  "countrycodes=de&format=jsonv2&limit=1&q=Bahnhofstra%C3%9Fe+15%2C+83278+Traunstein%2C+Germany": [
+    {
+      "place_id": 70403479,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "way",
+      "osm_id": 262226820,
+      "lat": "47.8690623",
+      "lon": "12.6418980",
+      "category": "building",
+      "type": "retail",
+      "place_rank": 30,
+      "importance": 5.8465705348241664e-05,
+      "addresstype": "building",
+      "name": "",
+      "display_name": "15, Bahnhofstraße, Wochinger Spitz, Empfing, Gemarkung Traunstein, Traunstorf, Traunstein, Landkreis Traunstein, Bayern, 83278, Deutschland",
+      "boundingbox": [
+        "47.8690034",
+        "47.8691212",
+        "12.6417574",
+        "12.6420385"
+      ]
+    }
+  ],
+  "countrycodes=de&format=jsonv2&limit=1&q=K%C3%B6nigsdorfer+Stra%C3%9Fe+2%2C+83646+Bad+T%C3%B6lz%2C+Germany": [
+    {
+      "place_id": 429973033,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "way",
+      "osm_id": 105521399,
+      "lat": "47.7604305",
+      "lon": "11.5556881",
+      "category": "building",
+      "type": "apartments",
+      "place_rank": 30,
+      "importance": 5.898451209272934e-05,
+      "addresstype": "building",
+      "name": "",
+      "display_name": "2, Königsdorfer Straße, Bad Tölz, Landkreis Bad Tölz-Wolfratshausen, Bayern, 83646, Deutschland",
+      "boundingbox": [
+        "47.7603073",
+        "47.7605798",
+        "11.5554759",
+        "11.5559004"
+      ]
+    }
+  ],
+  "countrycodes=de&format=jsonv2&limit=1&q=Sonnenbergstra%C3%9Fe+17%2C+82467+Garmisch-Partenkirchen%2C+Germany": [
+    {
+      "place_id": 70581626,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "way",
+      "osm_id": 59109765,
+      "lat": "47.4953569",
+      "lon": "11.1121969",
+      "category": "amenity",
+      "type": "restaurant",
+      "place_rank": 30,
+      "importance": 6.862973983363115e-05,
+      "addresstype": "amenity",
+      "name": "Taj Mahal",
+      "display_name": "Taj Mahal, 17, Sonnenbergstraße, Partenkirchen, Garmisch-Partenkirchen, Landkreis Garmisch-Partenkirchen, Bayern, 82467, Deutschland",
+      "boundingbox": [
+        "47.4953081",
+        "47.4954614",
+        "11.1120515",
+        "11.1123169"
+      ]
+    }
+  ],
+  "countrycodes=de&format=jsonv2&limit=1&q=Bankgasse+16%2C+82467+Garmisch-Partenkirchen%2C+Germany": [
+    {
+      "place_id": 70981591,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "way",
+      "osm_id": 57384716,
+      "lat": "47.4930060",
+      "lon": "11.0886279",
+      "category": "building",
+      "type": "yes",
+      "place_rank": 30,
+      "importance": 6.862973983363115e-05,
+      "addresstype": "building",
+      "name": "",
+      "display_name": "16, Bankgasse, Garmisch, Garmisch-Partenkirchen, Landkreis Garmisch-Partenkirchen, Bayern, 82467, Deutschland",
+      "boundingbox": [
+        "47.4929316",
+        "47.4930867",
+        "11.0884934",
+        "11.0887586"
+      ]
+    }
+  ],
+  "addressdetails=1&countrycodes=de&extratags=1&format=jsonv2&limit=35&q=%5Brestaurant%5D+indian+M%C3%BCnchen": [
+    {
+      "place_id": 128303707,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "node",
+      "osm_id": 315969661,
+      "lat": "48.1489981",
+      "lon": "11.5428445",
+      "category": "amenity",
+      "type": "restaurant",
+      "place_rank": 30,
+      "importance": 8.462272068355866e-05,
+      "addresstype": "amenity",
+      "name": "AnAn",
+      "display_name": "AnAn, 12, Elvirastraße, St. Vinzenz-Viertel, Neuhausen-Nymphenburg, München, Bayern, 80636, Deutschland",
+      "address": {
+        "amenity": "AnAn",
+        "house_number": "12",
+        "road": "Elvirastraße",
+        "neighbourhood": "St. Vinzenz-Viertel",
+        "suburb": "Neuhausen-Nymphenburg",
+        "city": "München",
+        "state": "Bayern",
+        "ISO3166-2-lvl4": "DE-BY",
+        "postcode": "80636",
+        "country": "Deutschland",
+        "country_code": "de"
+      },
+      "extratags": {
+        "cuisine": "vietnamese",
+        "website": "https://www.anan-restaurant.de/",
+        "delivery": "yes",
+        "takeaway": "yes",
+        "wheelchair": "no",
+        "opening_hours": "Mo-Fr 11:00-14:30,17:00-22:00; Sa 17:00-22:00; Su 12:00-22:00"
+      },
+      "boundingbox": [
+        "48.1489481",
+        "48.1490481",
+        "11.5427945",
+        "11.5428945"
+      ]
+    },
+    {
+      "place_id": 127903674,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "node",
+      "osm_id": 370744739,
+      "lat": "48.1590196",
+      "lon": "11.5865990",
+      "category": "amenity",
+      "type": "restaurant",
+      "place_rank": 30,
+      "importance": 8.462272068355866e-05,
+      "addresstype": "amenity",
+      "name": "Indian Cave Munich",
+      "display_name": "Indian Cave Munich, 9, Nikolaistraße, Alt-Schwabing, Schwabing, Schwabing-Freimann, München, Bayern, 80802, Deutschland",
+      "address": {
+        "amenity": "Indian Cave Munich",
+        "house_number": "9",
+        "road": "Nikolaistraße",
+        "quarter": "Alt-Schwabing",
+        "suburb": "Schwabing",
+        "city_district": "Schwabing-Freimann",
+        "city": "München",
+        "state": "Bayern",
+        "ISO3166-2-lvl4": "DE-BY",
+        "postcode": "80802",
+        "country": "Deutschland",
+        "country_code": "de"
+      },
+      "extratags": {
+        "phone": "+49 89 38898956",
+        "cuisine": "indian",
+        "website": "https://www.indian-cave-munich.de/",
+        "check_date": "2026-05-10",
+        "wheelchair": "no",
+        "opening_hours": "Tu-Th 18:00-24:00; Fr-Sa 18:00-02:30",
+        "diet:vegetarian": "yes",
+        "check_date:opening_hours": "2023-01-06"
+      },
+      "boundingbox": [
+        "48.1589696",
+        "48.1590696",
+        "11.5865490",
+        "11.5866490"
+      ]
+    },
+    {
+      "place_id": 128420216,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "node",
+      "osm_id": 1793502377,
+      "lat": "48.1150894",
+      "lon": "11.5876185",
+      "category": "amenity",
+      "type": "restaurant",
+      "place_rank": 30,
+      "importance": 8.462272068355866e-05,
+      "addresstype": "amenity",
+      "name": "Indian Accent",
+      "display_name": "Indian Accent, 1, Rotwandstraße, Obergiesing, Obergiesing-Fasangarten, München, Bayern, 81539, Deutschland",
+      "address": {
+        "amenity": "Indian Accent",
+        "house_number": "1",
+        "road": "Rotwandstraße",
+        "quarter": "Obergiesing",
+        "city_district": "Obergiesing-Fasangarten",
+        "city": "München",
+        "state": "Bayern",
+        "ISO3166-2-lvl4": "DE-BY",
+        "postcode": "81539",
+        "country": "Deutschland",
+        "country_code": "de"
+      },
+      "extratags": {
+        "cuisine": "indian",
+        "opening_hours": "Mo-Su 11:30-14:30,17:00-23:30",
+        "check_date:opening_hours": "2026-05-02"
+      },
+      "boundingbox": [
+        "48.1150394",
+        "48.1151394",
+        "11.5875685",
+        "11.5876685"
+      ]
+    },
+    {
+      "place_id": 128219263,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "node",
+      "osm_id": 700771076,
+      "lat": "48.1357216",
+      "lon": "11.5799001",
+      "category": "amenity",
+      "type": "restaurant",
+      "place_rank": 30,
+      "importance": 8.462272068355866e-05,
+      "addresstype": "amenity",
+      "name": "Indian Love Story",
+      "display_name": "Indian Love Story, 28, Tal, Graggenauerviertel, Altstadt-Lehel, München, Bayern, 80331, Deutschland",
+      "address": {
+        "amenity": "Indian Love Story",
+        "house_number": "28",
+        "road": "Tal",
+        "quarter": "Graggenauerviertel",
+        "suburb": "Altstadt-Lehel",
+        "city": "München",
+        "state": "Bayern",
+        "ISO3166-2-lvl4": "DE-BY",
+        "postcode": "80331",
+        "country": "Deutschland",
+        "country_code": "de"
+      },
+      "extratags": {
+        "phone": "+49 89 51578430",
+        "cuisine": "indian",
+        "check_date": "2026-03-30",
+        "diet:vegan": "yes",
+        "wheelchair": "no",
+        "payment:cash": "yes",
+        "opening_hours": "Mo-Fr 11:30-14:30,17:30-23:30; Sa 11:30-23:30",
+        "indoor_seating": "yes",
+        "diet:vegetarian": "yes",
+        "payment:debit_cards": "yes",
+        "payment:credit_cards": "yes"
+      },
+      "boundingbox": [
+        "48.1356716",
+        "48.1357716",
+        "11.5798501",
+        "11.5799501"
+      ]
+    },
+    {
+      "place_id": 128338461,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "node",
+      "osm_id": 1788352953,
+      "lat": "48.1614317",
+      "lon": "11.5746672",
+      "category": "amenity",
+      "type": "restaurant",
+      "place_rank": 30,
+      "importance": 8.462272068355866e-05,
+      "addresstype": "amenity",
+      "name": "The Indian Room",
+      "display_name": "The Indian Room, 9, Belgradstraße, Schwabing-West, Alt-Schwabing, Schwabing, München, Bayern, 80796, Deutschland",
+      "address": {
+        "amenity": "The Indian Room",
+        "house_number": "9",
+        "road": "Belgradstraße",
+        "neighbourhood": "Schwabing-West",
+        "quarter": "Alt-Schwabing",
+        "suburb": "Schwabing",
+        "city": "München",
+        "state": "Bayern",
+        "ISO3166-2-lvl4": "DE-BY",
+        "postcode": "80796",
+        "country": "Deutschland",
+        "country_code": "de"
+      },
+      "extratags": {
+        "brewery": "Augustiner Bräu München",
+        "cuisine": "indian",
+        "toilets": "yes",
+        "check_date": "2026-09-22",
+        "wheelchair": "yes",
+        "opening_hours": "Mo off; Tu-Sa 17:30-23:30; Su 12:00-15:00,17:00-23:30",
+        "outdoor_seating": "yes",
+        "contact:instagram": "https://www.instagram.com/theindianroom.munich/",
+        "toilets:wheelchair": "no",
+        "opening_hours:kitchen": "-22:30"
+      },
+      "boundingbox": [
+        "48.1613817",
+        "48.1614817",
+        "11.5746172",
+        "11.5747172"
+      ]
+    },
+    {
+      "place_id": 128339215,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "node",
+      "osm_id": 296462213,
+      "lat": "48.1328906",
+      "lon": "11.5841821",
+      "category": "amenity",
+      "type": "restaurant",
+      "place_rank": 30,
+      "importance": 8.462272068355866e-05,
+      "addresstype": "amenity",
+      "name": "Indian Mango",
+      "display_name": "Indian Mango, 15, Zweibrückenstraße, Graggenauerviertel, Altstadt-Lehel, München, Bayern, 80331, Deutschland",
+      "address": {
+        "amenity": "Indian Mango",
+        "house_number": "15",
+        "road": "Zweibrückenstraße",
+        "quarter": "Graggenauerviertel",
+        "suburb": "Altstadt-Lehel",
+        "city": "München",
+        "state": "Bayern",
+        "ISO3166-2-lvl4": "DE-BY",
+        "postcode": "80331",
+        "country": "Deutschland",
+        "country_code": "de"
+      },
+      "extratags": {
+        "cuisine": "indian",
+        "smoking": "no",
+        "diet:vegan": "yes",
+        "wheelchair": "no",
+        "contact:email": "indianmango.de@gmail.com",
+        "contact:phone": "+49 89 255 42424",
+        "opening_hours": "Mo-Fr 11:30-15:00,17:30-22:30, Sa,Su,PH 12:00-23:00",
+        "indoor_seating": "yes",
+        "contact:website": "https://indian-mango.com/",
+        "diet:vegetarian": "yes",
+        "internet_access": "wlan",
+        "outdoor_seating": "yes",
+        "internet_access:fee": "customers",
+        "wheelchair:description": "Eine Stufe am Eingang"
+      },
+      "boundingbox": [
+        "48.1328406",
+        "48.1329406",
+        "11.5841321",
+        "11.5842321"
+      ]
+    },
+    {
+      "place_id": 126921375,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "node",
+      "osm_id": 1479398833,
+      "lat": "48.1165438",
+      "lon": "11.6013936",
+      "category": "amenity",
+      "type": "restaurant",
+      "place_rank": 30,
+      "importance": 8.462272068355866e-05,
+      "addresstype": "amenity",
+      "name": "Indian Sun",
+      "display_name": "Indian Sun, 1, Sankt-Ingbert-Straße, Ramersdorf, Ramersdorf-Perlach, München, Bayern, 81541, Deutschland",
+      "address": {
+        "amenity": "Indian Sun",
+        "house_number": "1",
+        "road": "Sankt-Ingbert-Straße",
+        "suburb": "Ramersdorf",
+        "city_district": "Ramersdorf-Perlach",
+        "city": "München",
+        "state": "Bayern",
+        "ISO3166-2-lvl4": "DE-BY",
+        "postcode": "81541",
+        "country": "Deutschland",
+        "country_code": "de"
+      },
+      "extratags": {
+        "phone": "+49 89 49026627",
+        "cuisine": "indian",
+        "website": "https://www.indian-sun.com/",
+        "takeaway": "yes",
+        "wheelchair": "yes",
+        "opening_hours": "Mo-Fr 11:30-15:00,17:30-21:00",
+        "indoor_seating": "yes",
+        "outdoor_seating": "yes",
+        "check_date:opening_hours": "2024-09-07"
+      },
+      "boundingbox": [
+        "48.1164938",
+        "48.1165938",
+        "11.6013436",
+        "11.6014436"
+      ]
+    },
+    {
+      "place_id": 127634250,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "node",
+      "osm_id": 941762155,
+      "lat": "48.1335711",
+      "lon": "11.5352379",
+      "category": "amenity",
+      "type": "restaurant",
+      "place_rank": 30,
+      "importance": 8.462272068355866e-05,
+      "addresstype": "amenity",
+      "name": "Indian Bites",
+      "display_name": "Indian Bites, 61, Heimeranstraße, Theresienhöhe, Westend, Schwanthalerhöhe, München, Bayern, 80339, Deutschland",
+      "address": {
+        "amenity": "Indian Bites",
+        "house_number": "61",
+        "road": "Heimeranstraße",
+        "quarter": "Theresienhöhe",
+        "suburb": "Schwanthalerhöhe",
+        "city": "München",
+        "state": "Bayern",
+        "ISO3166-2-lvl4": "DE-BY",
+        "postcode": "80339",
+        "country": "Deutschland",
+        "country_code": "de"
+      },
+      "extratags": {
+        "cuisine": "indian",
+        "diet:vegan": "yes",
+        "wheelchair": "no",
+        "opening_hours": "Mo-Fr 11:30-14:30,17:30-23:00; Sa,Su 17:30-23:00",
+        "indoor_seating": "yes",
+        "contact:website": "https://www.indianbites.de/",
+        "diet:vegetarian": "yes",
+        "outdoor_seating": "yes",
+        "payment:debit_cards": "yes",
+        "payment:credit_cards": "yes"
+      },
+      "boundingbox": [
+        "48.1335211",
+        "48.1336211",
+        "11.5351879",
+        "11.5352879"
+      ]
+    },
+    {
+      "place_id": 126440286,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "node",
+      "osm_id": 683451950,
+      "lat": "48.1932154",
+      "lon": "11.4592272",
+      "category": "amenity",
+      "type": "restaurant",
+      "place_rank": 30,
+      "importance": 8.462272068355866e-05,
+      "addresstype": "amenity",
+      "name": "indian fusion",
+      "display_name": "indian fusion, 129a, Eversbuschstraße, Allach, Allach-Untermenzing, München, Bayern, 80999, Deutschland",
+      "address": {
+        "amenity": "indian fusion",
+        "house_number": "129a",
+        "road": "Eversbuschstraße",
+        "suburb": "Allach",
+        "city_district": "Allach-Untermenzing",
+        "city": "München",
+        "state": "Bayern",
+        "ISO3166-2-lvl4": "DE-BY",
+        "postcode": "80999",
+        "country": "Deutschland",
+        "country_code": "de"
+      },
+      "extratags": {
+        "email": "info@indianfusion.de",
+        "cuisine": "indian",
+        "diet:vegan": "yes",
+        "wheelchair": "yes",
+        "website:menu": "https://www.indianfusion.de/speisekarte",
+        "contact:phone": "+49 89 813 15 70",
+        "opening_hours": "Mo-Fr 11:30-14:30,17:30-23:00; Sa 17:00-23:00; Su 12:00-22:00",
+        "contact:website": "https://www.indianfusion.de",
+        "diet:vegetarian": "yes",
+        "outdoor_seating": "yes",
+        "toilets:wheelchair": "yes"
+      },
+      "boundingbox": [
+        "48.1931654",
+        "48.1932654",
+        "11.4591772",
+        "11.4592772"
+      ]
+    },
+    {
+      "place_id": 128143181,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "node",
+      "osm_id": 924395088,
+      "lat": "48.1980043",
+      "lon": "11.5242376",
+      "category": "amenity",
+      "type": "restaurant",
+      "place_rank": 30,
+      "importance": 8.462272068355866e-05,
+      "addresstype": "amenity",
+      "name": "Indian Village",
+      "display_name": "Indian Village, 226, Feldmochinger Straße, Fasanerie, Feldmoching-Hasenbergl, München, Bayern, 80995, Deutschland",
+      "address": {
+        "amenity": "Indian Village",
+        "house_number": "226",
+        "road": "Feldmochinger Straße",
+        "suburb": "Fasanerie",
+        "city_district": "Feldmoching-Hasenbergl",
+        "city": "München",
+        "state": "Bayern",
+        "ISO3166-2-lvl4": "DE-BY",
+        "postcode": "80995",
+        "country": "Deutschland",
+        "country_code": "de"
+      },
+      "extratags": {
+        "level": "0",
+        "cuisine": "indian",
+        "smoking": "outside",
+        "toilets": "yes",
+        "capacity": "120",
+        "check_date": "2025-09-24",
+        "diet:vegan": "yes",
+        "wheelchair": "limited",
+        "contact:fax": "+49 89 15957166",
+        "payment:cash": "yes",
+        "contact:phone": "+49 89 15985518",
+        "opening_hours": "Tu-Su 11:30-14:30, 17:30-23:00",
+        "indoor_seating": "yes",
+        "contact:website": "https://www.indian-village.de/",
+        "diet:vegetarian": "yes",
+        "outdoor_seating": "yes",
+        "capacity:outdoors": "50",
+        "payment:debit_cards": "yes",
+        "payment:credit_cards": "yes"
+      },
+      "boundingbox": [
+        "48.1979543",
+        "48.1980543",
+        "11.5241876",
+        "11.5242876"
+      ]
+    }
+  ],
+  "addressdetails=1&countrycodes=de&extratags=1&format=jsonv2&limit=35&q=%5Brestaurant%5D+indian+N%C3%BCrnberg": [
+    {
+      "place_id": 128165748,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "node",
+      "osm_id": 11420472002,
+      "lat": "49.4490750",
+      "lon": "11.0799389",
+      "category": "amenity",
+      "type": "restaurant",
+      "place_rank": 30,
+      "importance": 7.61417563133748e-05,
+      "addresstype": "amenity",
+      "name": "Anjappar",
+      "display_name": "Anjappar, 59, Königstraße, Altstadt, St. Lorenz, Altstadt und engere Innenstadt, Nürnberg, Bayern, 90402, Deutschland",
+      "address": {
+        "amenity": "Anjappar",
+        "house_number": "59",
+        "road": "Königstraße",
+        "suburb": "Altstadt, St. Lorenz",
+        "city": "Nürnberg",
+        "state": "Bayern",
+        "ISO3166-2-lvl4": "DE-BY",
+        "postcode": "90402",
+        "country": "Deutschland",
+        "country_code": "de"
+      },
+      "extratags": {
+        "cuisine": "indian",
+        "website": "https://www.anjapparnurnberg.de/",
+        "start_date": "2023-12-08",
+        "wheelchair": "no",
+        "opening_hours": "Mo-Sa 11:30-23:00; Su 11:30-23:00",
+        "indoor_seating": "yes",
+        "outdoor_seating": "yes",
+        "check_date:opening_hours": "2026-11-12"
+      },
+      "boundingbox": [
+        "49.4490250",
+        "49.4491250",
+        "11.0798889",
+        "11.0799889"
+      ]
+    },
+    {
+      "place_id": 417252722,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "node",
+      "osm_id": 301667060,
+      "lat": "49.4635887",
+      "lon": "11.1256714",
+      "category": "amenity",
+      "type": "restaurant",
+      "place_rank": 30,
+      "importance": 7.61417563133748e-05,
+      "addresstype": "amenity",
+      "name": "Plov&Chay",
+      "display_name": "Plov&Chay, 15, Flußstraße, St. Jobst, Östliche Außenstadt, Nürnberg, Bayern, 90491, Deutschland",
+      "address": {
+        "amenity": "Plov&Chay",
+        "house_number": "15",
+        "road": "Flußstraße",
+        "neighbourhood": "St. Jobst",
+        "suburb": "Östliche Außenstadt",
+        "city": "Nürnberg",
+        "state": "Bayern",
+        "ISO3166-2-lvl4": "DE-BY",
+        "postcode": "90491",
+        "country": "Deutschland",
+        "country_code": "de"
+      },
+      "extratags": {
+        "cuisine": "uzbek",
+        "website": "https://www.plovchay.de/",
+        "wheelchair": "no"
+      },
+      "boundingbox": [
+        "49.4635387",
+        "49.4636387",
+        "11.1256214",
+        "11.1257214"
+      ]
+    }
+  ],
+  "addressdetails=1&countrycodes=de&extratags=1&format=jsonv2&limit=35&q=%5Brestaurant%5D+indian+Augsburg": [
+    {
+      "place_id": 127516962,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "node",
+      "osm_id": 287930713,
+      "lat": "48.3621750",
+      "lon": "10.8688311",
+      "category": "amenity",
+      "type": "restaurant",
+      "place_rank": 30,
+      "importance": 7.340428778510746e-05,
+      "addresstype": "amenity",
+      "name": "Noon Mirch",
+      "display_name": "Noon Mirch, 39, Augsburger Straße, Pfersee-Süd, Pfersee, Augsburg, Bayern, 86157, Deutschland",
+      "address": {
+        "amenity": "Noon Mirch",
+        "house_number": "39",
+        "road": "Augsburger Straße",
+        "neighbourhood": "Pfersee-Süd",
+        "suburb": "Pfersee",
+        "city": "Augsburg",
+        "state": "Bayern",
+        "ISO3166-2-lvl4": "DE-BY",
+        "postcode": "86157",
+        "country": "Deutschland",
+        "country_code": "de"
+      },
+      "extratags": {
+        "phone": "+49 821 4206789",
+        "cuisine": "indian",
+        "smoking": "outside",
+        "website": "https://www.noonmirch.de",
+        "takeaway": "yes",
+        "diet:vegan": "yes",
+        "wheelchair": "limited",
+        "opening_hours": "11:00-14:00,17:00-22:00",
+        "indoor_seating": "yes",
+        "diet:vegetarian": "yes",
+        "outdoor_seating": "yes",
+        "toilets:wheelchair": "no"
+      },
+      "boundingbox": [
+        "48.3621250",
+        "48.3622250",
+        "10.8687811",
+        "10.8688811"
+      ]
+    }
+  ],
+  "addressdetails=1&countrycodes=de&extratags=1&format=jsonv2&limit=35&q=%5Brestaurant%5D+indian+Regensburg": [
+    {
+      "place_id": 129784641,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "node",
+      "osm_id": 12697369432,
+      "lat": "49.0214271",
+      "lon": "12.1029107",
+      "category": "amenity",
+      "type": "restaurant",
+      "place_rank": 30,
+      "importance": 7.224002441438952e-05,
+      "addresstype": "amenity",
+      "name": "Chaska - Indian Street Food",
+      "display_name": "Chaska - Indian Street Food, Werftstraße, Ostermayer-Viertel, Weichs, Regensburg, Bayern, 93059, Deutschland",
+      "address": {
+        "amenity": "Chaska - Indian Street Food",
+        "road": "Werftstraße",
+        "neighbourhood": "Ostermayer-Viertel",
+        "suburb": "Weichs",
+        "city": "Regensburg",
+        "state": "Bayern",
+        "ISO3166-2-lvl4": "DE-BY",
+        "postcode": "93059",
+        "country": "Deutschland",
+        "country_code": "de"
+      },
+      "extratags": {
+        "phone": "+4994146124493",
+        "cuisine": "indian",
+        "website": "https://www.chaskaregensberg.de/",
+        "diet:vegan": "yes",
+        "indoor_seating": "yes",
+        "diet:vegetarian": "yes",
+        "outdoor_seating": "yes",
+        "payment:debit_cards": "no",
+        "opening_hours:signed": "no",
+        "payment:credit_cards": "no",
+        "check_date:opening_hours": "2025-11-30"
+      },
+      "boundingbox": [
+        "49.0213771",
+        "49.0214771",
+        "12.1028607",
+        "12.1029607"
+      ]
+    }
+  ],
+  "addressdetails=1&countrycodes=de&extratags=1&format=jsonv2&limit=35&q=%5Brestaurant%5D+indian+Ingolstadt": [
+    {
+      "place_id": 127079461,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "way",
+      "osm_id": 160090324,
+      "lat": "48.7502440",
+      "lon": "11.4219052",
+      "category": "amenity",
+      "type": "restaurant",
+      "place_rank": 30,
+      "importance": 6.83916990920427e-05,
+      "addresstype": "amenity",
+      "name": "Indian Palace",
+      "display_name": "Indian Palace, 81, Haunwöhrer Straße, Herz-Jesu-Viertel, Südwest, Ingolstadt, Bayern, 85051, Deutschland",
+      "address": {
+        "amenity": "Indian Palace",
+        "house_number": "81",
+        "road": "Haunwöhrer Straße",
+        "suburb": "Herz-Jesu-Viertel",
+        "city_district": "Südwest",
+        "city": "Ingolstadt",
+        "state": "Bayern",
+        "ISO3166-2-lvl4": "DE-BY",
+        "postcode": "85051",
+        "country": "Deutschland",
+        "country_code": "de"
+      },
+      "extratags": {
+        "fax": "+49 841 980974",
+        "phone": "+49 841 980388",
+        "cuisine": "indian",
+        "website": "https://www.indianpalace-in.de/",
+        "building": "yes",
+        "opening_hours": "Mo-Su,PH 11:15-14:30,17:15-23:00"
+      },
+      "boundingbox": [
+        "48.7501500",
+        "48.7503931",
+        "11.4217557",
+        "11.4220176"
+      ]
+    }
+  ],
+  "addressdetails=1&countrycodes=de&extratags=1&format=jsonv2&limit=35&q=%5Brestaurant%5D+indian+W%C3%BCrzburg": [],
+  "addressdetails=1&countrycodes=de&extratags=1&format=jsonv2&limit=35&q=%5Brestaurant%5D+indian+Erlangen": [],
+  "addressdetails=1&countrycodes=de&extratags=1&format=jsonv2&limit=35&q=%5Brestaurant%5D+indian+F%C3%BCrth": [],
+  "addressdetails=1&countrycodes=de&extratags=1&format=jsonv2&limit=35&q=%5Brestaurant%5D+indian+Bamberg": [],
+  "addressdetails=1&countrycodes=de&extratags=1&format=jsonv2&limit=35&q=%5Brestaurant%5D+indian+Bayreuth": [],
+  "addressdetails=1&countrycodes=de&extratags=1&format=jsonv2&limit=35&q=%5Brestaurant%5D+indian+Landshut": [],
+  "addressdetails=1&countrycodes=de&extratags=1&format=jsonv2&limit=35&q=%5Brestaurant%5D+indian+Rosenheim": [
+    {
+      "place_id": 418897547,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "node",
+      "osm_id": 9123964495,
+      "lat": "47.8598880",
+      "lon": "12.3570326",
+      "category": "amenity",
+      "type": "restaurant",
+      "place_rank": 30,
+      "importance": 5.4843213549965935e-05,
+      "addresstype": "amenity",
+      "name": "Maa Indian & Italian",
+      "display_name": "Maa Indian & Italian, 65, Seestraße, Stock, Osternach, Prien am Chiemsee, Landkreis Rosenheim, Bayern, 83209, Deutschland",
+      "address": {
+        "amenity": "Maa Indian & Italian",
+        "house_number": "65",
+        "road": "Seestraße",
+        "suburb": "Stock",
+        "village": "Osternach",
+        "town": "Prien am Chiemsee",
+        "county": "Landkreis Rosenheim",
+        "state": "Bayern",
+        "ISO3166-2-lvl4": "DE-BY",
+        "postcode": "83209",
+        "country": "Deutschland",
+        "country_code": "de"
+      },
+      "extratags": {
+        "phone": "+4980519650205",
+        "cuisine": "indian;italian",
+        "website": "https://www.maaindischestraditional.de/",
+        "check_date": "2026-05-26",
+        "diet:vegan": "yes",
+        "diet:vegetarian": "yes",
+        "outdoor_seating": "yes"
+      },
+      "boundingbox": [
+        "47.8598380",
+        "47.8599380",
+        "12.3569826",
+        "12.3570826"
+      ]
+    }
+  ],
+  "addressdetails=1&countrycodes=de&extratags=1&format=jsonv2&limit=35&q=%5Brestaurant%5D+indian+Passau": [],
+  "addressdetails=1&countrycodes=de&extratags=1&format=jsonv2&limit=35&q=%5Brestaurant%5D+indian+Kempten": []
+}
