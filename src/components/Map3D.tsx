@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import maplibregl from 'maplibre-gl';
 import { CityPreset, Restaurant } from '../types/restaurant';
 import { getRegionStyle } from '../utils/regions';
+import { generateMapSprite } from '../utils/mapSprites';
 
 interface Map3DProps {
   restaurants: Restaurant[];
@@ -21,8 +22,9 @@ interface Map3DProps {
 const LIGHT_STYLE = 'https://tiles.openfreemap.org/styles/liberty';
 const DARK_STYLE = 'https://basemaps.cartocdn.com/gl/dark-matter-gl-style/style.json';
 const SOURCE_ID = 'spiceatlas-restaurants';
-const CIRCLE_LAYER_ID = 'spiceatlas-circles';
-const PULSE_LAYER_ID = 'spiceatlas-new-ring';
+const CLUSTER_LAYER_ID = 'spiceatlas-clusters';
+const OPEN_PIN_LAYER_ID = 'spiceatlas-open-pins';
+const RATED_PIN_LAYER_ID = 'spiceatlas-rated-pins';
 
 function prefersReducedMotion(): boolean {
   return typeof window !== 'undefined' && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -31,21 +33,64 @@ function prefersReducedMotion(): boolean {
 function buildGeoJson(list: Restaurant[]): GeoJSON.FeatureCollection<GeoJSON.Point> {
   return {
     type: 'FeatureCollection',
-    features: list.map((r) => ({
-      type: 'Feature',
-      geometry: {
-        type: 'Point',
-        coordinates: r.coordinates,
-      },
-      properties: {
-        id: r.id,
-        name: r.name,
-        color: getRegionStyle(r.regionCategory).color,
-        hasRating: typeof r.googleRating === 'number' ? 1 : 0,
-        isNew: r.isNewSpot ? 1 : 0,
-      },
-    })),
+    features: list.map((r) => {
+      const color = getRegionStyle(r.regionCategory).color;
+      const hasRating = typeof r.googleRating === 'number';
+      const iconId = hasRating
+        ? `pin-rated|${color}|${r.googleRating!.toFixed(1)}`
+        : `pin-open|${color}`;
+      return {
+        type: 'Feature',
+        geometry: {
+          type: 'Point',
+          coordinates: r.coordinates,
+        },
+        properties: {
+          id: r.id,
+          name: r.name,
+          stateLabel: r.indianState,
+          color,
+          iconId,
+          hasRating: hasRating ? 1 : 0,
+          rating: hasRating ? r.googleRating! : 0,
+        },
+      };
+    }),
   };
+}
+
+function buildHoverCard(name: string, stateLabel: string, rating: number): HTMLElement {
+  const card = document.createElement('div');
+  card.className = 'glass-panel-solid';
+  card.style.cssText =
+    'padding:7px 11px;border-radius:12px;display:flex;flex-direction:column;gap:2px;max-width:240px;pointer-events:none;';
+
+  const topRow = document.createElement('div');
+  topRow.style.cssText = 'display:flex;align-items:center;justify-content:space-between;gap:8px;';
+
+  const titleEl = document.createElement('span');
+  titleEl.style.cssText =
+    'font-size:12px;font-weight:700;color:var(--text-primary);line-height:1.2;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;';
+  titleEl.textContent = name;
+  topRow.appendChild(titleEl);
+
+  if (rating > 0) {
+    const scoreEl = document.createElement('span');
+    scoreEl.className = 'font-mono-data';
+    scoreEl.style.cssText =
+      'font-size:11px;font-weight:700;color:var(--accent-amber-gold);flex-shrink:0;';
+    scoreEl.textContent = `★ ${rating.toFixed(1)}`;
+    topRow.appendChild(scoreEl);
+  }
+
+  const subEl = document.createElement('span');
+  subEl.style.cssText =
+    'font-size:10.5px;font-weight:500;color:var(--text-muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;';
+  subEl.textContent = stateLabel;
+
+  card.appendChild(topRow);
+  card.appendChild(subEl);
+  return card;
 }
 
 export const Map3D: React.FC<Map3DProps> = ({
@@ -61,6 +106,7 @@ export const Map3D: React.FC<Map3DProps> = ({
   const containerRef = useRef<HTMLDivElement | null>(null);
   const mapRef = useRef<maplibregl.Map | null>(null);
   const selectedMarkerRef = useRef<maplibregl.Marker | null>(null);
+  const hoverPopupRef = useRef<maplibregl.Popup | null>(null);
   const orbitFrameRef = useRef<number | null>(null);
   const restaurantsRef = useRef<Restaurant[]>(restaurants);
   const onSelectRef = useRef(onSelectRestaurant);
@@ -86,49 +132,56 @@ export const Map3D: React.FC<Map3DProps> = ({
       map.addSource(SOURCE_ID, {
         type: 'geojson',
         data,
+        cluster: true,
+        clusterMaxZoom: 10.5,
+        clusterRadius: 44,
       });
 
-      // Subtle outer ring for New & Rising spots
+      // 1. Numbered Cluster Medallions
       map.addLayer({
-        id: PULSE_LAYER_ID,
-        type: 'circle',
+        id: CLUSTER_LAYER_ID,
+        type: 'symbol',
         source: SOURCE_ID,
-        filter: ['==', ['get', 'isNew'], 1],
-        paint: {
-          'circle-radius': ['interpolate', ['linear'], ['zoom'], 7, 7, 12, 14, 15, 17],
-          'circle-color': ['get', 'color'],
-          'circle-opacity': 0.25,
-          'circle-stroke-width': 1.5,
-          'circle-stroke-color': ['get', 'color'],
-          'circle-stroke-opacity': 0.7,
+        filter: ['has', 'point_count'],
+        layout: {
+          'icon-image': ['concat', 'cluster|', ['to-string', ['get', 'point_count']]],
+          'icon-allow-overlap': true,
+          'icon-ignore-placement': true,
         },
       });
 
-      // Main GPU-accelerated region-colored restaurant markers
+      // 2. Sculpted Teardrop Pins (OSM/Directory Verified spots)
       map.addLayer({
-        id: CIRCLE_LAYER_ID,
-        type: 'circle',
+        id: OPEN_PIN_LAYER_ID,
+        type: 'symbol',
         source: SOURCE_ID,
-        paint: {
-          'circle-radius': [
-            'interpolate',
-            ['linear'],
-            ['zoom'],
-            7,
-            ['case', ['==', ['get', 'hasRating'], 1], 6, 4.2],
-            12,
-            ['case', ['==', ['get', 'hasRating'], 1], 10.5, 7],
-            15,
-            ['case', ['==', ['get', 'hasRating'], 1], 12.5, 8.5],
-          ],
-          'circle-color': ['get', 'color'],
-          'circle-opacity': 0.94,
-          'circle-stroke-color': '#FFFFFF',
-          'circle-stroke-width': ['interpolate', ['linear'], ['zoom'], 7, 1.2, 12, 2],
+        filter: ['all', ['!', ['has', 'point_count']], ['==', ['get', 'hasRating'], 0]],
+        layout: {
+          'icon-image': ['get', 'iconId'],
+          'icon-anchor': 'bottom',
+          'icon-allow-overlap': true,
+          'icon-ignore-placement': true,
+          'icon-size': ['interpolate', ['linear'], ['zoom'], 7, 0.72, 12, 0.95, 15, 1.08],
+        },
+      });
+
+      // 3. Sculpted Rating Pill-Pins (drawn on top with visible ★ score)
+      map.addLayer({
+        id: RATED_PIN_LAYER_ID,
+        type: 'symbol',
+        source: SOURCE_ID,
+        filter: ['all', ['!', ['has', 'point_count']], ['==', ['get', 'hasRating'], 1]],
+        layout: {
+          'icon-image': ['get', 'iconId'],
+          'icon-anchor': 'bottom',
+          'icon-allow-overlap': true,
+          'icon-ignore-placement': true,
+          'symbol-sort-key': ['get', 'rating'],
+          'icon-size': ['interpolate', ['linear'], ['zoom'], 7, 0.78, 12, 0.98, 15, 1.1],
         },
       });
     } catch {
-      // Style still mid-swap; styledata/idle handler will retry cleanly
+      // Style still mid-swap; styledata/style.load will attach cleanly
     }
   };
 
@@ -145,6 +198,27 @@ export const Map3D: React.FC<Map3DProps> = ({
       bearing: activePreset.bearing,
       maxPitch: 70,
       attributionControl: { compact: true },
+    });
+
+    const hoverPopup = new maplibregl.Popup({
+      closeButton: false,
+      closeOnClick: false,
+      offset: [0, -34],
+      className: 'spiceatlas-hover-popup',
+    });
+    hoverPopupRef.current = hoverPopup;
+
+    // Generate Retina 2x canvas sprites dynamically (persists across Light/Dark style switches)
+    map.on('styleimagemissing', (e) => {
+      if (map.hasImage(e.id)) return;
+      const sprite = generateMapSprite(e.id);
+      if (sprite) {
+        map.addImage(
+          e.id,
+          { width: sprite.width, height: sprite.height, data: sprite.data },
+          { pixelRatio: sprite.pixelRatio }
+        );
+      }
     });
 
     map.on('load', () => {
@@ -164,20 +238,68 @@ export const Map3D: React.FC<Map3DProps> = ({
       }
     });
 
-    map.on('click', CIRCLE_LAYER_ID, (e) => {
+    // Click cluster to zoom in
+    map.on('click', CLUSTER_LAYER_ID, async (e) => {
+      const feat = e.features?.[0];
+      const clusterId = feat?.properties?.cluster_id;
+      const source = map.getSource(SOURCE_ID) as maplibregl.GeoJSONSource | undefined;
+      if (!source || clusterId === undefined || feat?.geometry.type !== 'Point') return;
+      try {
+        const zoom = await source.getClusterExpansionZoom(clusterId);
+        map.easeTo({
+          center: feat.geometry.coordinates as [number, number],
+          zoom,
+          duration: prefersReducedMotion() ? 0 : 450,
+        });
+      } catch {
+        // Ignore stale cluster click
+      }
+    });
+
+    map.on('mouseenter', CLUSTER_LAYER_ID, (e) => {
+      map.getCanvas().style.cursor = 'pointer';
+      const feat = e.features?.[0];
+      if (feat?.geometry.type === 'Point') {
+        const count = Number(feat.properties?.point_count || 0);
+        const card = buildHoverCard(`${count} Indian Kitchens`, 'Click cluster to zoom in', 0);
+        hoverPopup.setLngLat(feat.geometry.coordinates as [number, number]).setDOMContent(card).addTo(map);
+      }
+    });
+
+    map.on('mouseleave', CLUSTER_LAYER_ID, () => {
+      map.getCanvas().style.cursor = '';
+      hoverPopup.remove();
+    });
+
+    const handlePinClick = (e: maplibregl.MapLayerMouseEvent) => {
       const feat = e.features?.[0];
       const id = feat?.properties?.id;
       if (!id) return;
       const found = restaurantsRef.current.find((r) => r.id === id);
       if (found) onSelectRef.current(found);
-    });
+    };
 
-    map.on('mouseenter', CIRCLE_LAYER_ID, () => {
+    const handlePinEnter = (e: maplibregl.MapLayerMouseEvent) => {
       map.getCanvas().style.cursor = 'pointer';
-    });
+      const feat = e.features?.[0];
+      if (feat?.geometry.type === 'Point') {
+        const name = String(feat.properties?.name || '');
+        const stateLabel = String(feat.properties?.stateLabel || '');
+        const rating = Number(feat.properties?.rating || 0);
+        const card = buildHoverCard(name, stateLabel, rating);
+        hoverPopup.setLngLat(feat.geometry.coordinates as [number, number]).setDOMContent(card).addTo(map);
+      }
+    };
 
-    map.on('mouseleave', CIRCLE_LAYER_ID, () => {
+    const handlePinLeave = () => {
       map.getCanvas().style.cursor = '';
+      hoverPopup.remove();
+    };
+
+    [RATED_PIN_LAYER_ID, OPEN_PIN_LAYER_ID].forEach((layerId) => {
+      map.on('click', layerId, handlePinClick);
+      map.on('mouseenter', layerId, handlePinEnter);
+      map.on('mouseleave', layerId, handlePinLeave);
     });
 
     map.on('error', () => {
@@ -209,6 +331,7 @@ export const Map3D: React.FC<Map3DProps> = ({
 
     return () => {
       if (orbitFrameRef.current) cancelAnimationFrame(orbitFrameRef.current);
+      hoverPopupRef.current?.remove();
       selectedMarkerRef.current?.remove();
       selectedMarkerRef.current = null;
       map.remove();
@@ -286,7 +409,7 @@ export const Map3D: React.FC<Map3DProps> = ({
     }
   }, [activePreset, pitchMode]);
 
-  // Fly to selected restaurant & render crisp active halo pin
+  // Fly to selected restaurant & render crisp active halo pin via textContent
   useEffect(() => {
     const map = mapRef.current;
     if (!map) return;
@@ -311,28 +434,43 @@ export const Map3D: React.FC<Map3DProps> = ({
 
     const style = getRegionStyle(selectedRestaurant.regionCategory);
     const hasRating = typeof selectedRestaurant.googleRating === 'number';
-    const el = document.createElement('div');
-    el.className = 'flex flex-col items-center pointer-events-none';
-    el.style.zIndex = '40';
-    el.innerHTML = `
-      <div class="relative flex items-center justify-center">
-        <span class="pin-pulse absolute inset-0 rounded-full" style="background:${style.color}; opacity:0.5;"></span>
-        <span
-          class="relative flex items-center justify-center rounded-full border-2 border-white font-mono-data text-xs font-bold text-white"
-          style="width:40px; height:40px; background:${style.color}; box-shadow: 0 0 0 4px var(--bg-canvas), 0 0 0 7px ${style.color}, 0 10px 24px rgba(0,0,0,0.4);"
-        >
-          ${hasRating ? selectedRestaurant.googleRating!.toFixed(1) : '★'}
-        </span>
-      </div>
-      <span
-        class="mt-1.5 px-2.5 py-0.5 rounded-full text-xs font-bold whitespace-nowrap"
-        style="background:var(--bg-surface-elevated); color:var(--text-primary); border:1px solid var(--border-subtle); box-shadow:0 4px 12px rgba(0,0,0,0.2);"
-      >
-        ${selectedRestaurant.name}
-      </span>
-    `;
 
-    selectedMarkerRef.current = new maplibregl.Marker({ element: el, anchor: 'center' })
+    const root = document.createElement('div');
+    root.className = 'flex flex-col items-center pointer-events-none';
+    root.style.zIndex = '15';
+
+    const ringWrap = document.createElement('div');
+    ringWrap.className = 'relative flex items-center justify-center';
+
+    const pulse = document.createElement('span');
+    pulse.className = 'pin-pulse absolute inset-0 rounded-full';
+    pulse.style.background = style.color;
+    pulse.style.opacity = '0.48';
+
+    const badge = document.createElement('span');
+    badge.className =
+      'relative flex items-center justify-center rounded-full border-2 border-white font-mono-data text-xs font-bold text-white px-2.5';
+    badge.style.height = '32px';
+    badge.style.minWidth = '32px';
+    badge.style.background = style.color;
+    badge.style.boxShadow = `0 0 0 4px var(--bg-canvas), 0 0 0 7px ${style.color}, 0 10px 24px rgba(0,0,0,0.4)`;
+    badge.textContent = hasRating ? `★ ${selectedRestaurant.googleRating!.toFixed(1)}` : '★';
+
+    ringWrap.appendChild(pulse);
+    ringWrap.appendChild(badge);
+
+    const label = document.createElement('span');
+    label.className = 'mt-1.5 px-2.5 py-0.5 rounded-full text-xs font-bold whitespace-nowrap';
+    label.style.background = 'var(--bg-surface-elevated)';
+    label.style.color = 'var(--text-primary)';
+    label.style.border = '1px solid var(--border-subtle)';
+    label.style.boxShadow = '0 4px 12px rgba(0,0,0,0.2)';
+    label.textContent = selectedRestaurant.name;
+
+    root.appendChild(ringWrap);
+    root.appendChild(label);
+
+    selectedMarkerRef.current = new maplibregl.Marker({ element: root, anchor: 'center' })
       .setLngLat(selectedRestaurant.coordinates)
       .addTo(map);
   }, [selectedRestaurant, pitchMode, activePreset.bearing]);
@@ -366,7 +504,7 @@ export const Map3D: React.FC<Map3DProps> = ({
   }, [isOrbiting]);
 
   return (
-    <div className="relative w-full h-full">
+    <div className="relative w-full h-full z-0 isolate">
       <div
         ref={containerRef}
         className="w-full h-full"
@@ -389,7 +527,7 @@ export const Map3D: React.FC<Map3DProps> = ({
       )}
       {tileError && (
         <div className="absolute top-24 left-1/2 -translate-x-1/2 z-20 glass-panel px-4 py-2 rounded-xl text-xs font-medium">
-          Map tiles are loading slowly—switch to <strong>Accessible List</strong> anytime for instant browsing.
+          Map tiles are loading slowly—switch to <strong>List</strong> anytime for instant browsing.
         </div>
       )}
     </div>

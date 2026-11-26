@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { MapPin, Sparkles, Tag, X } from 'lucide-react';
 import { SEASONAL_SPOTLIGHTS } from '../data/delicacies';
 import { Restaurant } from '../types/restaurant';
@@ -16,13 +16,20 @@ export const SeasonalModal: React.FC<SeasonalModalProps> = ({
   restaurants,
   onPickRestaurant,
 }) => {
+  const closeBtnRef = useRef<HTMLButtonElement | null>(null);
+
   useEffect(() => {
     if (!isOpen) return;
+    const prevFocus = document.activeElement as HTMLElement | null;
+    closeBtnRef.current?.focus();
     const onKey = (e: KeyboardEvent) => {
       if (e.key === 'Escape') onClose();
     };
     window.addEventListener('keydown', onKey);
-    return () => window.removeEventListener('keydown', onKey);
+    return () => {
+      window.removeEventListener('keydown', onKey);
+      prevFocus?.focus?.();
+    };
   }, [isOpen, onClose]);
 
   if (!isOpen) return null;
@@ -62,10 +69,11 @@ export const SeasonalModal: React.FC<SeasonalModalProps> = ({
             </p>
           </div>
           <button
+            ref={closeBtnRef}
             type="button"
             onClick={onClose}
             aria-label="Close seasonal recommendations"
-            className="p-2 rounded-full cursor-pointer shrink-0"
+            className="touch-target p-2 rounded-full cursor-pointer shrink-0 flex items-center justify-center"
             style={{ background: 'var(--bg-subtle)', color: 'var(--text-secondary)' }}
           >
             <X className="w-4 h-4" />

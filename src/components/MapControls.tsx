@@ -99,7 +99,7 @@ export const MapControls: React.FC<MapControlsProps> = ({
             type="button"
             onClick={onZoomIn}
             aria-label="Zoom in map"
-            className="p-2 rounded-xl hover:opacity-80 cursor-pointer flex items-center justify-center"
+            className="touch-target p-2 rounded-xl hover:opacity-80 cursor-pointer flex items-center justify-center"
           >
             <Plus className="w-4 h-4" />
           </button>
@@ -107,7 +107,7 @@ export const MapControls: React.FC<MapControlsProps> = ({
             type="button"
             onClick={onZoomOut}
             aria-label="Zoom out map"
-            className="p-2 rounded-xl hover:opacity-80 cursor-pointer flex items-center justify-center"
+            className="touch-target p-2 rounded-xl hover:opacity-80 cursor-pointer flex items-center justify-center"
           >
             <Minus className="w-4 h-4" />
           </button>
@@ -116,7 +116,7 @@ export const MapControls: React.FC<MapControlsProps> = ({
             onClick={onResetMunich}
             aria-label="Reset aerial camera to Munich"
             title="Reset to Munich Aerial View"
-            className="p-2 rounded-xl hover:opacity-80 cursor-pointer flex items-center justify-center"
+            className="touch-target p-2 rounded-xl hover:opacity-80 cursor-pointer flex items-center justify-center"
           >
             <RotateCcw className="w-4 h-4" />
           </button>

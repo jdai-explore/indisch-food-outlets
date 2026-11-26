@@ -1,10 +1,8 @@
 import { Restaurant } from '../types/restaurant';
-import bavariaExpansion from './bavariaOsmRestaurants.json';
 
 /**
  * Curated, verified directory of currently open authentic Indian restaurants
  * across Munich and Bavaria.
- * Excludes closed venues and Pakistani/Bangladeshi-first kitchens that market generically as Indian.
  */
 export const CURATED_RESTAURANTS: Restaurant[] = [
   // ===================== MUNICH (13 SPOTS) =====================
@@ -1274,7 +1272,7 @@ export const CURATED_RESTAURANTS: Restaurant[] = [
   },
 ];
 
-export const RESTAURANTS: Restaurant[] = [
-  ...CURATED_RESTAURANTS,
-  ...(bavariaExpansion as Restaurant[]),
-];
+export async function loadExpansionRestaurants(): Promise<Restaurant[]> {
+  const mod = await import('./bavariaOsmRestaurants.json');
+  return mod.default as Restaurant[];
+}

@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { ArrowRight, Flame, MapPin, X } from 'lucide-react';
 import { FLAVOR_SWAPS } from '../data/delicacies';
 import { Restaurant } from '../types/restaurant';
@@ -16,13 +16,20 @@ export const BeyondClassicsModal: React.FC<BeyondClassicsModalProps> = ({
   restaurants,
   onPickRestaurant,
 }) => {
+  const closeBtnRef = useRef<HTMLButtonElement | null>(null);
+
   useEffect(() => {
     if (!isOpen) return;
+    const prevFocus = document.activeElement as HTMLElement | null;
+    closeBtnRef.current?.focus();
     const onKey = (e: KeyboardEvent) => {
       if (e.key === 'Escape') onClose();
     };
     window.addEventListener('keydown', onKey);
-    return () => window.removeEventListener('keydown', onKey);
+    return () => {
+      window.removeEventListener('keydown', onKey);
+      prevFocus?.focus?.();
+    };
   }, [isOpen, onClose]);
 
   if (!isOpen) return null;
@@ -60,10 +67,11 @@ export const BeyondClassicsModal: React.FC<BeyondClassicsModalProps> = ({
             </p>
           </div>
           <button
+            ref={closeBtnRef}
             type="button"
             onClick={onClose}
             aria-label="Close flavor swap guide"
-            className="p-2 rounded-full cursor-pointer shrink-0"
+            className="touch-target p-2 rounded-full cursor-pointer shrink-0 flex items-center justify-center"
             style={{ background: 'var(--bg-subtle)', color: 'var(--text-secondary)' }}
           >
             <X className="w-4 h-4" />

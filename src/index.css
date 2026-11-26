@@ -77,22 +77,28 @@ body,
 
 .font-mono-data {
   font-family: 'JetBrains Mono', monospace;
+  font-variant-numeric: tabular-nums;
 }
 
 .glass-panel {
   background: var(--bg-surface);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
   border: 1px solid var(--border-subtle);
-  box-shadow: var(--shadow-glass);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.55), var(--shadow-glass);
 }
 
 .glass-panel-solid {
   background: var(--bg-surface-elevated);
-  backdrop-filter: blur(18px);
-  -webkit-backdrop-filter: blur(18px);
+  backdrop-filter: blur(22px) saturate(180%);
+  -webkit-backdrop-filter: blur(22px) saturate(180%);
   border: 1px solid var(--border-subtle);
-  box-shadow: var(--shadow-glass);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.65), var(--shadow-glass);
+}
+
+[data-theme="dark"] .glass-panel,
+[data-theme="dark"] .glass-panel-solid {
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08), var(--shadow-glass);
 }
 
 /* Accessible focus outlines */
@@ -142,6 +148,24 @@ body,
   scrollbar-width: none;
 }
 
+/* Soft horizontal edge-fade mask for scrollable pill rails */
+.scroll-fade-x {
+  -webkit-mask-image: linear-gradient(to right, black 0%, black calc(100% - 28px), transparent 100%);
+  mask-image: linear-gradient(to right, black 0%, black calc(100% - 28px), transparent 100%);
+}
+
+/* Touch ergonomics: enforce 44x44px minimum target on touch devices */
+@media (pointer: coarse) {
+  .touch-target {
+    min-width: 44px;
+    min-height: 44px;
+  }
+}
+
+.safe-bottom-pad {
+  padding-bottom: max(0.75rem, env(safe-area-inset-bottom));
+}
+
 /* 3D Map pin animation */
 @keyframes pulse-ring {
   0% {
@@ -162,15 +186,29 @@ body,
   animation: pulse-ring 2.2s cubic-bezier(0.22, 1, 0.36, 1) infinite;
 }
 
-/* Responsive Inspector Drawer: Bottom sheet on mobile, floating right HUD on md+ */
+/* Responsive Inspector Drawer: 2-detent Spring Bottom Sheet on mobile, floating right HUD on md+ */
 .inspector-sheet {
-  max-height: 78dvh;
+  height: 82dvh;
+  max-height: 82dvh;
+  transition: transform 0.36s cubic-bezier(0.32, 0.72, 0, 1);
+  will-change: transform;
+}
+
+.inspector-sheet[data-detent="peek"] {
+  transform: translateY(46%);
+}
+
+.inspector-sheet[data-detent="expanded"] {
+  transform: translateY(0);
 }
 
 @media (min-width: 768px) {
   .inspector-sheet {
     top: var(--hud-top, 120px);
+    height: auto;
     max-height: none;
+    transform: none !important;
+    transition: none;
   }
 }
 
@@ -198,4 +236,15 @@ body,
 }
 .maplibregl-ctrl-attrib a {
   color: var(--text-secondary) !important;
+}
+
+/* Strip MapLibre's default white padded popup box & tip so hover cards render as one clean glass surface */
+.spiceatlas-hover-popup .maplibregl-popup-content {
+  background: transparent !important;
+  padding: 0 !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+}
+.spiceatlas-hover-popup .maplibregl-popup-tip {
+  display: none !important;
 }

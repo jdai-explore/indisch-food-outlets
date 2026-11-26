@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Globe, MapPin, Phone, Sparkles, Star, Tag } from 'lucide-react';
 import { IndianRegionCategory, Restaurant } from '../types/restaurant';
 import { getRegionStyle, REGION_STYLES } from '../utils/regions';
+import { safeHttpUrl, safeTelHref } from '../utils/sanitize';
 import { QuickFilter } from './SidebarRail';
 
 interface AccessibleGridViewProps {
@@ -214,22 +215,22 @@ export const AccessibleGridView: React.FC<AccessibleGridViewProps> = ({
 
                 <div className="pt-2 border-t flex items-center justify-between gap-2" style={{ borderColor: 'var(--border-subtle)' }}>
                   <div className="flex items-center gap-2">
-                    {r.phone && (
+                    {safeTelHref(r.phone) && (
                       <a
-                        href={`tel:${r.phone.replace(/\s+/g, '')}`}
+                        href={safeTelHref(r.phone)!}
                         aria-label={`Call ${r.name}`}
-                        className="p-2 rounded-xl border no-underline"
+                        className="touch-target p-2 rounded-xl border no-underline flex items-center justify-center"
                         style={{ borderColor: 'var(--border-subtle)', color: 'var(--text-primary)' }}
                       >
                         <Phone className="w-3.5 h-3.5" />
                       </a>
                     )}
                     <a
-                      href={r.website || `https://www.google.com/search?q=${encodeURIComponent(`${r.name} ${r.city}`)}`}
+                      href={safeHttpUrl(r.website) || `https://www.google.com/search?q=${encodeURIComponent(`${r.name} ${r.city}`)}`}
                       target="_blank"
                       rel="noopener noreferrer"
                       aria-label={`Visit website or search for ${r.name}`}
-                      className="p-2 rounded-xl border no-underline"
+                      className="touch-target p-2 rounded-xl border no-underline flex items-center justify-center"
                       style={{ borderColor: 'var(--border-subtle)', color: 'var(--text-primary)' }}
                     >
                       <Globe className="w-3.5 h-3.5" />

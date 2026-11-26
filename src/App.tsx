@@ -1,16 +1,23 @@
-import { useEffect, useMemo, useRef, useState } from 'react';
+import { lazy, Suspense, useEffect, useMemo, useRef, useState } from 'react';
 import { CITY_PRESETS } from './data/cities';
-import { RESTAURANTS } from './data/restaurants';
+import { CURATED_RESTAURANTS, loadExpansionRestaurants } from './data/restaurants';
 import { CityPreset, IndianRegionCategory, Restaurant } from './types/restaurant';
 import { TopBar } from './components/TopBar';
 import { Map3D } from './components/Map3D';
 import { QuickFilter, SidebarRail } from './components/SidebarRail';
 import { InspectorDrawer } from './components/InspectorDrawer';
 import { MapControls } from './components/MapControls';
-import { BeyondClassicsModal } from './components/BeyondClassicsModal';
-import { SeasonalModal } from './components/SeasonalModal';
-import { AccessibleGridView } from './components/AccessibleGridView';
 import { ChevronUp } from 'lucide-react';
+
+const BeyondClassicsModal = lazy(() =>
+  import('./components/BeyondClassicsModal').then((m) => ({ default: m.BeyondClassicsModal }))
+);
+const SeasonalModal = lazy(() =>
+  import('./components/SeasonalModal').then((m) => ({ default: m.SeasonalModal }))
+);
+const AccessibleGridView = lazy(() =>
+  import('./components/AccessibleGridView').then((m) => ({ default: m.AccessibleGridView }))
+);
 
 function getInitialTheme(): 'light' | 'dark' {
   if (typeof window === 'undefined') return 'light';
@@ -21,6 +28,7 @@ function getInitialTheme(): 'light' | 'dark' {
 
 export function App() {
   const [theme, setTheme] = useState<'light' | 'dark'>(getInitialTheme);
+  const [allRestaurants, setAllRestaurants] = useState<Restaurant[]>(CURATED_RESTAURANTS);
   const [activePreset, setActivePreset] = useState<CityPreset>(CITY_PRESETS[0]); // Munich default
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedRegion, setSelectedRegion] = useState<IndianRegionCategory | 'all'>('all');
@@ -44,52 +52,67 @@ export function App() {
     localStorage.setItem('spiceatlas-theme', theme);
   }, [theme]);
 
+  // Progressive dataset hydration: render flagship 29 instantly, stream remaining 495 asynchronously
+  useEffect(() => {
+    let active = true;
+    loadExpansionRestaurants().then((expansion) => {
+      if (active) {
+        setAllRestaurants([...CURATED_RESTAURANTS, ...expansion]);
+      }
+    });
+    return () => {
+      active = false;
+    };
+  }, []);
+
   const filteredRestaurants = useMemo(() => {
     const q = searchQuery.trim().toLowerCase();
 
-    return RESTAURANTS.filter((r) => {
-      // City preset filter (Munich preset also includes immediate north-east S8 neighbors Unterföhring & Ismaning)
-      if (!q && activePreset.cityFilter !== 'All') {
-        if (activePreset.cityFilter === 'Munich') {
-          if (r.city !== 'Munich' && r.city !== 'Unterföhring' && r.city !== 'Ismaning') return false;
-        } else if (r.city !== activePreset.cityFilter) {
+    return allRestaurants
+      .filter((r) => {
+        // City preset filter (Munich preset also includes immediate north-east S8 neighbors Unterföhring & Ismaning)
+        if (!q && activePreset.cityFilter !== 'All') {
+          if (activePreset.cityFilter === 'Munich') {
+            if (r.city !== 'Munich' && r.city !== 'Unterföhring' && r.city !== 'Ismaning') return false;
+          } else if (r.city !== activePreset.cityFilter) {
+            return false;
+          }
+        }
+
+        if (selectedRegion !== 'all' && r.regionCategory !== selectedRegion) {
           return false;
         }
-      }
 
-      if (selectedRegion !== 'all' && r.regionCategory !== selectedRegion) {
-        return false;
-      }
+        if (quickFilter === 'new' && !r.isNewSpot) return false;
+        if (quickFilter === 'offers' && !r.ongoingOffer) return false;
+        if (quickFilter === 'seasonal' && !r.isSeasonalWinterPick) return false;
+        if (quickFilter === 'street-food' && !r.isStreetFood) return false;
+        if (quickFilter === 'fine-dining' && !r.isFineDining) return false;
+        if (quickFilter === 'pure-veg' && !r.isPureVeg) return false;
 
-      if (quickFilter === 'new' && !r.isNewSpot) return false;
-      if (quickFilter === 'offers' && !r.ongoingOffer) return false;
-      if (quickFilter === 'seasonal' && !r.isSeasonalWinterPick) return false;
-      if (quickFilter === 'street-food' && !r.isStreetFood) return false;
-      if (quickFilter === 'fine-dining' && !r.isFineDining) return false;
-      if (quickFilter === 'pure-veg' && !r.isPureVeg) return false;
+        if (!q) return true;
 
-      if (!q) return true;
+        const haystack = [
+          r.name,
+          r.city,
+          r.district ?? '',
+          r.indianState,
+          r.cuisineStyle,
+          r.address,
+          ...r.signatureDishes.map((d) => `${d.name} ${d.regionalOrigin} ${d.description}`),
+        ]
+          .join(' ')
+          .toLowerCase();
 
-      const haystack = [
-        r.name,
-        r.city,
-        r.district ?? '',
-        r.indianState,
-        r.cuisineStyle,
-        r.address,
-        ...r.signatureDishes.map((d) => `${d.name} ${d.regionalOrigin} ${d.description}`),
-      ]
-        .join(' ')
-        .toLowerCase();
-
-      return haystack.includes(q);
-    }).sort((a, b) => {
-      const ra = a.googleRating ?? -1;
-      const rb = b.googleRating ?? -1;
-      if (rb !== ra) return rb - ra;
-      return a.name.localeCompare(b.name);
-    });
-  }, [searchQuery, activePreset.cityFilter, selectedRegion, quickFilter]);
+        return haystack.includes(q);
+      })
+      .sort((a, b) => {
+        const ra = a.googleRating ?? -1;
+        const rb = b.googleRating ?? -1;
+        if (rb !== ra) return rb - ra;
+        return a.name.localeCompare(b.name);
+      });
+  }, [allRestaurants, searchQuery, activePreset.cityFilter, selectedRegion, quickFilter]);
 
   const handleSelectPreset = (preset: CityPreset) => {
     setActivePreset(preset);
@@ -99,16 +122,12 @@ export function App() {
   };
 
   const handleSelectRestaurant = (restaurant: Restaurant) => {
-    // If picking a restaurant from another city (e.g. via modal or search), update city preset smoothly
     const cityPreset = CITY_PRESETS.find((p) => p.cityFilter === restaurant.city);
     if (cityPreset && activePreset.cityFilter !== 'All' && activePreset.cityFilter !== restaurant.city) {
       setActivePreset(cityPreset);
     }
     setIsOrbiting(false);
     setSelectedRestaurant(restaurant);
-    if (viewMode === 'list') {
-      // Keep list mode or let user inspect via drawer overlay
-    }
   };
 
   return (
@@ -116,6 +135,11 @@ export function App() {
       <a href="#main-content" className="skip-link">
         Skip to restaurant listings
       </a>
+
+      {/* Polite screen-reader live announcement for filter & dataset updates */}
+      <div className="sr-only" aria-live="polite" aria-atomic="true">
+        Showing {filteredRestaurants.length} verified open Indian kitchens in {activePreset.label}.
+      </div>
 
       <TopBar
         searchQuery={searchQuery}
@@ -174,7 +198,7 @@ export function App() {
             <button
               type="button"
               onClick={() => setViewMode('list')}
-              className="md:hidden fixed bottom-5 left-1/2 -translate-x-1/2 z-20 glass-panel px-4 py-2.5 rounded-full text-xs font-bold flex items-center gap-1.5 cursor-pointer whitespace-nowrap"
+              className="touch-target md:hidden fixed bottom-5 left-1/2 -translate-x-1/2 z-20 glass-panel px-4 py-2.5 rounded-full text-xs font-bold flex items-center gap-1.5 cursor-pointer whitespace-nowrap"
             >
               <ChevronUp className="w-4 h-4" />
               <span>Browse {filteredRestaurants.length} Verified Kitchens</span>
@@ -182,16 +206,24 @@ export function App() {
           )}
         </main>
       ) : (
-        <AccessibleGridView
-          restaurants={filteredRestaurants}
-          selectedRestaurant={selectedRestaurant}
-          onSelectRestaurant={handleSelectRestaurant}
-          selectedRegion={selectedRegion}
-          onSelectRegion={setSelectedRegion}
-          quickFilter={quickFilter}
-          onSelectQuickFilter={setQuickFilter}
-          cityLabel={activePreset.label}
-        />
+        <Suspense
+          fallback={
+            <div className="min-h-screen flex items-center justify-center text-sm font-medium">
+              Loading accessible directory…
+            </div>
+          }
+        >
+          <AccessibleGridView
+            restaurants={filteredRestaurants}
+            selectedRestaurant={selectedRestaurant}
+            onSelectRestaurant={handleSelectRestaurant}
+            selectedRegion={selectedRegion}
+            onSelectRegion={setSelectedRegion}
+            quickFilter={quickFilter}
+            onSelectQuickFilter={setQuickFilter}
+            cityLabel={activePreset.label}
+          />
+        </Suspense>
       )}
 
       <InspectorDrawer
@@ -199,25 +231,30 @@ export function App() {
         onClose={() => setSelectedRestaurant(null)}
       />
 
-      <BeyondClassicsModal
-        isOpen={showBeyondClassics}
-        onClose={() => setShowBeyondClassics(false)}
-        restaurants={RESTAURANTS}
-        onPickRestaurant={(spot) => {
-          setViewMode('map');
-          handleSelectRestaurant(spot);
-        }}
-      />
-
-      <SeasonalModal
-        isOpen={showSeasonal}
-        onClose={() => setShowSeasonal(false)}
-        restaurants={RESTAURANTS}
-        onPickRestaurant={(spot) => {
-          setViewMode('map');
-          handleSelectRestaurant(spot);
-        }}
-      />
+      <Suspense fallback={null}>
+        {showBeyondClassics && (
+          <BeyondClassicsModal
+            isOpen={showBeyondClassics}
+            onClose={() => setShowBeyondClassics(false)}
+            restaurants={allRestaurants}
+            onPickRestaurant={(spot) => {
+              setViewMode('map');
+              handleSelectRestaurant(spot);
+            }}
+          />
+        )}
+        {showSeasonal && (
+          <SeasonalModal
+            isOpen={showSeasonal}
+            onClose={() => setShowSeasonal(false)}
+            restaurants={allRestaurants}
+            onPickRestaurant={(spot) => {
+              setViewMode('map');
+              handleSelectRestaurant(spot);
+            }}
+          />
+        )}
+      </Suspense>
     </div>
   );
 }

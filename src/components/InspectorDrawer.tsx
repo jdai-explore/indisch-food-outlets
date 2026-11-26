@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import {
   Check,
   Clock,
@@ -19,6 +19,7 @@ import {
 } from 'lucide-react';
 import { Restaurant } from '../types/restaurant';
 import { getRegionStyle } from '../utils/regions';
+import { safeHttpUrl, safeTelHref } from '../utils/sanitize';
 
 interface InspectorDrawerProps {
   restaurant: Restaurant | null;
@@ -48,6 +49,23 @@ function SpiceDots({ level }: { level: 1 | 2 | 3 | 4 | 5 }) {
 
 export const InspectorDrawer: React.FC<InspectorDrawerProps> = ({ restaurant, onClose }) => {
   const [copied, setCopied] = useState(false);
+  const [detent, setDetent] = useState<'peek' | 'expanded'>('peek');
+  const dragStartY = useRef<number | null>(null);
+
+  // Reset to peek detent when switching restaurants on mobile
+  useEffect(() => {
+    if (restaurant) setDetent('peek');
+  }, [restaurant?.id]);
+
+  // Escape key parity on desktop & keyboard
+  useEffect(() => {
+    if (!restaurant) return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') onClose();
+    };
+    window.addEventListener('keydown', onKey);
+    return () => window.removeEventListener('keydown', onKey);
+  }, [restaurant, onClose]);
 
   if (!restaurant) return null;
 
@@ -58,7 +76,9 @@ export const InspectorDrawer: React.FC<InspectorDrawerProps> = ({ restaurant, on
   const googleReviewsUrl = `https://www.google.com/search?q=${encodeURIComponent(
     `${restaurant.name} ${restaurant.city} Google reviews`
   )}`;
-  const websiteHref = restaurant.website || googleReviewsUrl;
+
+  const safeWebsite = safeHttpUrl(restaurant.website);
+  const safeTel = safeTelHref(restaurant.phone);
 
   const handleCopyAddress = async () => {
     try {
@@ -70,105 +90,193 @@ export const InspectorDrawer: React.FC<InspectorDrawerProps> = ({ restaurant, on
     }
   };
 
+  const handleTouchStart = (e: React.TouchEvent) => {
+    dragStartY.current = e.touches[0].clientY;
+  };
+
+  const handleTouchEnd = (e: React.TouchEvent) => {
+    if (dragStartY.current === null) return;
+    const deltaY = e.changedTouches[0].clientY - dragStartY.current;
+    dragStartY.current = null;
+    if (deltaY < -36) {
+      setDetent('expanded');
+    } else if (deltaY > 48) {
+      if (detent === 'expanded') {
+        setDetent('peek');
+      } else {
+        onClose();
+      }
+    }
+  };
+
   return (
     <>
-      {/* Subtle mobile backdrop scrim */}
+      {/* Subtle mobile backdrop scrim (only darkened when expanded) */}
       <div
-        className="md:hidden fixed inset-0 z-20"
+        className={`md:hidden fixed inset-0 z-20 transition-opacity ${
+          detent === 'expanded' ? 'opacity-100' : 'opacity-0 pointer-events-none'
+        }`}
         style={{ background: 'rgba(13, 15, 18, 0.35)' }}
-        onClick={onClose}
+        onClick={() => setDetent('peek')}
         aria-hidden="true"
       />
+
       <aside
         aria-label={`Details for ${restaurant.name}`}
-        className="inspector-sheet fixed inset-x-2 bottom-2 md:inset-x-auto md:right-3 md:bottom-14 w-auto md:w-[380px] lg:w-[400px] z-30 glass-panel-solid rounded-3xl md:rounded-2xl flex flex-col overflow-hidden"
+        data-detent={detent}
+        className="inspector-sheet safe-bottom-pad fixed inset-x-2 bottom-0 md:inset-x-auto md:right-3 md:bottom-14 w-auto md:w-[380px] lg:w-[400px] z-30 glass-panel-solid rounded-t-3xl md:rounded-2xl flex flex-col overflow-hidden"
       >
-        {/* Mobile grabber bar */}
-        <div className="md:hidden flex justify-center pt-2.5 pb-1 shrink-0" aria-hidden="true">
+        {/* Interactive Mobile Grabber Handle */}
+        <button
+          type="button"
+          onClick={() => setDetent((d) => (d === 'peek' ? 'expanded' : 'peek'))}
+          onTouchStart={handleTouchStart}
+          onTouchEnd={handleTouchEnd}
+          aria-label={detent === 'peek' ? 'Expand restaurant details sheet' : 'Collapse restaurant details sheet'}
+          className="md:hidden w-full flex flex-col items-center pt-2.5 pb-1.5 shrink-0 bg-transparent border-0 cursor-pointer"
+        >
           <span
             className="w-10 h-1 rounded-full"
             style={{ background: 'var(--border-strong)' }}
           />
-        </div>
-        {/* Top Banner */}
-        <div
-          className="px-4 sm:px-5 py-3 sm:py-4 border-b relative"
-          style={{ borderColor: 'var(--border-subtle)' }}
-        >
-        <button
-          type="button"
-          onClick={onClose}
-          aria-label="Close restaurant details"
-          className="absolute top-3.5 right-3.5 p-1.5 rounded-full cursor-pointer transition-colors"
-          style={{ background: 'var(--bg-subtle)', color: 'var(--text-secondary)' }}
-        >
-          <X className="w-4 h-4" />
         </button>
 
-        <div className="flex items-center gap-1.5 flex-wrap pr-8">
-          <span
-            className="text-[11px] font-bold px-2.5 py-0.5 rounded-full"
-            style={{ background: region.bgSoft, color: region.color }}
+        {/* Header */}
+        <div
+          className="px-4 sm:px-5 pt-1 pb-3.5 md:py-4 border-b relative shrink-0"
+          style={{ borderColor: 'var(--border-subtle)' }}
+          onTouchStart={handleTouchStart}
+          onTouchEnd={handleTouchEnd}
+        >
+          <button
+            type="button"
+            onClick={onClose}
+            aria-label="Close restaurant details"
+            className="touch-target absolute top-1 md:top-3.5 right-3.5 p-2 rounded-full cursor-pointer transition-colors flex items-center justify-center"
+            style={{ background: 'var(--bg-subtle)', color: 'var(--text-secondary)' }}
           >
-            {restaurant.indianState}
-          </span>
-          <span
-            className="inline-flex items-center gap-1 text-[11px] font-semibold px-2 py-0.5 rounded-full"
-            style={{ background: 'var(--accent-emerald-soft)', color: 'var(--accent-emerald)' }}
-          >
-            <ShieldCheck className="w-3 h-3" />
-            Verified Open · Indian
-          </span>
-        </div>
+            <X className="w-4 h-4" />
+          </button>
 
-        <h2 className="font-display text-2xl font-bold mt-2 leading-tight">
-          {restaurant.name}
-        </h2>
-        <p className="text-xs mt-1" style={{ color: 'var(--text-secondary)' }}>
-          {restaurant.cuisineStyle}
-        </p>
+          <div className="flex items-center gap-1.5 flex-wrap pr-11">
+            <span
+              className="text-[11px] font-bold px-2.5 py-0.5 rounded-full"
+              style={{ background: region.bgSoft, color: region.color }}
+            >
+              {restaurant.indianState}
+            </span>
+            <span
+              className="inline-flex items-center gap-1 text-[11px] font-semibold px-2 py-0.5 rounded-full"
+              style={{ background: 'var(--accent-emerald-soft)', color: 'var(--accent-emerald)' }}
+            >
+              <ShieldCheck className="w-3 h-3" />
+              Verified Open
+            </span>
+          </div>
 
-        {/* Google Rating Strip */}
-        <div className="mt-3 flex items-center gap-3 flex-wrap">
-          {typeof restaurant.googleRating === 'number' ? (
-            <>
-              <div
-                className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-xl font-mono-data text-sm font-bold"
+          <h2 className="font-display text-xl sm:text-2xl font-bold mt-2 leading-tight pr-8">
+            {restaurant.name}
+          </h2>
+          <p className="text-xs mt-0.5" style={{ color: 'var(--text-secondary)' }}>
+            {restaurant.cuisineStyle}
+          </p>
+
+          {/* Rating Strip */}
+          <div className="mt-2.5 flex items-center gap-2.5 flex-wrap">
+            {typeof restaurant.googleRating === 'number' ? (
+              <>
+                <div
+                  className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-xl font-mono-data text-xs sm:text-sm font-bold"
+                  style={{ background: 'var(--accent-saffron-soft)', color: 'var(--accent-amber-gold)' }}
+                >
+                  <Star className="w-3.5 h-3.5 fill-current" />
+                  <span>{restaurant.googleRating.toFixed(1)} / 5.0</span>
+                </div>
+                {restaurant.reviewCountLabel && (
+                  <span className="text-xs font-medium" style={{ color: 'var(--text-muted)' }}>
+                    {restaurant.reviewCountLabel}
+                  </span>
+                )}
+              </>
+            ) : (
+              <a
+                href={googleReviewsUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-xl text-xs font-bold no-underline transition-opacity hover:opacity-85"
                 style={{ background: 'var(--accent-saffron-soft)', color: 'var(--accent-amber-gold)' }}
               >
-                <Star className="w-4 h-4 fill-current" />
-                <span>{restaurant.googleRating.toFixed(1)} / 5.0</span>
-              </div>
-              {restaurant.reviewCountLabel && (
-                <span className="text-xs font-medium" style={{ color: 'var(--text-muted)' }}>
-                  {restaurant.reviewCountLabel}
-                </span>
-              )}
-            </>
-          ) : (
+                <Star className="w-3.5 h-3.5" />
+                <span>View Live Google Reviews</span>
+                <ExternalLink className="w-3 h-3" />
+              </a>
+            )}
+          </div>
+
+          {/* Apple Maps-style 3-Button Primary Action Row (immediately visible in Peek detent!) */}
+          <div className="mt-3 grid grid-cols-3 gap-2">
             <a
-              href={googleReviewsUrl}
+              href={mapsUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-xl text-xs font-bold no-underline transition-opacity hover:opacity-85"
-              style={{ background: 'var(--accent-saffron-soft)', color: 'var(--accent-amber-gold)' }}
+              className="touch-target flex flex-col items-center justify-center gap-1 py-2 px-2 rounded-xl text-[11px] font-bold no-underline transition-opacity hover:opacity-90"
+              style={{ background: 'var(--accent-saffron)', color: '#1C1917' }}
             >
-              <Star className="w-3.5 h-3.5" />
-              <span>View Live Google Rating &amp; Reviews</span>
-              <ExternalLink className="w-3 h-3" />
+              <Navigation className="w-4 h-4" />
+              <span>Directions</span>
             </a>
-          )}
-        </div>
-      </div>
 
-      {/* Scrollable Body */}
-      <div className="flex-1 overflow-y-auto custom-scroll p-5 space-y-5">
-        {/* Address, Hours & Direct Contact */}
-        <section aria-label="Location and contact" className="space-y-2.5">
-          <div
-            className="p-3.5 rounded-xl border space-y-2.5"
-            style={{ background: 'var(--bg-subtle)', borderColor: 'var(--border-subtle)' }}
-          >
+            {safeTel ? (
+              <a
+                href={safeTel}
+                className="touch-target flex flex-col items-center justify-center gap-1 py-2 px-2 rounded-xl text-[11px] font-semibold border no-underline transition-opacity hover:opacity-85"
+                style={{
+                  background: 'var(--bg-subtle)',
+                  color: 'var(--text-primary)',
+                  borderColor: 'var(--border-subtle)',
+                }}
+              >
+                <Phone className="w-4 h-4" style={{ color: 'var(--accent-emerald)' }} />
+                <span>Call</span>
+              </a>
+            ) : (
+              <a
+                href={safeWebsite || googleReviewsUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="touch-target flex flex-col items-center justify-center gap-1 py-2 px-2 rounded-xl text-[11px] font-semibold border no-underline transition-opacity hover:opacity-85"
+                style={{
+                  background: 'var(--bg-subtle)',
+                  color: 'var(--text-primary)',
+                  borderColor: 'var(--border-subtle)',
+                }}
+              >
+                <Phone className="w-4 h-4" style={{ color: 'var(--accent-emerald)' }} />
+                <span>Contact</span>
+              </a>
+            )}
+
+            <a
+              href={safeWebsite || googleReviewsUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="touch-target flex flex-col items-center justify-center gap-1 py-2 px-2 rounded-xl text-[11px] font-semibold border no-underline transition-opacity hover:opacity-85"
+              style={{
+                background: 'var(--bg-subtle)',
+                color: 'var(--text-primary)',
+                borderColor: 'var(--border-subtle)',
+              }}
+            >
+              <Globe className="w-4 h-4" style={{ color: 'var(--accent-saffron)' }} />
+              <span>{safeWebsite ? 'Website' : 'Search'}</span>
+            </a>
+          </div>
+        </div>
+
+        {/* Scrollable Body with Hairline Section Dividers */}
+        <div className="flex-1 overflow-y-auto custom-scroll px-4 sm:px-5 py-4 space-y-5">
+          {/* Address, Phone & Hours */}
+          <section aria-label="Address and hours" className="space-y-2.5">
             <div className="flex items-start justify-between gap-2">
               <div className="flex items-start gap-2.5 text-sm">
                 <MapPin className="w-4 h-4 mt-0.5 shrink-0" style={{ color: 'var(--accent-saffron)' }} />
@@ -183,9 +291,9 @@ export const InspectorDrawer: React.FC<InspectorDrawerProps> = ({ restaurant, on
                 type="button"
                 onClick={handleCopyAddress}
                 aria-label="Copy street address"
-                className="p-1.5 rounded-lg border shrink-0 cursor-pointer"
+                className="touch-target p-2 rounded-xl border shrink-0 cursor-pointer flex items-center justify-center"
                 style={{
-                  background: 'var(--bg-surface-solid)',
+                  background: 'var(--bg-subtle)',
                   borderColor: 'var(--border-subtle)',
                   color: 'var(--text-secondary)',
                 }}
@@ -195,209 +303,154 @@ export const InspectorDrawer: React.FC<InspectorDrawerProps> = ({ restaurant, on
               </button>
             </div>
 
+            {restaurant.phone && (
+              <div className="flex items-center gap-2.5 text-xs font-mono-data" style={{ color: 'var(--text-secondary)' }}>
+                <Phone className="w-3.5 h-3.5 shrink-0" />
+                <span>{restaurant.phone}</span>
+              </div>
+            )}
+
             <div className="flex items-center gap-2.5 text-xs" style={{ color: 'var(--text-secondary)' }}>
               <Clock className="w-3.5 h-3.5 shrink-0" />
               <span>{restaurant.hoursNote}</span>
             </div>
 
-            {/* Action Links: Phone, Website, Directions */}
-            <div className="pt-1 grid grid-cols-2 gap-2">
-              {restaurant.phone ? (
-                <a
-                  href={`tel:${restaurant.phone.replace(/\s+/g, '')}`}
-                  className="inline-flex items-center justify-center gap-1.5 px-3 py-2 rounded-xl text-xs font-semibold border transition-opacity hover:opacity-85 no-underline"
-                  style={{
-                    background: 'var(--bg-surface-solid)',
-                    color: 'var(--text-primary)',
-                    borderColor: 'var(--border-subtle)',
-                  }}
-                >
-                  <Phone className="w-3.5 h-3.5" style={{ color: 'var(--accent-emerald)' }} />
-                  <span>{restaurant.phone}</span>
-                </a>
-              ) : (
-                <a
-                  href={websiteHref}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center gap-1.5 px-3 py-2 rounded-xl text-xs font-semibold border transition-opacity hover:opacity-85 no-underline"
-                  style={{
-                    background: 'var(--bg-surface-solid)',
-                    color: 'var(--text-primary)',
-                    borderColor: 'var(--border-subtle)',
-                  }}
-                >
-                  <Phone className="w-3.5 h-3.5" style={{ color: 'var(--accent-emerald)' }} />
-                  <span>{restaurant.website ? 'Contact via Site' : 'Find Phone'}</span>
-                </a>
-              )}
+            <p className="flex items-start gap-2 text-[11px] pt-1" style={{ color: 'var(--text-muted)' }}>
+              <Info className="w-3.5 h-3.5 mt-0.5 shrink-0" />
+              <span>Direct discovery only — online table booking is planned for a future release.</span>
+            </p>
+          </section>
 
-              <a
-                href={websiteHref}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-1.5 px-3 py-2 rounded-xl text-xs font-semibold border transition-opacity hover:opacity-85 no-underline"
+          {/* Ongoing Offer */}
+          {restaurant.ongoingOffer && (
+            <section
+              aria-label="Ongoing offer"
+              className="pt-4 border-t"
+              style={{ borderColor: 'var(--border-subtle)' }}
+            >
+              <div
+                className="p-3.5 rounded-xl border"
                 style={{
-                  background: 'var(--bg-surface-solid)',
-                  color: 'var(--text-primary)',
-                  borderColor: 'var(--border-subtle)',
+                  background: 'var(--accent-emerald-soft)',
+                  borderColor: 'rgba(15, 118, 110, 0.25)',
                 }}
               >
-                <Globe className="w-3.5 h-3.5" style={{ color: 'var(--accent-saffron)' }} />
-                <span>{restaurant.website ? 'Official Website' : 'Search Website'}</span>
-                <ExternalLink className="w-3 h-3 opacity-60" />
-              </a>
-            </div>
-
-            <a
-              href={mapsUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-full inline-flex items-center justify-center gap-1.5 px-3 py-2 rounded-xl text-xs font-semibold transition-opacity hover:opacity-90 no-underline"
-              style={{
-                background: 'var(--accent-saffron)',
-                color: '#1C1917',
-              }}
-            >
-              <Navigation className="w-3.5 h-3.5" />
-              <span>Open Route in Google Maps</span>
-            </a>
-          </div>
-
-          {/* Transparent Future-Scope Notice (No booking offered) */}
-          <p
-            className="flex items-start gap-2 text-[11px] px-2.5 py-2 rounded-xl"
-            style={{ background: 'var(--bg-subtle)', color: 'var(--text-muted)' }}
-          >
-            <Info className="w-3.5 h-3.5 mt-0.5 shrink-0" />
-            <span>
-              Direct discovery only — reach out via phone or official website above. Online table booking is planned for a future release.
-            </span>
-          </p>
-        </section>
-
-        {/* Ongoing Offer / Lunch Deal */}
-        {restaurant.ongoingOffer && (
-          <section
-            aria-label="Ongoing offer"
-            className="p-3.5 rounded-xl border"
-            style={{
-              background: 'var(--accent-emerald-soft)',
-              borderColor: 'rgba(15, 118, 110, 0.3)',
-            }}
-          >
-            <div className="flex items-center gap-1.5 text-xs font-bold" style={{ color: 'var(--accent-emerald)' }}>
-              <Tag className="w-3.5 h-3.5" />
-              <span>Ongoing Offer · {restaurant.ongoingOffer.title}</span>
-            </div>
-            <p className="text-xs mt-1 leading-relaxed">{restaurant.ongoingOffer.details}</p>
-            <p className="text-[11px] mt-1 font-medium" style={{ color: 'var(--text-secondary)' }}>
-              {restaurant.ongoingOffer.validNote}
-            </p>
-          </section>
-        )}
-
-        {/* Seasonal Highlight */}
-        {restaurant.isSeasonalWinterPick && restaurant.seasonalReason && (
-          <section
-            aria-label="Seasonal winter recommendation"
-            className="p-3.5 rounded-xl border"
-            style={{
-              background: 'var(--accent-indigo-soft)',
-              borderColor: 'rgba(67, 56, 202, 0.25)',
-            }}
-          >
-            <div className="flex items-center gap-1.5 text-xs font-bold" style={{ color: 'var(--accent-indigo)' }}>
-              <Sparkles className="w-3.5 h-3.5" />
-              <span>Bavarian Winter Recommendation</span>
-            </div>
-            <p className="text-xs mt-1 leading-relaxed">{restaurant.seasonalReason}</p>
-          </section>
-        )}
-
-        {/* Skip the Usual — Delicacies to Try */}
-        <section aria-label="Recommended delicacies beyond Butter Chicken" className="space-y-2.5">
-          <div>
-            <h3 className="font-display text-base font-bold">Skip the Usual — Try These Here</h3>
-            <p className="text-[11px]" style={{ color: 'var(--text-muted)' }}>
-              Regional specialties that showcase what this kitchen truly excels at
-            </p>
-          </div>
-
-          <div className="space-y-2.5">
-            {restaurant.signatureDishes.map((dish) => (
-              <div
-                key={dish.name}
-                className="p-3.5 rounded-xl border space-y-1.5"
-                style={{ background: 'var(--bg-subtle)', borderColor: 'var(--border-subtle)' }}
-              >
-                <div className="flex items-start justify-between gap-2">
-                  <div>
-                    <h4 className="text-sm font-bold leading-snug">{dish.name}</h4>
-                    <p className="text-[11px] font-medium" style={{ color: 'var(--accent-saffron)' }}>
-                      Origin: {dish.regionalOrigin}
-                    </p>
-                  </div>
-                  <SpiceDots level={dish.spiceLevel} />
+                <div className="flex items-center gap-1.5 text-xs font-bold" style={{ color: 'var(--accent-emerald)' }}>
+                  <Tag className="w-3.5 h-3.5" />
+                  <span>{restaurant.ongoingOffer.title}</span>
                 </div>
-
-                {dish.insteadOf && (
-                  <p className="text-[11px] font-semibold" style={{ color: 'var(--accent-crimson)' }}>
-                    Try instead of: {dish.insteadOf}
-                  </p>
-                )}
-
-                <p className="text-xs leading-relaxed" style={{ color: 'var(--text-secondary)' }}>
-                  {dish.description}
+                <p className="text-xs mt-1 leading-relaxed">{restaurant.ongoingOffer.details}</p>
+                <p className="text-[11px] mt-1 font-medium" style={{ color: 'var(--text-secondary)' }}>
+                  {restaurant.ongoingOffer.validNote}
                 </p>
-
-                <div className="flex flex-wrap gap-1 pt-0.5">
-                  {dish.dietary.map((tag) => (
-                    <span
-                      key={tag}
-                      className="text-[10px] font-semibold px-2 py-0.5 rounded-md"
-                      style={{
-                        background: 'var(--bg-surface-solid)',
-                        color: 'var(--text-secondary)',
-                        border: '1px solid var(--border-subtle)',
-                      }}
-                    >
-                      {tag}
-                    </span>
-                  ))}
-                </div>
               </div>
-            ))}
-          </div>
-        </section>
+            </section>
+          )}
 
-        {/* Diner Highlights */}
-        <section aria-label="Diner highlights" className="space-y-2.5">
-          <div className="flex items-center justify-between">
-            <h3 className="font-display text-base font-bold">Diner Highlights</h3>
-          </div>
+          {/* Seasonal Highlight */}
+          {restaurant.isSeasonalWinterPick && restaurant.seasonalReason && (
+            <section
+              aria-label="Seasonal winter recommendation"
+              className="pt-4 border-t"
+              style={{ borderColor: 'var(--border-subtle)' }}
+            >
+              <div className="flex items-center gap-1.5 text-xs font-bold" style={{ color: 'var(--accent-indigo)' }}>
+                <Sparkles className="w-3.5 h-3.5" />
+                <span>Bavarian Winter Recommendation</span>
+              </div>
+              <p className="text-xs mt-1 leading-relaxed" style={{ color: 'var(--text-secondary)' }}>
+                {restaurant.seasonalReason}
+              </p>
+            </section>
+          )}
 
-          <div className="space-y-2.5">
-            {restaurant.positiveReviews.map((rev, idx) => (
-              <blockquote
-                key={idx}
-                className="m-0 p-3.5 rounded-xl border space-y-1.5"
-                style={{ background: 'var(--bg-subtle)', borderColor: 'var(--border-subtle)' }}
-              >
-                <div className="flex items-center gap-1.5 text-[11px] font-semibold" style={{ color: 'var(--accent-emerald)' }}>
-                  <Quote className="w-3.5 h-3.5" />
-                  <span>{rev.reviewerType}</span>
-                  {rev.highlightDish && <span>· Loved {rev.highlightDish}</span>}
+          {/* Skip the Usual — Delicacies to Try */}
+          <section
+            aria-label="Recommended delicacies beyond Butter Chicken"
+            className="pt-4 border-t space-y-3"
+            style={{ borderColor: 'var(--border-subtle)' }}
+          >
+            <div>
+              <h3 className="font-display text-base font-bold">Skip the Usual — Try These Here</h3>
+              <p className="text-[11px]" style={{ color: 'var(--text-muted)' }}>
+                Regional specialties that showcase what this kitchen truly excels at
+              </p>
+            </div>
+
+            <div className="space-y-3">
+              {restaurant.signatureDishes.map((dish, idx) => (
+                <div
+                  key={dish.name}
+                  className={idx > 0 ? 'pt-3 border-t space-y-1.5' : 'space-y-1.5'}
+                  style={{ borderColor: 'var(--border-subtle)' }}
+                >
+                  <div className="flex items-start justify-between gap-2">
+                    <div>
+                      <h4 className="text-sm font-bold leading-snug">{dish.name}</h4>
+                      <p className="text-[11px] font-medium" style={{ color: 'var(--accent-saffron)' }}>
+                        Origin: {dish.regionalOrigin}
+                      </p>
+                    </div>
+                    <SpiceDots level={dish.spiceLevel} />
+                  </div>
+
+                  {dish.insteadOf && (
+                    <p className="text-[11px] font-semibold" style={{ color: 'var(--accent-crimson)' }}>
+                      Try instead of: {dish.insteadOf}
+                    </p>
+                  )}
+
+                  <p className="text-xs leading-relaxed" style={{ color: 'var(--text-secondary)' }}>
+                    {dish.description}
+                  </p>
+
+                  <div className="flex flex-wrap gap-1 pt-0.5">
+                    {dish.dietary.map((tag) => (
+                      <span
+                        key={tag}
+                        className="text-[10px] font-semibold px-2 py-0.5 rounded-md"
+                        style={{
+                          background: 'var(--bg-subtle)',
+                          color: 'var(--text-secondary)',
+                        }}
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
                 </div>
-                <p className="text-xs leading-relaxed italic" style={{ color: 'var(--text-primary)' }}>
-                  “{rev.quote}”
-                </p>
-              </blockquote>
-            ))}
-          </div>
-        </section>
-      </div>
-    </aside>
+              ))}
+            </div>
+          </section>
+
+          {/* Diner Highlights */}
+          <section
+            aria-label="Diner highlights"
+            className="pt-4 border-t space-y-2.5 pb-2"
+            style={{ borderColor: 'var(--border-subtle)' }}
+          >
+            <h3 className="font-display text-base font-bold">Diner Highlights</h3>
+            <div className="space-y-2.5">
+              {restaurant.positiveReviews.map((rev, idx) => (
+                <blockquote
+                  key={idx}
+                  className="m-0 p-3 rounded-xl space-y-1"
+                  style={{ background: 'var(--bg-subtle)' }}
+                >
+                  <div className="flex items-center gap-1.5 text-[11px] font-semibold" style={{ color: 'var(--accent-emerald)' }}>
+                    <Quote className="w-3.5 h-3.5" />
+                    <span>{rev.reviewerType}</span>
+                    {rev.highlightDish && <span>· Loved {rev.highlightDish}</span>}
+                  </div>
+                  <p className="text-xs leading-relaxed italic" style={{ color: 'var(--text-primary)' }}>
+                    “{rev.quote}”
+                  </p>
+                </blockquote>
+              ))}
+            </div>
+          </section>
+        </div>
+      </aside>
     </>
   );
 };
