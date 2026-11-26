@@ -21,7 +21,7 @@ export const FLAVOR_SWAPS: FlavorSwap[] = [
     whyItsBetter:
       'Naturally fermented rice-and-lentil batter crisps into a golden crepe or soft-centered hopper—light, tangy, and gluten-friendly.',
     spiceLevel: 2,
-    restaurantIds: ['saravanaa-bhavan-munich', 'spice-route-munich', 'malgudi-munich', 'oota-regensburg'],
+    restaurantIds: ['spice-route-munich', 'spice-route-dachau', 'malgudi-munich', 'oota-regensburg'],
   },
   {
     id: 'swap-tikka-masala',
@@ -43,7 +43,7 @@ export const FLAVOR_SWAPS: FlavorSwap[] = [
     whyItsBetter:
       'Chilled pink Solkadhi (kokum fruit & coconut milk) cools heat cleanly, while frothy brass-tumbler Filter Kaapi closes the meal like an espresso.',
     spiceLevel: 1,
-    restaurantIds: ['swaad-schwabing', 'anjappar-munich', 'saravanaa-bhavan-munich', 'oota-regensburg'],
+    restaurantIds: ['swaad-schwabing', 'anjappar-munich', 'malgudi-munich', 'oota-regensburg'],
   },
   {
     id: 'swap-samosa',
@@ -87,7 +87,7 @@ export const SEASONAL_SPOTLIGHTS: SeasonalSpotlight[] = [
     dishFocus: 'Maharashtrian Thali, Mini Dosa Combos & Ayurvedic Lunch Bowls',
     whyNowInBavaria:
       'Many top kitchens run weekday 11:30–14:30 lunch platters featuring dal, seasonal sabzi, rice, and fresh bread at approachable weekday prices.',
-    restaurantIds: ['swaad-schwabing', 'indian-mango-munich', 'saravanaa-bhavan-munich', 'swagat-munich'],
+    restaurantIds: ['swaad-schwabing', 'indian-mango-munich', 'spice-route-munich', 'swagat-munich'],
   },
   {
     id: 'new-wave-bavaria',

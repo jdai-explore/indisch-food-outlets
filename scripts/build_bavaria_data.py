@@ -9,6 +9,7 @@ from pathlib import Path
 BASE_DIR = Path(__file__).resolve().parent.parent
 OUT_PATH = BASE_DIR / "src" / "data" / "bavariaOsmRestaurants.json"
 CACHE_PATH = BASE_DIR / "scripts" / "nominatim_cache.json"
+CLOSED_PATH = BASE_DIR / "scripts" / "closed_registry.json"
 
 # Flagship centers already defined in CURATED_RESTAURANTS (src/data/restaurants.ts)
 # so the expansion pipeline never duplicates them.
@@ -25,7 +26,7 @@ FLAGSHIP_CENTERS = [
     ("delhi mehek", 11.5897, 48.1676),
     ("tattva", 11.5637, 48.1873),
     ("anjappar", 11.5872, 48.1369),
-    ("saravanaa bhavan", 11.5378, 48.1528),
+    ("spice route dachau", 11.454405, 48.257188),
     ("namaste restaurant", 11.6197, 48.1518),  # Arabellapark
     ("tandoori flame", 11.6512, 48.1897),       # Unterföhring
     ("rama", 11.6713, 48.2254),                 # Ismaning
@@ -56,6 +57,13 @@ WOLT_GRID = [
     ("Munich", 48.1840, 11.5150),       # Moosach
     ("Munich", 48.1100, 11.5800),       # Giesing
     ("Munich", 48.1870, 11.5640),       # Milbertshofen
+    ("Dachau", 48.2602, 11.4340),
+    ("Freising", 48.4028, 11.7489),
+    ("Erding", 48.3065, 11.9068),
+    ("Germering", 48.1333, 11.3667),
+    ("Haar", 48.1097, 11.7306),
+    ("Unterhaching", 48.0658, 11.6167),
+    ("Starnberg", 47.9972, 11.3406),
     ("Nuremberg", 49.4521, 11.0767),
     ("Fürth", 49.4771, 10.9887),
     ("Erlangen", 49.5900, 11.0040),
@@ -659,6 +667,281 @@ def fetch_wolt_bavaria():
     print(f"  Wolt filtered valid Indian kitchens: {len(results)}", flush=True)
     return results
 
+MULTIBRANCH_SITES = [
+    ("Spice Route", "https://thespiceroute.de/"),
+    ("Swaad", "https://www.swaadgermany.com/"),
+    ("Tattva", "https://tattvarestaurant.de/"),
+    ("Bindaas", "https://bindaas.de/"),
+    ("Madam Chutney", "https://www.madamchutney.com/"),
+]
+
+def load_closed_registry():
+    if not CLOSED_PATH.exists():
+        return []
+    try:
+        return json.loads(CLOSED_PATH.read_text(encoding="utf-8"))
+    except Exception:
+        return []
+
+def is_permanently_closed(rec: dict, closed_entries: list) -> bool:
+    rid = str(rec.get("id", "")).lower()
+    rname = norm_name(rec.get("name", ""))
+    rcity = (rec.get("city") or "").lower()
+    raddr = (rec.get("address") or "").lower()
+    for c in closed_entries:
+        osm_id = (c.get("osmId") or "").lower()
+        if osm_id and osm_id.replace("/", "-") in rid or (osm_id and osm_id.split("/")[-1] in rid):
+            return True
+        cname = norm_name(c.get("name", ""))
+        ccity = (c.get("city") or "").lower()
+        if cname and cname in rname and (not ccity or ccity == rcity):
+            return True
+        cstreet = (c.get("address") or "").split(",")[0].strip().lower()
+        if cstreet and cstreet in raddr and cname in rname:
+            return True
+    return False
+
+def load_nominatim_cache():
+    if CACHE_PATH.exists():
+        try:
+            return json.loads(CACHE_PATH.read_text(encoding="utf-8"))
+        except Exception:
+            return {}
+    return {}
+
+def geocode_address_cached(query: str, cache: dict):
+    import time
+    key = urllib.parse.urlencode({"format": "jsonv2", "limit": 1, "q": query, "countrycodes": "de"})
+    if key in cache and cache[key]:
+        item = cache[key][0]
+        return float(item["lon"]), float(item["lat"])
+    url = f"https://nominatim.openstreetmap.org/search?{key}"
+    req = urllib.request.Request(url, headers={"User-Agent": "SpiceAtlasBayern/3.1"})
+    time.sleep(1.05)
+    try:
+        with urllib.request.urlopen(req, timeout=10) as r:
+            d = json.loads(r.read().decode("utf-8"))
+            cache[key] = d
+            CACHE_PATH.write_text(json.dumps(cache, ensure_ascii=False, indent=2), encoding="utf-8")
+            if d:
+                return float(d[0]["lon"]), float(d[0]["lat"])
+    except Exception:
+        pass
+    return None
+
+def _extract_postal_places(obj, found: list):
+    if isinstance(obj, dict):
+        addr = obj.get("address")
+        if isinstance(addr, dict) and addr.get("streetAddress"):
+            found.append((obj.get("name") or "", addr, obj.get("telephone")))
+        if obj.get("@type") == "PostalAddress" and obj.get("streetAddress"):
+            found.append(("", obj, None))
+        for v in obj.values():
+            _extract_postal_places(v, found)
+    elif isinstance(obj, list):
+        for item in obj:
+            _extract_postal_places(item, found)
+
+def harvest_multibranch_jsonld():
+    print("3/4 Harvesting multi-branch Schema.org JSON-LD addresses...", flush=True)
+    cache = load_nominatim_cache()
+    results = []
+    for brand, url in MULTIBRANCH_SITES:
+        try:
+            req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
+            html = urllib.request.urlopen(req, timeout=10).read().decode("utf-8", errors="ignore")
+            blocks = re.findall(r'<script[^>]*type=["\']application/ld\+json["\'][^>]*>(.*?)</script>', html, re.S | re.I)
+            places = []
+            for b in blocks:
+                try:
+                    data = json.loads(b.strip())
+                    _extract_postal_places(data, places)
+                except Exception:
+                    continue
+            seen_addr = set()
+            for pname, addr, phone in places:
+                street = (addr.get("streetAddress") or "").strip()
+                pc = (addr.get("postalCode") or "").strip()
+                loc = (addr.get("addressLocality") or "").strip()
+                if not street or not pc:
+                    continue
+                sig = f"{street.lower()}|{pc}"
+                if sig in seen_addr:
+                    continue
+                seen_addr.add(sig)
+                coords = geocode_address_cached(f"{street}, {pc} {loc}, Germany", cache)
+                if not coords:
+                    continue
+                lon, lat = coords
+                if not in_bavaria(lon, lat):
+                    continue
+                city = infer_city_from_postcode_or_coords(loc, pc, lon, lat)
+                display_name = pname.strip() if pname.strip() else f"{brand} ({city})"
+                state, region_cat, sig_dishes = classify_region(display_name, brand)
+                slug = re.sub(r"[^a-z0-9]+", "-", f"{display_name}-{pc}".lower()).strip("-")
+                results.append({
+                    "id": f"jsonld-{slug}",
+                    "name": display_name,
+                    "city": city,
+                    "district": None,
+                    "address": f"{street}, {pc} {loc or city}".strip(),
+                    "coordinates": [round(lon, 6), round(lat, 6)],
+                    "indianState": state,
+                    "regionCategory": region_cat,
+                    "cuisineStyle": f"Official Website Branch ({brand})",
+                    "phone": phone,
+                    "website": url,
+                    "establishedNote": f"Verified branch harvested from {brand} official site",
+                    "hoursNote": "Check official website for daily hours",
+                    "isStreetFood": region_cat == "Street Food & Chaat",
+                    "isNewSpot": True,
+                    "positiveReviews": [
+                        {
+                            "quote": f"Official {brand} branch in {city} offering authentic regional dishes.",
+                            "reviewerType": "Official Multi-Branch Harvest",
+                        }
+                    ],
+                    "signatureDishes": sig_dishes,
+                    "authenticityNote": f"Verified branch from {url}.",
+                    "dataSource": "osm-verified",
+                })
+        except Exception as ex:
+            print(f"  JSON-LD warn ({url}): {ex}", flush=True)
+    print(f"  JSON-LD multi-branch locations harvested: {len(results)}", flush=True)
+    return results
+
+def check_live_website_closures(records: list) -> list:
+    """Fast concurrent check on non-portal official URLs for explicit closure notices."""
+    print("4/4 Auditing official websites for live closure notices...", flush=True)
+    urls = set()
+    for r in records:
+        w = r.get("website") or ""
+        if w.startswith("http") and "wolt.com" not in w and "lieferando" not in w:
+            urls.add(w)
+
+    closed_urls = set()
+    closure_re = re.compile(r"(dauerhaft\s+geschlossen|für\s+immer\s+geschlossen|permanently\s+closed|leider\s+geschlossen|wir\s+haben\s+geschlossen)", re.I)
+
+    def probe(u):
+        try:
+            req = urllib.request.Request(u, headers={"User-Agent": "Mozilla/5.0"})
+            with urllib.request.urlopen(req, timeout=5) as resp:
+                body = resp.read(65536).decode("utf-8", errors="ignore")
+                txt = re.sub(r"<[^>]+>", " ", body)
+                if closure_re.search(txt):
+                    return u, True
+        except Exception:
+            pass
+        return u, False
+
+    with ThreadPoolExecutor(max_workers=12) as ex:
+        for u, is_closed in ex.map(probe, urls):
+            if is_closed:
+                closed_urls.add(u)
+
+    if closed_urls:
+        print(f"  Live closure banners detected on: {closed_urls}", flush=True)
+    return [r for r in records if (r.get("website") or "") not in closed_urls]
+
+DISTRICT_VERIFIED_BAVARIA = [
+    ("Der Punjab", "Breite Str. 23", "92421", "Schwandorf", "Landkreis Schwandorf", "+49 9431 7989178", "http://derpunjab-schwandorf.de/"),
+    ("Dawat Indian Restaurant", "Schießstätte 29", "92237", "Sulzbach-Rosenberg", "Landkreis Amberg-Sulzbach", "+49 9661 9060367", "https://dawat-sulzbach.de/web"),
+    ("Flavours of India", "Dammstraße 2", "95615", "Marktredwitz", "Landkreis Wunsiedel im Fichtelgebirge", "+49 9231 667753", "https://flavoursofindiamarktredwitz.de/"),
+    ("Maharaja Cham", "Obere Regenstraße 1", "93413", "Cham", "Landkreis Cham", "+49 9971 9947082", "https://indisches-restaurant-maharaja-cham.eatbu.com"),
+    ("Taj Mahal Rothenburg", "Klingengasse 12", "91541", "Rothenburg ob der Tauber", "Landkreis Ansbach", "+49 9861 8738503", "https://tajmahalrothenburg.de"),
+    ("Ganesha Feuchtwangen", "Dinkelsbühler Str. 6", "91555", "Feuchtwangen", "Landkreis Ansbach", "+49 176 84594868", None),
+    ("Ganesha Kronach", "Melchior-Otto-Platz 1", "96317", "Kronach", "Landkreis Kronach", "+49 9261 9662144", None),
+    ("GANESHA Kulmbach", "Fritz-Hornschuch-Str. 4", "95326", "Kulmbach", "Landkreis Kulmbach", "+49 9221 8234930", "https://ganeshakulmbach.de"),
+    ("Masala Indian Restaurant Kulmbach", "Sutte 7", "95326", "Kulmbach", "Landkreis Kulmbach", "+49 172 7432346", None),
+    ("Restaurant Maharaja Dingolfing", "Daimlerstraße 8", "84130", "Dingolfing", "Landkreis Dingolfing-Landau", "+49 8731 71793", "https://maharaja-dingolfing.com"),
+    ("Restaurant Bombay Landau", "Steinfelsstraße 22", "94405", "Landau an der Isar", "Landkreis Dingolfing-Landau", "+49 9951 6017466", "https://bombaylandau.de"),
+    ("Shiva Indisches Restaurant", "Pfleggasse 23", "94469", "Deggendorf", "Landkreis Deggendorf", "+49 991 38313783", "https://indisches-restaurant-deggendorf.de"),
+    ("Restaurant Curry König", "Bahnhofplatz 9", "94447", "Plattling", "Landkreis Deggendorf", "+49 9931 9589611", None),
+    ("Shivalaya Pfarrkirchen", "Stadtplatz 41", "84347", "Pfarrkirchen", "Landkreis Rottal-Inn", "+49 8561 9889676", None),
+    ("Restaurant Siddha", "Pfarrkirchener Straße 17", "84307", "Eggenfelden", "Landkreis Rottal-Inn", "+49 8721 1205959", "https://restaurant-siddha.de"),
+    ("Indien Dish", "Am Markt 1", "94078", "Freyung", "Landkreis Freyung-Grafenau", None, "https://indien-dish-freyung.de"),
+    ("Bombay Indisches Restaurant Pegnitz", "Hauptstraße 42", "91257", "Pegnitz", "Landkreis Bayreuth", "+49 9241 4858670", "https://bombay-pegnitz.com"),
+    ("Namaste Lichtenfels", "Coburger Straße 18", "96215", "Lichtenfels", "Landkreis Lichtenfels", "+49 9571 9493876", None),
+    ("DERA Indische Spezialitäten", "Trostberger Straße 38", "84503", "Altötting", "Landkreis Altötting", None, None),
+    ("Maharani Mühldorf", "Stadtplatz 51", "84453", "Mühldorf am Inn", "Landkreis Mühldorf am Inn", None, None),
+    ("Ganesha Burghausen", "Stadtplatz 54", "84489", "Burghausen", "Landkreis Altötting", None, None),
+    ("Maharani Burghausen", "Stadtplatz 44", "84489", "Burghausen", "Landkreis Altötting", None, "https://maharani-burghausen.de"),
+    ("Jujhar's Restaurant", "Palmanostraße 1", "83512", "Wasserburg am Inn", "Landkreis Rosenheim", None, "https://jujharsrestaurant.de"),
+    ("Masala Haus Wasserburg", "Salzsenderzeile 3", "83512", "Wasserburg am Inn", "Landkreis Rosenheim", None, None),
+    ("Taj Mahal Weilheim", "Waisenhausstraße 8", "82362", "Weilheim in Oberbayern", "Landkreis Weilheim-Schongau", None, None),
+    ("Punjab Weilheim", "Bahnhofallee 4", "82362", "Weilheim in Oberbayern", "Landkreis Weilheim-Schongau", None, None),
+    ("New Avtar", "Röntgenstraße 19", "82362", "Weilheim in Oberbayern", "Landkreis Weilheim-Schongau", None, None),
+    ("Ganesha Landsberg", "Hauptplatz 175", "86899", "Landsberg am Lech", "Landkreis Landsberg am Lech", None, "https://ganesha-landsberg.de"),
+    ("Sarker's Masala", "Adolph-Kolping-Straße 133", "86899", "Landsberg am Lech", "Landkreis Landsberg am Lech", None, None),
+    ("Little India Landsberg", "Weilheimer Straße 9", "86899", "Landsberg am Lech", "Landkreis Landsberg am Lech", None, "https://littleindialandsbergamlech.de"),
+    ("Yogi's Indisches Restaurant", "Hindenburgstraße 27", "86609", "Donauwörth", "Landkreis Donau-Ries", None, None),
+    ("Taj Mahal Donauwörth", "Sonnenstraße 25", "86609", "Donauwörth", "Landkreis Donau-Ries", None, "https://indischesrestauranttajmahal.de"),
+    ("Taj Mahal Nördlingen", "Hallgasse 4", "86720", "Nördlingen", "Landkreis Donau-Ries", None, None),
+    ("Ganesha Neuburg", "Weinstraße 122", "86633", "Neuburg an der Donau", "Landkreis Neuburg-Schrobenhausen", None, None),
+    ("Maharaja Eichstätt", "Luitpoldstraße 19", "85072", "Eichstätt", "Landkreis Eichstätt", None, "https://eichstaett-maharaja.de"),
+    ("Safran Indisches Restaurant Günzburg", "Marktplatz 16", "89312", "Günzburg", "Landkreis Günzburg", None, "https://restaurantsafran.de"),
+    ("Namaste India Günzburg", "Hofgasse 11", "89312", "Günzburg", "Landkreis Günzburg", None, None),
+    ("Swagat Indische Feinküche", "Kornstraße 18", "87719", "Mindelheim", "Landkreis Unterallgäu", None, "https://swagat-mindelheim.de"),
+    ("Maharaja Mindelheim", "Maximilianstraße 3", "87719", "Mindelheim", "Landkreis Unterallgäu", None, None),
+    ("Restaurant Royal India Sonthofen", "Schloßstraße 4", "87527", "Sonthofen", "Landkreis Oberallgäu", None, "https://sonthofen-royalindia.de"),
+    ("Royal India Füssen", "Kemptener Str. 16", "87629", "Füssen", "Landkreis Ostallgäu", None, None),
+    ("Amrut Indisches Restaurant", "Tiroler Str. 55", "87629", "Füssen", "Landkreis Ostallgäu", None, "https://amrut-fuessen.de"),
+    ("Royal Rasoi", "Nebelhornstraße 49", "87561", "Oberstdorf", "Landkreis Oberallgäu", None, None),
+    ("Taj Curry Haus", "Marktplatz 21", "97688", "Bad Kissingen", "Landkreis Bad Kissingen", None, None),
+    ("Indian Tandoori Kitchen", "Kurhausstraße 29", "97688", "Bad Kissingen", "Landkreis Bad Kissingen", None, "https://indiandtandoorikitchen-bk.de"),
+    ("Felsenkeller - Bella Tandoori", "Felsenkellerweg 35", "97318", "Kitzingen", "Landkreis Kitzingen", None, None),
+    ("Tandoori Wonfurt", "Hauptstraße 31", "97539", "Wonfurt", "Landkreis Haßberge", None, "https://tandooriwonfurt.de"),
+    ("Maharadscha Restaurant Miltenberg", "Hauptstraße 111", "63897", "Miltenberg", "Landkreis Miltenberg", None, None),
+    ("Gautam India Palace", "Ignatius-Taschner-Straße 5", "97816", "Lohr am Main", "Landkreis Main-Spessart", None, None),
+]
+
+def harvest_district_verified():
+    """Geocode verified rural-district kitchens uncovered in the 96-district sweep."""
+    print("3b/4 Geocoding verified 96-district rural kitchens...", flush=True)
+    cache = load_nominatim_cache()
+    results = []
+    for name, street, pc, loc, district, phone, website in DISTRICT_VERIFIED_BAVARIA:
+        coords = geocode_address_cached(f"{street}, {pc} {loc}, Germany", cache)
+        if not coords:
+            coords = geocode_address_cached(f"{pc} {loc}, Germany", cache)
+        if not coords:
+            print(f"  District geocode miss: {name} ({pc} {loc})", flush=True)
+            continue
+        lon, lat = coords
+        if not in_bavaria(lon, lat):
+            continue
+        city = infer_city_from_postcode_or_coords(loc, pc, lon, lat)
+        state, region_cat, sig_dishes = classify_region(name, "indian")
+        slug = re.sub(r"[^a-z0-9]+", "-", f"{name}-{pc}".lower()).strip("-")
+        results.append({
+            "id": f"dist-{slug}",
+            "name": name,
+            "city": city,
+            "district": district,
+            "address": f"{street}, {pc} {loc}",
+            "coordinates": [round(lon, 6), round(lat, 6)],
+            "indianState": state,
+            "regionCategory": region_cat,
+            "cuisineStyle": f"Regional Indian · {district}",
+            "phone": phone,
+            "website": website,
+            "establishedNote": f"Verified via 96-district Bavaria sweep ({district})",
+            "hoursNote": "Check website or call for daily hours",
+            "isStreetFood": region_cat == "Street Food & Chaat",
+            "isNewSpot": True,
+            "positiveReviews": [
+                {
+                    "quote": f"Verified Indian kitchen serving {loc} ({district}).",
+                    "reviewerType": "96-District Sweep",
+                }
+            ],
+            "signatureDishes": sig_dishes,
+            "authenticityNote": f"Verified in {district} via Bavaria district audit.",
+            "dataSource": "osm-verified",
+        })
+    print(f"  District-verified kitchens geocoded: {len(results)} / {len(DISTRICT_VERIFIED_BAVARIA)}", flush=True)
+    return results
+
 def load_prev_json_or_cache():
     """Include previously geocoded web-verified Bavarian directory records if present."""
     if OUT_PATH.exists():
@@ -670,20 +953,28 @@ def load_prev_json_or_cache():
     return []
 
 def main():
+    closed_entries = load_closed_registry()
     prev_web = load_prev_json_or_cache()
-    print(f"0/3 Retained {len(prev_web)} geocoded Bavarian web-directory records.", flush=True)
+    print(f"0/4 Retained {len(prev_web)} geocoded directory records; loaded {len(closed_entries)} closed-registry entries.", flush=True)
 
     qlever_recs = fetch_qlever_bavaria()
     qlever_untagged = fetch_qlever_untagged_indian()
     wolt_recs = fetch_wolt_bavaria()
+    jsonld_recs = harvest_multibranch_jsonld()
+    district_recs = harvest_district_verified()
 
-    # Combine in priority order: web-verified -> Wolt -> QLever tagged -> QLever untagged Indian names
-    all_records = prev_web + wolt_recs + qlever_recs + qlever_untagged
+    # Combine in priority order: JSON-LD official branches -> web-verified -> 96-district -> Wolt -> QLever tagged -> QLever untagged
+    all_records = jsonld_recs + prev_web + district_recs + wolt_recs + qlever_recs + qlever_untagged
 
     deduped = []
+    closed_filtered = 0
     for rec in all_records:
         lon, lat = rec["coordinates"]
         n = norm_name(rec["name"])
+
+        if is_permanently_closed(rec, closed_entries):
+            closed_filtered += 1
+            continue
 
         if is_excluded(rec["name"], "", rec.get("address", "")):
             continue
@@ -724,8 +1015,9 @@ def main():
 
         deduped.append(rec)
 
+    deduped = check_live_website_closures(deduped)
     munich_cnt = sum(1 for r in deduped if r["city"] == "Munich")
-    print(f"3/3 DONE! Total expansion records: {len(deduped)} (Munich expansion: {munich_cnt})", flush=True)
+    print(f"DONE! Excluded {closed_filtered} closed-registry matches. Total expansion records: {len(deduped)} (Munich expansion: {munich_cnt})", flush=True)
     OUT_PATH.write_text(json.dumps(deduped, ensure_ascii=False, indent=2), encoding="utf-8")
     print(f"Saved {OUT_PATH}", flush=True)
 

@@ -3596,5 +3596,1224 @@
     }
   ],
   "addressdetails=1&countrycodes=de&extratags=1&format=jsonv2&limit=35&q=%5Brestaurant%5D+indian+Passau": [],
-  "addressdetails=1&countrycodes=de&extratags=1&format=jsonv2&limit=35&q=%5Brestaurant%5D+indian+Kempten": []
+  "addressdetails=1&countrycodes=de&extratags=1&format=jsonv2&limit=35&q=%5Brestaurant%5D+indian+Kempten": [],
+  "format=jsonv2&limit=1&q=Sch%C3%A4ftlarnstra%C3%9Fe+166%2C+81371+M%C3%BCnchen%2C+Germany&countrycodes=de": [
+    {
+      "place_id": 129757297,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "way",
+      "osm_id": 219674204,
+      "lat": "48.1029730",
+      "lon": "11.5471556",
+      "category": "building",
+      "type": "apartments",
+      "place_rank": 30,
+      "importance": 8.462272068355866e-05,
+      "addresstype": "building",
+      "name": "",
+      "display_name": "166, Schäftlarnstraße, Thalkirchen, Thalkirchen-Obersendling-Forstenried-Fürstenried-Solln, München, Bayern, 81371, Deutschland",
+      "boundingbox": [
+        "48.1028748",
+        "48.1030472",
+        "11.5469976",
+        "11.5473137"
+      ]
+    }
+  ],
+  "format=jsonv2&limit=1&q=Schlei%C3%9Fheimer+Str.+99%2C+85221+Dachau%2C+Germany&countrycodes=de": [
+    {
+      "place_id": 128556001,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "way",
+      "osm_id": 214815577,
+      "lat": "48.2571876",
+      "lon": "11.4544054",
+      "category": "amenity",
+      "type": "restaurant",
+      "place_rank": 30,
+      "importance": 6.308003356980267e-05,
+      "addresstype": "amenity",
+      "name": "Restaurant Croatica",
+      "display_name": "Restaurant Croatica, 99, Schleißheimer Straße, Polln, Dachau, Landkreis Dachau, Bayern, 85221, Deutschland",
+      "boundingbox": [
+        "48.2571155",
+        "48.2572597",
+        "11.4542554",
+        "11.4545555"
+      ]
+    }
+  ],
+  "format=jsonv2&limit=1&q=103+Berg-am-Laim-Stra%C3%9Fe%2C+81673+M%C3%BCnchen%2C+Germany&countrycodes=de": [
+    {
+      "place_id": 126813149,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "node",
+      "osm_id": 10235715148,
+      "lat": "48.1301868",
+      "lon": "11.6241475",
+      "category": "amenity",
+      "type": "restaurant",
+      "place_rank": 30,
+      "importance": 8.462272068355866e-05,
+      "addresstype": "amenity",
+      "name": "Swaad",
+      "display_name": "Swaad, 103, Berg-am-Laim-Straße, Baumkirchen, Berg am Laim, München, Bayern, 81673, Deutschland",
+      "boundingbox": [
+        "48.1301368",
+        "48.1302368",
+        "11.6240975",
+        "11.6241975"
+      ]
+    }
+  ],
+  "format=jsonv2&limit=1&q=Berg-am-Laim-Stra%C3%9Fe+103%2C+81673+M%C3%BCnchen%2C+Germany&countrycodes=de": [
+    {
+      "place_id": 128196600,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "node",
+      "osm_id": 10235715148,
+      "lat": "48.1301868",
+      "lon": "11.6241475",
+      "category": "amenity",
+      "type": "restaurant",
+      "place_rank": 30,
+      "importance": 8.462272068355866e-05,
+      "addresstype": "amenity",
+      "name": "Swaad",
+      "display_name": "Swaad, 103, Berg-am-Laim-Straße, Baumkirchen, Berg am Laim, München, Bayern, 81673, Deutschland",
+      "boundingbox": [
+        "48.1301368",
+        "48.1302368",
+        "11.6240975",
+        "11.6241975"
+      ]
+    }
+  ],
+  "format=jsonv2&limit=1&q=92421+Schwandorf%2C+Germany&countrycodes=de": [
+    {
+      "place_id": 377992220,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "relation",
+      "osm_id": 1127451,
+      "lat": "49.3171246",
+      "lon": "12.0834082",
+      "category": "boundary",
+      "type": "postal_code",
+      "place_rank": 21,
+      "importance": 0.12000999999999995,
+      "addresstype": "postcode",
+      "name": "92421",
+      "display_name": "92421, Schwandorf, Landkreis Schwandorf, Bayern, Deutschland",
+      "boundingbox": [
+        "49.2479558",
+        "49.3826214",
+        "11.9664446",
+        "12.2108622"
+      ]
+    }
+  ],
+  "format=jsonv2&limit=1&q=Schie%C3%9Fst%C3%A4tte+29%2C+92237+Sulzbach-Rosenberg%2C+Germany&countrycodes=de": [
+    {
+      "place_id": 126439867,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "way",
+      "osm_id": 1340251266,
+      "lat": "49.5105963",
+      "lon": "11.7395559",
+      "category": "leisure",
+      "type": "sports_centre",
+      "place_rank": 30,
+      "importance": 5.714732585636709e-05,
+      "addresstype": "leisure",
+      "name": "Sportpark Sulzbach-Rosenberg",
+      "display_name": "Sportpark Sulzbach-Rosenberg, 29, Schießstätte, Sulzbach, Sulzbach-Rosenberg, Landkreis Amberg-Sulzbach, Bayern, 92237, Deutschland",
+      "boundingbox": [
+        "49.5103260",
+        "49.5109495",
+        "11.7387850",
+        "11.7400847"
+      ]
+    }
+  ],
+  "format=jsonv2&limit=1&q=Dammstra%C3%9Fe+2%2C+95615+Marktredwitz%2C+Germany&countrycodes=de": [
+    {
+      "place_id": 138646784,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "way",
+      "osm_id": 226400148,
+      "lat": "50.0001486",
+      "lon": "12.0823951",
+      "category": "building",
+      "type": "yes",
+      "place_rank": 30,
+      "importance": 5.59205004958727e-05,
+      "addresstype": "building",
+      "name": "",
+      "display_name": "2, Dammstraße, Dörflas, Ziegelhütte, Marktredwitz, Landkreis Wunsiedel im Fichtelgebirge, Bayern, 95615, Deutschland",
+      "boundingbox": [
+        "50.0000663",
+        "50.0002302",
+        "12.0822729",
+        "12.0826797"
+      ]
+    }
+  ],
+  "format=jsonv2&limit=1&q=Obere+Regenstra%C3%9Fe+1%2C+93413+Cham%2C+Germany&countrycodes=de": [
+    {
+      "place_id": 130683867,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "node",
+      "osm_id": 1271851594,
+      "lat": "49.2164910",
+      "lon": "12.6671747",
+      "category": "amenity",
+      "type": "restaurant",
+      "place_rank": 30,
+      "importance": 5.6422522316274016e-05,
+      "addresstype": "amenity",
+      "name": "Maharaja",
+      "display_name": "Maharaja, 1, Obere Regenstraße, Siechen, Chammünster, Cham, Landkreis Cham, Bayern, 93413, Deutschland",
+      "boundingbox": [
+        "49.2164410",
+        "49.2165410",
+        "12.6671247",
+        "12.6672247"
+      ]
+    }
+  ],
+  "format=jsonv2&limit=1&q=Klingengasse+12%2C+91541+Rothenburg+ob+der+Tauber%2C+Germany&countrycodes=de": [
+    {
+      "place_id": 125561998,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "way",
+      "osm_id": 143383699,
+      "lat": "49.3788751",
+      "lon": "10.1772247",
+      "category": "tourism",
+      "type": "hotel",
+      "place_rank": 30,
+      "importance": 6.130540932321687e-05,
+      "addresstype": "tourism",
+      "name": "Hotel Schwarzer Adler",
+      "display_name": "Hotel Schwarzer Adler, 12, Klingengasse, Schlößlein, Rothenburg ob der Tauber, Landkreis Ansbach, Bayern, 91541, Deutschland",
+      "boundingbox": [
+        "49.3787993",
+        "49.3789211",
+        "10.1771449",
+        "10.1773106"
+      ]
+    }
+  ],
+  "format=jsonv2&limit=1&q=Dinkelsb%C3%BChler+Str.+6%2C+91555+Feuchtwangen%2C+Germany&countrycodes=de": [
+    {
+      "place_id": 125383716,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "way",
+      "osm_id": 42266088,
+      "lat": "49.1650069",
+      "lon": "10.3268560",
+      "category": "highway",
+      "type": "secondary",
+      "place_rank": 26,
+      "importance": 0.05339149080643927,
+      "addresstype": "secondary",
+      "name": "Dinkelsbühler Straße",
+      "display_name": "Dinkelsbühler Straße, Winterhalten, Sommerau, Feuchtwangen, Landkreis Ansbach, Bayern, 91555, Deutschland",
+      "boundingbox": [
+        "49.1634463",
+        "49.1665322",
+        "10.3263423",
+        "10.3272864"
+      ]
+    }
+  ],
+  "format=jsonv2&limit=1&q=Melchior-Otto-Platz+1%2C+96317+Kronach%2C+Germany&countrycodes=de": [
+    {
+      "place_id": 136453559,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "way",
+      "osm_id": 97328619,
+      "lat": "50.2405303",
+      "lon": "11.3250232",
+      "category": "building",
+      "type": "yes",
+      "place_rank": 30,
+      "importance": 5.686503395127821e-05,
+      "addresstype": "building",
+      "name": "",
+      "display_name": "1, Melchior-Otto-Platz, Kronach, Landkreis Kronach, Bayern, 96317, Deutschland",
+      "boundingbox": [
+        "50.2404325",
+        "50.2406334",
+        "11.3248554",
+        "11.3251702"
+      ]
+    }
+  ],
+  "format=jsonv2&limit=1&q=Fritz-Hornschuch-Str.+4%2C+95326+Kulmbach%2C+Germany&countrycodes=de": [
+    {
+      "place_id": 136066802,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "way",
+      "osm_id": 425919451,
+      "lat": "50.1080429",
+      "lon": "11.4529564",
+      "category": "building",
+      "type": "yes",
+      "place_rank": 30,
+      "importance": 5.8793774319020636e-05,
+      "addresstype": "building",
+      "name": "",
+      "display_name": "4, Fritz-Hornschuch-Straße, Priemershof, Ziegelhütten, Kulmbach, Landkreis Kulmbach, Bayern, 95326, Deutschland",
+      "boundingbox": [
+        "50.1079455",
+        "50.1081603",
+        "11.4528139",
+        "11.4531035"
+      ]
+    }
+  ],
+  "format=jsonv2&limit=1&q=Sutte+7%2C+95326+Kulmbach%2C+Germany&countrycodes=de": [
+    {
+      "place_id": 136884532,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "way",
+      "osm_id": 425932566,
+      "lat": "50.1090318",
+      "lon": "11.4565087",
+      "category": "building",
+      "type": "retail",
+      "place_rank": 30,
+      "importance": 5.8793774319020636e-05,
+      "addresstype": "building",
+      "name": "",
+      "display_name": "7, Sutte, Plassenburg, Blaich, Kulmbach, Landkreis Kulmbach, Bayern, 95326, Deutschland",
+      "boundingbox": [
+        "50.1089647",
+        "50.1091057",
+        "11.4563969",
+        "11.4566410"
+      ]
+    }
+  ],
+  "format=jsonv2&limit=1&q=Daimlerstra%C3%9Fe+8%2C+84130+Dingolfing%2C+Germany&countrycodes=de": [
+    {
+      "place_id": 128725490,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "way",
+      "osm_id": 980757492,
+      "lat": "48.6422641",
+      "lon": "12.4929157",
+      "category": "building",
+      "type": "apartments",
+      "place_rank": 30,
+      "importance": 5.5935759517769396e-05,
+      "addresstype": "building",
+      "name": "",
+      "display_name": "8, Daimlerstraße, Friedenheim, Dingolfing, Landkreis Dingolfing-Landau, Bayern, 84130, Deutschland",
+      "boundingbox": [
+        "48.6420232",
+        "48.6423542",
+        "12.4928141",
+        "12.4933325"
+      ]
+    }
+  ],
+  "format=jsonv2&limit=1&q=Steinfelsstra%C3%9Fe+22%2C+94405+Landau+an+der+Isar%2C+Germany&countrycodes=de": [
+    {
+      "place_id": 128225337,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "way",
+      "osm_id": 975574787,
+      "lat": "48.6738081",
+      "lon": "12.6984691",
+      "category": "highway",
+      "type": "secondary",
+      "place_rank": 26,
+      "importance": 0.05337872968642707,
+      "addresstype": "secondary",
+      "name": "Steinfelsstraße",
+      "display_name": "Steinfelsstraße, Ahausen, Oberframmering, Landau an der Isar, Landkreis Dingolfing-Landau, Bayern, 94405, Deutschland",
+      "boundingbox": [
+        "48.6735529",
+        "48.6741728",
+        "12.6979893",
+        "12.6988794"
+      ]
+    }
+  ],
+  "format=jsonv2&limit=1&q=Pfleggasse+23%2C+94469+Deggendorf%2C+Germany&countrycodes=de": [
+    {
+      "place_id": 129159922,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "way",
+      "osm_id": 224929731,
+      "lat": "48.8335752",
+      "lon": "12.9642086",
+      "category": "historic",
+      "type": "building",
+      "place_rank": 30,
+      "importance": 5.435492484927165e-05,
+      "addresstype": "historic",
+      "name": "",
+      "display_name": "23, Pfleggasse, Kulturviertel, Ufersbach, Gailberg, Deggendorf, Landkreis Deggendorf, Bayern, 94469, Deutschland",
+      "boundingbox": [
+        "48.8335251",
+        "48.8336253",
+        "12.9640947",
+        "12.9643226"
+      ]
+    }
+  ],
+  "format=jsonv2&limit=1&q=Bahnhofplatz+9%2C+94447+Plattling%2C+Germany&countrycodes=de": [
+    {
+      "place_id": 129153621,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "way",
+      "osm_id": 335221310,
+      "lat": "48.7787012",
+      "lon": "12.8640362",
+      "category": "building",
+      "type": "yes",
+      "place_rank": 30,
+      "importance": 5.541695277328172e-05,
+      "addresstype": "building",
+      "name": "",
+      "display_name": "9, Bahnhofplatz, Enchendorf, Plattling, Landkreis Deggendorf, Bayern, 94447, Deutschland",
+      "boundingbox": [
+        "48.7786090",
+        "48.7787870",
+        "12.8639130",
+        "12.8641601"
+      ]
+    }
+  ],
+  "format=jsonv2&limit=1&q=Stadtplatz+41%2C+84347+Pfarrkirchen%2C+Germany&countrycodes=de": [
+    {
+      "place_id": 129333035,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "node",
+      "osm_id": 415677003,
+      "lat": "48.4325460",
+      "lon": "12.9404879",
+      "category": "amenity",
+      "type": "restaurant",
+      "place_rank": 30,
+      "importance": 5.055848020137358e-05,
+      "addresstype": "amenity",
+      "name": "Shivalaya",
+      "display_name": "Shivalaya, 41, Stadtplatz, Reichenberg, Pfarrkirchen, Landkreis Rottal-Inn, Bayern, 84347, Deutschland",
+      "boundingbox": [
+        "48.4324960",
+        "48.4325960",
+        "12.9404379",
+        "12.9405379"
+      ]
+    }
+  ],
+  "format=jsonv2&limit=1&q=Pfarrkirchener+Stra%C3%9Fe+17%2C+84307+Eggenfelden%2C+Germany&countrycodes=de": [
+    {
+      "place_id": 128599460,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "way",
+      "osm_id": 27566106,
+      "lat": "48.4060142",
+      "lon": "12.7676431",
+      "category": "highway",
+      "type": "residential",
+      "place_rank": 26,
+      "importance": 0.05338383230334932,
+      "addresstype": "residential",
+      "name": "Pfarrkirchener Straße",
+      "display_name": "Pfarrkirchener Straße, Eggenfelden, Landkreis Rottal-Inn, Bayern, 84307, Deutschland",
+      "boundingbox": [
+        "48.4049672",
+        "48.4061378",
+        "12.7664500",
+        "12.7681156"
+      ]
+    }
+  ],
+  "format=jsonv2&limit=1&q=Am+Markt+1%2C+94078+Freyung%2C+Germany&countrycodes=de": [
+    {
+      "place_id": 128440841,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "way",
+      "osm_id": 248978179,
+      "lat": "48.8076263",
+      "lon": "13.5451350",
+      "category": "building",
+      "type": "yes",
+      "place_rank": 30,
+      "importance": 5.518043793388293e-05,
+      "addresstype": "building",
+      "name": "",
+      "display_name": "1, Am Markt, Hammer, Freyung, Landkreis Freyung-Grafenau, Bayern, 94078, Deutschland",
+      "boundingbox": [
+        "48.8074865",
+        "48.8077826",
+        "13.5449156",
+        "13.5453543"
+      ]
+    }
+  ],
+  "format=jsonv2&limit=1&q=Hauptstra%C3%9Fe+42%2C+91257+Pegnitz%2C+Germany&countrycodes=de": [
+    {
+      "place_id": 127123248,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "way",
+      "osm_id": 35574425,
+      "lat": "49.7567231",
+      "lon": "11.5407878",
+      "category": "building",
+      "type": "yes",
+      "place_rank": 30,
+      "importance": 5.571297779807763e-05,
+      "addresstype": "building",
+      "name": "",
+      "display_name": "42, Hauptstraße, Rosenhof, Pegnitz, Landkreis Bayreuth, Bayern, 91257, Deutschland",
+      "boundingbox": [
+        "49.7566501",
+        "49.7568805",
+        "11.5406820",
+        "11.5408907"
+      ]
+    }
+  ],
+  "format=jsonv2&limit=1&q=Coburger+Stra%C3%9Fe+18%2C+96215+Lichtenfels%2C+Germany&countrycodes=de": [
+    {
+      "place_id": 136727232,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "way",
+      "osm_id": 548189252,
+      "lat": "50.1474570",
+      "lon": "11.0627973",
+      "category": "building",
+      "type": "yes",
+      "place_rank": 30,
+      "importance": 5.596780346375246e-05,
+      "addresstype": "building",
+      "name": "",
+      "display_name": "18, Coburger Straße, Lichtenfels, Landkreis Lichtenfels, Bayern, 96215, Deutschland",
+      "boundingbox": [
+        "50.1474045",
+        "50.1475183",
+        "11.0626893",
+        "11.0629045"
+      ]
+    }
+  ],
+  "format=jsonv2&limit=1&q=Trostberger+Stra%C3%9Fe+38%2C+84503+Alt%C3%B6tting%2C+Germany&countrycodes=de": [
+    {
+      "place_id": 128627637,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "way",
+      "osm_id": 264953746,
+      "lat": "48.2225626",
+      "lon": "12.6729434",
+      "category": "building",
+      "type": "yes",
+      "place_rank": 30,
+      "importance": 5.8404669260654876e-05,
+      "addresstype": "building",
+      "name": "",
+      "display_name": "38, Trostberger Straße, Wiesmühle, Altötting, Landkreis Altötting, Bayern, 84503, Deutschland",
+      "boundingbox": [
+        "48.2224804",
+        "48.2226391",
+        "12.6728288",
+        "12.6730580"
+      ]
+    }
+  ],
+  "format=jsonv2&limit=1&q=Stadtplatz+51%2C+84453+M%C3%BChldorf+am+Inn%2C+Germany&countrycodes=de": [
+    {
+      "place_id": 129146819,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "way",
+      "osm_id": 686401783,
+      "lat": "48.2413186",
+      "lon": "12.5253484",
+      "category": "building",
+      "type": "yes",
+      "place_rank": 30,
+      "importance": 5.749828335999111e-05,
+      "addresstype": "building",
+      "name": "",
+      "display_name": "51, Stadtplatz, Altstadt, Mühldorf a. Inn, Landkreis Mühldorf am Inn, Bayern, 84453, Deutschland",
+      "boundingbox": [
+        "48.2411282",
+        "48.2414917",
+        "12.5250937",
+        "12.5255717"
+      ]
+    }
+  ],
+  "format=jsonv2&limit=1&q=Stadtplatz+54%2C+84489+Burghausen%2C+Germany&countrycodes=de": [
+    {
+      "place_id": 128544385,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "way",
+      "osm_id": 680673591,
+      "lat": "48.1594225",
+      "lon": "12.8327462",
+      "category": "building",
+      "type": "yes",
+      "place_rank": 30,
+      "importance": 5.024261844811196e-05,
+      "addresstype": "building",
+      "name": "",
+      "display_name": "54, Stadtplatz, Burghausen, Landkreis Altötting, Bayern, 84489, Deutschland",
+      "boundingbox": [
+        "48.1593012",
+        "48.1595378",
+        "12.8321998",
+        "12.8329728"
+      ]
+    }
+  ],
+  "format=jsonv2&limit=1&q=Stadtplatz+44%2C+84489+Burghausen%2C+Germany&countrycodes=de": [
+    {
+      "place_id": 129230255,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "way",
+      "osm_id": 121391450,
+      "lat": "48.1587955",
+      "lon": "12.8324360",
+      "category": "building",
+      "type": "yes",
+      "place_rank": 30,
+      "importance": 5.024261844811196e-05,
+      "addresstype": "building",
+      "name": "",
+      "display_name": "44, Stadtplatz, Burghausen, Landkreis Altötting, Bayern, 84489, Deutschland",
+      "boundingbox": [
+        "48.1587175",
+        "48.1588745",
+        "12.8320663",
+        "12.8326616"
+      ]
+    }
+  ],
+  "format=jsonv2&limit=1&q=Palmanostra%C3%9Fe+1%2C+83512+Wasserburg+am+Inn%2C+Germany&countrycodes=de": [
+    {
+      "place_id": 126978205,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "way",
+      "osm_id": 61044209,
+      "lat": "48.0619709",
+      "lon": "12.2345142",
+      "category": "building",
+      "type": "yes",
+      "place_rank": 30,
+      "importance": 5.750438696874979e-05,
+      "addresstype": "building",
+      "name": "",
+      "display_name": "1, Palmanostraße, Altstadt, Weikertsham, Wasserburg am Inn, Landkreis Rosenheim, Bayern, 83512, Deutschland",
+      "boundingbox": [
+        "48.0618817",
+        "48.0620738",
+        "12.2343800",
+        "12.2346409"
+      ]
+    }
+  ],
+  "format=jsonv2&limit=1&q=Salzsenderzeile+3%2C+83512+Wasserburg+am+Inn%2C+Germany&countrycodes=de": [
+    {
+      "place_id": 129070656,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "way",
+      "osm_id": 25967851,
+      "lat": "48.0618310",
+      "lon": "12.2326901",
+      "category": "building",
+      "type": "yes",
+      "place_rank": 30,
+      "importance": 5.750438696874979e-05,
+      "addresstype": "building",
+      "name": "",
+      "display_name": "3, Salzsenderzeile, Altstadt, Weikertsham, Wasserburg am Inn, Landkreis Rosenheim, Bayern, 83512, Deutschland",
+      "boundingbox": [
+        "48.0617637",
+        "48.0618945",
+        "12.2325891",
+        "12.2327918"
+      ]
+    }
+  ],
+  "format=jsonv2&limit=1&q=Waisenhausstra%C3%9Fe+8%2C+82362+Weilheim+in+Oberbayern%2C+Germany&countrycodes=de": [
+    {
+      "place_id": 70133210,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "way",
+      "osm_id": 456506459,
+      "lat": "47.8335181",
+      "lon": "11.1402795",
+      "category": "building",
+      "type": "apartments",
+      "place_rank": 30,
+      "importance": 5.728160524905802e-05,
+      "addresstype": "building",
+      "name": "",
+      "display_name": "8, Waisenhausstraße, Weilheim in Oberbayern, Landkreis Weilheim-Schongau, Bayern, 82362, Deutschland",
+      "boundingbox": [
+        "47.8334595",
+        "47.8335766",
+        "11.1401964",
+        "11.1403626"
+      ]
+    }
+  ],
+  "format=jsonv2&limit=1&q=Bahnhofallee+4%2C+82362+Weilheim+in+Oberbayern%2C+Germany&countrycodes=de": [
+    {
+      "place_id": 429614612,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "way",
+      "osm_id": 146544848,
+      "lat": "47.8453180",
+      "lon": "11.1441862",
+      "category": "building",
+      "type": "apartments",
+      "place_rank": 30,
+      "importance": 5.728160524905802e-05,
+      "addresstype": "building",
+      "name": "",
+      "display_name": "4, Bahnhofallee, Unterhausen, Weilheim in Oberbayern, Landkreis Weilheim-Schongau, Bayern, 82362, Deutschland",
+      "boundingbox": [
+        "47.8451835",
+        "47.8454525",
+        "11.1440166",
+        "11.1443558"
+      ]
+    }
+  ],
+  "format=jsonv2&limit=1&q=R%C3%B6ntgenstra%C3%9Fe+19%2C+82362+Weilheim+in+Oberbayern%2C+Germany&countrycodes=de": [
+    {
+      "place_id": 70271735,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "node",
+      "osm_id": 6775191555,
+      "lat": "47.8341647",
+      "lon": "11.1447103",
+      "category": "amenity",
+      "type": "restaurant",
+      "place_rank": 30,
+      "importance": 5.728160524905802e-05,
+      "addresstype": "amenity",
+      "name": "Avtar",
+      "display_name": "Avtar, 19-21, Röntgenstraße, Weilheim in Oberbayern, Landkreis Weilheim-Schongau, Bayern, 82362, Deutschland",
+      "boundingbox": [
+        "47.8341147",
+        "47.8342147",
+        "11.1446603",
+        "11.1447603"
+      ]
+    }
+  ],
+  "format=jsonv2&limit=1&q=Hauptplatz+175%2C+86899+Landsberg+am+Lech%2C+Germany&countrycodes=de": [
+    {
+      "place_id": 127680351,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "way",
+      "osm_id": 555403641,
+      "lat": "48.0501391",
+      "lon": "10.8768768",
+      "category": "building",
+      "type": "yes",
+      "place_rank": 30,
+      "importance": 6.065995269698661e-05,
+      "addresstype": "building",
+      "name": "",
+      "display_name": "175, Hauptplatz, Klösterl, Altstadt, Landsberg am Lech, Landkreis Landsberg am Lech, Bayern, 86899, Deutschland",
+      "boundingbox": [
+        "48.0500495",
+        "48.0502499",
+        "10.8767399",
+        "10.8770400"
+      ]
+    }
+  ],
+  "format=jsonv2&limit=1&q=Adolph-Kolping-Stra%C3%9Fe+133%2C+86899+Landsberg+am+Lech%2C+Germany&countrycodes=de": [
+    {
+      "place_id": 127790648,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "way",
+      "osm_id": 108321874,
+      "lat": "48.0508896",
+      "lon": "10.8749853",
+      "category": "building",
+      "type": "yes",
+      "place_rank": 30,
+      "importance": 6.065995269698661e-05,
+      "addresstype": "building",
+      "name": "Bachwirt",
+      "display_name": "Bachwirt, 133, Adolph-Kolping-Straße, Klösterl, Altstadt, Landsberg am Lech, Landkreis Landsberg am Lech, Bayern, 86899, Deutschland",
+      "boundingbox": [
+        "48.0508091",
+        "48.0509329",
+        "10.8749133",
+        "10.8750651"
+      ]
+    }
+  ],
+  "format=jsonv2&limit=1&q=Weilheimer+Stra%C3%9Fe+9%2C+86899+Landsberg+am+Lech%2C+Germany&countrycodes=de": [
+    {
+      "place_id": 128160996,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "way",
+      "osm_id": 108436143,
+      "lat": "48.0460882",
+      "lon": "10.8853660",
+      "category": "building",
+      "type": "retail",
+      "place_rank": 30,
+      "importance": 6.065995269698661e-05,
+      "addresstype": "building",
+      "name": "",
+      "display_name": "9, Weilheimer Straße, Bayervorstadt, Landsberg am Lech, Landkreis Landsberg am Lech, Bayern, 86899, Deutschland",
+      "boundingbox": [
+        "48.0459506",
+        "48.0462057",
+        "10.8847752",
+        "10.8858897"
+      ]
+    }
+  ],
+  "format=jsonv2&limit=1&q=Hindenburgstra%C3%9Fe+27%2C+86609+Donauw%C3%B6rth%2C+Germany&countrycodes=de": [
+    {
+      "place_id": 127305573,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "way",
+      "osm_id": 129502513,
+      "lat": "48.7169667",
+      "lon": "10.7781412",
+      "category": "building",
+      "type": "apartments",
+      "place_rank": 30,
+      "importance": 6.100480659185195e-05,
+      "addresstype": "building",
+      "name": "",
+      "display_name": "27, Hindenburgstraße, Parkstadt, Berg, Donauwörth, Asbach-Bäumenheim, Landkreis Donau-Ries, Bayern, 86609, Deutschland",
+      "boundingbox": [
+        "48.7168124",
+        "48.7170418",
+        "10.7780532",
+        "10.7782540"
+      ]
+    }
+  ],
+  "format=jsonv2&limit=1&q=Sonnenstra%C3%9Fe+25%2C+86609+Donauw%C3%B6rth%2C+Germany&countrycodes=de": [
+    {
+      "place_id": 127530500,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "node",
+      "osm_id": 4189128495,
+      "lat": "48.7192674",
+      "lon": "10.7796175",
+      "category": "amenity",
+      "type": "restaurant",
+      "place_rank": 30,
+      "importance": 6.100480659185195e-05,
+      "addresstype": "amenity",
+      "name": "Taj Mahal",
+      "display_name": "Taj Mahal, 25, Sonnenstraße, Parkstadt, Berg, Donauwörth, Asbach-Bäumenheim, Landkreis Donau-Ries, Bayern, 86609, Deutschland",
+      "boundingbox": [
+        "48.7192174",
+        "48.7193174",
+        "10.7795675",
+        "10.7796675"
+      ]
+    }
+  ],
+  "format=jsonv2&limit=1&q=Hallgasse+4%2C+86720+N%C3%B6rdlingen%2C+Germany&countrycodes=de": [
+    {
+      "place_id": 128613546,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "way",
+      "osm_id": 107398658,
+      "lat": "48.8501486",
+      "lon": "10.4888716",
+      "category": "building",
+      "type": "yes",
+      "place_rank": 30,
+      "importance": 6.1203173876509e-05,
+      "addresstype": "building",
+      "name": "",
+      "display_name": "4, Hallgasse, Baldingen, Nördlingen, Landkreis Donau-Ries, Bayern, 86720, Deutschland",
+      "boundingbox": [
+        "48.8500276",
+        "48.8502202",
+        "10.4887503",
+        "10.4889775"
+      ]
+    }
+  ],
+  "format=jsonv2&limit=1&q=Weinstra%C3%9Fe+122%2C+86633+Neuburg+an+der+Donau%2C+Germany&countrycodes=de": [
+    {
+      "place_id": 126693384,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "node",
+      "osm_id": 4545322780,
+      "lat": "48.7362677",
+      "lon": "11.1821318",
+      "category": "place",
+      "type": "house",
+      "place_rank": 30,
+      "importance": 5.943160143430255e-05,
+      "addresstype": "place",
+      "name": "",
+      "display_name": "C 122, Weinstraße, Hessellohe, Neuburg an der Donau, Landkreis Neuburg-Schrobenhausen, Bayern, 86633, Deutschland",
+      "boundingbox": [
+        "48.7362177",
+        "48.7363177",
+        "11.1820818",
+        "11.1821818"
+      ]
+    }
+  ],
+  "format=jsonv2&limit=1&q=Luitpoldstra%C3%9Fe+19%2C+85072+Eichst%C3%A4tt%2C+Germany&countrycodes=de": [
+    {
+      "place_id": 127585665,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "way",
+      "osm_id": 322931787,
+      "lat": "48.8932783",
+      "lon": "11.1855901",
+      "category": "building",
+      "type": "yes",
+      "place_rank": 30,
+      "importance": 6.069352254515934e-05,
+      "addresstype": "building",
+      "name": "",
+      "display_name": "19, Luitpoldstraße, Seidlkreuz, Eichstätt, Landkreis Eichstätt, Bayern, 85072, Deutschland",
+      "boundingbox": [
+        "48.8931834",
+        "48.8933875",
+        "11.1854586",
+        "11.1857255"
+      ]
+    }
+  ],
+  "format=jsonv2&limit=1&q=Marktplatz+16%2C+89312+G%C3%BCnzburg%2C+Germany&countrycodes=de": [
+    {
+      "place_id": 127729452,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "way",
+      "osm_id": 209142298,
+      "lat": "48.4557664",
+      "lon": "10.2768614",
+      "category": "building",
+      "type": "apartments",
+      "place_rank": 30,
+      "importance": 5.921339742117979e-05,
+      "addresstype": "building",
+      "name": "",
+      "display_name": "16, Marktplatz, Denzingen, Günzburg, Landkreis Günzburg, Bayern, 89312, Deutschland",
+      "boundingbox": [
+        "48.4556916",
+        "48.4558411",
+        "10.2767476",
+        "10.2769753"
+      ]
+    }
+  ],
+  "format=jsonv2&limit=1&q=Hofgasse+11%2C+89312+G%C3%BCnzburg%2C+Germany&countrycodes=de": [
+    {
+      "place_id": 127649756,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "node",
+      "osm_id": 2440812377,
+      "lat": "48.4550457",
+      "lon": "10.2776465",
+      "category": "place",
+      "type": "house",
+      "place_rank": 30,
+      "importance": 5.921339742117979e-05,
+      "addresstype": "place",
+      "name": "",
+      "display_name": "11, Hofgasse, Denzingen, Günzburg, Landkreis Günzburg, Bayern, 89312, Deutschland",
+      "boundingbox": [
+        "48.4549957",
+        "48.4550957",
+        "10.2775965",
+        "10.2776965"
+      ]
+    }
+  ],
+  "format=jsonv2&limit=1&q=Kornstra%C3%9Fe+18%2C+87719+Mindelheim%2C+Germany&countrycodes=de": [
+    {
+      "place_id": 128037291,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "way",
+      "osm_id": 136442025,
+      "lat": "48.0471922",
+      "lon": "10.4877611",
+      "category": "building",
+      "type": "yes",
+      "place_rank": 30,
+      "importance": 5.8105592431479626e-05,
+      "addresstype": "building",
+      "name": "",
+      "display_name": "18, Kornstraße, Mindelheim, Landkreis Unterallgäu, Bayern, 87719, Deutschland",
+      "boundingbox": [
+        "48.0471224",
+        "48.0472578",
+        "10.4876542",
+        "10.4878701"
+      ]
+    }
+  ],
+  "format=jsonv2&limit=1&q=Maximilianstra%C3%9Fe+3%2C+87719+Mindelheim%2C+Germany&countrycodes=de": [
+    {
+      "place_id": 127117377,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "way",
+      "osm_id": 135084075,
+      "lat": "48.0466323",
+      "lon": "10.4904477",
+      "category": "building",
+      "type": "apartments",
+      "place_rank": 30,
+      "importance": 5.8105592431479626e-05,
+      "addresstype": "building",
+      "name": "",
+      "display_name": "3, Maximilianstraße, Mindelheim, Landkreis Unterallgäu, Bayern, 87719, Deutschland",
+      "boundingbox": [
+        "48.0464782",
+        "48.0467916",
+        "10.4902873",
+        "10.4906005"
+      ]
+    }
+  ],
+  "format=jsonv2&limit=1&q=Schlo%C3%9Fstra%C3%9Fe+4%2C+87527+Sonthofen%2C+Germany&countrycodes=de": [
+    {
+      "place_id": 70944776,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "way",
+      "osm_id": 89216821,
+      "lat": "47.5115747",
+      "lon": "10.2787009",
+      "category": "building",
+      "type": "yes",
+      "place_rank": 30,
+      "importance": 5.599526970316651e-05,
+      "addresstype": "building",
+      "name": "",
+      "display_name": "4, Schloßstraße, Illersiedlung, Sonthofen, Landkreis Oberallgäu, Bayern, 87527, Deutschland",
+      "boundingbox": [
+        "47.5114940",
+        "47.5116553",
+        "10.2784953",
+        "10.2789065"
+      ]
+    }
+  ],
+  "format=jsonv2&limit=1&q=Kemptener+Str.+16%2C+87629+F%C3%BCssen%2C+Germany&countrycodes=de": [
+    {
+      "place_id": 70949713,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "way",
+      "osm_id": 95812211,
+      "lat": "47.5682247",
+      "lon": "10.6922000",
+      "category": "building",
+      "type": "yes",
+      "place_rank": 30,
+      "importance": 6.1032272831266003e-05,
+      "addresstype": "building",
+      "name": "",
+      "display_name": "16, Kemptener Straße, Füssen-West, Bad Faulenbach, Füssen, Landkreis Ostallgäu, Bayern, 87629, Deutschland",
+      "boundingbox": [
+        "47.5681125",
+        "47.5683467",
+        "10.6920556",
+        "10.6923999"
+      ]
+    }
+  ],
+  "format=jsonv2&limit=1&q=Tiroler+Str.+55%2C+87629+F%C3%BCssen%2C+Germany&countrycodes=de": [
+    {
+      "place_id": 71050750,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "way",
+      "osm_id": 85779929,
+      "lat": "47.5590178",
+      "lon": "10.6955340",
+      "category": "building",
+      "type": "yes",
+      "place_rank": 30,
+      "importance": 4.903410391389361e-05,
+      "addresstype": "building",
+      "name": "",
+      "display_name": "55, Tiroler Straße, Ziegelwies, Bad Faulenbach, Füssen, Landkreis Ostallgäu, Bayern, 87629, Deutschland",
+      "boundingbox": [
+        "47.5589126",
+        "47.5591229",
+        "10.6953989",
+        "10.6956690"
+      ]
+    }
+  ],
+  "format=jsonv2&limit=1&q=Nebelhornstra%C3%9Fe+49%2C+87561+Oberstdorf%2C+Germany&countrycodes=de": [
+    {
+      "place_id": 70698964,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "way",
+      "osm_id": 189138095,
+      "lat": "47.4067976",
+      "lon": "10.2845118",
+      "category": "building",
+      "type": "apartments",
+      "place_rank": 30,
+      "importance": 6.663843747611227e-05,
+      "addresstype": "building",
+      "name": "",
+      "display_name": "49, Nebelhornstraße, Oberstdorf, Landkreis Oberallgäu, Bayern, 87561, Deutschland",
+      "boundingbox": [
+        "47.4067182",
+        "47.4068730",
+        "10.2842755",
+        "10.2847573"
+      ]
+    }
+  ],
+  "format=jsonv2&limit=1&q=Marktplatz+21%2C+97688+Bad+Kissingen%2C+Germany&countrycodes=de": [
+    {
+      "place_id": 137011926,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "way",
+      "osm_id": 406441431,
+      "lat": "50.1994636",
+      "lon": "10.0753332",
+      "category": "building",
+      "type": "retail",
+      "place_rank": 30,
+      "importance": 6.0801861600625884e-05,
+      "addresstype": "building",
+      "name": "",
+      "display_name": "21, Marktplatz, Garitz, Bad Kissingen, Landkreis Bad Kissingen, Bayern, 97688, Deutschland",
+      "boundingbox": [
+        "50.1993365",
+        "50.1995797",
+        "10.0750667",
+        "10.0755898"
+      ]
+    }
+  ],
+  "format=jsonv2&limit=1&q=Kurhausstra%C3%9Fe+29%2C+97688+Bad+Kissingen%2C+Germany&countrycodes=de": [
+    {
+      "place_id": 137097514,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "way",
+      "osm_id": 238463069,
+      "lat": "50.1930165",
+      "lon": "10.0783756",
+      "category": "tourism",
+      "type": "hotel",
+      "place_rank": 30,
+      "importance": 6.0801861600625884e-05,
+      "addresstype": "tourism",
+      "name": "Aparthotel Hohenzollern",
+      "display_name": "Aparthotel Hohenzollern, 29, Kurhausstraße, Garitz, Bad Kissingen, Landkreis Bad Kissingen, Bayern, 97688, Deutschland",
+      "boundingbox": [
+        "50.1928577",
+        "50.1931737",
+        "10.0782835",
+        "10.0784649"
+      ]
+    }
+  ],
+  "format=jsonv2&limit=1&q=Felsenkellerweg+35%2C+97318+Kitzingen%2C+Germany&countrycodes=de": [
+    {
+      "place_id": 125583964,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "way",
+      "osm_id": 720915329,
+      "lat": "49.7226570",
+      "lon": "10.1652562",
+      "category": "building",
+      "type": "yes",
+      "place_rank": 30,
+      "importance": 5.828412298767098e-05,
+      "addresstype": "building",
+      "name": "",
+      "display_name": "35, Felsenkellerweg, Hohenfeld, Kitzingen, Landkreis Kitzingen, Bayern, 97318, Deutschland",
+      "boundingbox": [
+        "49.7225378",
+        "49.7227990",
+        "10.1650599",
+        "10.1654524"
+      ]
+    }
+  ],
+  "format=jsonv2&limit=1&q=Hauptstra%C3%9Fe+31%2C+97539+Wonfurt%2C+Germany&countrycodes=de": [
+    {
+      "place_id": 418586366,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "way",
+      "osm_id": 128242793,
+      "lat": "50.0131657",
+      "lon": "10.4672379",
+      "category": "building",
+      "type": "yes",
+      "place_rank": 30,
+      "importance": 4.8968490119737814e-05,
+      "addresstype": "building",
+      "name": "",
+      "display_name": "31, Hauptstraße, Wonfurt, Theres (VGem), Landkreis Haßberge, Bayern, 97539, Deutschland",
+      "boundingbox": [
+        "50.0130500",
+        "50.0132939",
+        "10.4670121",
+        "10.4674160"
+      ]
+    }
+  ],
+  "format=jsonv2&limit=1&q=Hauptstra%C3%9Fe+111%2C+63897+Miltenberg%2C+Germany&countrycodes=de": [
+    {
+      "place_id": 125171047,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "way",
+      "osm_id": 391235733,
+      "lat": "49.6998102",
+      "lon": "9.2552013",
+      "category": "building",
+      "type": "yes",
+      "place_rank": 30,
+      "importance": 5.736095216292084e-05,
+      "addresstype": "building",
+      "name": "",
+      "display_name": "111, Hauptstraße, Miltenberg-Nord, Miltenberg, Landkreis Miltenberg, Bayern, 63897, Deutschland",
+      "boundingbox": [
+        "49.6997134",
+        "49.6999130",
+        "9.2550760",
+        "9.2554289"
+      ]
+    }
+  ],
+  "format=jsonv2&limit=1&q=Ignatius-Taschner-Stra%C3%9Fe+5%2C+97816+Lohr+am+Main%2C+Germany&countrycodes=de": [
+    {
+      "place_id": 125738643,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "way",
+      "osm_id": 52527561,
+      "lat": "49.9936476",
+      "lon": "9.5704108",
+      "category": "amenity",
+      "type": "restaurant",
+      "place_rank": 30,
+      "importance": 5.472266727698203e-05,
+      "addresstype": "amenity",
+      "name": "Gautam India Palace",
+      "display_name": "Gautam India Palace, 5, Ignatius-Taschner-Straße, Lohr, Lohr am Main, Landkreis Main-Spessart, Bayern, 97816, Deutschland",
+      "boundingbox": [
+        "49.9935310",
+        "49.9937579",
+        "9.5702509",
+        "9.5705903"
+      ]
+    }
+  ]
 }
