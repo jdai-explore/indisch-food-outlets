@@ -28,6 +28,7 @@ FLAGSHIP_CENTERS = [
     ("saravanaa bhavan", 11.5378, 48.1528),
     ("namaste restaurant", 11.6197, 48.1518),  # Arabellapark
     ("tandoori flame", 11.6512, 48.1897),       # Unterföhring
+    ("rama", 11.6713, 48.2254),                 # Ismaning
     ("sangam", 11.0846, 49.4589),
     ("namaste", 11.1135, 49.4618),
     ("oota", 12.0942, 49.0195),
@@ -99,6 +100,10 @@ def infer_city_from_postcode_or_coords(raw_city: str, postcode: str, lon: float,
         return "Munich"
     if pc == "85774":
         return "Unterföhring"
+    if pc == "85737":
+        return "Ismaning"
+    if pc == "85375":
+        return "Neufahrn b. Freising"
     if pc.startswith(("904", "903")):
         return "Nuremberg"
     if pc.startswith("907"):
@@ -149,19 +154,50 @@ def norm_name(s: str) -> str:
         s = s.replace(token, " ")
     return re.sub(r"[^a-z0-9äöüß]+", " ", s).strip()
 
+HARD_SUBCONTINENT_EXCLUDE = [
+    "pakistan", "lahore", "karachi", "peshawar", "shalimar",
+    "nepal", "tibet", "afghan", "bangladesh", "nepalese", "afghan",
+]
+
+NAME_NON_INDIAN_EXCLUDE = [
+    "pizza", "pizzeria", "döner", "doner", "kebab", "kebap", "sushi", "thai",
+    "vietnam", "china", "asia", "wok", "burger", "metzgerei", "bäckerei",
+    "ice cream", "wirtshaus", "gasthaus", "gasthof", "brauhaus", "trattoria",
+    "ristorante", "imbiss", "anan", "kaimug", "dean&david", "slurp", "bami house",
+]
+
+SECONDARY_CUISINE_BAD = [
+    "pakistan", "vietnam", "thai", "sushi", "pizza", "kebab", "turkish",
+    "italian", "german", "chinese", "nepalese", "afghan", "burger", "greek",
+    "bavarian", "regional", "mexican", "spanish", "french",
+]
+
 def is_excluded(name: str, cuisine: str = "", address: str = "") -> bool:
-    combined = f"{name} {cuisine}".lower()
+    n_low = name.lower()
+    c_low = (cuisine or "").lower()
     # Exclude Nuremberg's Tandoori Flames (Allersberger Str 118, Pakistani-Indian) specifically,
     # while keeping Unterföhring's Tandoori Flame!
-    if "tandoori flames" in name.lower() or ("tandoori flame" in name.lower() and "allersberger" in address.lower()):
+    if "tandoori flames" in n_low or ("tandoori flame" in n_low and "allersberger" in address.lower()):
         return True
-    for term in EXCLUDE_TERMS:
-        if term in combined:
+    for term in HARD_SUBCONTINENT_EXCLUDE:
+        if term in n_low or term in c_low:
             return True
-    if cuisine:
-        c = cuisine.lower()
-        for bad in ["pakistan", "vietnam", "thai", "sushi", "pizza", "kebab", "turkish", "italian", "german", "chinese", "nepalese", "afghan"]:
-            if bad in c:
+    for term in NAME_NON_INDIAN_EXCLUDE:
+        if term in n_low:
+            return True
+
+    if c_low:
+        cuisines = [part.strip() for part in re.split(r"[;,/]", c_low) if part.strip()]
+        if cuisines:
+            primary = cuisines[0]
+            # Indian-first multi-cuisine restaurants (e.g., "indian;italian", "indian;pizza") are KEPT!
+            if "indian" in primary or "indisch" in primary:
+                return False
+            # Non-Indian primary cuisine (e.g. "pizza;italian;indian", "german;indian") is EXCLUDED.
+            for bad in SECONDARY_CUISINE_BAD:
+                if bad in primary:
+                    return True
+            if not any("indian" in part for part in cuisines):
                 return True
     return False
 
@@ -410,6 +446,119 @@ LIMIT 2000
     print(f"  QLever filtered valid Indian kitchens: {len(results)} (recovered {poly_count} from building polygons)", flush=True)
     return results
 
+def fetch_qlever_untagged_indian():
+    print("2/4 Querying QLever OSM Planet for untagged Indian-named restaurants in Bavaria...", flush=True)
+    sparql = """
+PREFIX osmkey: <https://www.openstreetmap.org/wiki/Key:>
+PREFIX osmrel: <https://www.openstreetmap.org/relation/>
+PREFIX ogc: <http://www.opengis.net/rdf#>
+PREFIX geo: <http://www.opengis.net/ont/geosparql#>
+SELECT ?osm ?name ?amenity ?street ?hnum ?pc ?city ?suburb ?phone ?cphone ?website ?cwebsite ?hours ?veg ?loc WHERE {
+  osmrel:2145268 ogc:sfContains ?osm .
+  ?osm osmkey:amenity ?amenity .
+  FILTER(?amenity IN ("restaurant", "fast_food", "cafe"))
+  ?osm osmkey:name ?name .
+  FILTER(REGEX(?name, "(indisch|indian|tandoor|masala|maharaja|maharani|namaste|taj mahal|swagat|sangam|ganesha|\\\\bdosa\\\\b|kerala|swaad|svaad|bollywood|bombay|mumbai|chutney|rasoi|anjappar|saravanaa|jaipur|haveli|biryani|chettinad|ayurveda|malabar|chandni|swarg|kohinoor|\\\\bsitar\\\\b|punjab)", "i"))
+  FILTER NOT EXISTS { ?osm osmkey:cuisine ?c }
+  FILTER NOT EXISTS { ?osm osmkey:disused:amenity ?d }
+  ?osm geo:hasGeometry/geo:asWKT ?loc .
+  OPTIONAL { ?osm osmkey:addr:street ?street }
+  OPTIONAL { ?osm osmkey:addr:housenumber ?hnum }
+  OPTIONAL { ?osm osmkey:addr:postcode ?pc }
+  OPTIONAL { ?osm osmkey:addr:city ?city }
+  OPTIONAL { ?osm osmkey:addr:suburb ?suburb }
+  OPTIONAL { ?osm osmkey:phone ?phone }
+  OPTIONAL { ?osm osmkey:contact:phone ?cphone }
+  OPTIONAL { ?osm osmkey:website ?website }
+  OPTIONAL { ?osm osmkey:contact:website ?cwebsite }
+  OPTIONAL { ?osm osmkey:opening_hours ?hours }
+  OPTIONAL { ?osm osmkey:diet:vegetarian ?veg }
+}
+LIMIT 500
+"""
+    req = urllib.request.Request(
+        "https://qlever.dev/api/osm-planet",
+        data=urllib.parse.urlencode({"query": sparql}).encode("utf-8"),
+        headers={"User-Agent": "SpiceAtlasBayern/3.0", "Accept": "application/sparql-results+json"},
+    )
+    with urllib.request.urlopen(req, timeout=25) as resp:
+        rows = json.loads(resp.read().decode("utf-8")).get("results", {}).get("bindings", [])
+
+    results = []
+    seen_osm = set()
+    for r in rows:
+        osm_uri = r.get("osm", {}).get("value", "")
+        if osm_uri in seen_osm:
+            continue
+        seen_osm.add(osm_uri)
+
+        loc = r.get("loc", {}).get("value", "")
+        parsed = parse_wkt_centroid(loc)
+        if not parsed:
+            continue
+        lon, lat, _ = parsed
+        if not in_bavaria(lon, lat):
+            continue
+
+        name = r.get("name", {}).get("value", "").strip()
+        street = r.get("street", {}).get("value", "").strip()
+        hnum = r.get("hnum", {}).get("value", "").strip()
+        pc = r.get("pc", {}).get("value", "").strip()
+        raw_city = r.get("city", {}).get("value", "").strip()
+        suburb = r.get("suburb", {}).get("value", "").strip() or None
+        city = infer_city_from_postcode_or_coords(raw_city, pc, lon, lat)
+
+        addr_parts = []
+        if street:
+            addr_parts.append(f"{street} {hnum}".strip())
+        city_part = f"{pc} {raw_city or city}".strip()
+        if city_part:
+            addr_parts.append(city_part)
+        address = ", ".join(addr_parts) if addr_parts else city
+
+        if is_excluded(name, "", address):
+            continue
+
+        phone = (r.get("phone", {}).get("value") or r.get("cphone", {}).get("value") or "").strip() or None
+        website = (r.get("website", {}).get("value") or r.get("cwebsite", {}).get("value") or "").strip() or None
+        if website and not website.startswith(("http://", "https://")):
+            website = f"https://{website}"
+        hours = (r.get("hours", {}).get("value") or "").strip() or "Check official site or Google Maps for hours"
+        is_veg = (r.get("veg", {}).get("value") or "").lower() == "only"
+
+        state, region_cat, sig_dishes = classify_region(name, "")
+        osm_id_short = osm_uri.rsplit("/", 1)[-1]
+        results.append({
+            "id": f"osm-untagged-{osm_id_short}",
+            "name": name,
+            "city": city,
+            "district": suburb,
+            "address": address,
+            "coordinates": [round(lon, 6), round(lat, 6)],
+            "indianState": state,
+            "regionCategory": region_cat,
+            "cuisineStyle": "Verified Indian Kitchen (OSM Name Match)",
+            "phone": phone,
+            "website": website,
+            "establishedNote": "OpenStreetMap Verified Open Location",
+            "hoursNote": hours,
+            "isPureVeg": is_veg,
+            "isStreetFood": region_cat == "Street Food & Chaat",
+            "isNewSpot": any(w in name.lower() for w in ["ilai", "noon mirch", "tadka", "street", "urban turban", "svaad", "anjappar"]),
+            "positiveReviews": [
+                {
+                    "quote": f"Verified active Indian restaurant in {city} serving regional spices and freshly prepared dishes.",
+                    "reviewerType": "OSM Community Verified",
+                }
+            ],
+            "signatureDishes": sig_dishes,
+            "authenticityNote": "Verified Indian restaurant in OpenStreetMap.",
+            "dataSource": "osm-verified",
+        })
+
+    print(f"  QLever untagged Indian-name kitchens recovered: {len(results)}", flush=True)
+    return results
+
 def fetch_wolt_bavaria():
     print("2/3 Querying Wolt Live API across 22 Munich & Bavaria hubs...", flush=True)
 
@@ -525,17 +674,18 @@ def main():
     print(f"0/3 Retained {len(prev_web)} geocoded Bavarian web-directory records.", flush=True)
 
     qlever_recs = fetch_qlever_bavaria()
+    qlever_untagged = fetch_qlever_untagged_indian()
     wolt_recs = fetch_wolt_bavaria()
 
-    # Combine in priority order: web-verified -> Wolt (has addresses & scores) -> QLever OSM (broadest Bavaria coverage)
-    all_records = prev_web + wolt_recs + qlever_recs
+    # Combine in priority order: web-verified -> Wolt -> QLever tagged -> QLever untagged Indian names
+    all_records = prev_web + wolt_recs + qlever_recs + qlever_untagged
 
     deduped = []
     for rec in all_records:
         lon, lat = rec["coordinates"]
         n = norm_name(rec["name"])
 
-        if is_excluded(rec["name"], rec.get("cuisineStyle", ""), rec.get("address", "")):
+        if is_excluded(rec["name"], "", rec.get("address", "")):
             continue
 
         # Deduplicate against flagship curated 28

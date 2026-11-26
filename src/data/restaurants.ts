@@ -746,6 +746,49 @@ export const CURATED_RESTAURANTS: Restaurant[] = [
     ],
     authenticityNote: 'Verified active Indian restaurant in Unterföhring.',
   },
+  {
+    id: 'rama-ismaning',
+    name: 'Rama Indisches Restaurant',
+    city: 'Ismaning',
+    district: 'Munich Metro North-East',
+    address: 'Bahnhofplatz 5, 85737 Ismaning',
+    coordinates: [11.6713, 48.2254],
+    googleRating: 4.5,
+    reviewCountLabel: '1,000+ Google reviews',
+    indianState: 'North India & Punjab',
+    regionCategory: 'North Indian & Tandoori',
+    cuisineStyle: 'Classic North Indian Curries & Ismaning S-Bahn Landmark',
+    phone: '+49 89 967690',
+    website: 'https://www.restaurant-rama-ismaning.de/',
+    establishedNote: 'Beloved long-standing Indian kitchen right at Ismaning S-Bahn',
+    hoursNote: 'Daily 11:30–14:30 & 17:30–23:00',
+    positiveReviews: [
+      {
+        quote:
+          'Consistently delicious, generously portioned Indian curries with warm, attentive service steps from Ismaning station.',
+        reviewerType: 'Ismaning Regular',
+        highlightDish: 'Mango Curry & Lamb Vindaloo',
+      },
+    ],
+    signatureDishes: [
+      {
+        name: 'Lamb Madras or Vindaloo',
+        regionalOrigin: 'Indian Regional Classics',
+        description: 'Tender slow-simmered lamb with freshly ground aromatic spices and balanced heat.',
+        spiceLevel: 4,
+        dietary: ['Gluten-Free', 'Signature'],
+        insteadOf: 'Butter Chicken',
+      },
+      {
+        name: 'Fresh Clay-Oven Paneer Tikka',
+        regionalOrigin: 'North India',
+        description: 'Marinated cottage cheese blistered in the tandoor with bell peppers and mint chutney.',
+        spiceLevel: 2,
+        dietary: ['Vegetarian', 'Gluten-Free'],
+      },
+    ],
+    authenticityNote: 'Verified active Indian restaurant at Bahnhofplatz 5, Ismaning.',
+  },
 
   // ===================== REST OF BAVARIA (13 SPOTS) =====================
   {

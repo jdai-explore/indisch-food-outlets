@@ -48,10 +48,10 @@ export function App() {
     const q = searchQuery.trim().toLowerCase();
 
     return RESTAURANTS.filter((r) => {
-      // City preset filter (Munich preset also includes immediate S-Bahn border Unterföhring)
+      // City preset filter (Munich preset also includes immediate north-east S8 neighbors Unterföhring & Ismaning)
       if (!q && activePreset.cityFilter !== 'All') {
         if (activePreset.cityFilter === 'Munich') {
-          if (r.city !== 'Munich' && r.city !== 'Unterföhring') return false;
+          if (r.city !== 'Munich' && r.city !== 'Unterföhring' && r.city !== 'Ismaning') return false;
         } else if (r.city !== activePreset.cityFilter) {
           return false;
         }
