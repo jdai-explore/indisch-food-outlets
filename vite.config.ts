@@ -3,6 +3,9 @@ import react from '@vitejs/plugin-react';
 import tailwindcss from '@tailwindcss/vite';
 
 export default defineConfig({
+  base: (globalThis as { process?: { env?: Record<string, string | undefined> } }).process?.env?.GITHUB_ACTIONS
+    ? '/indisch-food-outlets/'
+    : '/',
   plugins: [react(), tailwindcss()],
   build: {
     rollupOptions: {
